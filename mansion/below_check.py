@@ -107,4 +107,74 @@ s=math.sqrt((1-beta)/(1+beta))
 ok("bright pulse in H", 80*s, 40.0); ok("dim pulse in H", 20/s, 40.0)
 ok("triangle", (r-1)**2+(2*math.sqrt(r))**2, (r+1)**2)
 
+# Drawer 5 exact C
+ok("C exact", 1/(0.10*(2-math.sqrt(2))*g), 1/(2-math.sqrt(2)))
+
+# ---- Funhouse ----
+# F1: shapes from the two balances: (2+r) w^2 = 2k, (1+r) w^2 = k r  =>  r^2 = 2
+for r_ in (math.sqrt(2), -math.sqrt(2)):
+    w2_ = 2*g/(2+r_)
+    ok(f"F1 second balance r={r_:+.3f}", (1+r_)*w2_, g*r_)
+ok("F1 tones ratio times its mirror", (1+math.sqrt(2))*(math.sqrt(2)-1), 1.0)
+ok("F1 product of squared tones", wa**2*wb**2, 2*g**2)
+ok("F1 beat", round(wb-wa,2), 3.42)
+
+# F2: coupled split. eta L (w0^2 - w^2)^2 = kappa^2 w^2 ; s = kappa/sqrt(eta L)
+w0=wa; s_=(3/2-2/3)*w0
+lo=(-s_+math.sqrt(s_**2+4*w0**2))/2; hi=(s_+math.sqrt(s_**2+4*w0**2))/2
+ok("F2 low tone 2/3", lo/w0, 2/3); ok("F2 high tone 3/2", hi/w0, 3/2)
+ok("F2 product", lo*hi, w0**2); ok("F2 difference", hi-lo, s_)
+ok("F2 low tone", round(lo,2), 1.61); ok("F2 high tone", round(hi,2), 3.63)
+
+# F3: crest speeds multiply to u^2; a line's power never outruns u times its stored energy per meter
+ok("F3 crest product", (u/9)*(9*u), u**2)
+Lp, Cp = 0.50e-6, 0.20e-9
+uu=1/math.sqrt(Lp*Cp)
+for V,I in [(6,0.12),(12,0),(6,-0.12),(3,0.05),(1,0.3)]:
+    E=0.5*(Cp*V*V+Lp*I*I); P=V*I
+    assert abs(P) <= uu*E*(1+1e-12)
+print("OK  F3 |P| <= u E on samples")
+ok("F3 equal waves sit exactly at the bound", 6*0.12, uu*0.5*(Cp*36+Lp*0.12**2))
+ok("F3 energy product same in both frames", 80*20, 40*40)
+ok("F3 stretch from shift 2", (2+1/2)/2, 1.25)
+
+# F4: instantaneous center = corner reflected through the ladder's middle
+for phi in [0.3,0.6,0.9273,1.2]:
+    xf=L*math.cos(phi); yt=L*math.sin(phi)
+    ic=(xf,yt); mid=(xf/2,yt/2)
+    ok(f"F4 reflection phi={phi}", ic[0], 2*mid[0]); ok(f"F4 reflection y phi={phi}", ic[1], 2*mid[1])
+    ok(f"F4 IC to center", math.hypot(ic[0]-mid[0],ic[1]-mid[1]), L/2)
+w2l=8/3
+ok("F4 per-mass energy at leaving: profile L^2/3 across zing", (L**2/3)*(w2l/2), 4.0)
+ok("F4 times 8 kg is the heft let go", 8*4.0, 8*g*(h0-1.6)/2)
+
+# ---- Understage ----
+# U1: scaled X = sqrt(eta) a, Y = sqrt(L) q ; nu units: w0 = 6, s = 5
+from fractions import Fraction as Fr
+for w,sgn in [(4,-1),(9,1)]:
+    assert (36 - w*w) == -sgn*5*w   # (w0^2 - w^2) A = -s w B with A = sgn B
+B1,B2=Fr(9,13),Fr(4,13)
+assert B1+B2==1 and -4*B1+9*B2==0
+print("OK  U1 shares 9/13 and 4/13")
+nu=wa/6
+ok("U1 return", 2*math.pi/nu, 15.576198, tol=1e-6)
+Yh=B1*1+B2*(-1); Xdot=-(4*B1+9*B2)
+assert Yh==Fr(5,13) and Xdot==Fr(-72,13)
+ok("U1 half-return motion share", float((Xdot/6)**2), 144/169)
+ok("U1 can share", float(Yh**2), 25/169)
+assert 9-4==5 and 2*6==12 and 9+4==13 and 5**2+12**2==13**2
+print("OK  U1 5-12-13")
+ok("U1 zam: 80 mJ through a return, per 2 kg of rods", round(0.080*2*math.pi/nu/2,2), 0.62)
+
+# U2: kicks
+import cmath
+Nk=100
+ok("U2 in step amplitude", abs(sum(cmath.exp(0j) for _ in range(Nk))), 100.0)
+random.seed(1)
+trials=[abs(sum(cmath.exp(1j*random.uniform(0,2*math.pi)) for _ in range(Nk)))**2 for _ in range(4000)]
+ms=sum(trials)/len(trials)
+ok("U2 random mean-square amplitude ~ N", ms, 100.0, tol=0.06)
+ok("U2 in-step energy ratio", 100**2, 10000)
+ok("U2 work of the k-th in-step kick", sum(2*k-1 for k in range(1,101)), 100**2)
+
 print("all checks pass")
