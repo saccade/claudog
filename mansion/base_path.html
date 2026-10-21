@@ -1,0 +1,83 @@
+<html><head><meta charset="utf-8"></head><body>
+<h1>The Mansion: the base path</h1>
+<p><b>Written by Claude (Anthropic), 2026-10-21 19:20.</b> First draft of the worked route through the base game, problems 2 to 13, in the base game's words only. Problem 1, the knife and the way in, is Codex's to draft; this picks up after it, with the turn, the flip, the cycle, the sweep and the stroke already on the table. The statements are the ones in CL-214, unchanged. The ideas are dr. kraemer's; the words are Claude's. Every number is checked in mansion/toplevel_check.py in Claude's repo. Nothing is fixed.</p>
+<p><i>Words new on this path, each where it lands: χ for torque (kitchen), current as the conductance of the voltage and power as the voltage of the current (study), own time (lounge). No cabinet words: the energy of a rolling thing is just its energy, and nothing gets verbed yet.</i></p>
+
+<h2>Kitchen</h2>
+<p><i>The engine beats twice while the knife in the dining room comes home once, nearly. Nearly is the word to remember.</i></p>
+<h3>2. The engine and the flywheel</h3>
+<p>(1) The engine ends every cycle where it began, so it can't keep anything. Of the 15 J that goes in, 3.0 J comes out as work and the other 12 J goes out as heat. Work over heat in is 3/15: 20 percent. At a cycle a second, that's 3.0 W.</p>
+<p>(2) A flywheel's energy is half its moment of inertia times the square of its sweep. At 4.0 stroke a second, half of 0.50 kg m² times 16 is 4.0 J. Four seconds at 3.0 W add 12 J, for 16 J, and 16 J on the same wheel needs the square of the sweep to be 64. The wheel ends up sweeping at 8.0 stroke a second. The engine paid in equal energy every second, not equal sweep, so four times the energy only doubles the sweep.</p>
+<p>(3) Torque usually gets the letter τ, but the turn has it now. Torque gets χ. The power a torque delivers is the torque times the sweep: P = χω. At the start, 3.0 W at 4.0 stroke a second takes χ = 0.75 N m. At the end, at 8.0, it takes 0.38 N m. The same power needs half the torque once the wheel's going twice as fast.</p>
+<h3>3. The governor and the spool</h3>
+<p>(1) The arm's pull does two jobs at once. Its upward part holds up the ball's weight, mg. Its inward part bends the ball's path round the shaft, and that takes m times the square of the sweep times the ball's distance from the shaft, mω²ℓ sin θ. The pull runs along the arm, so the two parts stand in the arm's own slope: tan θ = ℓω² sin θ/g. For an arm off the vertical the sine cancels, and cos θ = g/(ℓω²) = 10/(0.50 × 25) = 0.80. The arm hangs 0.40 m down and reaches 0.30 m out: a 3–4–5 triangle a tenth of a meter to the unit, about 37° from the vertical. Each ball hangs 0.40 m below the hinge instead of 0.50 m, so it's risen 0.10 m.</p>
+<p>(2) The cosine can't go over 1, so g/(ℓω²) has to stay under 1. Below a sweep of √(g/ℓ) = √20, about 4.5 stroke a second, hanging straight down is the only answer.</p>
+<p>(3) Take forward, the way the cord pulls, as positive, and let f be the counter's grip on the spool, positive forward too. The center of mass speeds up as if both forces acted there: ma = F + f. For the turning, take the way the spool turns when it rolls forward as positive. The cord pulls forward 0.12 m below the axle and the grip acts 0.20 m below it, and a forward push below the axle turns the spool backward. So the torques about the axle are −Fr and −fR, and Iα = −Fr − fR. Rolling ties the two together: α = a/R. Put f = ma − F into the turning equation and the a's collect:</p>
+<p style="margin-left:36pt">a = F(1 − r/R)/(m + I/R²).</p>
+<p>Here I/R² = 0.040/0.040 = 1.0 kg, so the bottom is 3.0 kg, and the top is 6.0 N × 0.40 = 2.4 N. The spool speeds up at 0.80 m/s², forward: it rolls toward the pull. The grip is f = 1.6 − 6.0 = −4.4 N. It pulls back, and about the axle it turns the spool forward harder than the cord turns it back.</p>
+<p>(4) A spool that stays put has a = 0 and α = 0. The cord still leaves the hub at a tangent, 0.12 m from the axle, so its torque about the axle is still −Fr; only its forward part changes, to F cos θ. Then F cos θ + f = 0 and −Fr − fR = 0. The second gives f = −Fr/R, and the first then says cos θ = r/R = 0.60. That's θ = 53°: the 3–4–5 again, with the 3 along the counter. The spool's inertia never comes into it, because a spool that doesn't turn never asks for it.</p>
+
+<h2>Library</h2>
+<p><i>Raise the spool's cord past that angle and, still pulled forward, the spool rolls back. It knocks a catch, and in the library a ladder that was leaning on the wall isn't any more.</i></p>
+<h3>4. The ladder</h3>
+<p>(1) The ladder doesn't stretch: with the foot x out from the wall and the top y up, x² + y² = L² the whole time. As both change, x times the foot's velocity plus y times the top's velocity is zero. So the top moves at x/y times the foot's speed, the other way: 1.8/2.4 × 0.40 = 0.30 m/s, downward.</p>
+<p>(2) The center of mass starts at half of 2.4 m and ends at half of 1.60 m, so it drops 0.40 m. With 80 N of weight, that's 32 J.</p>
+<p>(3) The center moves at Lω/2 and the ladder turns about its center at the same sweep. The center's energy is ½m(Lω/2)², or mL²ω²/8. The turning about the center is ½(mL²/12)ω², or mL²ω²/24. Those are 3 to 1, so the 32 J splits 24 J to the center's motion and 8 J to the turning. Then ½ × 8.0 kg × v² = 24 J gives v² = 6, and the center's moving at √6, about 2.4 m/s, when the top leaves the wall. The ladder's sweeping at 2v/L, about 1.6 stroke a second.</p>
+
+<h2>Billiard room</h2>
+<p><i>After the ladder's left the wall, its fall trips the sear on a cocked cue. The spring pays for the shot. The ladder only lets it go.</i></p>
+<h3>5. The cue ball</h3>
+<p>(1) A 2.0 N s impulse on 1.0 kg leaves the center moving at 2.0 m/s.</p>
+<p>(2) The same impulse, struck H above the table, is H − R above the ball's center, so about the center it leaves an angular momentum of J(H − R). Rolling at once means the ball sweeps at v/R, and its angular momentum about the center is (2/5)mR² × v/R = (2/5)RJ. So H − R = 2R/5, and H = 7R/5 = 0.070 m: two fifths of a radius above the center.</p>
+<p>(3) The ball sweeps at 2.0/0.050 = 40 stroke a second. The center's motion carries ½ × 1.0 × 2.0² = 2.0 J. The turning carries ½ × (2/5)(1.0)(0.050)² × 40² = 0.80 J. That's two fifths as much again.</p>
+
+<h2>Conservatory</h2>
+<p><i>The cue ball rolls free, then nudges a flap, and a second ball drops a little way into a basin and starts to rock. Its own height pays for its motion. The chalk is on your cuff.</i></p>
+<h3>6. The basin</h3>
+<p>(1) The ball cycles with sweep ω where ω² = 5g/(7a), and a turn of the cycle takes T with ωT = τ. With a = 5/7 m, 7a/5 is exactly 1 m, so ω² = 10 and T = τ/√10 = 1.99 s. That's the knife's time to the last digit, from a ball on a shorter arc.</p>
+<p>(2) The bead cycles with ω² = g/a = 14, so T = τ/√14 = 1.68 s.</p>
+<p>(3) The ball has to turn about its own center as well as move along the arc. Some of what the drop lets go goes into that turning, two fifths as much again as the motion along the arc gets, so the same drop gives less speed and the ball comes round later.</p>
+
+<h2>Ballroom</h2>
+<p><i>The ball keeps the knife's time, and a beat that matches draws you on. Matching times don't mean matching places: the ball and the knife only come home together if they set out together.</i></p>
+<h3>7. The hoop</h3>
+<p>(1) Rolling without slipping, the center moves at the radius times the sweep: 0.25 m × 8.0 = 2.0 m/s.</p>
+<p>(2) Every point of the hoop has the center's velocity plus its own motion round the center, 2.0 m/s along the rim. At the top the two point the same way and add, for 4.0 m/s. At the bottom they point opposite ways and cancel. The bottom point is still for that instant.</p>
+<p>(3) At the front, level with the center, the motion round the center points straight down. Forward 2.0 m/s and down 2.0 m/s make 2√2, about 2.8 m/s, 45° below forward.</p>
+<h3>8. The ribbon</h3>
+<p>(1) The ribbon only ever pulls toward the hole, so it has no torque about the hole, and the puck's angular momentum about the hole, mvr, stays the same. Half the radius means twice the speed: 4.0 m/s. The sweep goes from 2.0/0.60, about 3.3 stroke a second, to 4.0/0.30, about 13.</p>
+<p>(2) The tension is what bends the path: mv²/r. That's 0.50 × 4.0/0.60 = 3.3 N at first and 0.50 × 16/0.30 = 27 N at the end. Halving the radius multiplies it by eight.</p>
+<p>(3) The ribbon's work is the change in the puck's energy: ½ × 0.50 × (16 − 4.0) = 3.0 J. Something drew the ribbon down. Its other end has been in your hand.</p>
+
+<h2>Study</h2>
+<p><i>What supplied that work, and where could it wait? The study keeps the answer ready: two rods held still and a loop held open.</i></p>
+<h3>9. The double pendulum</h3>
+<p>(1) Each mode cycles with its own sweep, and a turn of it takes T = τ/ω. The slow one takes τ/2.42 = 2.60 s and the fast one τ/5.84 = 1.08 s.</p>
+<p>(2) The squares are in the ratio (2 + √2)/(2 − √2). Multiply top and bottom by 2 + √2 and it's (2 + √2)²/2, so the sweeps are in the ratio (2 + √2)/√2 = 1 + √2. That's irrational, so no whole number of slow cycles ever equals a whole number of fast ones, and a motion with both in it never exactly repeats.</p>
+<p>(3) In the slow mode the lower angle is +√2 times the upper: both masses swing the same way, the lower one farther. In the fast mode it's −√2 times: whenever the upper mass swings one way, the lower one swings the other.</p>
+<h3>10. The coils and the capacitor</h3>
+<p>(1) Say these the right way round. Current is the conductance of the voltage: I = GV, with G = 1/R. Power is the voltage of the current: P = VI. At the start the capacitor holds no charge, so the resistor gets the whole 6.0 V, and the current is the conductance of 6.0 V across 20 Ω: 0.30 A. The time constant is RC = 20 × 0.10 = 2.0 s. When the capacitor's at 4.0 V, the resistor has the other 2.0 V, and the current is 0.10 A. The capacitor holds CV = 0.40 C and ½CV² = 0.80 J, and the resistor's burning the voltage of the current, 2.0 V × 0.10 A = 0.20 W, as heat.</p>
+<p>(2) With C = 1/(Lω_a²), LC = 1/ω_a², so ω₀ = 1/√(LC) = ω_a = 2.42 stroke a second. The loop on its own cycles with the slow mode exactly.</p>
+<p>(3) The statement writes the torque τ_em; here it's χ_em = κi. The power the current delivers to the rod is that torque times the rod's sweep, κiȧ. The circuit's emf is ε = −κȧ, and the power the emf delivers to the circuit is the voltage of the current, εi = −κiȧ. The two add to zero: whatever the rod gets, the circuit gives up. When κi and ȧ have opposite signs, κiȧ is negative, and the rod's giving its energy to the circuit instead.</p>
+<p>(4) (2/3) × 2.42 = 1.61 and (3/2) × 2.42 = 3.63 stroke a second. Their product is ω₀², 5.86 per second squared, and the faster is 9/4 of the slower: 4 to 9.</p>
+
+<h2>Hall</h2>
+<p><i>The rods are left hanging still and the loop open. The hall asks what could announce the release.</i></p>
+<h3>11. The line</h3>
+<p>(1) u = 1/√(0.50 × 10⁻⁶ × 0.20 × 10⁻⁹) = 1/√(10⁻¹⁶) = 1.0 × 10⁸ m/s, a third of light's speed. Z = √(0.50 × 10⁻⁶/0.20 × 10⁻⁹) = √2500 = 50 Ω.</p>
+<p>(2) The voltages add: 12 V. Each pulse's current is 6.0/50 = 0.12 A in its own direction of travel, and they travel opposite ways, so the currents cancel: no current at all. The energy per meter is all in the voltage there: ½ × 0.20 × 10⁻⁹ × 144 = 14 nJ/m. That's the same as the two pulses' 7.2 nJ/m each, so nothing's gone missing; it's just all in one place.</p>
+<p>(3) The sum is 9.0 MHz and the difference 1.0 MHz, so the crests move at u/9 = 1.1 × 10⁷ m/s and at 9u = 9.0 × 10⁸ m/s, three times light's speed. The fast crests can't carry a signal. A signal is a change made at a source, and the change travels with its wave at u. The fast crest is only where two waves that were already there happen to line up. It seems to arrive before anyone sends anything because nobody sent it.</p>
+
+<h2>Lounge</h2>
+<p><i>A signal goes down the line at u, and two lamps answer it, aimed at your chair from either side.</i></p>
+<h3>12. The two lights</h3>
+<p>(1) The energies add to 100 mJ. A light pulse's momentum is its energy over c, and these point opposite ways, so the total is (80 − 20) mJ/c = 2.0 × 10⁻¹⁰ kg m/s, to the right.</p>
+<p>(2) (Mc²)² = 100² − 60², in mJ²: 80 mJ. That's 60, 80, 100: a 3–4–5 triangle twenty times over.</p>
+<p>(3) The pair's momentum is zero in the frame moving at v = pc²/E = (60/100)c = 0.60c. There γ = 1/√(1 − 0.36) = 1/0.80 = 1.25.</p>
+<p>(4) Call the time a clock reads, carried along with it, its own time. A clock at rest in that frame reads 10/1.25 = 8.0 s of its own time while 10 s pass in S.</p>
+<h3>13. The chair</h3>
+<p>(1) The capacitor holds q₀²/(2C), with C = 1/(2 − √2) F, about 1.71 F. Setting that to 0.080 J gives q₀ = √(2 × 1.71 × 0.080) = 0.52 C, and the voltage is q₀/C = 0.31 V.</p>
+<p>(2) Both parts of q come back when 4νT and 9νT are each a whole number of turns. Four and nine share no factor, so the first time is νT = τ: four turns of the slow part and nine of the fast. That's T = τ/ν = 6τ/ω₀ = 15.6 s.</p>
+<p>(3) At T/2 the slow part has made two whole turns and the fast part four turns and a flip. So the slow cosine is back at 1 and the fast one is at −1, and q/q₀ = 9/13 − 4/13 = 5/13. The sines are both zero there, so the current is zero and the upper rod's angle is zero, and with it the lower rod's: the rods pass through vertical. The capacitor holds (5/13)² = 25/169 of 80 mJ, about 12 mJ. With no current the inductor holds nothing, and at vertical the rods hold no height, so the other 68 mJ is in the rods' motion.</p>
+<p>(4) T is the receiver's own time. In S the same stretch lasts γT = 1.25 × 15.6 = 19.5 s, and the receiver covers 0.60c × 19.5 s = 3.5 × 10⁹ m. Its seat is at x = vt the whole while, so x_H = γ(x − vt) = 0 throughout. In its own frame, the chair never moves. You were never moving.</p>
+</body></html>
