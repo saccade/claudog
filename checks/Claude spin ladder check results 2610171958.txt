@@ -1,0 +1,41 @@
+Claude spin ladder check — results (2026-10-17)
+
+HOLDS  motion = sweep of lot_radial   (ω × (ι m))
+FAILS  motion = sweep of lot_around   (ω × (η × ι))
+        lhs = [-m*omega*r, 0, 0]
+        rhs = [0, m*omega*r, 0]
+FAILS  motion = sweep of lot_back     (ω × (ι × η))
+        lhs = [m*omega*r, 0, 0]
+        rhs = [0, m*omega*r, 0]
+HOLDS  motion = scalar ω times lot_around
+FAILS  motion = pace of inertia as cross (ν × η)
+        lhs = [m*omega*r, 0, 0]
+        rhs = [0, m*omega*r, 0]
+HOLDS  motion = pace of inertia as scalar (ν m)
+HOLDS  bulk A = ι × (η × ι) = m r² ⤷
+HOLDS  bulk B = (ι × η) × ι = m r² ⤷
+HOLDS  spin = scalar ω times bulk A
+FAILS  spin = sweep × bulk A (cross)
+        lhs = [0, 0, 0]
+        rhs = [0, 0, m*omega*r**2]
+FAILS  spin = pace of lot_around as cross (ν × (η×ι))
+        lhs = [0, 0, 0]
+        rhs = [0, 0, m*omega*r**2]
+HOLDS  spin = leverage of (ω × lot_radial)
+HOLDS  |spin| = pace · lot_around
+HOLDS  torque picks up bulk: χ_free = α β_A (for F = m α×ι)
+HOLDS  power: sweep · torque = force · pace
+HOLDS  F × ι = −(ι × F)  (the order the words caught)
+HOLDS  turn force = ω × p = −m ω² ι
+HOLDS  sweep of lot_around (cross) = −(turn force)/ω ... i.e. radial
+HOLDS  ι × (η × ι) = (inertia tensor)·⤷ for a general lever
+
+Reading:
+ * lot_radial (ι m, along the lever) is the only lot whose SWEEP is the motion.
+ * lot_around (η × ι) is tangential; sweeping it (cross) gives a radial arrow, not motion.
+   Scalar-times-vector 'works' but that is not what 'sweep of' means elsewhere (turn force = ω × p).
+ * 'pace of inertia' holds only as a scalar product; as a cross it is radial.
+ * bulk = ι × (η × ι) is axial with scale m r² and equals the textbook inertia tensor
+   applied to the axis direction; the other grouping (ι × η) × ι is the same vector.
+ * spin = ω β needs β as a scalar about the axis (or scalar ω × vector β); ω × β crossed is zero.
+ * ω·χ = F·ν: sweep of the torque is the force of the pace (power, trundle rate).

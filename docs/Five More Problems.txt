@@ -1,0 +1,75 @@
+FIVE MORE PROBLEMS
+==================
+
+Problem statements only. Figures not reproduced; assumed geometry
+is stated.
+
+1. The ladder that slides
+-------------------------
+
+    A ladder of length L = 3.0 m leans against a frictionless
+    wall, its foot on a frictionless floor. At one instant the
+    foot is 1.8 m from the wall, the top is 2.4 m up the wall, and
+    the foot is sliding away from the wall at 0.40 m/s.
+    (a) How fast is the top moving, and how fast is the ladder's
+        angle changing?
+    (b) Find the velocity of the ladder's centre. Show that the
+        centre moves on a circle, and find it.
+    (c) Find the point that is momentarily at rest, and show that
+        every point of the ladder moves as if the ladder were
+        turning about it.
+
+    (This version looks at the ladder with the wall on the left.)
+
+2. The rod on the ice
+---------------------
+
+    A uniform rod of mass m = 0.60 kg and length L = 1.2 m lies
+    at rest on frictionless ice. Seen from above it lies north to
+    south. A puck moving east strikes its north end, delivering a
+    horizontal impulse J = 1.8 N s, due east, in a very short
+    time. The rod's moment of inertia about its centre is
+    m L^2 / 12.
+    (a) Find the velocity of the rod's centre and its angular
+        velocity just after the strike.
+    (b) Find the point of the rod that is momentarily at rest.
+
+3. The ladder that leaves the wall
+----------------------------------
+
+    The ladder of problem 1, uniform, of mass m, is released from
+    rest with its top 2.4 m up the frictionless wall and its foot
+    1.8 m out on the frictionless floor. Its moment of inertia
+    about its centre is m L^2 / 12.
+    (a) Find its angular velocity as a function of its angle.
+    (b) Show that the top leaves the wall when it has come down to
+        two thirds of its starting height, and find that height.
+    (c) Find the speed of the centre at that moment.
+
+4. The superball
+----------------
+
+    A uniform solid superball of mass m and radius R = 2.5 cm,
+    moment of inertia 2 m R^2 / 5 about its centre, is thrown
+    horizontally with speed v_x, turning at angular velocity omega
+    about an axis square to its path. It bounces off a level
+    floor without slipping, and elastically: no energy is lost,
+    and its vertical speed reverses unchanged.
+    (a) Find its horizontal velocity and angular velocity just
+        after the bounce, in terms of v_x, omega and R.
+    (b) Find them after a second bounce, and describe the motion
+        over many bounces.
+    (c) Give the numbers for v_x = 2.1 m/s, thrown not turning.
+
+    (This version counts omega positive for forward rolling,
+    topspin.)
+
+5. The marble in the trough
+---------------------------
+
+    A uniform marble of radius b = 5.0 cm, moment of inertia
+    2 m b^2 / 5 about its centre, rolls without slipping inside a
+    fixed horizontal cylinder of radius R = 30 cm, across the
+    cylinder's axis. Find the period of small oscillations about
+    the bottom, and compare it with a bead sliding without
+    friction on a circle of radius R - b.

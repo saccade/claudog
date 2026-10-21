@@ -1,0 +1,62 @@
+FIVE PROBLEMS
+=============
+
+Problem statements only (paraphrased from MIT 8.01SC Fall 2016,
+Problem Set 12). Figures not reproduced; assumed geometry is stated.
+
+1. The bicycle wheel
+--------------------
+
+    A wheel of radius R rolls without slipping on level ground, its
+    centre moving at steady speed V in the +x direction. A bead on
+    the rim is at the top, at (x0, 2R), when t = 0. Find the bead's
+    coordinates x(t) and y(t) for an observer on the ground.
+
+2. The ball in the ring
+-----------------------
+
+    A ball of radius b rolls without slipping on the inside of a
+    ring of radius R > b. The ball spins at angular speed omega
+    about its own centre, and the ring turns at angular speed Omega
+    about its centre. Find the speed of the ball's centre.
+
+    (The figure isn't reproduced. This version takes the ball
+    against the inside of the ring, with omega, Omega and the
+    centre's motion all counted forward around: counterclockwise
+    as we look.)
+
+3. The cube that meets a ridge
+------------------------------
+
+    A uniform cube of mass m and edge s slides without friction at
+    speed v across a level floor and hits a low ridge with its
+    leading bottom edge. The collision is instantaneous and
+    inelastic: afterward the cube pivots freely about the ridge.
+    Its moment of inertia about an axis through the centres of two
+    opposite faces is m s^2 / 6.
+    (a) Find the cube's angular speed just after the collision.
+    (b) Find the largest v, call it v0, for which the cube does
+        not tip over the ridge.
+
+4. The yo-yo on the slope
+-------------------------
+
+    A yo-yo of mass m has rims of radius R, an axle of radius R/3,
+    and moment of inertia m R^2 / 2 about its centre. It sits on a
+    slope at angle phi, and its string is pulled with force F. The
+    coefficient of static friction is mu_s. Find the largest F for
+    which the yo-yo rolls without slipping.
+
+    (The figure isn't reproduced. This version takes the string
+    leaving the top of the axle and pulled up the slope, parallel
+    to it.)
+
+5. The billiard ball that skids
+-------------------------------
+
+    A uniform ball of mass m and radius R, moment of inertia
+    2 m R^2 / 5 about its centre, is struck by a cue: a sharp
+    horizontal blow at height h above its centre line. It leaves
+    the cue with speed v0 and some rotation, skids, and when it
+    finally rolls without slipping its speed is 9 v0 / 7. Find
+    h / R.

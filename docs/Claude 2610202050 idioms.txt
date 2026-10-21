@@ -1,0 +1,64 @@
+Written by Claude (Anthropic), 2026-10-20 20:50.
+
+IDIOMS THAT ALREADY BELONG TO THE DOG MATH
+working list for the Mansion doc. Not book prose. Nothing here is in the
+doc yet: the lock says Codex, so these wait for my next turn (or Codex's).
+
+THE PICKUP PAIR (alpha, how fast the sweep changes)
+  positive pickup   picking up steam, picking up speed, ramping up,
+                    revving up, winding up, spinning up, gathering speed
+  negative pickup   backing off, easing off, letting up, winding down,
+                    spinning down, slowing, coasting, running out of steam
+  Note: backing off the throttle lowers the pow (power), so it lowers the
+  zlow first and the pickup after. The governor backs the steam off by
+  itself. "Backing off" is the cleanest everyday word for a negative pickup.
+
+TERM -> EVERYDAY PHRASE (a ghost word that is already a phrase)
+  pickup    pick up where you left off; pick up the pace; pickup truck
+  sweep     clean sweep; sweep it under the rug; sweeping change
+  bulk      in bulk; the bulk of it; bulk up        (opposite: shed it)
+  heft      hefty; heft it; gauge the heft            (opposite: drop it)
+  hook      off the hook; hooked; hook up      (a stopped ball is off the hook)
+  crank     crank it up / down; cranky; crank out
+  punch     packs a punch; pull a punch; punch up (the cube pulls 5/8 of one)
+  ring      ring true; ring a bell; ring down (damping, if it ever comes)
+  stroke    at a stroke; stroke of midnight; master stroke     (stroke = radian)
+  zoom      zoom in / out; zoom past                        (opposite: creep)
+  zip       zip it; zip up / down
+  zlow      slow, flow, low: it adds six zing a second and says so
+  boost     give a boost; booster seat
+  profile   keep a low profile (a small profile is a small zing price)
+  grip      get a grip; lose your grip   (the spool and the baize need one)
+  slack     cut me some slack; take up the slack   (already in the spool scene)
+  lump      lump it; lump together
+  cat       let the cat out; catwalk; cat nap
+  push      push back; push on; push through
+  ponder    give it a ponder   (the knife ponders; ponder is already a verb)
+
+MECHANISM -> EVERYDAY PHRASE (things that exist in the rooms)
+  steam / governor   let off steam; full steam ahead; under your own steam;
+                     run out of steam; govern yourself accordingly
+  cue                on cue; take your cue         (best for the "you")
+  catch / sear       catch on; catch-22; trigger-happy
+  cube / ridge       tipping point; tip the balance; on a knife-edge
+  beam (neutral)     off balance; in balance; stays where it was left
+  pendulum           swing back; in the swing of things; come full circle
+  ribbon / spiral    drawn in; downward spiral; spiral out of control
+  ladder / foot      climb the ladder; put your foot down; foot in the door
+  spring             spring into action; spring back
+  chalk              chalk it up; chalked up
+  ribbon             cut the ribbon
+
+WHERE I WOULD USE THEM (suggestions only)
+  rooms 1-2   backing off, picking up, ring true, off balance: "not spooky"
+              words that teach the introduce-a-term mechanic and then
+              appear as verbs, adjectives and nouns
+  room 2      let off steam (the governor), run out of steam
+  room 5      on cue / take your cue (the first "your" intrusion could be a
+              cue: "take your cue" next to "The chalk is on your cuff")
+  room 6      the beam "off balance" then "stays where it was left"
+  room 8      drawn in, spiral
+  Last House  leave alone (Codex's verse; no new puns there)
+
+Open question for doc: the idioms are best as a texture that the reader
+catches slowly. Say if you want a hard cap per room.

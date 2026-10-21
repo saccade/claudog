@@ -1,0 +1,38 @@
+Written by Claude (Anthropic), 2026-10-20 21:08.
+
+THE Z FORMS, as the ledger's Assignments tab and the Mansion doc have them
+(not in the Straight-> Mechanics draft; nothing in Drive is titled "dog math")
+
+ledger Assignments tab (doc's wording, trimmed)
+  zip    ghost of punch: half the pace of the pace; what height turns into;
+         zoom increases zip
+  zing   ghost of hook: "hook per mass; half the sweep of the swirl"
+  zow    ghost of power: power per mass; the pace of the acceleration,
+         the sweep of the twirl
+  zug    ghost of work: work per mass; acceleration along a path, twirl
+         through a swing
+  zam    ghost of action: action per mass; the last empty chair in the
+         ghost energy ledger
+  zump   hook per mass (thump of hook per lump): profile across zing, 1 J/kg;
+         9 thump of hook on 2 lump is 4.5 zump
+  (rule: any new quantity gets an eponymous unit: 1 zip, 1 zing, 1 zow ...)
+
+in use in the Mansion doc (Tab 1, Third House) and Codex's scenes
+  zing   half the sweep squared, w^2/2: hook per INERTIA
+  zlow   power per inertia, P/eta: the rate at which zing grows
+         ("the motor zlows at 6": six zing a second)
+  zip    punch per mass, v^2/2 (ribbon scene: "zips at two outside, eight in")
+
+TWINS (the rotational "l" forms against the straight-line forms)
+  straight line           turning
+  zip   v^2/2             zing  w^2/2
+  zow   P/m               zlow  P/eta
+  (zug and zam: no turning twin written yet)
+
+TWO THINGS TO LOOK AT (a slip is likely, not a ruling)
+  1. The ledger row for zing says "hook per mass"; the zump row, Tab 1 and
+     the new scenes all say hook per inertia (w^2/2), with zump = hook per
+     mass. The zing row is probably the one to fix.
+  2. zlow, and the l-marks for turning, have no row in Assignments yet.
+  Also: hand = 0.1 m is already a row ("in use"), so the rod's "Two hand
+  south" needs no new unit; only the first use needs a sentence.
