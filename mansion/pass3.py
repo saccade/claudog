@@ -1,0 +1,32 @@
+# Written by Claude (Anthropic), 2026-10-20. Builds the batch for Claude pass 3 (my tab + Goals note).
+import json,sys
+def u(s): return len(s.encode('utf-16-le'))//2
+BR={"red":0.19607843,"green":0.10588235,"blue":0.023529412}
+def block(tab,start,H,paras,lead=True):
+    T=("\n" if lead else "")+H+"\n"+"".join(p+"\n" for p in paras)
+    reqs=[{"insertText":{"location":{"index":start,"tabId":tab},"text":T}}]
+    a=start+(1 if lead else 0)
+    hs,he=a,a+u(H)+1
+    end=start+u(T)
+    reqs.append({"updateParagraphStyle":{"range":{"startIndex":a,"endIndex":end,"tabId":tab},"paragraphStyle":{"namedStyleType":"NORMAL_TEXT"},"fields":"namedStyleType"}})
+    reqs.append({"updateParagraphStyle":{"range":{"startIndex":hs,"endIndex":he,"tabId":tab},"paragraphStyle":{"namedStyleType":"HEADING_2"},"fields":"namedStyleType"}})
+    reqs.append({"updateTextStyle":{"range":{"startIndex":a,"endIndex":end,"tabId":tab},"textStyle":{},"fields":"bold,italic,fontSize,weightedFontFamily,foregroundColor"}})
+    reqs.append({"updateTextStyle":{"range":{"startIndex":a,"endIndex":end,"tabId":tab},"textStyle":{"foregroundColor":{"color":{"rgbColor":BR}}},"fields":"foregroundColor"}})
+    reqs.append({"updateTextStyle":{"range":{"startIndex":hs,"endIndex":he-1,"tabId":tab},"textStyle":{"bold":True},"fields":"bold"}})
+    return reqs
+mine_H="Claude pass 3 — cold read of the kitchen and library"
+mine=[
+"Claude (Anthropic), 2026-10-20 21:53. Cold read of “Codex — kitchen and library”. Every figure agrees with an independent rerun (check_kitchen.py, in the claudog repo): exact rational arithmetic for the spool and its slope variation, and a numerical integration of the sliding ladder. Not edited: Tab 1, the Last House, and anything of Codex’s.",
+"Agrees. Spool: contact inertia 0.120, three lump in the rolling balance; a = 2 cos θ − 1.2 zoom, so +0.80 flat, −0.20 at 60° and −1.20 straight up; still at cos θ = 0.60 (53°, upward part 0.80). Grip: friction 4.4, 3.4 and 2.4 push to the left on normals of 20, 14.8 and 14, so 0.22, 0.23 and 0.17; over every angle the worst is 0.244 near 36°, so 0.25 covers them all. Before the trip: 1.0 s, 0.20 cat, punch 0.040 and hook 0.020, 0.060 thump, equal to 6 push through the 1 cm the cord end has been drawn (checked from the rolling contact: net 1.0 cm along the cord); the sear’s 0.02 push changes the speed-up by 0.0067 zoom, 3%. Slope: 9f + F = 3mg sin φ, N = mg cos φ, limits 7.2 and 64.8 push at 0.60, 0.80 and grip 0.20. Ladder: statics 80, 72 and 30 push; snapshot 0.30 cat down, centre 0.20 right and 0.15 down at 0.25 cat, a sixth of a stroke a second at both ends; free slide by integration: the wall pushes 28.8 at release, matching 4N = 3mg cos θ (3 sin θ − 2 sin θ₀), and lets go at 1.60 m with sweep squared 8/3, centre √6 = 2.45 cat, 24 thump of punch and 8 of hook, 32 in all, equal to 80 push through 0.40 m; foot at 2.538 m, 0.738 m out, which is the billiard pin at 2.54.",
+"Reader’s flags; nothing changed. (1) A real spool is in the kitchen, so by doc’s step-aside rule the dog word steps aside there: “About the axle it wheels 0.040” and “The spool wheels 0.120 about contact” use the unit as a verb on an actual wheel. Say “its wheel of inertia about the axle is 0.040” at first use (or kg m²), and plain η after. (2) Hand. The reader’s hand is the Mansion’s strongest recurring noun, so a hand of length would fight the scene. Codex’s 0.20 m and centimetres are right, and I am not asking to introduce the unit here (hand = 0.1 m stays a dog-math row only). That closes my pass-2 flag. (3) η and I. doc’s answer was η everywhere, including the Last House’s few I’s; Codex’s note called the Last House protected and left I. The swap is a mechanical edit I will make when the rooms are assembled. (4) Room 3 is the place for “a push is still a push when it pulls”: it goes after “Steeper than that, the cord cranks the spool left even while it pulls right.” I mark the spot only; the line is for doc or Codex to write. (5) zing is hook per inertia and zump hook per mass (doc, 21:42); Codex’s zlow note agrees with that. The library’s snapshot and free slide are kept apart as asked.",
+"Open for doc, before I assemble. doc said (21:46 to 21:50) that the problem set is AP standard and reads clean to outsiders, mood and setup allowed and no funny business; that the book’s main text introduces oompf and as many of the words as it can get away with; and that the dog math chapter has all of it. The Goals tab has the dog vocabulary arriving room by room in the Mansion. Does that mean the 13 problem statements inside the Mansion read plain AP, with the dog words in the story around them and in the solutions’ climb out, or is the Mansion the soup and a separate clean set follows? I have not assembled themes 1 to 8, because the answer changes how the continuous draft is written.",
+"Next. Either way: themes 1 to 8 in room order, the Last House whole and last, the η swap, the wheel-of-inertia tag in the kitchen, the idiom list (few early, more later, none in the Last House). If the answer is the first, the statements are written AP-clean and the dog words stay in the story; if the second, I assemble as planned. The lock stays with Claude (orange) until doc answers.",
+]
+goals_H="Claude pass 3 — kitchen and library checked"
+goals=[
+"Claude (Anthropic), 2026-10-20 21:53. Read “Codex — kitchen and library” cold and rechecked every figure (exact rationals for the spool, an integration of the sliding ladder); all agree, including the ladder leaving the wall at 1.60 m with 24 thump of punch and 8 of hook. Flags: the kitchen’s real spool should say “wheel of inertia” where it says “it wheels”; no hand unit in the Mansion (the reader’s hand is the scene’s noun); the η swap reaches the Last House at assembly; the spot for “a push is still a push when it pulls” is marked in my tab.",
+"Waiting on doc for one thing before I assemble themes 1 to 8: whether the problem statements inside the Mansion read plain AP (doc, 21:48: the problem set is AP standard, mood and setup allowed), with the dog words in the story and the solutions, or whether the Mansion is the soup. The lock stays with Claude (orange).",
+]
+reqs=block("t.89r88yxpo4v3",9787,goals_H,goals)+block("t.inqo4n6m89dk",13821,mine_H,mine)
+json.dump(reqs,open(sys.argv[1] if len(sys.argv)>1 else 'pass3.json','w'),ensure_ascii=False)
+print(json.dumps(reqs,ensure_ascii=False))
