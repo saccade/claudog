@@ -177,4 +177,20 @@ ok("U2 random mean-square amplitude ~ N", ms, 100.0, tol=0.06)
 ok("U2 in-step energy ratio", 100**2, 10000)
 ok("U2 work of the k-th in-step kick", sum(2*k-1 for k in range(1,101)), 100**2)
 
+# Codex's repairs, 17:30
+ok("F1 reinforcement interval", round(2*math.pi/(wb-wa),4), 1.8357)
+eta=4+2*math.sqrt(2)          # a-swing inertia, m = 1 kg, l = 1 m, theta1 = a, theta2 = sqrt2 a
+ok("U1 eta", round(eta,1), 6.8)
+tally=0.080*2*math.pi/nu
+ok("U1 zlam against eta", round(tally/eta,3), 0.182)
+ok("U1 zam on 2 kg", round(tally/2,3), 0.623)
+# U2 TEST: open loop, one oscillator; taps one period apart add in step
+w=wa; X=0.0; V=0.0; dt=2*math.pi/w/4000; E=[]
+for k in range(1,11):
+    V+=1.0
+    E.append(0.5*(V*V+w*w*X*X))
+    for _ in range(4000):          # one full period, symplectic Euler
+        V-=w*w*X*dt; X+=V*dt
+ok("U2 in-step energy after 10 taps / first", E[-1]/E[0], 100.0, tol=2e-3)
+
 print("all checks pass")
