@@ -127,7 +127,14 @@ SLOW_WALK = [
   "(3) The power a torque delivers is the sweep of the torque. Put numbers to it once: 0.75 N m at 4.0 strokes a second delivers 3.0 W. So at the start the engine's 3.0 W takes 0.75 N m, and at the end, at 8.0, it takes 0.38 N m.\nWhen the wheel goes twice as fast, applying the same power takes just half the torque.\nThrough one whole turn, 0.75 N m does 2π of itself: 4.7 J, and 0.64 of a turn a second at 4.7 J a turn is the engine's 3.0 W. There's the 2π again, two flips standing in for one turn. π only covers half of what the knife does, one swing across; the cycle is the whole of it. Give the whole turn its own sign, τ. The knife's rule is then Tω = τ, and the wheel's 4.0 strokes a second is 4.0/τ of a turn a second.\nTorque usually gets the letter τ, but the turn has it now. A χ hung on the wall could apply a twist to something—use that for torque: P = ωχ, with χ = 0.75 N m at the start."),
 ]
 
-STATEMENT_FIX = [("A spool of mass 2.0 kg, outer radius R = 0.20 m and hub radius r = 0.12 m has moment of inertia 0.040 kg m²† about its axle. It rests on a level counter.",
+SLOW_WALK += [   # set 1 only for now (doc 09:03): the turning is a motion, so it carries an energy; it isn't one
+ ("The center's energy is ½m(Lω/2)², or mL²ω²/8. The turning about the center is ½(mL²/12)ω², or mL²ω²/24.",
+  "The center's motion carries ½\u200am\u200a(L\u200aω/2)², or m\u200aL²\u200aω²/8. The turning about the center carries ½\u200a(m\u200aL²/12)\u200aω², or m\u200aL²\u200aω²/24."),
+ ("(3) The center moves at Lω/2 and the ladder", "(3) The center moves at L\u200aω/2 and the ladder"),   # doc's hair spaces, 09:03
+]
+
+STATEMENT_FIX = [("the center moves at speed Lω/2, where", "the center moves at speed L\u200aω/2, where"),
+                 ("A spool of mass 2.0 kg, outer radius R = 0.20 m and hub radius r = 0.12 m has moment of inertia 0.040 kg m²† about its axle. It rests on a level counter.",
                   "A spool rests on a level counter. It has mass 2.0 kg, outer radius R = 0.20 m, hub radius r = 0.12 m, and moment of inertia 0.040 kg m²† about its axle.")]
 # turn-family units are count nouns and take a plural (doc, 08:06); dog park units stay bare (R-041)
 STROKES = re.compile(r"(?<=[0-9√τ]) stroke\b")

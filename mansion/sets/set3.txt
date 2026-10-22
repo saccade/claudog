@@ -103,7 +103,7 @@ Raise the spool's cord past that angle and, still pulled forward, the spool roll
 A uniform ladder of mass 8.0 kg and length 3.0 m rests with its foot 1.8 m from a frictionless wall and its top 2.4 m above a frictionless floor. Its moment of inertia about its center is mL²/12. Use g = 10 m/s².
 1. The foot is pulled away from the wall at 0.40 m/s while the top stays against the wall. Find the speed of the top at that instant.
 2. The ladder is released from rest in its original position. It stays in contact with the wall until its top is 1.60 m† above the floor. Find the gravitational potential energy released by then.
-3. While both ends touch, the center moves at speed Lω/2, where ω is the ladder's angular speed. Find how that energy divides between the center's translation and the rotation about the center, and the speed of the center when the top leaves the wall.
+3. While both ends touch, the center moves at speed L ω/2, where ω is the ladder's angular speed. Find how that energy divides between the center's translation and the rotation about the center, and the speed of the center when the top leaves the wall.
 Solution
 (1) The ladder doesn't stretch: with the foot x out from the wall and the top y up, x² + y² = L² the whole time. As both change, x of the foot's velocity and y of the top's velocity cancel: 1.8 m of 0.40 m/s against 2.4 m of the top's. So the top moves at x/y of the foot's speed, the other way: 0.30 m/s, downward.
 (2) For the release from rest, the center of mass starts at half of 2.4 m and ends at half of 1.60 m, so it drops 0.40 m. With 80 N of weight, that's 32 J of heft let go.
