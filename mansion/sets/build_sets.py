@@ -331,7 +331,7 @@ P1_GLOSS = [
     ("Some of what the drop lets go goes into that turning, two fifths as much again as the motion along the arc gets, so the same drop gives less speed and the ball comes round later.",
      "Rolling, it turns at v/R, and its moment of inertia about the center is (2/5) m R², so the turning carries ½ (2/5) m R² (v/R)², "
      "two fifths of the ½ m v² in the motion along the arc. Every 7 J the drop lets go splits 5 J to the motion and 2 J to the turning. "
-     "At any height the ball moves at √(5/7) of the bead's speed, about 0.85 of it, so it takes √(7/5) as long to come round: 1.99 s against 1.68 s."),
+     "At any height the ball moves at √(5/7) of the bead's speed, about 0.85 of it, so it takes √(7/5) as long to come round: 2.0 s against 1.7 s."),
     ("The bottom point is still for that instant.",
      "The bottom point is still for that instant. That's why a photo of a moving bicycle blurs the spokes at the top of the wheel and catches them sharp near the ground."),
 ]
@@ -575,6 +575,12 @@ def build(k):
             out[hit[0]] = (out[hit[0]][0], out[hit[0]][1].replace(old, new))
     # doc 19:25: the ladder's 1.60 m was the one three-digit number among two-digit ones; 1.6 m says it (R-115, round hard)
     out = [(t, x.replace("1.60 m", "1.6 m") if isinstance(x, str) else x) for t, x in out]
+    # doc 19:29: he meant the knife's 1.99 s. Two seconds says it; the basin matches the knife exactly, not to a digit
+    ROUND = [("T = 2π/√10 = 1.99 s, about two seconds.", "T = 2π/√10, about two seconds."),
+             ("T = τ/√10 = 1.99 s. That's the knife's time to the last digit,", "T = τ/√10, about 2.0 s. That's exactly the knife's time,"),
+             ("T = τ/√14 = 1.68 s.", "T = τ/√14, about 1.7 s.")]
+    for a, b in ROUND:
+        out = [(t, x.replace(a, b) if isinstance(x, str) else x) for t, x in out]
     # doc 18:00: the reverse question goes in as drawer 6's part 4; the hall's 4 MHz dagger points here (problem set f-4)
     for j, (t, x) in enumerate(out):
         if isinstance(x, str) and x.startswith("3. For 5.0 MHz and 4.0 MHz and u"):   # statements are gone after the sweep

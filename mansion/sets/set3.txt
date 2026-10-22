@@ -20,7 +20,7 @@ Call a radian a stroke. All the way round is a turn, about 6.3 strokes, and half
 Count strokes each second and call that the sweep. The cycle’s sweep is ω. The usual small-swing rule balances as
 ℓω² = g,
 Tω = 2π.
-Here the cycle sweeps at √10, about 3.2 strokes a second. Its cycle takes T = 2π/√10 = 1.99 s, about two seconds. There's a 2 riding along with that π: two flips standing in for one turn. π only covers half of what the knife does, one swing across; the cycle is the whole of it. Give the whole turn its own sign, τ, and the rule says so:
+Here the cycle sweeps at √10, about 3.2 strokes a second. Its cycle takes T = 2π/√10, about two seconds. There's a 2 riding along with that π: two flips standing in for one turn. π only covers half of what the knife does, one swing across; the cycle is the whole of it. Give the whole turn its own sign, τ, and the rule says so:
 Tω = τ.
 The knife’s own direction sweeps too, at a different pace. At the bottom it sweeps at v/ℓ, about 0.32 strokes a second. At either end that sweep is zero. The knife turns back while the cycle sweeps on. The rate the sweep changes is the pickup: swung θ off vertical, the knife picks up at g/ℓ of its lean, back toward the bottom, θ̈ = −(g/ℓ)θ. A stroke a second makes a handy unit of sweep, so call it a sweep too: the cycle sweeps at 3.2 sweep. At either end the knife picks up at 10 of its 0.10 lean: 1.0 sweep a second, back toward the bottom.
 (1-d) Twice the mass doubles the heft, the punch, and the resistance to being sped up. The height, bottom speed, and time for a cycle stay the same. The cycle never asked for the mass.
@@ -100,8 +100,8 @@ Each pair points the same way, so each dot is just the product of the sizes. The
 ## Conservatory
 The cue ball rolls free, then nudges a flap. A second ball, held a little way up the basin, is let go. Its own height pays for its motion. The striped dome's second door is here, unlatched.
 ## 6. The basin
-(6-a) T is the period—how long it takes to sweep through a full turn of the cycle. The ball cycles with sweep ω where ω² = 5g/(7a), and a turn of the cycle takes T with ωT = τ. With a = 5/7 m, 7a/5 is exactly 1 m, so ω² = 10 and T = τ/√10 = 1.99 s. That's the knife's time to the last digit, from a ball on a shorter arc.
-(6-b) The bead cycles with ω² = g/a = 14, so T = τ/√14 = 1.68 s.
+(6-a) T is the period—how long it takes to sweep through a full turn of the cycle. The ball cycles with sweep ω where ω² = 5g/(7a), and a turn of the cycle takes T with ωT = τ. With a = 5/7 m, 7a/5 is exactly 1 m, so ω² = 10 and T = τ/√10, about 2.0 s. That's exactly the knife's time, from a ball on a shorter arc.
+(6-b) The bead cycles with ω² = g/a = 14, so T = τ/√14, about 1.7 s.
 (6-c) The ball has to turn about its own center as well as move along the arc. Its profile about the center is (2/5)R², so for every 5 J of punch along the arc it hooks 2 more. The same heft gives less punch, the ball runs slower and comes round later: per kilogram, the heft splits five to two between zip and the turning's share. About the contact the profile is (7/5)R², and the shorter arc, 5/7 of the knife's, pays that 7/5 back exactly.
 ## Ballroom
 The ball keeps the knife's time, and a beat that matches draws you on. Their cycles keep time; their starting positions are still theirs to choose. The striped dome's third door is here, unlatched.
