@@ -204,7 +204,7 @@ MOBILES = [
   "(2) Picture each part's cycle as a hand swinging round from →, the slow one 4νt_H and the fast one 9νt_H. The statement's cosines are the hands' forward parts and its sines their upward parts. The weights 9/13 and 4/13 are positive and add to one, so q is back at q₀ only when both hands point → again."),
  ("the ↑ parts and the velocities return too.", "the upward parts and the velocities return too."),
  ("So the slow cycle points → and the fast one ←, and q/q₀ = (9/13)(→ · →) + (4/13)(→ · ←) = 9/13 − 4/13 = 5/13. Both cycles lie along the start line, and their ↑ parts are zero there,",
-  f"So the slow hand points → and the fast one ←, and q/q₀ = 9/13 →{DOT}→ + 4/13 →{DOT}← = 9/13 − 4/13 = 5/13. Both hands lie along the start line, and their upward parts are zero there,"),
+  f"So the slow hand points → and the fast one ←. The forward arrow comes out of both terms, and the hands add on their own first: q/q₀ = →{DOT}(9/13 → + 4/13 ←), and 9/13 → + 4/13 ← is 5/13 →, so q/q₀ = 5/13 →{DOT}→ = 5/13. Both hands lie along the start line, and their upward parts are zero there,"),
 ]
 
 STATEMENT_FIX = [("the center moves at speed Lω/2, where", "the center moves at speed L\u200aω/2, where"),
