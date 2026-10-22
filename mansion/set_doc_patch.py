@@ -27,12 +27,25 @@ def pair(o, n):
     while p < min(len(o), len(n)) and o[p] == n[p]: p += 1
     s = 0
     while s < min(len(o), len(n)) - p and o[-1 - s] == n[-1 - s]: s += 1
-    for ctx in (12, 25, 40, 80, 200, 10**6):
+    for ctx in (6, 9, 12, 25, 40, 80, 200, 10**6):
         lo, hi = max(0, p - ctx), min(len(o), len(o) - s + ctx)
-        old = o[lo:hi]
+        old = o[lo:hi]; new = n[lo:len(n) - (len(o) - hi)]
+        if any(unicodedata.combining(ch) for ch in old + new): continue   # a θ̈ in the context: widen or narrow past it
         if full.count(old) == 1:
             return rep(old, n[lo:len(n) - (len(o) - hi)])
-    raise SystemExit("no unique context: " + o[:80])
+    # a combining mark sits inside the changed span: patch the paragraph's separate changes one at a time
+    ops = [op for op in difflib.SequenceMatcher(None, o, n, autojunk=False).get_opcodes() if op[0] != "equal"]
+    groups = []
+    for op in ops:
+        if groups and op[1] - groups[-1][2] < 30: groups[-1] = (groups[-1][0], groups[-1][1], op[2], groups[-1][3], op[4])
+        else: groups.append(op)
+    for _, i1, i2, j1, j2 in groups:
+        for ctx in (6, 9, 12, 20):
+            lo, hi = max(0, i1 - ctx), min(len(o), i2 + ctx)
+            old = o[lo:hi]; new = o[lo:i1] + n[j1:j2] + o[i2:hi]
+            if any(unicodedata.combining(ch) for ch in old + new): continue
+            if full.count(old) == 1: rep(old, new); break
+        else: raise SystemExit("no unique context: " + o[:80])
 for op, i1, i2, j1, j2 in difflib.SequenceMatcher(None, a, b, autojunk=False).get_opcodes():
     if op == "equal": continue
     if op == "replace" and i2 - i1 == j2 - j1:

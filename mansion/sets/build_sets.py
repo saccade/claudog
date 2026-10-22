@@ -285,7 +285,7 @@ def build(k):
             if n == 10: sl = ["Four parts."] + sl
             out += [(t, s) for t, s in number_parts(sl)][1 if n == 10 else 0:]
             out.append(("b", "Solution"))
-            out += [("eq" if ln.startswith("    ") or ln.startswith("(m + η") or ln.startswith("a = F(1") else "p", ln.strip()) for ln in body]
+            out += [("eq" if ln.startswith("    ") or ln.startswith(("(m + η", "(m + I/R²)a")) or ln.startswith("a = F(1") else "p", ln.strip()) for ln in body]
             for key in after.get(h, []):
                 if key in items:
                     if key.startswith("F") and "b" not in shown and "b" in scen:
