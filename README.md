@@ -21,3 +21,12 @@ no credentials. Keep it that way.
 
 Paths inside the scripts still point at the old session folders
 (/home/claude/out, scratchpad). Fix a path when you reuse a script.
+
+## Forgetting gaps (mansion/sets)
+
+How long a reader goes without each term along each solution path, where it's glossed, and where it comes back cold (doc's forgetting theory, R-117). Python 3, no packages beyond the standard library; run from `mansion/sets`:
+
+    python3 gaps.py gaps.json             # measures the four paths (built by build_sets.py from r1_now.txt .. r4_now.txt), prints a summary
+    python3 gaps_page.py gaps.json forgetting_gaps.html   # the page: one staff per term, a path switch and a long-gap dial
+
+The terms and the gloss heuristic are the lists at the top of `gaps.py`; add a term there and rerun. `forgetting_gaps.html` is the current page, self-contained.
