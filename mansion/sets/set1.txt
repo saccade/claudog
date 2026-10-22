@@ -29,7 +29,7 @@ Count strokes each second and call that the sweep. The cycle’s sweep is ω. Th
 Tω = 2π.
 Here the cycle sweeps at √10, about 3.2 strokes a second. Its cycle takes T = 2π/√10 = 1.99 s, about two seconds. There's a 2 riding along with that π.
 The knife’s own direction sweeps too, at a different pace. At the bottom it sweeps at v/ℓ, about 0.32 strokes a second. At either end that sweep is zero. The knife turns back while the cycle sweeps on.
-(4) Twice the mass doubles the stored energy and the resistance to being sped up. The height, bottom speed and time for a cycle stay the same. The cycle never asked for the mass.
+(4) Twice the mass doubles the stored energy and the resistance to being sped up. The height, bottom speed, and time for a cycle stay the same. The cycle never asked for the mass.
 The pen begins the curve again. The lock stays shut.
 ## Kitchen
 The line on the paper goes on behind the wall. Ahead, something breathes in steam. By the range, a toolbox in scorched canvas, locked.
@@ -83,7 +83,7 @@ So 2.4 m of v is 0.72 m²/s the other way: v ↑ = 0.30 m/s ↓. The second arro
 (2) For the release from rest, the center of mass starts at half of 2.4 m and ends at half of 1.60 m, so it drops 0.40 m. With 80 N of weight, that's 32 J.
 (3) The center moves at L ω/2 and the ladder turns about its center at the same sweep. The center's motion carries ½ m (L ω/2)², or m L² ω²/8. The turning about the center carries ½ (m L²/12) ω², or m L² ω²/24. Those are 3 to 1, so the 32 J splits 24 J to the center's motion and 8 J to the turning. Then ½ × 8.0 kg × v² = 24 J gives v² = 6, and the center's moving at √6, about 2.4 m/s, when the top leaves the wall. The ladder is sweeping at 2v/L, about 1.6 strokes a second.
 ## Billiard room
-After the ladder has left the wall, its fall trips the sear on a cocked cue. The spring pays for the shot. The ladder only lets it go. The chalk is on your cuff. On the sideboard, a clockwork diorama under a striped dome, locked. It has a door in this room, the conservatory and the ballroom.
+After the ladder has left the wall, its fall trips the sear on a cocked cue. The spring pays for the shot. The ladder only lets it go. The chalk is on your cuff. On the sideboard, a clockwork diorama under a striped dome, locked. It has a door in this room, the conservatory, and the ballroom.
 ## 5. The cue ball
 A uniform solid ball of mass 1.0 kg and radius R = 0.050 m (moment of inertia 2 m R²/5) is at rest on a table. A cue gives it a short horizontal impulse of 2.0 N s at height H above the table. Neglect friction during the impulse.
 1. Find the speed of the ball's center just afterward.
@@ -143,7 +143,7 @@ Solution
 (2) The squares are in the ratio (2 + √2)/(2 − √2). Multiply top and bottom by 2 + √2 and it's (2 + √2)²/2, so the sweeps are in the ratio (2 + √2)/√2 = 1 + √2. That's irrational, so no whole number of slow cycles ever equals a whole number of fast ones, and a motion with both in it never exactly repeats.
 (3) In the slow mode the lower angle is +√2 times the upper: both masses swing the same way, the lower one farther. In the fast mode it's −√2 times: whenever the upper mass swings one way, the lower one swings the other.
 ## 10. The coils and the capacitor
-1. A 6.0 V source is connected through a 20 Ω resistor to an uncharged 0.10 F capacitor. Find the initial current, the time constant, and the current, charge and stored energy when the capacitor reaches 4.0 V.
+1. A 6.0 V source is connected through a 20 Ω resistor to an uncharged 0.10 F capacitor. Find the initial current, the time constant, and the current, charge, and stored energy when the capacitor reaches 4.0 V.
 2. An ideal LC circuit has L = 0.10 H and C = 1/(Lω_a²) ≈ 1.71 F†, with ω_a from problem 9. Find its angular frequency ω₀ = 1/√(LC), and compare it with ω_a.
 3. A coil fixed to a pendulum rod sits in a magnetic field. With the rod's angle a and the current i both signed, the current exerts a torque τ_em = κi on the rod, and the rod's motion induces an emf ε = −κȧ in the circuit. Show that the mechanical power delivered to the rod, κiȧ, equals the electrical power the circuit gives up, and that the exchange runs the other way when κi and ȧ have opposite signs.
 4. When the slow pendulum mode of problem 9 and the LC circuit are coupled in this way, the combined system has two modes†, at (2/3)ω₀ and (3/2)ω₀. Find them, their product, and the ratio of their angular frequencies.
@@ -179,7 +179,7 @@ Solution
 (4) Call the time a clock reads, carried along with it, its own time. A clock at rest in that frame reads 10/1.25 = 8.0 s of its own time while 10 s pass in S.
 In the chair’s frame the opposed pulses have equal energy, 40 mJ apiece. The receiver captures them and transfers their 80 mJ to its capacitor. The charging path is disconnected. The loop closes, the rods are released without a kick, and the chair’s clock starts.
 ## 13. The chair
-A sealed receiver moves through S at the speed found in problem 12, part 3. In its rest frame H, time is t_H. Inside is the coupled apparatus of problem 10. It starts with its capacitor holding 80 mJ, the rods vertical and at rest, and no current. After charging, the apparatus is lossless; its only energy stores are the capacitor, the inductor, the rods' kinetic energy and their gravitational potential energy, measured from vertical. Ignore recoil of the support. At t = t_H = 0, the receiver's seat is at x = x_H = 0. Write its two mode angular frequencies from problem 10, part 4 as 4ν and 9ν, so ν = ω₀/6. You see that the charge follows q = q₀[(9/13) cos(4νt_H) + (4/13) cos(9νt_H)]†, and the upper rod's angle follows a sum of sin(4νt_H) and sin(9νt_H)†.
+A sealed receiver moves through S at the speed found in problem 12, part 3. In its rest frame H, time is t_H. Inside is the coupled apparatus of problem 10. It starts with its capacitor holding 80 mJ, the rods vertical and at rest, and no current. After charging, the apparatus is lossless; its only energy stores are the capacitor, the inductor, the rods' kinetic energy, and their gravitational potential energy, measured from vertical. Ignore recoil of the support. At t = t_H = 0, the receiver's seat is at x = x_H = 0. Write its two mode angular frequencies from problem 10, part 4 as 4ν and 9ν, so ν = ω₀/6. You see that the charge follows q = q₀[(9/13) cos(4νt_H) + (4/13) cos(9νt_H)]†, and the upper rod's angle follows a sum of sin(4νt_H) and sin(9νt_H)†.
 1. Find q₀ and the capacitor's initial voltage.
 2. Find the first time T > 0 at which the whole initial state returns.
 3. Show that at T/2 the current is zero and the rods pass through vertical. Find q/q₀ there and the share of the 80 mJ held by the capacitor. Where is the rest?
@@ -193,7 +193,7 @@ Solution
 Everything's moving at once now. Count it from where you sit.
 The knife cycles, a turn every 2 seconds. The basin's ball keeps the same time on a shorter arc, and neither of them ever asked for its mass.
 The kitchen's flywheel took a steady 3 W, so its χ fell as its sweep rose. The ladder let go of the wall at 1.60 m with 32 J let go: 24 in the center's motion and 8 in the turning. The cue sent its ball off already rolling at 2.0 m/s. The hoop's bottom stood still while its top ran at 4.0. The ribbon took 3 J from the hand that drew it in.
-In the study, current was the conductance of the voltage, and the resistor burned electrical energy. The machine under your chair has no resistor. Charge flows through its loop; energy passes between the capacitor, the inductor, the moving rods and their lifted weight, then comes home. Nothing burns. Its two coupled motions make four turns and nine before the whole state returns.
+In the study, current was the conductance of the voltage, and the resistor burned electrical energy. The machine under your chair has no resistor. Charge flows through its loop; energy passes between the capacitor, the inductor, the moving rods, and their lifted weight, then comes home. Nothing burns. Its two coupled motions make four turns and nine before the whole state returns.
 In the hall the two pulses overlap at 6 V apiece. Their currents cancel, and the line stays full of energy there. In the lounge two lights meet, 80 mJ and 20 mJ, and make a pair with 80 mJ of rest energy, the same 80 mJ the capacitor starts with.
 The costumes were mended the way the machines were tuned: by hand, and carefully. In every room there was a cabinet, locked. You didn't need to open them. The numbers came out right anyway.
 The return comes at 15.6 s of your own time. Outside it's 19.5 s, and outside says you've crossed 3.5 million kilometers. The chair says x_H = 0. The rods hang straight and still, no current runs, and the capacitor is full again.

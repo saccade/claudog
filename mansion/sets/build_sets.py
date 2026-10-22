@@ -310,6 +310,23 @@ def appendix_items(tabs, k):
             items[key] = [("h3", h)] + [("i", ln) for ln in intro] + number_parts(rest)
     return items, scenery
 
+SERIAL = [("the current, charge and stored energy", "the current, charge, and stored energy"),
+          ("outer radius R, hub radius r and moment", "outer radius R, hub radius r, and moment"),
+          ("mass m, radius R and moment", "mass m, radius R, and moment"),
+          ("baize, taffeta and moss-damp velvet", "baize, taffeta, and moss-damp velvet"),
+          ("r − 1, 2√r and r + 1", "r − 1, 2√r, and r + 1"),
+          ("the rods' kinetic energy and their gravitational", "the rods' kinetic energy, and their gravitational"),
+          ("the moving rods and their lifted weight", "the moving rods, and their lifted weight"),
+          ("in this room, the conservatory and the ballroom", "in this room, the conservatory, and the ballroom"),
+          ("The height, bottom speed and time", "The height, bottom speed, and time"),
+          ("the heft, the punch and the resistance", "the heft, the punch, and the resistance"),
+          ("a place, a velocity and a phase", "a place, a velocity, and a phase"),
+          ("plus heft, punch and hook", "plus heft, punch, and hook"),
+          ("tone, chord, beat and the shape", "tone, chord, beat, and the shape")]
+def _serial(x):
+    for old, new in SERIAL: x = x.replace(old, new)
+    return x
+
 def build(k):
     tabs = read(f"r{k}_now.txt")
     main = tabs["The mansion"]
@@ -439,6 +456,8 @@ def build(k):
             if sol:
                 for rx, rep in SWEEP_UNIT: x = rx.sub(rep, x)
                 out[i] = (t, x)
+    # Oxford comma, always (R-121, doc 16:07): the serial lists the sources wrote without it
+    out = [(t, x if not isinstance(x, str) else _serial(x)) for t, x in out]
     return out
 
 def to_html(items):
