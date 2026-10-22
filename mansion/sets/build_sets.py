@@ -235,11 +235,23 @@ SLOWDOWN = [("(3) The cord pulls forward (→). Take the counter's grip on the s
 # spool part 4, after the arrows have earned their place at spool part 3, with the usual F cos θ said first.
 LATE_DOT = [("(1) An arm ℓ long, leaning θ, hangs ↓\u200a·\u200aℓ below the pivot instead of ℓ. That's the downward part of ℓ: how much of the arm points straight down, the statement's ℓ cos θ. So the lean lifts its end by ℓ − ↓\u200a·\u200aℓ. For this small lean,", '(1) Leaning through θ lifts a point ℓ away by ℓ(1 − cos θ). For this small lean,'), ("That's the downward part of the arm, ↓\u200a·\u200aℓ = 0.40 m of its 0.50 m.", "On the 0.50 m arm that's cos θ = 0.80."), ('only its forward part changes. The forward part of F, →\u200a·\u200aF, is how much of the pull goes forward, and as a force it points forward too: →\u200a·\u200aF\u200a·\u200a→.', "only its forward part changes, to F cos θ in the usual notation. With the arrows already doing the directions, there's a plainer way to say it: the forward part of F is →\u200a·\u200aF, the pull dotted with forward, and as a force it points forward too, →\u200a·\u200aF\u200a·\u200a→.")]
 
+DOC_1320 = [("one swing across; the cycle is the whole of it. Give the whole turn its own sign, τ.", "one swing across—the cycle is the whole of it.\nGive the whole turn its own sign, τ."),
+            ("use that for torque: P = ωχ, with χ = 0.75 N m at the start.", "use that for torque. Power is the sweep of torque (P = ωχ), which starts at χ = 0.75 N m.")]
+DOC_1320_SET1 = [("Of the 15 J that goes in, 3.0 J comes out as work and the other 12 J goes out as heat. Work over heat in is 3/15: 20 percent.",
+                  "Call the heat that comes in the heat-in, and the heat that leaves the heat-out. Of 15 J of heat-in, 3.0 J comes out as work and the other 12 J is heat-out. Work over heat-in is 3/15: 20%.")]
+DOC_1320_LATER = [("Of the 15 J that goes in, 3.0 J comes out as work and the other 12 J goes out as heat. Work over heat in is 3/15: 20 percent.",
+                   "Of 15 J of heat-in, 3.0 J comes out as work and the other 12 J is heat-out. Work over heat-in is 3/15: 20%.")]
+
 STATEMENT_FIX = [("pivoted so it swings freely in a vertical plane. It's released from rest", "pivoted to swing freely in a vertical plane. It gets released from rest"),   # doc's own edit, set 1 doc, 12:1x
                  ("the center moves at speed Lω/2, where", "the center moves at speed L\u200aω/2, where"),
                  ("(moment of inertia 2mR²/5)", "(moment of inertia 2\u200am\u200aR²/5)"),   # doc's hair spaces, 09:17
                  ("A spool of mass 2.0 kg, outer radius R = 0.20 m and hub radius r = 0.12 m has moment of inertia 0.040 kg m²† about its axle. It rests on a level counter.",
-                  "A spool rests on a level counter. It has mass 2.0 kg, outer radius R = 0.20 m, hub radius r = 0.12 m, and moment of inertia 0.040 kg m²† about its axle.")]
+                  "A spool rests on a level counter. It has mass 2.0 kg, outer radius R = 0.20 m, hub radius r = 0.12 m, and moment of inertia 0.040 kg m²† about its axle."),
+                 # doc, set 1 doc, 13:20 (the problem set has the rest of the willing-reader pass)
+                 ("each on a massless 0.50 m arm", "each on a massless 0.5 m arm"),
+                 ("outer radius R = 0.20 m, hub radius r = 0.12 m, and moment of inertia 0.040 kg m²†", "outer radius R = 0.2 m, hub radius r = 0.12 m, and moment of inertia 0.04 kg m²†"),
+                 ("The spool rolls without slipping. Find its acceleration and the direction it rolls.", "If the spool rolls without slipping, how does it accelerate?"),
+                 ("If the cord is instead pulled at an angle θ above horizontal, for what θ does the spool stay at rest?", "If the cord is instead pulled partly upward, at what angle does the spool stay at rest?")]
 # turn-family units are count nouns and take a plural (doc, 08:06); dog park units stay bare (R-041)
 STROKES = re.compile(r"(?<=[0-9√τ]) stroke\b")
 LEGEND = "A value marked † is supplied: chosen so the house works, with the reason somewhere below the mansion."
@@ -338,6 +350,10 @@ def build(k):
             for old, new in alts:
                 if route.count(old) == 1: route = route.replace(old, new); hit = True
             assert hit, alts[0][0][:70]
+    # doc, set 1 doc, 13:20: his flywheel edits; heat-in and heat-out (his question, yes); 20% (R-114)
+    for old, new in (DOC_1320 + DOC_1320_SET1 if k == 1 else DOC_1320_LATER):   # the τ walk and the χ sentence are set 1's own
+        assert route.count(old) == 1, old[:70]
+        route = route.replace(old, new)
     ending = main[iE:]
     items, scen = appendix_items(tabs, k)
     st = statements()
