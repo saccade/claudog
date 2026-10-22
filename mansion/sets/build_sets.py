@@ -133,7 +133,15 @@ SLOW_WALK += [   # set 1 only for now (doc 09:03): the turning is a motion, so i
  ("(3) The center moves at Lω/2 and the ladder", "(3) The center moves at L\u200aω/2 and the ladder"),   # doc's hair spaces, 09:03
 ]
 
+SLOW_WALK += [   # doc 09:17, set 1: no contraction where 's reads as a possessive; hair spaces; doc's period sentence
+ ("The ladder's sweeping at 2v/L", "The ladder is sweeping at 2v/L"),
+ ("After the ladder's left the wall", "After the ladder has left the wall"),
+ ("(2/5)mR² × v/R = (2/5)RJ", "(2/5)m\u200aR² × v/R = (2/5)\u200aR\u200aJ"),
+ ("(1) The ball cycles with sweep ω where", "(1) T is the period—how long it takes to sweep through a full turn of the cycle. The ball cycles with sweep ω where"),
+]
+
 STATEMENT_FIX = [("the center moves at speed Lω/2, where", "the center moves at speed L\u200aω/2, where"),
+                 ("(moment of inertia 2mR²/5)", "(moment of inertia 2\u200am\u200aR²/5)"),   # doc's hair spaces, 09:17
                  ("A spool of mass 2.0 kg, outer radius R = 0.20 m and hub radius r = 0.12 m has moment of inertia 0.040 kg m²† about its axle. It rests on a level counter.",
                   "A spool rests on a level counter. It has mass 2.0 kg, outer radius R = 0.20 m, hub radius r = 0.12 m, and moment of inertia 0.040 kg m²† about its axle.")]
 # turn-family units are count nouns and take a plural (doc, 08:06); dog park units stay bare (R-041)
