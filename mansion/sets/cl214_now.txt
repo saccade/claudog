@@ -1,0 +1,105 @@
+Claude Mansion top-level problems 2610211120 AHj4eMSGmZx7Gpc0wscJPjKufFvCuUOt-vFZvhQGeiw2NVlI7LPcWbuaygM07SEsrpbzdRgIV8PsGKhM2JkRdtAScSipWOOwI8ikYABPbA
+
+######## TAB t.0 Tab 1
+## The Mansion: top-level problems
+Written by Claude (Anthropic), 2026-10-21 11:20. First try at the top-level problem set for the clean-slate Mansion, in standard language, with no running text. The ideas are dr. kraemer's; the problems and words are Claude's; every number is checked in mansion/toplevel_check.py in Claude's repo. Nothing is fixed, the room order included. Portraits shortened by Codex (OpenAI), 2026-10-21; the full character options remain in the Clowns tab.
+A value marked † is supplied: chosen so the house works, with the reason somewhere below the mansion. Use g = 10 m/s² throughout. Thirteen problems, one or two per room, meant for an amusing afternoon for a first-year physics major. The hard middle is left as exposed endpoints: given values and given forms that the lower levels explain.
+## Dining room
+candle wax and starch; a knife hanging over the table; a pen tracing on moving paper; the roast going cold under its cover
+## the clown: a whiteface in damask motley, stopped partway into a curtsy.
+## 1. The knife
+A knife is modeled as a point mass m = 1.0 kg on a massless rod of length ℓ = 1.0 m, pivoted so it swings freely in a vertical plane. It's released from rest at θ₀ = 0.10 rad from the downward vertical. Use g = 10 m/s² and the small-angle approximation 1 − cos θ ≈ θ²/2.
+Find the gravitational potential energy of the knife at release, relative to its lowest point.
+Find its greatest speed.
+For small oscillations the angular frequency is ω₀ = √(g/ℓ), and the period T satisfies ω₀T = 2π. Find T.
+How does T change if the mass is doubled?
+## Kitchen
+chuff and hiss of a small engine; coal smoke and hot oil; cast iron and copper; scorched sugar on the range
+## the clown: scorched canvas and oil-black leather; heavy shoulders wedged into the works; burnt toffee.
+## 2. The engine and the flywheel
+A small steam engine takes in 15 J of heat and does 3.0 J of work in each cycle, returning to its initial state at the end of each cycle. It completes one cycle per second.
+Find the heat rejected per cycle, the efficiency and the average power output.
+The engine's 3.0 W of net power, taken as constant, drives a flywheel of moment of inertia I = 0.50 kg m², initially turning at 4.0 rad/s, for 4.0 s. Find the final angular speed.
+The power delivered by a torque τ to a wheel turning at angular speed ω is P = τω. Find the driving torque at the start and at the end of the 4.0 s.
+## 3. The governor and the spool
+A centrifugal governor has two 1.0 kg balls, each on a massless 0.50 m arm hinged on the axis of a vertical shaft. The shaft turns steadily at 5.0 rad/s†.
+Find the angle each arm makes with the vertical, and how far each ball has risen above its hanging position.
+Below what angular speed would the arms hang straight down?
+A spool of mass 2.0 kg, outer radius R = 0.20 m and hub radius r = 0.12 m has moment of inertia 0.040 kg m²† about its axle. It rests on a level counter. A light cord wound on the hub leaves from the bottom of the hub and is pulled horizontally with a constant 6.0 N. The spool rolls without slipping. Find its acceleration and the direction it rolls.
+If the cord is instead pulled at an angle θ above horizontal, for what θ does the spool stay at rest?
+## Library
+no light from the windows; dust, leather, whiskey; a ladder's worn rungs; the tick of a lamp cooling
+## the clown: worn velvet; one knee crossed over the other; whiskey and old leather.
+## 4. The ladder
+A uniform ladder of mass 8.0 kg and length 3.0 m rests with its foot 1.8 m from a frictionless wall and its top 2.4 m above a frictionless floor. Its moment of inertia about its center is mL²/12. Use g = 10 m/s².
+The foot is pulled away from the wall at 0.40 m/s while the top stays against the wall. Find the speed of the top at that instant.
+The ladder is released from rest in its original position. It stays in contact with the wall until its top is 1.60 m† above the floor. Find the gravitational potential energy released by then.
+While both ends touch, the center moves at speed Lω/2, where ω is the ladder's angular speed. Find how that energy divides between the center's translation and the rotation about the center, and the speed of the center when the top leaves the wall.
+## Billiard room
+click and hush of baize; chalk; slate and mahogany; the green lamp's cone and the dark around it
+## the clown: chalk-dusted worsted; shoulders and hips held square; cigar and talc.
+## 5. The cue ball
+A uniform solid ball of mass 1.0 kg and radius R = 0.050 m (moment of inertia 2mR²/5) is at rest on a table. A cue gives it a short horizontal impulse of 2.0 N s at height H above the table. Neglect friction during the impulse.
+Find the speed of the ball's center just afterward.
+Find H if the ball rolls without slipping immediately.
+Find its angular speed and its translational and rotational kinetic energies.
+## Conservatory
+drip and fog on glass; wet earth; iron ribs and terracotta; condensation running down the panes
+## the clown: moss-damp velvet diamonds; shoulders curled like a fern; lily pollen and wet iron.
+## 6. The basin
+A small uniform solid ball rolls without slipping back and forth across the bottom of a fixed curved basin. Its center moves on a circular arc of radius a = 5/7 m†. For small oscillations its period is T = 2π√(7a/(5g)). Use g = 10 m/s².
+Find T, and compare it with the period of the knife in problem 1.
+A frictionless bead sliding on the same arc has period 2π√(a/g). Find it.
+Explain why the rolling ball takes longer.
+## Ballroom
+an orchestra keeping time; beeswax floor; parquet, mirror, gilt; a chandelier swaying a little on no draft
+## the clown: whispering taffeta; hips turned into an unfinished figure; visible only in the mirror.
+## 7. The hoop
+A hoop of radius 0.25 m rolls without slipping on a level floor at a steady 8.0 rad/s.
+Find the speed of its center.
+Find the speeds of the points of the hoop at the top and at the bottom.
+Find the speed of a point on the hoop level with the center, at the front.
+## 8. The ribbon
+A 0.50 kg puck slides on a frictionless floor, held by a light ribbon that passes down through a small hole. It moves in a circle of radius 0.60 m at 2.0 m/s. The ribbon is slowly drawn down until the puck again moves in uniform circular motion, now at radius 0.30 m.
+Find the puck's new speed and angular speed.
+Find the tension in the ribbon in the initial and final circles.
+Find the work done by the ribbon.
+## Study
+coils humming; ozone and shellac; brass, wound wire, mahogany; a needle trembling at zero
+## the clown: oilcloth and gray-fingered gloves; narrow shoulders bent over the bench; ozone and carbolic.
+## 9. The double pendulum
+Two point masses of 1.0 kg hang in series on massless rods each 1.0 m long, swinging in one vertical plane. Use g = 10 m/s². Its small oscillations are combinations of two normal modes†: a slow mode with ω_a² = 10(2 − √2) s⁻² (ω_a ≈ 2.42 rad/s), in which the lower rod's angle is +√2 times the upper rod's, and a fast mode with ω_b² = 10(2 + √2) s⁻² (ω_b ≈ 5.84 rad/s), in which it's −√2 times. Both angles are measured from the downward vertical, positive toward the same side.
+Find the period of each mode.
+Show that ω_b/ω_a = 1 + √2. Does a motion mixing both modes ever exactly repeat?
+Describe each mode in words: which way does the lower mass move compared with the upper?
+## 10. The coils and the capacitor
+A 6.0 V source is connected through a 20 Ω resistor to an uncharged 0.10 F capacitor. Find the initial current, the time constant, and the current, charge and stored energy when the capacitor reaches 4.0 V.
+An ideal LC circuit has L = 0.10 H and C = 1/(Lω_a²) ≈ 1.71 F†, with ω_a from problem 9. Find its angular frequency ω₀ = 1/√(LC), and compare it with ω_a.
+A coil fixed to a pendulum rod sits in a magnetic field. With the rod's angle a and the current i both signed, the current exerts a torque τ_em = κi on the rod, and the rod's motion induces an emf ε = −κȧ in the circuit. Show that the mechanical power delivered to the rod, κiȧ, equals the electrical power the circuit gives up, and that the exchange runs the other way when κi and ȧ have opposite signs.
+When the slow pendulum mode of problem 9 and the LC circuit are coupled in this way, the combined system has two modes†, at (2/3)ω₀ and (3/2)ω₀. Find them, their product, and the ratio of their angular frequencies.
+## Hall
+a buzz in the wires; damp plaster and gas; a long runner and brass stair rods; a draft along the runner with no door open
+## the clown: a rubberized coat reaching the floor; shoulders near the cornice; wet wool and gas.
+## 11. The line
+A lossless transmission line has inductance 0.50 μH/m and capacitance 0.20 nF/m per unit length. Its wave speed is u = 1/√(L′C′) and its characteristic impedance is Z = √(L′/C′). Take c = 3.0 × 10⁸ m/s.
+Find u and Z.
+Two 6.0 V pulses travel in opposite directions and overlap. In each, the current is the voltage divided by Z, in its own direction of travel. Find the total voltage, the total current, and the energy stored per meter, (C′V² + L′I²)/2, where they overlap.
+Two sinusoidal waves of equal amplitude, at 5.0 MHz and 4.0 MHz†, travel in opposite directions. Their sum has crests that move at u(f₊ − f₋)/(f₊ + f₋) and at u(f₊ + f₋)/(f₊ − f₋)†. Find both speeds and compare the faster with c. Can the faster crests carry a signal?
+## Lounge
+a hush and one clock; leather and cold ash; velvet and glass; a chair turned slightly toward the door
+## the clown: an old joey in quilted silk. They’re looking straight at you. The chair is warm.
+## 12. The two lights
+In a frame S, a light pulse of energy 80 mJ† travels to the right and one of 20 mJ† travels to the left. Take c = 3.0 × 10⁸ m/s and γ = 1/√(1 − v²/c²).
+Find the total energy and the total momentum of the pair in S.
+The pair's invariant mass M satisfies (Mc²)² = E² − (pc)². Find Mc².
+Find the speed v of the frame in which the pair's total momentum is zero, and γ for that speed.
+A clock at rest in that frame: how much proper time Δt₀ does it record while 10 s pass in S?
+## 13. The chair
+A sealed receiver moves through S at the speed found in problem 12(c). In its rest frame H, time is t_H. Inside is the coupled apparatus of problem 10. It starts with its capacitor holding 80 mJ, the rods vertical and at rest, and no current. After charging, the apparatus is lossless; its only energy stores are the capacitor, the inductor, the rods' kinetic energy and their gravitational potential energy, measured from vertical. Ignore recoil of the support. At t = t_H = 0, the receiver's seat is at x = x_H = 0. Write its two mode angular frequencies from problem 10(d) as 4ν and 9ν, so ν = ω₀/6. You see that the charge follows q = q₀[(9/13) cos(4νt_H) + (4/13) cos(9νt_H)]†, and the upper rod's angle follows a sum of sin(4νt_H) and sin(9νt_H)†.
+Find q₀ and the capacitor's initial voltage.
+Find the first time T > 0 at which the whole initial state returns.
+Show that at T/2 the current is zero and the rods pass through vertical. Find q/q₀ there and the share of the 80 mJ held by the capacitor. Where is the rest?
+How long does T last in S, and how far does the receiver travel in S during it? Using x_H = γ(x − vt), find the receiver's position in H throughout.
+## Answers
+## Exposed endpoints and where they're explained
+A first guess at depth; nothing fixed.<<RED:>>

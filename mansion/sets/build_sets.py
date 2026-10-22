@@ -1,0 +1,204 @@
+"""Builds the four end-to-end Mansion solution sets, one per level, as simple HTML.
+
+Claude (Anthropic), 2026-10-21. Sources (flattened copies in this folder): Codex's four release
+reading copies r1..r4 (main route, ending, and the appendix tabs open at that release) and
+CL-214's standard statements. Set k = the mansion route of release k with every mansion solution
+re-said in level-k words (levels.py), the problem statements put back in, and the optional
+problems open at level k interleaved in the problem set's order:
+  1 knife, drawer 4, F1 | 2, 3, drawer 1 | 4, drawer 2, F4 | 5 | 6 | 7, drawer 3 | 8 |
+  9, 10, drawer 5, F2 | 11, drawer 6 | 12, drawer 7, F3 | 13, U1, U2 | ending k.
+Usage: python3 build_sets.py   (writes set1.html .. set4.html and set*.txt beside it)
+"""
+import html, re
+from levels import LEVEL
+
+STAMP = "2610212230"
+WORDS = {
+ 1: "the turn and τ, π for the flip, the cycle (it cycles), the sweep and the stroke, χ for torque, sentences the right way round (current is the conductance of the voltage; power is the voltage of the current, and the sweep of the torque), own time",
+ 2: "level 1's, plus heft, punch and hook; profile; pickup, and crank as a verb; spin; can and coil",
+ 3: "level 2's, plus zip and zing; the still point; flips and mirror pairs; tone, chord, beat and the shape Ω_shape; the trade (a belt, not a battery); the stripe and phase, for ghosts; shift and stretch",
+ 4: "level 3's, plus the one machine; zam and zlam; in step, at random, the tap; TEST and RUN; and doc's zow and zlow, with their verbs zower and zlower",
+}
+NAMES = {1: "the base game", 2: "with the cabinet", 3: "with the cabinet and the funhouse", 4: "the whole house"}
+
+def read(path):
+    lines = open(path, encoding="utf-8").read().split("\n")
+    tabs, cur = {}, None
+    for ln in lines[1:]:
+        if ln.startswith("######## TAB"):
+            cur = ln.split(" ", 3)[3]; tabs[cur] = []; continue
+        if cur is not None and ln.strip():
+            tabs[cur].append(ln)
+    return tabs
+
+def blocks(lines):
+    """Split into [(heading, [lines])], heading None for anything before the first heading."""
+    out, head, body = [], None, []
+    for ln in lines:
+        if ln.startswith("## "):
+            out.append((head, body)); head, body = ln[3:], []
+        else:
+            body.append(ln)
+    out.append((head, body))
+    return out
+
+def statements():
+    tabs = read("cl214_now.txt"); bl = blocks(next(iter(tabs.values())))
+    st = {}
+    for h, body in bl:
+        m = re.match(r"(\d+)\. ", h or "")
+        if not m: continue
+        n = int(m.group(1)); parts = []
+        for ln in body:
+            if ln.startswith("candle") or ln.startswith("the clown"): continue
+            parts.append(ln)
+        st[n] = parts
+    return st
+
+def apply_edits(text, k):
+    for lev in range(1, k + 1):
+        for old, new in LEVEL[lev]:
+            c = text.count(old)
+            assert c == 1, (lev, c, old[:80])
+            text = text.replace(old, new)
+    return text
+
+NAV = [(re.compile(r" \(Appendix 1, drawer \d\.\)"), ""),
+       (re.compile(r"Passage: from Appendix 1, drawers? [\d and]+, and back (the same way|either way)\. "), ""),
+       (re.compile(r"Passage: the back of this drawer opens on Appendix b, F\d\. The passage is open\."), "The back of this drawer opens into the funhouse."),
+       (re.compile(r"Passage: the back of this drawer opens on Appendix b, F\d\. Painted shut until patch 2\."), "Behind this drawer there's a draft; the panel at its back is painted shut."),
+       (re.compile(r" \(Appendix γ\. The trapdoor is open\.\)"), " The trapdoor is open."),
+       (re.compile(r" \(Appendix γ\. Nailed down until patch 3\.\)"), " It's nailed down."),
+       (re.compile(r"Service entrance: any of the three trapdoors\. They all come down here, and any of them takes you back up\."), "Any of the three trapdoors comes down here."),
+       (re.compile(r"Take the coupled machine of funhouse problem 2"), "Take the coupled machine of F2")]
+SKIP = re.compile(r"^(Return to |Return the |Optional problems and worked route|each drawer opens)")
+# words a set reaches before its level brings them in (set 2 only)
+SET2_FIX = [("and a moment later a different point is: the still point keeps changing.", "and a moment later a different point is."),
+            ("It carries nothing: that's the hall's stripe.", "It carries nothing.")]
+TIMES = [("and the center speeds up at R times that:", "and the center speeds up at R of that:"),
+         ("In a mode both rods pick up at −ω² times their angle.", "In a mode both rods pick up at ω² of their angle, back toward vertical."),
+         ("In a mode both rods pick up at −ω² times their angle, and the lower rod leans Ω_shape times as far as the upper.", "In a mode both rods pick up at ω² of their angle, back toward vertical, and the lower rod leans Ω_shape of the upper's lean."),
+         ("One tone is ω₀ times a factor and the other is ω₀ over it: a mirror pair.", "One tone is ω₀ at a factor and the other is ω₀ on it: a mirror pair.")]
+
+def clean(ln, k):
+    for rx, rep in NAV: ln = rx.sub(rep, ln)
+    for old, new in TIMES: ln = ln.replace(old, new)
+    if k == 2:
+        for old, new in SET2_FIX: ln = ln.replace(old, new)
+    return ln
+
+def number_parts(lines):
+    """Statement lines: first is setup; later bare lines become numbered parts unless they already are."""
+    out, n = [], 0
+    for i, ln in enumerate(lines):
+        if i == 0 or ln.startswith("Use g"):
+            out.append(("p", ln)); continue
+        m = re.match(r"(\d+)\.\s+(.*)", ln)
+        n = int(m.group(1)) if m else n + 1
+        out.append(("p", f"{n}. {m.group(2) if m else ln}"))
+    return out
+
+def appendix_items(tabs, k):
+    """Drawer/funhouse/understage problems as {key: [(kind, text)]}, plus scenery lines per appendix."""
+    items, scenery = {}, {}
+    for title, lines in tabs.items():
+        if not title.startswith("Appendix"): continue
+        bl = blocks(lines); app = title.split(" ")[1]
+        pre = []
+        for h, body in bl:
+            if h is None: continue
+            if h.startswith("Appendix"):
+                pre = [ln for ln in body if not SKIP.match(ln)]; scenery[app] = pre; continue
+            if h == "Solution":
+                items[key] += [("b", "Solution")] + [("p", clean(ln, k)) for ln in body if not SKIP.match(ln)]
+                continue
+            if h == "The four voices": continue
+            key = h.split(":")[0]
+            if k == 2: h = h.replace("the second knife's two tones", "the second knife's two motions")
+            body = [clean(ln, k) for ln in body if not SKIP.match(ln)]
+            intro = [ln for ln in body if ln.startswith(("Door", "Doors", "Passage", "A long", "Two facing", "A hall", "A tilted", "Any of", "On the chassis"))]
+            rest = [ln for ln in body if ln not in intro]
+            items[key] = [("h3", h)] + [("i", ln) for ln in intro] + number_parts(rest)
+    return items, scenery
+
+def build(k):
+    tabs = read(f"r{k}_now.txt")
+    main = tabs["The mansion"]
+    i0 = main.index("## The way in"); iE = next(i for i, l in enumerate(main) if l.startswith("## Ending"))
+    route = "\n".join(main[i0:iE])
+    # doc's own corrections in release 4 (21:4x) are what LEVEL[1] applies everywhere; undo them here so one edit list fits all four
+    route = route.replace("needs the squared sweep to be 64.", "needs the square of the sweep to be 64.")
+    route = route.replace("is the the sweep of the torque [ see how this means something and the other one is not English? ]  torque times the sweep:", "is the torque times the sweep:")
+    route = apply_edits(route, k)
+    ending = main[iE:]
+    items, scen = appendix_items(tabs, k)
+    st = statements()
+    out = [("h1", f"The Mansion, solution set {k} of 4: {NAMES[k]}")]
+    out.append(("p", f"<b>Written by Claude (Anthropic), 2026-10-21, for dr. kraemer.</b> Set {k} of four: the whole problem set done through, end to end, the way a reader at level {k} would do it, with every optional problem open at that level placed right after the room it belongs to. Assembled from Codex's (OpenAI) release copies and the checked drafts; the thirteen mansion solutions are re-said in this level's words. The ideas and vocabulary are dr. kraemer's; the words are the models'. Statements stay in standard language."))
+    out.append(("i", f"Words this set uses: {WORDS[k]}."))
+    after = {"1. The knife": ["Drawer 4", "F1"], "3. The governor and the spool": ["Drawer 1"],
+             "4. The ladder": ["Drawer 2", "F4"], "7. The hoop": ["Drawer 3"],
+             "10. The coils and the capacitor": ["Drawer 5", "F2"], "11. The line": ["Drawer 6"],
+             "12. The two lights": ["Drawer 7", "F3"], "13. The chair": ["U1", "U2"]}
+    shown = set()
+    for h, body in blocks(route.split("\n")):
+        if h is None: continue
+        m = re.match(r"(\d+)\. ", h)
+        hold = []
+        if h.startswith("12."):
+            hold = [ln for ln in body if ln.startswith("In the chair’s frame")]
+            body = [ln for ln in body if ln not in hold]
+        body = [clean(ln, k) for ln in body]
+        if m:
+            n = int(m.group(1))
+            out.append(("h3", h))
+            sl = [x.replace("problem 12(c)", "problem 12, part 3").replace("problem 10(d)", "problem 10, part 4") for x in st[n]]
+            if n == 10: sl = ["Four parts."] + sl
+            out += [(t, s) for t, s in number_parts(sl)][1 if n == 10 else 0:]
+            out.append(("b", "Solution"))
+            out += [("eq" if ln.startswith("    ") or ln.startswith("(m + η") or ln.startswith("a = F(1") else "p", ln.strip()) for ln in body]
+            for key in after.get(h, []):
+                if key in items:
+                    if key.startswith("F") and "b" not in shown and "b" in scen:
+                        out.append(("h2", "Into the funhouse")); out += [("i", s) for s in scen["b"]]; shown.add("b")
+                    if key.startswith("Drawer") and "1" not in shown and "1" in scen:
+                        out.append(("h2", "Into the cabinet")); out += [("i", s) for s in scen["1"]]; shown.add("1")
+                    if key.startswith("U") and "γ" not in shown and "γ" in scen:
+                        out.append(("h2", "Under the stage")); out += [("i", s) for s in scen["γ"]]; shown.add("γ")
+                    out += items[key]
+            if hold:
+                out += [("i", s) for s in hold]
+        else:
+            out.append(("h2", h)); out += [("i", ln) for ln in body]
+    # the chair paragraph held from 12 goes before 13: move it
+    for idx, (t, s) in enumerate(out):
+        if t == "h3" and s.startswith("13."):
+            j = next(j for j, (tt, ss) in enumerate(out) if tt == "i" and ss.startswith("In the chair’s frame"))
+            if j > idx:
+                para = out.pop(j); out.insert(idx, para)
+            break
+    eh = ending[0][3:]
+    out.append(("h2", eh))
+    for ln in ending[1:]:
+        if ln.startswith("## "): out.append(("h3", ln[3:]))
+        else: out.append(("p", ln))
+    return out
+
+def to_html(items):
+    h = ['<html><head><meta charset="utf-8"></head><body>']
+    for t, s in items:
+        e = html.escape(s, quote=False).replace("&lt;b&gt;", "<b>").replace("&lt;/b&gt;", "</b>")
+        if t in ("h1", "h2", "h3"): h.append(f"<{t}>{e}</{t}>")
+        elif t == "i": h.append(f"<p><i>{e}</i></p>")
+        elif t == "b": h.append(f"<p><b>{e}</b></p>")
+        elif t == "eq": h.append(f'<p style="margin-left:36pt">{e}</p>')
+        else: h.append(f"<p>{e}</p>")
+    h.append("</body></html>")
+    return "\n".join(h)
+
+if __name__ == "__main__":
+    for k in (1, 2, 3, 4):
+        items = build(k)
+        open(f"set{k}.html", "w").write(to_html(items))
+        open(f"set{k}.txt", "w").write("\n".join(("## " if t.startswith("h") else "") + re.sub("</?b>", "", s) for t, s in items))
+        print(k, len(items), sum(len(s) for _, s in items))

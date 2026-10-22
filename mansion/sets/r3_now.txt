@@ -1,0 +1,276 @@
+Codex Mansion release 3 funhouse 2610211947 AHj4eMRhXOYUSGCVWBMItvBZG_f563eNjQQZtbiHdDv1mVAbR98k1HD6iF0SOLffaU74canE799iVC2C9cmat4WHmQz8VDLlGjhOzOGbgQ
+
+######## TAB t.0 The mansion
+## The Mansion that did not Spin
+Release 3: the funhouse opens
+Worked story by Claude (Anthropic) and Codex (OpenAI), assembled by Codex, 2026-10-21. The ideas and vocabulary are dr. kraemer’s; these are the models’ working and inspiration words, not his manuscript. Contributor colors are retained.
+The independent AP problem set is on a separate sheet. The worked story supplies no missing premises for its main questions.
+Appendixes 1 and b are open. The funhouse trapdoors remain nailed down.
+Begin at The way in. Follow an optional door when you meet it, then return to the room you left. If you have already visited, you can enter the newly opened appendix directly. Come back to the lounge for this release’s ending.
+Appendix 1 — the clown’s cabinet  ·  Appendix b — the funhouse
+## The way in
+The inquiry has a place and an hour. It has no name for the dead.
+A visitor has come to find out how it was done. The door is unlatched. A loose sheet of questions lies beside a small ruled book; the book has been opened to a page somebody has already used.
+In the dining room the roast is going cold under its cover. A strip of paper moves beneath a pen. Above it, a knife swings.
+At the silver centerpiece’s pivot, a whiteface in damask has stopped partway into a curtsy. The flowers on one repaired cuff face inward; every other spray faces out. The curtsy doesn’t deepen.
+A silver canteen stands unlatched on the sideboard. Its lid bears a painted juggler. The little lock has been polished more recently than the lid.
+The visitor watches the knife go across and come back. On the paper, the same curve begins again.
+## Dining room
+## 1. The knife
+The loose sheet models the knife as a 1.0 kg point mass, a meter from its pivot. Let go from 0.10 rad off the downward vertical, it swings under g = 10 m/s². The numbers are on the sheet; the knife has already begun.
+(1) Leaning through θ lifts a point at distance ℓ by ℓ(1 − cos θ). For this small lean, that’s ℓθ²/2: 0.0050 m, or 5 mm. Its 10 N weight lifted through 5 mm stores 0.050 J.
+(2) At the bottom that energy is all in the knife’s motion. Both the stored energy mgh and the kinetic energy ½mv² carry the same mass. It cancels:
+    v² = 2gh.
+A 5 mm fall under 10 m/s² gives v² = 0.10 m²/s². The knife passes the bottom at 0.32 m/s.
+(3) The knife has a cycle: from one end, through the bottom to the other end, and back. It cycles. Call the time for one complete cycle T.
+The usual small-swing rule gives T = 2π√(ℓ/g). A whole turn has arrived wearing two flips. Give the full turn its own sign, τ.
+Call a radian a stroke. A whole turn is τ, about 6.3 stroke. Half a turn is π, the flip. A turn of the knife’s cycle brings it back to the same end; a flip of the cycle takes it to the opposite end.
+Count strokes each second and call that the sweep. The cycle’s sweep is ω. The small-swing rule balances as
+    ℓω² = g,
+     Tω = τ.
+Here the cycle sweeps at √10, about 3.2 stroke a second. Its turn takes T = τ/√10 = 1.99 s, about two seconds.
+The knife’s own direction sweeps too, at a different pace. At the bottom it sweeps at v/ℓ, about 0.32 stroke a second. At either end that sweep is zero. The knife turns back while the cycle sweeps on.
+(4) Twice the mass doubles the stored energy and the resistance to being sped up. The height, bottom speed and time for a turn stay the same. The cycle never asked for the mass.
+The pen begins the curve again. The lid lifts. (Appendix 1, drawer 4.)
+## Kitchen
+The line on the paper goes on behind the wall. Ahead, something breathes in steam. By the range, a toolbox in scorched canvas, unlatched. (Appendix 1, drawer 1.)
+## 2. The engine and the flywheel
+(1) The engine ends each cycle with the same stored energy it began with. Of the 15 J that goes in, 3.0 J comes out as work and the other 12 J goes out as heat. Work over heat in is 3/15: 20 percent. At a cycle a second, that's 3.0 W.
+(2) A flywheel's energy is half its moment of inertia times the square of its sweep. At 4.0 stroke a second, half of 0.50 kg m² times 16 is 4.0 J. Four seconds at a net 3.0 W add 12 J, for 16 J, and 16 J on the same wheel needs the square of the sweep to be 64. The wheel ends up sweeping at 8.0 stroke a second. The engine paid in equal energy every second, not equal sweep, so four times the energy only doubles the sweep.
+(3) Torque usually gets the letter τ, but the turn has it now. Torque gets χ. The power a torque delivers is the torque times the sweep: P = χω. At the start, 3.0 W at 4.0 stroke a second takes χ = 0.75 N m. At the end, at 8.0, it takes 0.38 N m. The same power needs half the torque once the wheel's going twice as fast.
+## 3. The governor and the spool
+(1) The arm's pull does two jobs at once. Its upward part holds up the ball's weight, mg. Its inward part bends the ball's path round the shaft, and that takes m times the square of the sweep times the ball's distance from the shaft, mω²ℓ sin θ. The pull runs along the arm, so the two parts stand in the arm's own slope: tan θ = ℓω² sin θ/g. For an arm off the vertical the sine cancels, and cos θ = g/(ℓω²) = 10/(0.50 × 25) = 0.80. The arm hangs 0.40 m down and reaches 0.30 m out: a 3–4–5 triangle a tenth of a meter to the unit, about 37° from the vertical. Each ball hangs 0.40 m below the hinge instead of 0.50 m, so it's risen 0.10 m.
+(2) The cosine can't go over 1, so g/(ℓω²) has to stay under 1. Below a sweep of √(g/ℓ) = √20, about 4.5 stroke a second, hanging straight down is the only answer.
+(3) Write the statement’s moment of inertia as η. Take forward, the way the cord pulls, as positive, and let f be the counter's grip on the spool, positive forward too. The center of mass speeds up as if both forces acted there: ma = F + f. For the turning, take the way the spool turns when it rolls forward as positive. The cord pulls forward 0.12 m below the axle and the grip acts 0.20 m below it, and a forward push below the axle turns the spool backward. So the torques about the axle are −Fr and −fR, and ηα = −Fr − fR. Rolling ties the two together: α = a/R. With rolling tying the two motions together, the ledgers balance as:
+(m + η/R²)a = F(1 − r/R).
+Here η/R² = 0.040/0.040 = 1.0 kg. The mass and turning count as 3.0 kg at the axle, while 6.0 N × 0.40 gives 2.4 N on the other side. The center speeds up at 0.80 m/s², forward: the spool rolls toward the pull. The grip is f = 1.6 − 6.0 = −4.4 N. It pulls back, and about the axle it turns the spool forward harder than the cord turns it back.
+(4) A spool that stays put has a = 0 and α = 0. The cord still leaves the hub at a tangent, 0.12 m from the axle, so its torque about the axle is still −Fr; only its forward part changes, to F cos θ. Then F cos θ + f = 0 and −Fr − fR = 0. The second gives f = −Fr/R, and the first then says cos θ = r/R = 0.60. That's θ = 53°: the 3–4–5 again, with the 3 along the counter. The spool's inertia never comes into it, because a spool that doesn't turn never asks for it.
+## Library
+Raise the spool's cord past that angle and, still pulled forward, the spool rolls back. It knocks a catch, and the ladder is free to slide. The first question catches the ladder mid-slide; the rest start it again from rest. On the reading table, a velvet kit, unlatched. (Appendix 1, drawer 2.)
+## 4. The ladder
+(1) The ladder doesn't stretch: with the foot x out from the wall and the top y up, x² + y² = L² the whole time. As both change, x times the foot's velocity plus y times the top's velocity is zero. So the top moves at x/y times the foot's speed, the other way: 1.8/2.4 × 0.40 = 0.30 m/s, downward.
+(2) For the release from rest, the center of mass starts at half of 2.4 m and ends at half of 1.60 m, so it drops 0.40 m. With 80 N of weight, that's 32 J.
+(3) The center moves at Lω/2 and the ladder turns about its center at the same sweep. The center's energy is ½m(Lω/2)², or mL²ω²/8. The turning about the center is ½(mL²/12)ω², or mL²ω²/24. Those are 3 to 1, so the 32 J splits 24 J to the center's motion and 8 J to the turning. Then ½ × 8.0 kg × v² = 24 J gives v² = 6, and the center's moving at √6, about 2.4 m/s, when the top leaves the wall. The ladder's sweeping at 2v/L, about 1.6 stroke a second.
+## Billiard room
+After the ladder's left the wall, its fall trips the sear on a cocked cue. The spring pays for the shot. The ladder only lets it go. The chalk is on your cuff. On the sideboard, a clockwork diorama under a striped dome, unlatched. It has a door in this room, the conservatory and the ballroom. (Appendix 1, drawer 3.)
+## 5. The cue ball
+(1) Call the given impulse J. A 2.0 N s impulse on 1.0 kg leaves the center moving at 2.0 m/s.
+(2) The same impulse, struck H above the table, is H − R above the ball's center, so about the center it leaves an angular momentum of J(H − R). Rolling at once means the ball sweeps at v/R, and its angular momentum about the center is (2/5)mR² × v/R = (2/5)RJ. So H − R = 2R/5, and H = 7R/5 = 0.070 m: two fifths of a radius above the center.
+(3) The ball sweeps at 2.0/0.050 = 40 stroke a second. The center's motion carries ½ × 1.0 × 2.0² = 2.0 J. The turning carries ½ × (2/5)(1.0)(0.050)² × 40² = 0.80 J. That's two fifths as much again.
+## Conservatory
+The cue ball rolls free, then nudges a flap. A second ball, held a little way up the basin, is let go. Its own height pays for its motion. The striped dome's second door is here, unlatched.
+## 6. The basin
+(1) The ball cycles with sweep ω where ω² = 5g/(7a), and a turn of the cycle takes T with ωT = τ. With a = 5/7 m, 7a/5 is exactly 1 m, so ω² = 10 and T = τ/√10 = 1.99 s. That's the knife's time to the last digit, from a ball on a shorter arc.
+(2) The bead cycles with ω² = g/a = 14, so T = τ/√14 = 1.68 s.
+(3) The ball has to turn about its own center as well as move along the arc. Some of what the drop lets go goes into that turning, two fifths as much again as the motion along the arc gets, so the same drop gives less speed and the ball comes round later.
+## Ballroom
+The ball keeps the knife's time, and a beat that matches draws you on. Their cycles keep time; their starting positions are still theirs to choose. The striped dome's third door is here, unlatched.
+## 7. The hoop
+(1) Rolling without slipping, the center moves at the radius times the sweep: 0.25 m × 8.0 = 2.0 m/s.
+(2) Every point of the hoop has the center's velocity plus its own motion round the center, 2.0 m/s along the rim. At the top the two point the same way and add, for 4.0 m/s. At the bottom they point opposite ways and cancel. The bottom point is still for that instant.
+(3) At the front, level with the center, the motion round the center points straight down. Forward 2.0 m/s and down 2.0 m/s make 2√2, about 2.8 m/s, 45° below forward.
+## 8. The ribbon
+(1) The ribbon only ever pulls toward the hole, so it has no torque about the hole, and the puck's angular momentum about the hole, mvr, stays the same. Half the radius means twice the speed: 4.0 m/s. The sweep goes from 2.0/0.60, about 3.3 stroke a second, to 4.0/0.30, about 13.
+(2) At the circular endpoints, the tension is what bends the path: mv²/r. That's 0.50 × 4.0/0.60 = 3.3 N at first and 0.50 × 16/0.30 = 27 N at the end. Halving the radius multiplies it by eight.
+(3) The ribbon's work is the change in the puck's energy: ½ × 0.50 × (16 − 4.0) = 3.0 J. While the radius shrinks, the puck’s path spirals inward. A small part of its velocity follows the pull, so the pull can add energy. Something drew the ribbon down. Its other end has been in your hand.
+## Study
+What supplied that work, and where could it wait? The study keeps the answer ready: two rods held still and a loop held open. A separate little meter has READY marked beside 4 V. Its contact must be held while the needle rises. Bent over the bench, the whiteface has gloves gone gray at the fingertips, and around one wrist, well above the cuff, a row of old needle holes. Someone took that sleeve in, and wore it. Beside the jars, a doctor's bag in striped oilcloth, unlatched. (Appendix 1, drawer 5.)
+## 9. The double pendulum
+(1) Each mode cycles with its own sweep, and a turn of it takes T = τ/ω. The slow one takes τ/2.42 = 2.60 s and the fast one τ/5.84 = 1.08 s.
+(2) The squares are in the ratio (2 + √2)/(2 − √2). Multiply top and bottom by 2 + √2 and it's (2 + √2)²/2, so the sweeps are in the ratio (2 + √2)/√2 = 1 + √2. That's irrational, so no whole number of slow cycles ever equals a whole number of fast ones, and a motion with both in it never exactly repeats.
+(3) In the slow mode the lower angle is +√2 times the upper: both masses swing the same way, the lower one farther. In the fast mode it's −√2 times: whenever the upper mass swings one way, the lower one swings the other.
+## 10. The coils and the capacitor
+(1) Say these the right way round. Current is the conductance of the voltage: I = GV, with G = 1/R. Power is the voltage of the current: P = VI. At the start the capacitor holds no charge, so the resistor gets the whole 6.0 V, and the current is the conductance of 6.0 V across 20 Ω: 0.30 A. The time constant is RC = 20 × 0.10 = 2.0 s. When the capacitor's at 4.0 V, the resistor has the other 2.0 V, and the current is 0.10 A. The capacitor holds CV = 0.40 C and ½CV² = 0.80 J, and the resistor's burning the voltage of the current, 2.0 V × 0.10 A = 0.20 W, as heat.
+This is a different capacitor, in a separate LC loop.
+(2) With C = 1/(Lω_a²), LC = 1/ω_a², so ω₀ = 1/√(LC) = ω_a = 2.42 stroke a second. The loop on its own cycles with the slow mode exactly.
+(3) The statement writes the torque τ_em; here it's χ_em = κi. The power the current delivers to the rod is that torque times the rod's sweep, κiȧ. The circuit's emf is ε = −κȧ, and the power the emf delivers to the circuit is the voltage of the current, εi = −κiȧ. The two add to zero: whatever the rod gets, the circuit gives up. When κi and ȧ have opposite signs, κiȧ is negative, and the rod's giving its energy to the circuit instead.
+(4) (2/3) × 2.42 = 1.61 and (3/2) × 2.42 = 3.63 stroke a second. Their product is ω₀², 5.86 per second squared, and the faster is 9/4 of the slower: 4 to 9.
+## Hall
+The rods are left hanging still and the loop open. The hall asks what could announce the release. On the hall stand, a striped hatbox, unlatched. (Appendix 1, drawer 6.)
+## 11. The line
+(1) The line’s values balance as L′C′u² = 1 and C′Z² = L′. Here L′C′ = 10⁻¹⁶ s²/m², so u = 1.0 × 10⁸ m/s, a third of light’s speed. The impedance balance gives Z² = 2500 ohm², so Z = 50 ohm.
+(2) The voltages add: 12 V. Each pulse's current is 6.0/50 = 0.12 A in its own direction of travel, and they travel opposite ways, so the currents cancel: no current at all. The energy per meter is all in the voltage there: ½ × 0.20 × 10⁻⁹ × 144 = 14 nJ/m. That's the same as the two pulses' 7.2 nJ/m each, so nothing's gone missing; it's just all in one place.
+(3) The sum is 9.0 MHz and the difference 1.0 MHz, so the crests move at u/9 = 1.1 × 10⁷ m/s and at 9u = 9.0 × 10⁸ m/s, three times light's speed. The fast crests can't carry a signal. A signal is a change made at a source, and the change travels with its wave at u. The fast crest is only where two waves that were already there happen to line up. It seems to arrive before anyone sends anything because nobody sent it.
+## Lounge
+A signal goes down the line at u, and two lamps answer it, aimed at your chair from either side. Across the cold hearth, the old joey keeps a hand on the clock key and looks straight at you. They've been looking since before you sat down. The silk at the shoulders has faded round two small thumbprints. On the mantel, a traveling clock case in faded red leather, unlatched. (Appendix 1, drawer 7.)
+## 12. The two lights
+(1) The energies add to 100 mJ. A light pulse's momentum is its energy over c, and these point opposite ways, so the total is (80 − 20) mJ/c = 2.0 × 10⁻¹⁰ kg m/s, to the right.
+(2) The given relation balances as E² = (pc)² + (Mc²)². Here 100² = 60² + 80², in mJ², so Mc² = 80 mJ. The three quantities make 60, 80, 100: a 3–4–5 triangle twenty times over.
+(3) The pair's momentum is zero in the frame moving at v = pc²/E = (60/100)c = 0.60c. There γ = 1/√(1 − 0.36) = 1/0.80 = 1.25.
+(4) Call the time a clock reads, carried along with it, its own time. A clock at rest in that frame reads 10/1.25 = 8.0 s of its own time while 10 s pass in S.
+In the chair’s frame the opposed pulses have equal energy, 40 mJ apiece. The receiver captures them and transfers their 80 mJ to its capacitor. The charging path is disconnected. The loop closes, the rods are released without a kick, and the chair’s clock starts.
+## 13. The chair
+(1) The capacitor holds q₀²/(2C), with C = 1/(2 − √2) F, about 1.71 F. Setting that to 0.080 J gives q₀ = √(2 × 1.71 × 0.080) = 0.52 C, and the voltage is q₀/C = 0.31 V.
+(2) The two cosine weights are positive and add to one, so q reaches its initial maximum q₀ only when both cosines return to 1. Then 4νT and 9νT are each a whole number of turns; the sine terms and the velocities return too. Four and nine share no factor, so the first full return is νT = τ: four turns of the slow part and nine of the fast. That's T = τ/ν = 6τ/ω₀ = 15.6 s.
+(3) At T/2 the slow part has made two whole turns and the fast part four turns and a flip. So the slow cosine is back at 1 and the fast one is at −1, and q/q₀ = 9/13 − 4/13 = 5/13. The sines are both zero there, so the current is zero and the upper rod's angle is zero, and with it the lower rod's: the rods pass through vertical. The capacitor holds (5/13)² = 25/169 of 80 mJ, about 12 mJ. With no current the inductor holds nothing, and at vertical the rods hold no height, so the other 68 mJ is in the rods' motion.
+(4) T is the receiver's own time. In S the same stretch lasts γT = 1.25 × 15.6 = 19.5 s, and the receiver covers 0.60c × 19.5 s = 3.5 × 10⁹ m. Its seat is at x = vt the whole while, so x_H = γ(x − vt) = 0 throughout. The chair stays at x_H = 0 for the whole run.
+## Ending 3: the funhouse — Appendix b
+At every hem in the last glass, the same stitch is missing.
+From the other side of the mirror comes a first voice.
+The can cans charge. The coil coils flux.
+The field cranks through a little lean.
+What leaves the can comes back as hook;
+the lifted weights keep some unseen.
+The heft gives way. The sweep grows loud.
+The current turns. The charge comes home.
+Two currents cancel down the hall:
+the cans stay full. The stripe goes on.
+Two lights balance. Neither stops.
+Their movement cancels. Mass remains.
+Four turns low and nine turns high:
+the clock brings every part in line.
+The rods are still.
+The coil is quiet.
+The can is full.
+The chair is where you left it.
+You never left it.
+You stop singing.
+Something keeps your time.
+
+######## TAB t.wpirev2tgcpr Appendix 1 — cabinet
+## Appendix 1: the clown’s cabinet
+Optional problems and worked route by Claude (Anthropic), with Codex (OpenAI) revisions and story additions. Assembled here from the checked below-stairs draft.
+striped canvas in faded red and cream; brass corners; sawdust and lamp oil; painted stars on every lid; no one else in here; each drawer opens from its room's locked box, and you leave the way you came
+## Drawer 1: the kitchen's two 3–4–5s
+Door: the kitchen. A toolbox in scorched canvas, patched with the same cloth turned inside out, its lid painted with a ringmaster's star; inside, a little governor on a stand and a spool on a strip of counter.
+Use g = 10 m/s².
+A ball hangs on a light arm of length ℓ = 0.50 m, hinged on the axis of a vertical shaft that turns steadily at angular speed ω. Show that the arm settles at an angle θ from the vertical with cos θ = g/(ℓω²).
+Find the ω at which the arm's vertical drop and horizontal reach are in the ratio 4 to 3, and how far the ball has risen from hanging straight down.
+A spool of mass m, outer radius R, hub radius r and moment of inertia I about its axle rests on a level counter. A cord wound on the hub leaves from the bottom of the hub and is pulled horizontally with force F. The spool rolls without slipping. Show that its center's acceleration is a = F(1 − r/R)/(m + I/R²).
+For m = 2.0 kg and R = 0.20 m, find the I that makes m + I/R² equal 3.0 kg. What simple shape of spool has that I? With r = 0.12 m and F = 6.0 N, find a and the friction force.
+The cord is instead pulled at an angle θ above the horizontal. Show that the spool can stay at rest only when cos θ = r/R, whatever I is, and find θ.
+## Solution
+(1) The arm's pull on the ball does two jobs at once. Its upward part holds the weight, mg. Its inward part bends the ball's path round the axis, mℓ sin θ ω². The pull runs along the arm, so the two jobs stand in the arm's own slope: tan θ = ℓ sin θ ω²/g. For an arm off the vertical the sine cancels, and cos θ = g/(ℓω²). Hanging straight down is the other answer, and below ω = √(g/ℓ) it's the only one.
+(2) A drop of 4 to a reach of 3 makes the arm the 5, so cos θ = 4/5. Then ω² = g/(ℓ · 4/5) = 10/0.40 = 25, and ω = 5.0 rad/s: the kitchen's shaft. The ball hangs 0.40 m below the hinge instead of 0.50 m, so it’s risen 0.10 m.
+(3) Count about the line where the spool touches the counter. Friction and the counter's push act there, with no leverage about it. The contact's acceleration points straight at the axle, where the center of mass is, so counting about it is fair. The cord's line runs R − r above the counter and cranks the spool F(R − r) about the contact. The spool's profile about its center is I/m; about the contact it gains R², so its inertia there is I + mR². The pickup is F(R − r) on I + mR², and the center speeds up at R times that:
+a = F(1 − r/R)/(m + I/R²).
+The center's ledgers agree. Forward will be positive, and a positive roll would also take the spool this way. With f the counter's grip, positive forward: ma = F + f and Ia/R = −Fr − fR. Put the second into the first and the same a comes out. The grip comes out negative, pulling back, so the cord cranks the spool backward about the axle and the counter's grip cranks it forward, harder.
+(4) The bottom line counts what must speed up at the axle: the mass, plus the turning carried as inertia over R². For 3.0 kg, I/R² = 1.0 kg, so I = 0.040 kg m², half of mR². That's a uniform disk. Then 6.0 N at 1 − 0.60 is 2.4 N on 3.0 kg: a = 0.80 m/s², forward, the way the cord pulls. Friction pulls back 4.4 N.
+(5) A spool that stays put isn't turning, so the pull has no leverage about the contact. The cord leaves the hub at a tangent, r from the axle; tilted up θ, its line passes R cos θ − r from the contact. No leverage means cos θ = r/R. The inertia never enters, because a spool that doesn't turn never asks for it. With r/R = 0.60 = 3/5, θ = 53°: the 3–4–5 again, with the 3 along the counter.
+Return to the kitchen.
+## Drawer 2: the wall lets go
+Door: the library. A gentleman's reading kit in circus colors, its velvet worn to the nap: a folding rule, spectacles, a little ladder leaning on a painted wall.
+A uniform ladder of mass m and length L leans on a frictionless wall from a frictionless floor, its top at height h₀. It's released from rest. Use g = 10 m/s².
+1. While both ends touch, show that the ladder's center stays L/2 from the corner where the wall meets the floor.
+2. While both ends touch, show that the ladder's kinetic energy is (1/6)mL²ω², where ω is its angular speed.
+3. The wall can push but can't pull. Show that the top leaves the wall when its height is 2h₀/3.
+4. For L = 3.0 m and h₀ = 2.4 m, find that height and the center's speed then.
+## Solution
+(1) Call the ladder's angle with the floor φ. The foot is L cos φ out and the top L sin φ up, so the center sits at half of each. That's a circle of radius L/2 about the corner.
+(2) The center runs round its circle at (L/2)ω and punches ½m(L/2)²ω². The ladder's own turning hooks ½m(L²/12)ω² on top. The profiles add, L²/4 + L²/12 = L²/3, so the whole is ½m(L²/3)ω² = (1/6)mL²ω².
+(3) With the top at height y, the center has dropped (h₀ − y)/2, so the heft let go is mg(h₀ − y)/2, and ω² = 3g(h₀ − y)/L². The wall's push is the only sideways force, so it's what speeds the center up sideways. The center's sideways speed is (L/2)ω sin φ = ωy/2, and its square, 3gy²(h₀ − y)/(4L²), grows while y²(h₀ − y) grows. That peaks where 2h₀y = 3y², at y = 2h₀/3. Past there the center would have to slow down sideways, and that takes a pull. The wall can't pull, so it lets go.
+(4) Two thirds of 2.4 m is 1.6 m. Then ω² = 3 × 10 × 0.8/9 = 8/3, and the center runs at 1.5√(8/3) = √6 = 2.4 m/s.
+Passage: the back of this drawer opens on Appendix b, F4. The passage is open.
+Return to the library.
+## Drawer 3: turning about the contact
+Doors: the conservatory, the billiard room, the ballroom. A clockwork diorama under a striped dome, its base trimmed in baize, taffeta and moss-damp velvet, a strip for each door: a glass marble in a tin basin, a tiny cue, a wire hoop.
+A uniform solid ball has mass m, radius R and moment of inertia (2/5)mR² about its center. Use g = 10 m/s².
+1. It rolls without slipping, its center at speed v. Show that its kinetic energy is (7/10)mv², 7/5 of a sliding bead's at the same speed.
+2. It rolls back and forth in a basin, its center on an arc of radius a. Show that small oscillations have T = 2π√(7a/(5g)), and find the a that matches a simple pendulum 1.0 m long.
+3. The ball starts at rest on a horizontal table, and a cue gives it a short horizontal impulse at height H above the table. Neglect the table's horizontal impulse during the strike. Show that it rolls at once only if H = 7R/5.
+4. A hoop rolls with its center at speed v. Find the speeds of its top and bottom points. Which point of the hoop is still?
+## Solution
+(1) While it rolls, the bottom of the ball is still for that instant, so the ball turns about the contact. Its profile about its center is (2/5)R²; about the contact it gains R², the center's square, for (7/5)R². Sweeping at v/R, it hooks ½m(7/5)R²(v/R)² = (7/10)mv²: 7/5 of the ½mv² a sliding bead would punch.
+(2) Swung θ from the bottom, the center sits a(1 − cos θ) up, about aθ²/2, so the heft is mgaθ²/2. The center runs at aθ̇, so the energy in motion is (7/10)ma²θ̇². A heft that goes as the swing squared, traded against motion that goes as the sweep squared, cycles where (7/5)aω² = g, and a turn of the cycle takes T with Tω = τ: that's the statement's T. The knife's 1.0 m needs 7a/5 = 1.0 m, so a = 5/7 m. The ball keeps the knife's time because a shorter arc pays for the extra two fifths of turning.
+(3) Count about the line on the table under the ball. During the blow nothing else has leverage there, so the blow J at height H leaves JH of spin about it. Rolling at once means the center runs at v = J/m while the ball sweeps at v/R, and that's (7/5)mR²(v/R) = (7/5)RJ of spin about the contact. So H = 7R/5: the cue goes in two fifths of a radius above the center.
+(4) The center runs at v and the rim sweeps round it at v. At the top the two add, for 2v; at the bottom they cancel. The bottom point is still for that instant, and a moment later a different point is: the still point keeps changing.
+Return to the billiard room, the conservatory, or the ballroom.
+## Drawer 4: the second knife's two tones
+Door: the dining room. A silver canteen with a juggler painted on the lid, lined in damask; inside, under glass, one knife hanging from another.
+Two point masses m hang in series on light rods each ℓ long, swinging in one vertical plane. For small angles θ₁ (upper rod) and θ₂ (lower rod) from the downward vertical, positive toward the same side, 2θ̈₁ + θ̈₂ = −2(g/ℓ)θ₁ and θ̈₁ + θ̈₂ = −(g/ℓ)θ₂.
+1. In a normal mode both angles go as cos ωt, with θ₂ = +√2 θ₁ or θ₂ = −√2 θ₁. Find ω² for each.
+2. With ℓ = 1.0 m and g = 10 m/s², find both ω and their ratio. Does a motion with both modes ever exactly repeat?
+## Solution
+(1) In a mode both rods pick up at −ω² times their angle. The first balance gives (2 ± √2)ω²θ₁ = 2(g/ℓ)θ₁, so ω² = 2g/((2 ± √2)ℓ) = (2 ∓ √2)g/ℓ. The second balance gives the same two. The shape where the lower rod leans the same way, +√2, is the slow one.
+(2) ω² = 10(2 − √2) = 5.86 and 10(2 + √2) = 34.1 per second squared, so the slow mode cycles at 2.42 stroke a second and the fast one at 5.84. Their ratio is (2 + √2)/√2 = 1 + √2. That's irrational, so a motion with both modes never quite repeats.
+Passage: the back of this drawer opens on Appendix b, F1. The passage is open.
+Return to the dining room.
+## Drawer 5: a can to match the knife
+Door: the study. A doctor's bag in striped oilcloth: a capacitor the size of a teacup, a coil, a card of figures, the first of them 22/7.
+An LC circuit has L = 0.10 H.
+1. Find the C that makes ω₀ = 1/√(LC) equal the slow mode of drawer 4, ω₀² = 10(2 − √2) s⁻².
+2. With that C, how long does one turn of the circuit take, and one turn of the slow mode?
+## Solution
+(1) C = 1/(Lω₀²), and ω₀² = 10(2 − √2) = 5.86 s⁻², so C = 1/(2 − √2) F, which is 1.71 F to three figures. The tuning needs the exact value; 1.71 is only how it's written down.
+The capacitor cans charge; call it a can. The inductor coils its own linked flux. The can’s voltage rises with charge, the coil’s current with flux. A little added charge stores the voltage of that charge; a little added flux stores the current of that flux. For these linear stores, the energy is ½qV in the can and ½iΦ in the coil, with V = q/C and Φ = Li.
+(2) Both take 2.60 s when free. Same sweep, same turn: the loop keeps the slow motion’s time. Coupling them changes the two motions; the passage shows how.
+Passage: the back of this drawer opens on Appendix b, F2. The passage is open.
+Return to the study.
+## Drawer 6: two crests from two waves
+Door: the hall. A hatbox in red and white stripes, rubberized against the wet; inside, a long coil of wire and two tuning forks.
+Two waves of equal amplitude A run in opposite directions on a line with wave speed u: A cos(k₁x − ω₁t) to the right and A cos(k₂x + ω₂t) to the left, with k = ω/u for each.
+1. Show that their sum is 2A cos(½[(k₁ − k₂)x − (ω₁ + ω₂)t]) cos(½[(k₁ + k₂)x − (ω₁ − ω₂)t]).
+2. Find the speed of each factor's crests, in terms of u and the two frequencies.
+3. For 5.0 MHz and 4.0 MHz and u = 1.0 × 10⁸ m/s, find both speeds.
+## Solution
+(1) cos P + cos Q = 2 cos(½(P − Q)) cos(½(P + Q)), with P = k₁x − ω₁t and Q = k₂x + ω₂t.
+(2) A crest of either factor keeps what's inside it fixed, so it moves at the time coefficient over the place coefficient: (ω₁ + ω₂)/(k₁ − k₂) = u(f₁ + f₂)/(f₁ − f₂) for the first, and u(f₁ − f₂)/(f₁ + f₂) for the second.
+(3) The sum is 9 MHz and the difference 1 MHz, so the crests run at 9u = 9.0 × 10⁸ m/s, three times light's speed, and u/9 = 1.1 × 10⁷ m/s. The fast crest is only where waves that were already there happen to line up. It carries nothing: that's the hall's stripe.
+Passage: the back of this drawer opens on Appendix b, F3. The passage is open.
+Return to the hall.
+## Drawer 7: two lights made equal
+Door: the lounge. A traveling clock case in faded red leather, lined in quilted silk; inside, two little lamps, one brighter than the other.
+Seen from a frame moving at βc in a light pulse's own direction, the pulse's energy is multiplied by √((1 − β)/(1 + β)); seen from one moving against it, by √((1 + β)/(1 − β)). A pulse of energy E₁ runs right and one of E₂ runs left, with E₁ > E₂.
+1. Find β for the frame moving right in which the two energies are equal, in terms of r = E₁/E₂.
+2. Show that γ = (r + 1)/(2√r) there.
+3. For r = 4, find β and γ, and show that r − 1, 2√r and r + 1 make a right triangle.
+## Solution
+(1) Write s = √((1 − β)/(1 + β)). Equal means E₁s = E₂/s, so s² = 1/r, and β = (r − 1)/(r + 1).
+(2) 1 − β² = 4r/(r + 1)², so γ = (r + 1)/(2√r).
+(3) r = 4 gives β = 3/5 and γ = 5/4. (r − 1)² + (2√r)² = r² + 2r + 1 = (r + 1)², so a ratio that's a perfect square makes the triangle whole: 4 makes 3–4–5. The 80 mJ pulse is halved and the 20 mJ pulse doubled, 40 mJ each.
+Passage: the back of this drawer opens on Appendix b, F3. The passage is open.
+Return to the lounge.
+
+######## TAB t.gzw6jtei9l90 Appendix b — funhouse
+## Appendix b: the funhouse
+Optional problems and worked route by Claude (Anthropic), with Codex (OpenAI) revisions and story additions. Assembled here from the checked below-stairs draft.
+mirrors on every wall, some flat and some not; a floor that tilts one way and then the other; everything you know comes back at you flipped; no one else in here
+## F1: the knives, flipped
+Passage: from Appendix 1, drawer 4, and back the same way. A long mirror in which the second knife hangs upside down.
+The double pendulum of drawer 4 has 2θ̈₁ + θ̈₂ = −2(g/ℓ)θ₁ and θ̈₁ + θ̈₂ = −(g/ℓ)θ₂, with ℓ = 1.0 m and g = 10 m/s².
+1. In a normal mode θ₂ = rθ₁ and both angles go as cos ωt. Use both equations to show that r² = 2.
+2. Show that the two modes' angular frequencies satisfy ω_b/ω_a = 1 + √2 and ω_a/ω_b = √2 − 1, and that ω_a²ω_b² = 2(g/ℓ)².
+3. At what angular rate does the relative phase of the two modes advance? For equal contributions to θ₁ that begin in phase, how long is the interval between successive reinforcements? Does that interval return the whole state?
+## Solution
+(1) In a mode both rods pick up at −ω² times their angle, and the lower rod leans Ω_shape times as far as the upper. The first balance gives (2 + Ω_shape)ω² = 2g/ℓ and the second (1 + Ω_shape)ω² = Ω_shape g/ℓ. Divide one by the other: (2 + Ω_shape)Ω_shape = 2(1 + Ω_shape), so Ω_shape² = 2. The shape is +√2 or −√2: the same lean, or the lower rod flipped.
+(2) Each shape is a tone, and each tone's cycle sweeps at its own rate: ω_a² = (2 − √2)g/ℓ and ω_b² = (2 + √2)g/ℓ, whose product is 2(g/ℓ)². The fast over the slow is √((2 + √2)/(2 − √2)) = 1 + √2, and the slow over the fast is its reflection, √2 − 1. The two multiply to one. Flip the lower rod and you've flipped the tone.
+(3) Both tones at once make a chord. Their relative phase sweeps at the gap, ω_b − ω_a = 3.42 stroke a second. Equal contributions to the upper lean reinforce once per turn of that difference: 1.84 s between reinforcements. The signed cosine envelope takes twice that time to return; its sign flips between neighboring reinforcements. Neither interval returns the whole chord. The two tones’ ratio is irrational.
+Trapdoor, the swing side: in the floor under the mirror, and through it the same two rods, full size, on a black iron chassis with a chipped ceramic insulator. They're humming. (Appendix γ. Nailed down until patch 3.)
+Return to Appendix 1, drawer 4.
+## F2: the trade, both ways
+Passage: from Appendix 1, drawer 5, and back the same way. Two facing mirrors; the can in one is the coil in the other.
+The slow mode of the double pendulum acts like one swing a with effective inertia η and stiffness D, so its free angular frequency is ω₀ = √(D/η). A coil in a magnetic field couples it to an LC circuit with κ > 0 and the same ω₀ = 1/√(LC): ηä = −Da + κi and Lq̈ = −q/C − κȧ, with i = q̇.
+1. Try a = A cos ωt and q = Q sin ωt. Show that ηL(ω₀² − ω²)² = κ²ω².
+2. Show that the two positive solutions multiply to ω₀² and that their gap Δω = ω_high − ω_low satisfies Δω√(ηL) = κ.
+3. What κ puts the two modes at (2/3)ω₀ and (3/2)ω₀? With ω₀ = 2.42 rad/s, find both.
+## Solution
+(1) Put the trial motions in. The swing's balance gives (D − ηω²)A = κωQ and the loop's gives (1/C − Lω²)Q = κωA. Multiply them; D = ηω₀² and 1/C = Lω₀² turn the left side into ηL(ω₀² − ω²)²AQ, so ηL(ω₀² − ω²)² = κ²ω². The charge runs a quarter turn of the cycle from the lean.
+(2) Call the gap Δω. Taking the square root gives ω₀² − ω² = ±[κ/√(ηL)]ω. Subtract the low and high balances: (ω_high − ω_low)(ω_high + ω_low) = [κ/√(ηL)](ω_high + ω_low). The positive sum cancels, leaving Δω√(ηL) = κ. The low balance is then ω_low² + (ω_high − ω_low)ω_low = ω₀², so ω_low ω_high = ω₀². One tone is ω₀ times a factor and the other is ω₀ over it: a mirror pair.
+(3) 3/2 − 2/3 = 5/6, so Δω = (5/6)ω₀ and κ = (5/6)ω₀√(ηL). The tones cycle at 1.61 and 3.63 stroke a second. The power the field puts into the swing, κiȧ, is exactly what the loop gives up: a belt, not a battery. Energy goes round and comes back; nothing's made.
+Trapdoor, the circuit side: windings and a capacitor the size of a hatbox, wired into the same chassis, with the chipped insulator again. (Appendix γ. Nailed down until patch 3.)
+Return to Appendix 1, drawer 5.
+## F3: two more mirrors
+Passage: from Appendix 1, drawers 6 and 7, and back either way. A hall of mirrors that never ends, and a lamp in it that can't decide how bright it is.
+1. For drawer 6’s two distinct positive frequencies, with f₁ > f₂, show that the slow and fast crest speeds multiply to u².
+2. On a lossless line a wave pattern stores (C′V² + L′I²)/2 per meter and carries power VI. Show that |VI| is never more than u times the stored energy per meter. Can the fast crest carry a signal?
+3. For drawer 7's lights, show that the two energies multiply to the same number in every frame moving along the line, and check it with 80 mJ and 20 mJ. For a source receding directly along the line of sight at constant velocity, flashes arrive s = 2 times farther apart than their emission interval on the source’s clock. Show that (s + 1/s)/2 is drawer 7’s γ.
+## Solution
+(1) u(f₁ − f₂)/(f₁ + f₂) times u(f₁ + f₂)/(f₁ − f₂) is u². The crests are each other's reflection about u: one nine times under it, one nine times over.
+(2) A sum of two squares is never less than twice their product, so (C′V² + L′I²)/2 ≥ √(C′L′)|VI| = |VI|/u. The net power on the stored energy per meter stays between −u and +u. To send something new, change a wave at its source. The change travels with that wave at u; the fast crest only marks where the two waves already there line up. It has a place, a velocity and a phase, and carries no independent store. Phase is for ghosts. The stripe goes through.
+(3) From a frame moving along the line, one pulse's energy is multiplied by s and the other's divided by s, so their product stays put: 80 × 20 = 40 × 40. In the frame where the energies match, their movements cancel. Each pulse then has the square root of that product, 40 mJ. Together they leave 80 mJ of rest energy. The shift is s = 2, and the stretch is the mean of the shift and its flip, (2 + 1/2)/2 = 5/4: drawer 7's γ.
+Trapdoor, the timing side: a clock face on the same chassis, one hand, marked in turns, with the chipped insulator under it. (Appendix γ. Nailed down until patch 3.)
+Return to Appendix 1, drawer 6 or drawer 7.
+## F4: the corner, turned over
+Passage: from Appendix 1, drawer 2, and back the same way. A tilted floor, and a mirror at the end that shows the room upside down.
+While the ladder of drawer 2 is moving and both ends still touch their supports, its foot is at (L cos φ, 0) and its top at (0, L sin φ), with 0 < φ < π/2. The corner where the wall meets the floor is the origin.
+1. The foot moves along the floor and the top along the wall. Show that the point that's still for the instant, where the perpendiculars to the two ends' motions meet, is (L cos φ, L sin φ).
+2. Show that this point is the corner turned a half turn about the ladder's center, so it's always L/2 from the center.
+3. About that point all the motion is turning. Show that the kinetic energy is ½m(L²/3)ω², and find the energy per kilogram when the top leaves the wall, in drawer 2's numbers.
+## Solution
+(1) The foot only moves sideways, so the still point is straight above it. The top only moves up and down, so the still point is level with it: (L cos φ, L sin φ).
+(2) The center, at (L cos φ, L sin φ)/2, sits halfway between the corner and the still point. Turn the corner over through the center, a half turn, π, the flip, and it lands on the still point. So the still point is L/2 from the center, like the corner.
+(3) The ladder's profile about its center is L²/12; about the still point it gains (L/2)², for L²/3. All the motion is turning, so the energy per kilogram is that profile across the zing, ½ω²: (L²/3)(ω²/2). With L = 3.0 m and ω² = 8/3 per second squared as the wall lets go, that's 3 × 4/3 = 4 J/kg, and 8.0 kg of ladder makes 32 J: the heft let go. The center's own zip, ½((L/2)ω)², is 3 J/kg of it; turning about the center makes up the other 1.
+In the far glass, the nine costumes hang empty and inside out. The long coat’s lining stops at an ordinary person’s height. Through the worn knees of the velvet diamonds, the pattern continues in another color.
+Each costume is missing one stitch. It’s the same stitch.
+They were all cut for one wearer.
+Return to Appendix 1, drawer 2, or go to the lounge for the return.
