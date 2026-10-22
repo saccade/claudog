@@ -1,6 +1,6 @@
 # The Mansion: how to pick it up
 
-Written by Claude (Anthropic), 2026-10-22 14:45. It merges Codex's (OpenAI) handoff and Claude's from this afternoon into one entry point. It summarizes the live project; it isn't dr. kraemer's manuscript. The ideas and rulings are doc's; the words are the models'. Ledger rule numbers are in parentheses.
+Written by Claude (Anthropic), 2026-10-22 14:45; revised 15:10 after Codex's review. It merges Codex's (OpenAI) handoff and Claude's from this afternoon into one entry point. It summarizes the live project; it isn't dr. kraemer's manuscript. The ideas and rulings are doc's; the words are the models'. Ledger rule numbers are in parentheses.
 
 ## The project in one room
 
@@ -28,21 +28,21 @@ The working method is **dog math** ([Dog Math](https://docs.google.com/document/
     - [base route](https://docs.google.com/document/d/1XHbXxr-W9JqGfKzdJ6DlQCNAQRLsUKD735d-3TgaSas/edit)
     - [working map](https://docs.google.com/document/d/1jyWsS3Tw9hbgaSm_ha2UAsFut9FPJUKz7UsY8TxmATA/edit)
     - [old top-level AP sheet](https://docs.google.com/document/d/1sQUCAgRc1014ynzvkT3KcWXikbPkicDjPtpxBMDto1c/edit)
-- **Tools:** [claudog](https://github.com/saccade/claudog) is Claude's: the builder, BALANCE.md and paths_plan.py (the plan for what each path says in full and what it quotes), gaps.py (where terms go quiet), and the set_doc scripts that update a path doc without overwriting doc's edits. [codogx](https://github.com/saccade/codogx) is Codex's. Keep them independent enough to catch each other's mistakes; share results, not one engine.
+- **Tools:** [claudog](https://github.com/saccade/claudog) is Claude's: the builder, BALANCE.md and paths_plan.py (the plan for what each path says in full and what it quotes), gaps.py (where terms go quiet), and the set_doc scripts that update a path doc without overwriting doc's edits. [codogx](https://github.com/saccade/codogx) is Codex's; its Mansion case is a pending independent check in [PR #2](https://github.com/saccade/codogx/pull/2), not yet a two-author comparison. Keep them independent enough to catch each other's mistakes; share results, not one engine.
 
 ## Notation: inconsistent on purpose
 
 A model keeps notation consistent the way it digests food, without deciding to. Here that reflex is wrong. Be inconsistent in a planned, targeted way: not sloppy, never ambiguous, with every symbol's meaning tracked and every transition legible.
 
 - **Motivate the change; don't start with it** (R-107 to R-110). Begin with what the reader recognizes: cos θ, signed terms, 2π. Let the nuisance show, then offer the new form where it solves that nuisance at once, explained at first use. It's a haunted hotel: a little odd at first, building at the right moments, never quite going back down. Notation that won't pay rent almost at once waits. Pairs arrive together: ↓ × → = ↺ and ↑ × → = ↻ pay rent as one check.
-- **The turn.** The 2π hangs around until it's unwelcome. Path 1 notices the extra 2 at the knife and the flywheel, then gives the whole turn τ where that pays at once; later paths make the walk faster. τ is the turn and χ is torque (R-089).
+- **The turn.** The 2π hangs around until it's unwelcome. Path 1 notices the extra 2 at the knife and the flywheel, then gives the whole turn τ where that pays at once; later paths make the walk faster. One full cycle is a turn of the cycle, and the pendulum cycles; the body's changing sweep and the cycle's steady sweep are different motions, so say which when both matter. τ is the turn and χ is torque (R-089).
 - **Letters move only when two quantities fight over one** (R-074). I stays inertia at the spool; current and inertia get resolved letters only in the coupled machine. Ω is the ghost family's fallback, and all the ghosts change together (R-062).
 - **Arrows arrive when the signs tangle,** at the spool (problem 3), not as a blizzard at the front door (R-092, R-096, R-099). → is forward, the moving body's forward, not page-right; ← is back. ↺ is forward around, the default sense, so a body rolling forward turns back around (↻). There are no negative forces, just directions: 4.4 N ←. Verify each cross. If the arrows tangle, read the book.
 - **Dots and crosses do physics** (R-100 to R-104). The dot takes the along part, and arrives at spool part 4, after F cos θ has been said. ↑ · v is the upward part of v, with the arrow first when the dot stands alone; v / ↑ is only for a real fraction. A part that's a force in its own right is → · F · →, because the dot scales. Products are mobiles: arrows hug their operator on hair spaces, and sizes hang outside on full spaces. A sum written inside parentheses with its meaning outside is an emphatic register, kept rare. The plain way isn't a straitjacket either: it's no shortcut if you have to walk through the dahlias.
 
 ## Making the language last
 
-- **A name comes in when the sentence asks for it,** then gets its full grammatical life: the can cans charge; the coil coils flux. Name quantities that break the mechanism apart, not every intermediate expression. A definition has to survive its dictionary meaning and translate back into checked algebra.
+- **A name comes in when the sentence asks for it,** then gets its full grammatical life: the can cans charge; the coil coils flux. Name quantities that break the mechanism apart, not every intermediate expression. A definition has to survive its dictionary meaning and translate back into checked algebra. Say what acts, what moves and what gets stored before compressing into a rate equation, and put the d's on different sides where that shows the exchange (R-063, R-064).
 - **Time the glosses to forgetting, not to a beat** (R-117). A new term gets a few uses in a row so it settles. After a long gap it gets a nod, not a stop. A gloss on a fixed schedule makes readers hunker down instead of reaching for meaning. The gaps tool measures characters, not memory: it's a rough measure of doc's heuristic, a picture to inspect χ, τ, the dot and phase after long silences, and nothing to chant by.
 - **Highlights, not reruns.** Path 1 pays for full first explanations, said plainly like something true and obvious; it pays forward. Later paths give reprises and shorter and shorter highlights, take their time over the new arrivals, and can carry an old name in parentheses. Nobody sits through the same cutscene four times. A sentence or two to admire the view is fine where something just introduced does a nice job in the scene (R-111).
 - **Small, constant things.**
