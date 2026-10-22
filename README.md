@@ -30,3 +30,15 @@ How long a reader goes without each term along each solution path, where it's gl
     python3 gaps_page.py gaps.json forgetting_gaps.html   # the page: one staff per term, a path switch and a long-gap dial
 
 The terms and the gloss heuristic are the lists at the top of `gaps.py`; add a term there and rerun. `forgetting_gaps.html` is the current page, self-contained.
+
+
+## Do the arrows hold up? (checks/arrows.py, the big red button)
+
+Push this before doubting straight→ mechanics' arrows (doc, 2026-10-22). The arrows are names for unit vectors:
+→ is the moving body's forward, ← = −→, ↑ up, ↓ = −↑, ↺ = ↓ × → (forward around), ↻ = −↺; the dot and the cross are
+the ordinary ones. `python3 checks/arrows.py` checks every arrow identity the house uses, the mobile rules, and the
+path 1 problems that lean on the arrows (spool rolling and at rest, ladder, cue ball, hoop), solved as vector equations
+and again with textbook signed scalars, with forward drawn page-right and page-left; plus controls (wrong rules that
+must come out false). Exits 1 on any failure. The same checks run in the browser behind one red button:
+[the button page](https://claude.ai/artifact/G1ahUWwMdbR9jsASsRUnvH) (doc's claude.ai account; source `checks/arrows_button.html`).
+If it ever goes red, show doc and Codex exactly that line.

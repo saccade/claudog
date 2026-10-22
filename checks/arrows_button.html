@@ -1,0 +1,285 @@
+<title>The Big Red Button</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=JetBrains+Mono:wght@400;600&family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&display=swap">
+<style>
+/* Layout: one bench column — what the arrows are, the button, then the readout grouped by what it checks */
+:root {
+  --bg: #eef1f4; --panel: #ffffff; --ink: #1b2430; --muted: #5a6676; --rule: #d3dae2;
+  --red: #c8231c; --red-deep: #8f130e; --pass: #1f7a46; --fail: #c8231c; --pending: #a3adb9;
+  --display: "Bricolage Grotesque", "Arial Narrow", system-ui, sans-serif;
+  --body: "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #12171d; --panel: #1a2129; --ink: #e5eaf0; --muted: #98a4b3; --rule: #2c3540;
+  --red: #e0372f; --red-deep: #8f130e; --pass: #4cc283; --fail: #ff6b63; --pending: #5d6876; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #12171d; --panel: #1a2129; --ink: #e5eaf0; --muted: #98a4b3; --rule: #2c3540;
+  --red: #e0372f; --red-deep: #8f130e; --pass: #4cc283; --fail: #ff6b63; --pending: #5d6876; color-scheme: dark }
+body { background: var(--bg); color: var(--ink); font: 16px/1.55 var(--body);
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 28px 64px; }
+main { max-width: 760px; margin: 0 auto; display: grid; gap: 28px; }
+.byline { font-size: 13px; color: var(--muted); }
+h1 { font: 800 clamp(30px, 6vw, 44px)/1.05 var(--display); margin: 0; text-wrap: balance; letter-spacing: -0.01em; }
+p { margin: 0; max-width: 65ch; }
+.lede { display: grid; gap: 12px; }
+.defs { background: var(--panel); border: 1px solid var(--rule); border-radius: 10px; padding: 16px 18px; display: grid; gap: 6px; }
+.defs h2, .group h2 { font: 700 12px/1.3 var(--body); text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: 0 0 4px; }
+.defs code, .claim { font-family: var(--mono); font-size: 14px; }
+.defs div { display: grid; grid-template-columns: 7.5em 1fr; gap: 12px; }
+.defs div > :first-child { font-family: var(--mono); }
+.bench { display: grid; justify-items: center; gap: 14px; padding: 8px 0; }
+#push { width: 168px; height: 168px; border-radius: 50%; border: 0; cursor: pointer;
+  background: radial-gradient(circle at 38% 32%, #ff6a5f 0%, var(--red) 46%, var(--red-deep) 100%);
+  box-shadow: 0 10px 0 var(--red-deep), 0 14px 24px rgba(0,0,0,.28), inset 0 -6px 10px rgba(0,0,0,.18);
+  color: #fff; font: 800 22px/1.1 var(--display); letter-spacing: 0.04em; text-transform: uppercase;
+  transition: transform .08s, box-shadow .08s; }
+#push:active, #push.down { transform: translateY(8px); box-shadow: 0 2px 0 var(--red-deep), 0 4px 8px rgba(0,0,0,.25), inset 0 -4px 8px rgba(0,0,0,.2); }
+#push:focus-visible { outline: 3px solid var(--ink); outline-offset: 6px; }
+#tally { font: 700 20px/1.2 var(--display); text-align: center; min-height: 1.2em; }
+#tally.ok { color: var(--pass); } #tally.bad { color: var(--fail); }
+.hint { font-size: 13px; color: var(--muted); text-align: center; }
+.groups { display: grid; gap: 18px; }
+.group { background: var(--panel); border: 1px solid var(--rule); border-radius: 10px; padding: 14px 16px; }
+.group ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.group li { display: grid; grid-template-columns: 1.4em 1fr; gap: 8px; align-items: baseline; min-width: 0; }
+.mark { font: 700 15px/1 var(--mono); color: var(--pending); text-align: center; }
+li.pass .mark { color: var(--pass); } li.fail .mark { color: var(--fail); }
+li.fail .claim { color: var(--fail); font-weight: 600; }
+.claim { overflow-wrap: anywhere; }
+.got { display: block; font-family: var(--mono); font-size: 12.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.foot { font-size: 14px; color: var(--muted); display: grid; gap: 8px; }
+.foot code { font-family: var(--mono); font-size: 13px; }
+a { color: inherit; }
+@media (prefers-reduced-motion: reduce) { #push { transition: none; } }
+</style>
+
+<main>
+  <div class="lede">
+    <div class="byline">Written by Claude (Anthropic), 2026-10-22, for dr. kraemer and Codex.</div>
+    <h1>Do the arrows hold up?</h1>
+    <p>The arrows are names for unit vectors. The dot and the cross are the ordinary ones. This page builds the arrows in plain page coordinates (x right, y up, z out of the page) twice, once with the body's forward drawn page-right and once page-left. Then it checks every arrow rule the house uses, and the path 1 problems that lean on them, against ordinary vector algebra and against a textbook solution with signed numbers.</p>
+  </div>
+
+  <section class="defs" aria-label="What the arrows are">
+    <h2>What the arrows are</h2>
+    <div><span>→</span><span>the moving body's forward</span></div>
+    <div><span>← = −→</span><span>back</span></div>
+    <div><span>↑, ↓ = −↑</span><span>up and down</span></div>
+    <div><span>↺ = ↓ × →</span><span>forward around: the way a forward push below the axle turns things</span></div>
+    <div><span>↻ = −↺</span><span>back around</span></div>
+  </section>
+
+  <section class="bench">
+    <button id="push" type="button" aria-describedby="tally">Push</button>
+    <div id="tally" role="status" aria-live="polite">Not run yet</div>
+    <div class="hint">If anything goes red, it names the line. Show doc and Codex that line.</div>
+  </section>
+
+  <section class="groups" id="groups"></section>
+
+  <section class="foot">
+    <p>The controls at the bottom are wrong rules. Each has to come out false, so the button can go red when something is wrong.</p>
+    <p>The same checks run in Python: <code>checks/arrows.py</code> in <a href="https://github.com/saccade/claudog/blob/main/checks/arrows.py">claudog</a>. It exits 1 on any failure.</p>
+  </section>
+</main>
+
+<script>
+(() => {
+const X = [1,0,0], Y = [0,1,0], Z = [0,0,1], O = [0,0,0];
+const add = (a, b) => a.map((v, i) => v + b[i]);
+const mul = (k, a) => a.map(v => k * v);
+const neg = a => mul(-1, a);
+const dot = (a, b) => a[0]*b[0] + a[1]*b[1] + a[2]*b[2];
+const cross = (a, b) => [a[1]*b[2] - a[2]*b[1], a[2]*b[0] - a[0]*b[2], a[0]*b[1] - a[1]*b[0]];
+const norm = a => Math.sqrt(dot(a, a));
+const close = (x, y) => Math.abs(x - y) <= 1e-9 + 1e-5 * Math.abs(y);
+const same = (u, v) => { u = [].concat(u); v = [].concat(v); return u.length === v.length && u.every((x, i) => close(x, v[i])); };
+const det3 = m => m[0][0]*(m[1][1]*m[2][2]-m[1][2]*m[2][1]) - m[0][1]*(m[1][0]*m[2][2]-m[1][2]*m[2][0]) + m[0][2]*(m[1][0]*m[2][1]-m[1][1]*m[2][0]);
+const solve3 = (m, b) => { const d = det3(m); return [0,1,2].map(k => det3(m.map((row, i) => row.map((v, j) => j === k ? b[i] : v))) / d); };
+const lstsq3 = (cols, b) => solve3(cols.map(ci => cols.map(cj => dot9(ci, cj))), cols.map(ci => dot9(ci, b)));
+const dot9 = (a, b) => a.reduce((s, v, i) => s + v * b[i], 0);
+const cat = (...vs) => vs.flat();
+
+function arrows(face) {
+  const A = { "→": mul(face, X), "↑": Y };
+  A["←"] = neg(A["→"]); A["↓"] = neg(A["↑"]);
+  A["↺"] = cross(A["↓"], A["→"]); A["↻"] = neg(A["↺"]);
+  return A;
+}
+const FACES = [[+1, "forward drawn page-right"], [-1, "forward drawn page-left (mirror)"]];
+const body = (A, v) => [dot(A["→"], v), dot(A["↑"], v), dot(A["↺"], v)];
+
+function rng(seed) {   // mulberry32, then Box–Muller for normals
+  let t = seed >>> 0;
+  const u = () => { t += 0x6D2B79F5; let r = Math.imul(t ^ t >>> 15, 1 | t); r ^= r + Math.imul(r ^ r >>> 7, 61 | r); return ((r ^ r >>> 14) >>> 0) / 4294967296; };
+  return { uniform: (a, b) => a + (b - a) * u(), normal: () => Math.sqrt(-2 * Math.log(u() || 1e-12)) * Math.cos(2 * Math.PI * u()) };
+}
+
+function run() {
+  const rows = [];
+  const check = (group, claim, ok, got = "") => rows.push({ group, claim, ok: !!ok, got });
+
+  // 1. Identities
+  for (const [face, where] of FACES) {
+    const A = arrows(face), g = `identities, ${where}`;
+    check(g, "← = −→, ↓ = −↑, ↻ = −↺", same(A["←"], neg(A["→"])) && same(A["↓"], neg(A["↑"])) && same(A["↻"], neg(A["↺"])));
+    check(g, "↺ is a unit turning sense, out of the plane", close(norm(A["↺"]), 1) && Math.abs(dot(A["↺"], X)) + Math.abs(dot(A["↺"], Y)) < 1e-12);
+    for (const [a, b, c] of [["↓","→","↺"],["↑","→","↻"],["↓","←","↻"],["↑","←","↺"],["↻","↓","←"],["↺","↓","→"],["↻","↑","→"],["↻","→","↓"]])
+      check(g, `${a} × ${b} = ${c}`, same(cross(A[a], A[b]), A[c]));
+    for (const [a, b, v] of [["→","→",1],["←","→",-1],["←","↑",0],["↻","↻",1],["↻","↺",-1]])
+      check(g, `${a} · ${b} = ${v}`, same(dot(A[a], A[b]), v));
+    check(g, face > 0 ? "↺ on the page is counterclockwise" : "↺ on the page is clockwise: forward around follows the body, not the page",
+      same(A["↺"], mul(face, Z)), `↺ = ${face > 0 ? "+" : "−"}z`);
+  }
+
+  // 2. Mobile rules, on random forces
+  const R0 = rng(20261022);
+  for (const [face, where] of FACES) {
+    const A = arrows(face), g = `mobile rules, ${where}`, ok = [true, true, true, true, true, true, true];
+    for (let n = 0; n < 2000; n++) {
+      const F = [R0.normal() * 10, R0.normal() * 10, 0];
+      const [r, R, a, b] = [R0.uniform(0.01, 3), R0.uniform(0.01, 3), R0.uniform(0.01, 3), R0.uniform(0.01, 3)];
+      ok[0] &&= same(mul(dot(A["→"], F), A["←"]), mul(dot(A["←"], F), A["→"]));
+      ok[1] &&= same(mul(dot(A["→"], F) * R, A["↻"]), mul(dot(A["←"], F) * R, A["↺"]));
+      const lhs = add(mul(norm(F) * r, A["↺"]), mul(dot(A["→"], F) * R, A["↻"]));
+      ok[2] &&= same(lhs, mul(norm(F) * r + dot(A["←"], F) * R, A["↺"])) && same(lhs, mul(norm(F) * r - dot(A["→"], F) * R, A["↺"]));
+      ok[3] &&= same(add(mul(dot(A["→"], F), A["→"]), mul(dot(A["↑"], F), A["↑"])), F);
+      ok[4] &&= same(dot(mul(a, A["→"]), F), dot(F, mul(a, A["→"])));
+      ok[5] &&= same(cross(mul(a, A["↓"]), mul(b, A["→"])), mul(a * b, A["↺"])) && same(cross(mul(b, A["→"]), mul(a, A["↓"])), mul(-a * b, A["↺"]));
+      ok[6] &&= same(cross(mul(a - b, A["↑"]), mul(r, A["→"])), mul((a - b) * r, A["↻"]));
+    }
+    check(g, "→ · F · ← = ← · F · →   (read the mobile from the other end)", ok[0]);
+    check(g, "(→ · F) R ↻ = (← · F) R ↺   (the minus moves into the dot)", ok[1]);
+    check(g, "Fr ↺ + (→ · F) R ↻ = (Fr + (← · F) R) ↺ = (Fr − (→ · F) R) ↺   (one vector, three ways to write it)", ok[2]);
+    check(g, "→ · F · → + ↑ · F · ↑ = F   (the parts put back)", ok[3]);
+    check(g, "a dot doesn't care about order: the sizes step out of the way", ok[4]);
+    check(g, "a cross keeps its arrows in order: the sizes move, the arrows don't", ok[5]);
+    check(g, "(H − R) ↑ × → J = (H − R) J ↻", ok[6]);
+  }
+
+  // 3. The path 1 problems
+  const m = 2.0, R = 0.20, r = 0.12, I = 0.040, F = 6.0, answers = {};
+  const keep = (k, v) => (answers[k] ||= []).push(v);
+  for (const [face, where] of FACES) {
+    const A = arrows(face), g = `3-c spool, rolling, ${where}`;
+    const cols = [cat(mul(m, A["→"]), O, A["→"]),
+                  cat(neg(A["→"]), neg(cross(mul(R, A["↓"]), A["→"])), O),
+                  cat(O, mul(I, A["↻"]), cross(A["↻"], mul(R, A["↓"])))];
+    const rhs = cat(mul(F, A["→"]), cross(mul(r, A["↓"]), mul(F, A["→"])), O);
+    const [a, f, al] = lstsq3(cols, rhs);
+    const tc = cross(mul(r, A["↓"]), mul(F, A["→"])), tg = cross(mul(R, A["↓"]), mul(f, A["→"]));
+    check(g, "the center speeds up at 0.80 m/s² →: it rolls toward the pull", same(a, 0.8), `a = ${a.toFixed(4)}`);
+    check(g, "the grip is 4.4 N ←", same(mul(f, A["→"]), mul(4.4, A["←"])), `f = ${f.toFixed(4)} along →`);
+    check(g, "it picks up at 4.0 ↻: it really does turn back around", same(al, 4.0), `α = ${al.toFixed(4)} along ↻`);
+    check(g, "cord 0.72 N m ↺, grip 0.88 N m ↻, net 0.16 N m ↻ = I α ↻",
+      same(tc, mul(0.72, A["↺"])) && same(tg, mul(0.88, A["↻"])) && same(add(tc, tg), mul(I * al, A["↻"])));
+    check(g, "(m + I/R²) a = F (1 − r/R)", same((m + I / R ** 2) * a, F * (1 - r / R)));
+    keep("spool rolling", cat(body(A, mul(a, A["→"])), body(A, mul(f, A["→"])), body(A, mul(al, A["↻"]))));
+  }
+  const [at, ft, alt] = solve3([[m, -1, 0], [0, -R, I], [1, 0, R]], [F, r * F, 0]);
+  check("3-c spool, textbook signs", "a = +0.8, f = −4.4, α = −4.0 (clockwise, with forward drawn right)", same([at, ft, alt], [0.8, -4.4, -4.0]),
+    `a = ${at.toFixed(3)}, f = ${ft.toFixed(3)}, α = ${alt.toFixed(3)}`);
+  const sr = answers["spool rolling"][0];
+  check("3-c spool, textbook signs", "matches the arrows: the minus signs are the arrows' ← and ↻", same([at, ft, alt], [sr[0], sr[3], sr[8]]));
+
+  const atRest = (A, th) => {
+    const u = add(mul(Math.cos(th), A["→"]), mul(Math.sin(th), A["↑"]));
+    const p = mul(r, add(mul(Math.sin(th), A["→"]), mul(Math.cos(th), A["↓"])));
+    const grip = mul(dot(A["←"], mul(F, u)), A["→"]);
+    return { u, p, grip, net: add(cross(p, mul(F, u)), cross(mul(R, A["↓"]), grip)) };
+  };
+  for (const [face, where] of FACES) {
+    const A = arrows(face), g = `3-d spool at rest, ${where}`;
+    let okT = true;
+    for (let k = 0; k < 15; k++) { const t = 1.4 * k / 14, s = atRest(A, t);
+      okT &&= Math.abs(dot(s.p, s.u)) < 1e-12 && same(cross(s.p, mul(F, s.u)), mul(F * r, A["↺"])); }
+    check(g, "at any angle the cord leaves at a tangent and still turns the spool Fr ↺", okT);
+    let lo = 0.1, hi = 1.5;
+    for (let k = 0; k < 80; k++) { const mid = (lo + hi) / 2; if (dot(atRest(A, mid).net, A["↺"]) > 0) hi = mid; else lo = mid; }
+    const th = (lo + hi) / 2, s = atRest(A, th);
+    check(g, "the turnings cancel where → · F is r/R = 3/5 of the pull: 53°", same(Math.cos(th), r / R), `θ = ${(th * 180 / Math.PI).toFixed(3)}°`);
+    check(g, "there Fr ↺ + (← · F) R ↺ = 0", same(add(mul(F * r, A["↺"]), mul(dot(A["←"], mul(F, s.u)) * R, A["↺"])), O));
+    check(g, "the grip is → · F · ← = ← · F · →, 3.6 N ←", same(s.grip, mul(dot(A["→"], mul(F, s.u)), A["←"])) && same(s.grip, mul(3.6, A["←"])));
+    keep("spool at rest", [th]);
+  }
+  check("3-d spool, textbook signs", "F r = F cos θ R gives cos θ = r/R = 0.6", same(Math.acos(r / R), answers["spool at rest"][0][0]));
+
+  for (const [face, where] of FACES) {
+    const A = arrows(face), g = `4-a ladder, ${where}`;
+    const L = add(mul(1.8, A["←"]), mul(2.4, A["↑"])), foot = mul(0.40, A["→"]);
+    const v = -dot(L, neg(foot)) / dot(L, A["↑"]), rel = add(mul(v, A["↑"]), neg(foot));
+    check(g, "the top moves 0.30 m/s ↓", same(mul(v, A["↑"]), mul(0.30, A["↓"])), `v = ${v.toFixed(4)} along ↑`);
+    check(g, "seen from the foot it's 0.50 m/s, square to the ladder", same(norm(rel), 0.5) && Math.abs(dot(rel, L)) < 1e-12);
+    keep("ladder", body(A, mul(v, A["↑"])));
+  }
+  check("4-a ladder, textbook signs", "x² + y² = L² gives ẏ = −x ẋ / y = −0.30", same(-1.8 * 0.40 / 2.4, -0.30));
+
+  const mb = 1.0, Rb = 0.050, J = 2.0, v = J / mb;
+  for (const [face, where] of FACES) {
+    const A = arrows(face), g = `5 cue ball, ${where}`;
+    const c = cross(A["↺"], mul(Rb, A["↓"])), k = dot(c, mul(-v, A["→"])) / dot(c, c);
+    const w = mul(k, A["↺"]), Lr = mul(0.4 * mb * Rb ** 2, w), H = Rb + dot(Lr, A["↻"]) / J;
+    check(g, "it sweeps at 40 ↻ when it rolls at once", same(w, mul(40, A["↻"])));
+    check(g, "H = 7R/5 = 0.070 m", same(H, 0.07), `H = ${H.toFixed(4)} m`);
+    check(g, "½ v→ · →J = 2.0 J and ½ ω↻ · ↻L = 0.80 J", same(0.5 * dot(mul(v, A["→"]), mul(J, A["→"])), 2.0) && same(0.5 * dot(w, Lr), 0.8));
+    keep("cue", [H]);
+  }
+  check("5 cue ball, textbook signs", "−(H − R) J = (2/5) m R² ω with ω = −v/R gives H = 0.070 m", same(Rb + 0.4 * mb * Rb ** 2 * (v / Rb) / J, 0.07));
+
+  for (const [face, where] of FACES) {
+    const A = arrows(face), g = `7 hoop, ${where}`;
+    const w = mul(8.0, A["↻"]), c = mul(0.25 * 8.0, A["→"]), pt = lev => add(c, cross(w, lev));
+    check(g, "top 4.0 m/s →, bottom 0, front 2.0 m/s → + 2.0 m/s ↓",
+      same(pt(mul(0.25, A["↑"])), mul(4, A["→"])) && same(pt(mul(0.25, A["↓"])), O) && same(pt(mul(0.25, A["→"])), add(mul(2, A["→"]), mul(2, A["↓"]))));
+    keep("hoop", cat(body(A, pt(mul(0.25, A["↑"]))), body(A, pt(mul(0.25, A["→"])))));
+  }
+
+  // 4. The mirror
+  for (const [k, [right, left]] of Object.entries(answers))
+    check("the mirror", `${k}: the page-left drawing gives the same answer in the body's words`, same(right, left));
+
+  // 5. Controls
+  const A = arrows(+1), B = arrows(-1), Fq = [3, 1, 0];
+  for (const [claim, val] of [["↓ × → = ↻", same(cross(A["↓"], A["→"]), A["↻"])],
+                              ["→ · F · ← = → · F · →", same(mul(dot(A["→"], Fq), A["←"]), mul(dot(A["→"], Fq), A["→"]))],
+                              ["a cross doesn't care about order", same(cross(A["↓"], A["→"]), cross(A["→"], A["↓"]))],
+                              ["↺ is the page's counterclockwise whichever way forward is drawn", same(B["↺"], Z)],
+                              ["the spool at rest at 45°", Math.abs(dot(atRest(A, Math.PI / 4).net, A["↺"])) < 1e-9]])
+    check("controls (each must be false)", `wrong: ${claim}`, !val, val ? "TRUE: the checker is broken" : "false, as it should be");
+  return rows;
+}
+
+// Render the list at rest, every check pending; the button runs them for real.
+const groupsEl = document.getElementById("groups"), tally = document.getElementById("tally"), btn = document.getElementById("push");
+function render(rows, ran) {
+  groupsEl.textContent = "";
+  let cur = null, ul = null;
+  for (const row of rows) {
+    if (row.group !== cur) {
+      cur = row.group;
+      const sec = document.createElement("div"); sec.className = "group";
+      const h = document.createElement("h2"); h.textContent = cur; sec.appendChild(h);
+      ul = document.createElement("ul"); sec.appendChild(ul); groupsEl.appendChild(sec);
+    }
+    const li = document.createElement("li"); li.className = ran ? (row.ok ? "pass" : "fail") : "";
+    const mk = document.createElement("span"); mk.className = "mark"; mk.textContent = ran ? (row.ok ? "✓" : "✗") : "·";
+    mk.setAttribute("aria-label", ran ? (row.ok ? "holds" : "fails") : "not run");
+    const cl = document.createElement("span"); cl.className = "claim"; cl.textContent = row.claim;
+    if (ran && row.got) { const gt = document.createElement("span"); gt.className = "got"; gt.textContent = row.got; cl.appendChild(gt); }
+    li.append(mk, cl); ul.appendChild(li);
+  }
+}
+const first = run();
+render(first, false);
+tally.textContent = `${first.length} checks, not run yet`;
+btn.addEventListener("click", () => {
+  btn.classList.add("down"); setTimeout(() => btn.classList.remove("down"), 160);
+  const rows = run(), bad = rows.filter(r => !r.ok).length;
+  render(rows, true);
+  tally.className = bad ? "bad" : "ok";
+  tally.textContent = bad ? `${bad} of ${rows.length} fail` : `${rows.length} of ${rows.length} hold`;
+  if (bad) groupsEl.querySelector("li.fail")?.scrollIntoView({ block: "center", behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+});
+})();
+</script>
