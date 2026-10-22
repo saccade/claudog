@@ -155,12 +155,11 @@ LEVEL[4] += [
 # A stagehand: offstage until there's something to do. 9-3 asks about the masses; the shape is the rods'.
 BODY_9_3 = ("The shape is the rods'. The question asks about the masses, and with two of them in one problem it helps to say whose each quantity is.\n"
  "Call the upper rod with its mass body U, and the lower one body L. A body is the thing as the physics sees it: where it is, how it moves, what it carries, and nothing else. "
- "Write the body last in a quantity, after its size and its direction, and read × as “of”: 1 m × U is the length of body U, and 0.10 rad → × U is its swing.\n"
+ "Write the body last in a quantity, after its size and its direction, and read × as “of”: 1 m × U is the length of body U, and 0.10 rad → × U is its swing. The knife of the knife was the knife all along, but the knife of a ladder has nothing to be, and no place to go.\n"
  "A mass at the end of its rod is out by the rod's length of the rod's swing:\n"
  "    1 m × U × 0.10 rad → × U = 1 m × 0.10 rad → × U × U = 0.10 m → × U × U.\n"
- "That's 0.10 m forward of body U of body U, and body U of body U is just body U, so the upper mass is out 0.10 m → × U. "
- "The body rides through the product and stays out of the way. "
- "A product of two different bodies is nothing: the lower rod's length of the upper rod's swing, 1 m × L × 0.10 rad → × U, comes to 0.10 m → × L × U, and body L of body U means nothing.\n"
+ "That's 0.10 m forward of body U of body U, which is just body U: the upper mass is out 0.10 m → × U. "
+ "The lower rod's length of the upper rod's swing, 1 m × L × 0.10 rad → × U, comes to 0.10 m → × L × U, body L of body U.\n"
  "So the lower mass can't take the upper swing through its own rod. It rides on the upper mass instead: it starts wherever U's mass is, 0.10 m → × L, and its own rod adds its own length of its own swing. "
  "In the slow tone the lower rod swings √2 as far the same way, 0.14 rad →:\n"
  "    0.10 m → × L + 1 m × L × 0.14 rad → × L = 0.24 m → × L.\n"
@@ -174,7 +173,7 @@ LEVEL[3] += [
 ]
 LEVEL[4] += [   # a highlight, not the cutscene again
  (BODY_9_3,
-  "The shape is the rods'. Each mass is out by its own rod's length of its own swing (body U of body U is just U; L of U is nothing), and the lower one rides on the upper, so with the body written last, "
+  "The shape is the rods'. Each mass is out by its own rod's length of its own swing, and the lower one rides on the upper: the L of the U has nothing to be. With the body written last, "
   "swinging the upper rod 0.10 rad → puts them at 0.10 m → × U + 0.24 m → × L in the slow tone and 0.10 m → × U + 0.041 m ← × L in the fast: "
   "the lower mass goes the other way, but only √2 − 1 as far.\n"),
 ]
