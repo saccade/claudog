@@ -5,7 +5,7 @@ Each changed paragraph is cut to its differing middle plus enough context to be 
 A paragraph the doc doesn't have yet goes in after the one before it, as a new paragraph;
 a dropped paragraph is emptied (delete the blank line after, with a guarded batch).
 """
-import json, re, html, difflib, sys
+import json, re, html, difflib, sys, unicodedata
 c = json.load(open(sys.argv[1])); c = c.get("content", c)
 a = []
 for el in c["tabs"][0]["documentTab"]["body"]["content"]:
@@ -17,6 +17,9 @@ h = open(sys.argv[2]).read()
 b = [x for x in (html.unescape(re.sub("<[^>]+>", "", m.group(2))).strip() for m in re.finditer(r"<(h1|h2|h3|p)[^>]*>(.*?)</\1>", h, re.S)) if x]
 reqs = []
 def rep(old, new):
+    # Docs' replaceAllText matches without regard to combining marks: "a" + U+0307 matched every plain "a"
+    # (2026-10-22, 1511 replacements, undone). Never send a combining character in a search.
+    assert not any(unicodedata.combining(ch) for ch in old + new), "combining mark in a replaceAllText"
     assert full.count(old) == 1, old[:80]
     reqs.append({"replaceAllText": {"containsText": {"text": old, "matchCase": True}, "replaceText": new}})
 def pair(o, n):
