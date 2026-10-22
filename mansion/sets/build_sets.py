@@ -221,7 +221,7 @@ SETUP_DOC = [('The inquiry has a place and an hour. It has no name for the dead.
 # doc 11:36: enamel, not paint (paint would be gone fast); the book is blank unless its rules are used in a problem (they aren't).
 # Applies wherever the text appears (sets 2-4: drawer 4's door, ending 4); set 1's way in already has doc's words.
 EVERYWHERE = [("a juggler painted on the lid", "an enamel juggler on the lid"),
-              ("The pencil marks in the ruled book are cues", "The pencil marks in the book are cues")]
+              ("The pencil marks in the ruled book are cues", "The notes in the book are cues")]
 
 STATEMENT_FIX = [("the center moves at speed Lω/2, where", "the center moves at speed L\u200aω/2, where"),
                  ("(moment of inertia 2mR²/5)", "(moment of inertia 2\u200am\u200aR²/5)"),   # doc's hair spaces, 09:17
