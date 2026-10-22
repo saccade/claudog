@@ -236,15 +236,16 @@ SLOWDOWN = [("(3) The cord pulls forward (→). Take the counter's grip on the s
 LATE_DOT = [("(1) An arm ℓ long, leaning θ, hangs ↓\u200a·\u200aℓ below the pivot instead of ℓ. That's the downward part of ℓ: how much of the arm points straight down, the statement's ℓ cos θ. So the lean lifts its end by ℓ − ↓\u200a·\u200aℓ. For this small lean,", '(1) Leaning through θ lifts a point ℓ away by ℓ(1 − cos θ). For this small lean,'), ("That's the downward part of the arm, ↓\u200a·\u200aℓ = 0.40 m of its 0.50 m.", "On the 0.50 m arm that's cos θ = 0.80."), ('only its forward part changes. The forward part of F, →\u200a·\u200aF, is how much of the pull goes forward, and as a force it points forward too: →\u200a·\u200aF\u200a·\u200a→.', "only its forward part changes, to F cos θ in the usual notation. With the arrows already doing the directions, there's a plainer way to say it: the forward part of F is →\u200a·\u200aF, the pull dotted with forward, and as a force it points forward too, →\u200a·\u200aF\u200a·\u200a→.")]
 
 DOC_1320 = [("one swing across; the cycle is the whole of it. Give the whole turn its own sign, τ.", "one swing across—the cycle is the whole of it.\nGive the whole turn its own sign, τ."),
-            ("use that for torque: P = ωχ, with χ = 0.75 N m at the start.", "use that for torque. Power is the sweep of torque (P = ωχ), which starts at χ = 0.75 N m."),
-            ("A small steam engine takes in 15 J of heat and does 3.0 J of work in each cycle, returning to its initial state at the end of each cycle. It completes one cycle per second.",
-             "A small steam engine takes in 15 J of heat to do 3.0 J of work per one-second cycle.")]   # doc 16:03: returning to its initial state just redefines cycle
+            ("use that for torque: P = ωχ, with χ = 0.75 N m at the start.", "use that for torque. Power is the sweep of torque (P = ωχ), which starts at χ = 0.75 N m.")]
 DOC_1320_SET1 = [("Of the 15 J that goes in, 3.0 J comes out as work and the other 12 J goes out as heat. Work over heat in is 3/15: 20 percent.",
                   "Call the heat that comes in the heat-in, and the heat that leaves the heat-out. Of 15 J of heat-in, 3.0 J comes out as work and the other 12 J is heat-out. Work over heat-in is 3/15: 20%.")]
 DOC_1320_LATER = [("Of the 15 J that goes in, 3.0 J comes out as work and the other 12 J goes out as heat. Work over heat in is 3/15: 20 percent.",
                    "Of 15 J of heat-in, 3.0 J comes out as work and the other 12 J is heat-out. Work over heat-in is 3/15: 20%.")]
 
-STATEMENT_FIX = [("pivoted so it swings freely in a vertical plane. It's released from rest", "pivoted to swing freely in a vertical plane. It gets released from rest"),   # doc's own edit, set 1 doc, 12:1x
+STATEMENT_FIX = [("A small steam engine takes in 15 J of heat and does 3.0 J of work in each cycle, returning to its initial state at the end of each cycle. It completes one cycle per second.",
+                  "A small steam engine takes in 15 J of heat to do 3.0 J of work per one-second cycle."),   # doc, set 1 doc, 16:03: returning to its initial state just redefines cycle
+                 ("the efficiency and the average power output", "the efficiency, and the average power output"),   # doc, 16:07: Oxford comma forever
+                 ("pivoted so it swings freely in a vertical plane. It's released from rest", "pivoted to swing freely in a vertical plane. It gets released from rest"),   # doc's own edit, set 1 doc, 12:1x
                  ("the center moves at speed Lω/2, where", "the center moves at speed L\u200aω/2, where"),
                  ("(moment of inertia 2mR²/5)", "(moment of inertia 2\u200am\u200aR²/5)"),   # doc's hair spaces, 09:17
                  ("A spool of mass 2.0 kg, outer radius R = 0.20 m and hub radius r = 0.12 m has moment of inertia 0.040 kg m²† about its axle. It rests on a level counter.",
