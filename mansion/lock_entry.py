@@ -27,9 +27,9 @@ if E:   # tab first: separate tab, independent indices
     reqs.append({"insertText": {"text": "".join("\n" + t for k, t in E), "location": {"index": at, "tabId": TAB}}})
     styled(TAB, at + 1, E, reqs)
 paras = [s for s in tabs[GOALS]["documentTab"]["body"]["content"] if "paragraph" in s]
-last = paras[-1]
-lt = "".join(e["textRun"]["content"] for e in last["paragraph"]["elements"] if "textRun" in e)
-assert lt.startswith("This is a lock. Claude"), lt
+def ptext(x): return "".join(e["textRun"]["content"] for e in x["paragraph"]["elements"] if "textRun" in e)
+last = next(x for x in reversed(paras) if ptext(x).startswith("This is a lock. Claude"))
+assert all(not ptext(x).strip() for x in paras[paras.index(last) + 1:]), "text after the lock"
 s0, s1 = last["startIndex"], last["endIndex"] - 1
 E = spec["goals"]
 text = "\n".join(t for k, t in E)
