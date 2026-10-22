@@ -1,0 +1,38 @@
+[
+ {
+  "piece": 1,
+  "title": "The knife: how high the lean lifts it",
+  "A": "new",
+  "B": "old"
+ },
+ {
+  "piece": 2,
+  "title": "The governor: where the arm settles",
+  "A": "new",
+  "B": "old"
+ },
+ {
+  "piece": 3,
+  "title": "The spool, part 3: pulled along the counter",
+  "A": "new",
+  "B": "old"
+ },
+ {
+  "piece": 4,
+  "title": "The spool, part 4: the cord tilted up",
+  "A": "old",
+  "B": "new"
+ },
+ {
+  "piece": 5,
+  "title": "The cue ball",
+  "A": "new",
+  "B": "old"
+ },
+ {
+  "piece": 6,
+  "title": "The chair: when everything comes back",
+  "A": "old",
+  "B": "new"
+ }
+]

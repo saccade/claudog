@@ -1,0 +1,121 @@
+Two ways of writing the same solutions
+
+These are six short pieces from a physics problem set. Each piece shows one problem's statement, then the same solution written two ways, Version A and Version B. The physics and the numbers are the same in both; what differs is mostly how directions and parts of directions are written.
+
+Earlier in the same problem set, the reader has already been told this (it applies to both versions):
+  Call a radian a stroke. All the way round is a turn, about 6.3 strokes, and half of that is π, the flip. Count strokes each second and call that the sweep; a cycle's sweep is ω. The whole turn gets its own sign, τ.
+  Torque gets the letter χ; moment of inertia keeps I.
+
+===== Piece 1: The knife: how high the lean lifts it
+
+Problem statement:
+  A knife is modeled as a point mass m = 1.0 kg on a massless rod of length ℓ = 1.0 m, pivoted so it swings freely in a vertical plane. It's released from rest at θ₀ = 0.10 rad from the downward vertical. Use g = 10 m/s² and the small-angle approximation 1 − cos θ ≈ θ²/2.
+  1. Find the gravitational potential energy of the knife at release, relative to its lowest point.
+  2. Find its greatest speed.
+  3. For small oscillations the angular frequency is ω₀ = √(g/ℓ), and the period T satisfies ω₀T = 2π. Find T.
+  4. How does T change if the mass is doubled?
+
+--- Version A ---
+(1) The statement's cos θ is ↓ · θ, the lean's part along straight down. Leaning through θ, a point ℓ away hangs ℓ (↓ · θ) below the pivot instead of ℓ, so it's lifted by ℓ (1 − ↓ · θ). For this small lean, that’s ℓ θ²/2: 0.0050 m, or 5 mm. The 10 N weight lifted through 5 mm stores 0.050 J.
+
+--- Version B ---
+(1) Leaning through θ lifts a point ℓ away by ℓ(1 − cos θ). For this small lean, that’s ℓ θ²/2: 0.0050 m, or 5 mm. The 10 N weight lifted through 5 mm stores 0.050 J.
+
+
+===== Piece 2: The governor: where the arm settles
+
+Problem statement:
+  A centrifugal governor has two 1.0 kg balls, each on a massless 0.50 m arm hinged on the axis of a vertical shaft. The shaft turns steadily at 5.0 rad/s†.
+  1. Find the angle each arm makes with the vertical, and how far each ball has risen above its hanging position.
+  2. Below what angular speed would the arms hang straight down?
+  3. A spool rests on a level counter. It has mass 2.0 kg, outer radius R = 0.20 m, hub radius r = 0.12 m, and moment of inertia 0.040 kg m²† about its axle. A light cord wound on the hub leaves from the bottom of the hub and is pulled horizontally with a constant 6.0 N. The spool rolls without slipping. Find its acceleration and the direction it rolls.
+  4. If the cord is instead pulled at an angle θ above horizontal, for what θ does the spool stay at rest?
+
+--- Version A ---
+(1) The arm's pull does two jobs at once. Its ↑ part holds up the ball's weight, mg. Its inward part bends the ball's path round the shaft, and that takes the mass at the squared sweep, at the ball's reach from the shaft: mω² of the reach. The pull runs along the arm, so its two parts stand to each other as the arm's drop to its reach: mg is to mω² of the reach as the drop is to the reach. For an arm off the vertical the reach cancels, and the ball hangs g/ω² below the hinge: 10/25 = 0.40 m. On the 0.50 m arm that's ↓ · θ = 0.80. The arm hangs 0.40 m down and reaches 0.30 m out: a 3–4–5 triangle a tenth of a meter to the unit, about 37° from the vertical. Each ball hangs 0.40 m below the hinge instead of 0.50 m, so it's risen 0.10 m.
+(2) A drop can't be longer than the arm. Below a sweep of √(g/ℓ) = √20, about 4.5 strokes a second, g/ω² would be longer than the 0.50 m arm, so hanging straight down is all that's left.
+
+--- Version B ---
+(1) The arm's pull does two jobs at once. Its upward part holds up the ball's weight, mg. Its inward part bends the ball's path round the shaft, and that takes the mass at the squared sweep, at the ball's distance from the shaft: mω²ℓ sin θ. The pull runs along the arm, so the two parts stand in the arm's own slope: tan θ = ℓω² sin θ/g. For an arm off the vertical the sine cancels, and cos θ = g/(ℓω²) = 10/(0.50 × 25) = 0.80. The arm hangs 0.40 m down and reaches 0.30 m out: a 3–4–5 triangle a tenth of a meter to the unit, about 37° from the vertical. Each ball hangs 0.40 m below the hinge instead of 0.50 m, so it's risen 0.10 m.
+(2) The cosine can't go over 1, so g/(ℓω²) has to stay under 1. Below a sweep of √(g/ℓ) = √20, about 4.5 strokes a second, hanging straight down is the only answer.
+
+
+===== Piece 3: The spool, part 3: pulled along the counter
+
+Problem statement:
+  A centrifugal governor has two 1.0 kg balls, each on a massless 0.50 m arm hinged on the axis of a vertical shaft. The shaft turns steadily at 5.0 rad/s†.
+  1. Find the angle each arm makes with the vertical, and how far each ball has risen above its hanging position.
+  2. Below what angular speed would the arms hang straight down?
+  3. A spool rests on a level counter. It has mass 2.0 kg, outer radius R = 0.20 m, hub radius r = 0.12 m, and moment of inertia 0.040 kg m²† about its axle. A light cord wound on the hub leaves from the bottom of the hub and is pulled horizontally with a constant 6.0 N. The spool rolls without slipping. Find its acceleration and the direction it rolls.
+  4. If the cord is instead pulled at an angle θ above horizontal, for what θ does the spool stay at rest?
+
+--- Version A ---
+(3) The cord pulls forward (→). Take the counter's grip on the spool, f, as positive → too; the answer will say which way it really goes. The center of mass speeds up as if both forces acted on it directly: ma = F + f. Rolling →, the spool turns back around, ↻. The cord pulls → 0.12 m below the axle and the grip acts 0.20 m below it, and a → push below the axle turns the spool forward around, ↺. So the torques about the axle are Fr ↺ and fR ↺, and Iα ↻ = [Fr + fR] ↺. Rolling ties the two together: α = a/R. Put together, the ledgers balance as:
+(m + I/R²)a = F(1 − r/R).
+Here I/R² = 0.040/0.040 = 1.0 kg. The mass and turning count as 3.0 kg at the axle, while 6.0 N × 0.40 gives 2.4 N on the other side. The center speeds up at 0.80 m/s² →: the spool rolls toward the pull. The grip is what's left when the cord's 6.0 N → comes off the 1.6 N → the center needs: f = 1.6 N → + 6.0 N ← = 4.4 N ←. It pulls back, and about the axle it turns the spool ↻ harder than the cord turns it ↺.
+
+--- Version B ---
+(3) Take forward, the way the cord pulls, as positive, and let f be the counter's grip on the spool, positive forward too. The center of mass speeds up as if both forces acted there: ma = F + f. For the turning, take the way the spool turns when it rolls forward as positive. The cord pulls forward 0.12 m below the axle and the grip acts 0.20 m below it, and a forward push below the axle turns the spool backward. So the torques about the axle are −Fr and −fR, and Iα = −Fr − fR. Rolling ties the two together: α = a/R. Put together, the ledgers balance as:
+(m + I/R²)a = F(1 − r/R).
+Here I/R² = 0.040/0.040 = 1.0 kg. The mass and turning count as 3.0 kg at the axle, while 6.0 N × 0.40 gives 2.4 N on the other side. The center speeds up at 0.80 m/s², forward: the spool rolls toward the pull. The grip is f = 1.6 − 6.0 = −4.4 N. It pulls back, and about the axle it turns the spool forward harder than the cord turns it back.
+
+
+===== Piece 4: The spool, part 4: the cord tilted up
+
+Problem statement:
+  A centrifugal governor has two 1.0 kg balls, each on a massless 0.50 m arm hinged on the axis of a vertical shaft. The shaft turns steadily at 5.0 rad/s†.
+  1. Find the angle each arm makes with the vertical, and how far each ball has risen above its hanging position.
+  2. Below what angular speed would the arms hang straight down?
+  3. A spool rests on a level counter. It has mass 2.0 kg, outer radius R = 0.20 m, hub radius r = 0.12 m, and moment of inertia 0.040 kg m²† about its axle. A light cord wound on the hub leaves from the bottom of the hub and is pulled horizontally with a constant 6.0 N. The spool rolls without slipping. Find its acceleration and the direction it rolls.
+  4. If the cord is instead pulled at an angle θ above horizontal, for what θ does the spool stay at rest?
+
+--- Version A ---
+(4) A spool that stays put has a = 0 and α = 0. The cord still leaves the hub at a tangent, 0.12 m from the axle, so its torque about the axle is still −Fr; only its forward part changes, to F cos θ. Then F cos θ + f = 0 and −Fr − fR = 0. The second gives f = −Fr/R, and the first then says cos θ = r/R = 0.60. That's θ = 53°: the 3–4–5 again, with the 3 along the counter. The spool's inertia never comes into it, because a spool that doesn't turn never asks for it.
+
+--- Version B ---
+(4) A spool that stays put has a = 0 and α = 0. The cord still leaves the hub at a tangent, 0.12 m from the axle, so it still turns the spool ↺ with Fr; only its forward part changes, to F (→ · θ) →. With nothing speeding up, the grip has to be F (→ · θ) ←, and pulling ← 0.20 m below the axle it turns the spool ↻ with F (→ · θ) at R. The two balance when F (→ · θ) at R is Fr, so → · θ = r/R = 0.60. That's θ = 53°: the 3–4–5 again, with the 3 along the counter. The spool's inertia never comes into it, because a spool that doesn't turn never asks for it.
+
+
+===== Piece 5: The cue ball
+
+Problem statement:
+  A uniform solid ball of mass 1.0 kg and radius R = 0.050 m (moment of inertia 2 m R²/5) is at rest on a table. A cue gives it a short horizontal impulse of 2.0 N s at height H above the table. Neglect friction during the impulse.
+  1. Find the speed of the ball's center just afterward.
+  2. Find H if the ball rolls without slipping immediately.
+  3. Find its angular speed and its translational and rotational kinetic energies.
+
+--- Version A ---
+(1) Call the given impulse J: 2.0 N s →. On 1.0 kg it leaves the center moving at 2.0 m/s →.
+(2) Take the lever from the ball's center up to where the cue strikes: (H − R) ↑. The angular momentum a blow leaves about the center is the leverage of the blow, with ↑ × → = ↻:
+(H − R) ↑ × J → = (H − R) J ↻.
+Rolling at once means the bottom of the ball isn't sliding. The bottom's lever from the center is R ↓, and the turning moves it at the sweep crossed into that lever: ω ↻ × R ↓ = ω R ←. That has to cancel the center's v →, so the ball sweeps at v/R ↻. About the center, its angular momentum is then its moment of inertia at that sweep:
+(2/5) m R² (v/R) ↻ = (2/5) R J ↻,
+since m v is J. The two senses agree, so the cue went in above the center, and H − R = 2R/5: H = 7R/5 = 0.070 m, two fifths of a radius above the center.
+(3) The ball sweeps at 2.0/0.050 = 40 strokes a second ↻, and its angular momentum is (2/5)(0.050 m)(2.0 N s) = 0.040 kg m²/s ↻. Energy in motion is half the velocity dotted into the momentum, and for the turning, half the sweep dotted into the angular momentum:
+½ (2.0 m/s →) · (2.0 N s →) = 2.0 J,
+½ (40 ↻) · (0.040 kg m²/s ↻) = 0.80 J.
+Each pair points the same way, so each dot is just the product of the sizes. The turning carries two fifths as much again.
+
+--- Version B ---
+(1) Call the given impulse J. A 2.0 N s impulse on 1.0 kg leaves the center moving at 2.0 m/s.
+(2) The same impulse, struck H above the table, is H − R above the ball's center, so about the center it leaves an angular momentum of J(H − R). Rolling at once means the ball sweeps at v/R, and its angular momentum about the center is (2/5)mR² × v/R = (2/5)RJ. So H − R = 2R/5, and H = 7R/5 = 0.070 m: two fifths of a radius above the center.
+(3) The ball sweeps at 2.0/0.050 = 40 strokes a second. The center's motion carries ½ × 1.0 × 2.0² = 2.0 J. The turning carries ½ × (2/5)(1.0)(0.050)² × 40² = 0.80 J. That's two fifths as much again.
+
+
+===== Piece 6: The chair: when everything comes back
+
+Problem statement:
+  A sealed receiver moves through S at the speed found in problem 12, part 3. In its rest frame H, time is t_H. Inside is the coupled apparatus of problem 10. It starts with its capacitor holding 80 mJ, the rods vertical and at rest, and no current. After charging, the apparatus is lossless; its only energy stores are the capacitor, the inductor, the rods' kinetic energy and their gravitational potential energy, measured from vertical. Ignore recoil of the support. At t = t_H = 0, the receiver's seat is at x = x_H = 0. Write its two mode angular frequencies from problem 10, part 4 as 4ν and 9ν, so ν = ω₀/6. You see that the charge follows q = q₀[(9/13) cos(4νt_H) + (4/13) cos(9νt_H)]†, and the upper rod's angle follows a sum of sin(4νt_H) and sin(9νt_H)†.
+  1. Find q₀ and the capacitor's initial voltage.
+  2. Find the first time T > 0 at which the whole initial state returns.
+  3. Show that at T/2 the current is zero and the rods pass through vertical. Find q/q₀ there and the share of the 80 mJ held by the capacitor. Where is the rest?
+  4. How long does T last in S, and how far does the receiver travel in S during it? Using x_H = γ(x − vt), find the receiver's position in H throughout.
+
+--- Version A ---
+(2) The two cosine weights are positive and add to one, so q reaches its initial maximum q₀ only when both cosines return to 1. Then 4νT and 9νT are each a whole number of turns; the sine terms and the velocities return too. Four and nine share no factor, so the first full return is νT = τ: four turns of the slow part and nine of the fast. That's T = τ/ν = 6τ/ω₀ = 15.6 s.
+(3) At T/2 the slow part has made two whole turns and the fast part four turns and a flip. So the slow cosine is back at 1 and the fast one is at −1, and q/q₀ = 9/13 − 4/13 = 5/13. The sines are both zero there, so the current is zero and the upper rod's angle is zero, and with it the lower rod's: the rods pass through vertical. The capacitor holds (5/13)² = 25/169 of 80 mJ, about 12 mJ. With no current the inductor holds nothing, and at vertical the rods hold no height, so the other 68 mJ is in the rods' motion.
+
+--- Version B ---
+(2) The statement's cosines are each part's cycle dotted into where it started, → · 4νt_H and → · 9νt_H, and its sines are ↑ · 4νt_H and ↑ · 9νt_H. The weights 9/13 and 4/13 are positive and add to one, so q is back at q₀ only when both cycles point → again. Then 4νT and 9νT are each a whole number of turns, and the ↑ parts and the velocities return too. Four and nine share no factor, so the first full return is νT = τ: four turns of the slow part and nine of the fast. That's T = τ/ν = 6τ/ω₀ = 15.6 s.
+(3) At T/2 the slow part has made two whole turns and the fast part four turns and a flip. So the slow cycle points → and the fast one ←, and q/q₀ = (9/13)(→ · →) + (4/13)(→ · ←) = 9/13 − 4/13 = 5/13. Both cycles lie along the start line, and their ↑ parts are zero there, so the current is zero and the upper rod's angle is zero, and with it the lower rod's: the rods pass through vertical. The capacitor holds (5/13)² = 25/169 of 80 mJ, about 12 mJ. With no current the inductor holds nothing, and at vertical the rods hold no height, so the other 68 mJ is in the rods' motion.
+
