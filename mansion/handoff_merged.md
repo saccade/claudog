@@ -70,6 +70,7 @@ The four endings get richer with their routes. Keep the Last House chorus; the f
     - Path 1 glosses a little more fully.
     - Paths 2–4 carry set 1's notation pass as a highlights reel, with names in parentheses ("the 15 J that comes in (heat-in)").
     - The arrows carry through the middle material.
+    - Numbers go to two figures (doc 19:30: if a difference that small matters, it needs a name and attention because it's causally central). That covers the √2 family too: 2.4 and 5.8 sweep, 1.7 F, 16 s. The tuning's exactness already has its sentence (C = 1/(2 − √2) F). Round each result from the exact value, and keep any shown arithmetic consistent. This touches the problem set, the endings, and Dog Math section 12.
 3. **Not done, so don't claim it:** sin and cos gone by the middle (R-075). Drawers a, b, and f, Mirror 4, and α still use them, and they move into arrows only where that reads better.
 4. **Later, not now:** the text-input game, whose pictures carry deliberate AI signatures in smoke, folds, hair, or shadows: readable scenes first, unmistakable letters once noticed.
 
