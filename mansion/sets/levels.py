@@ -20,7 +20,7 @@ LEVEL[1] += [
  ("The power a torque delivers is the torque times the sweep: P = χω. At the start, 3.0 W at 4.0 stroke a second takes χ = 0.75 N m. At the end, at 8.0, it takes 0.38 N m.",
   "The power a torque delivers is the sweep of the torque: P = ωχ. Put numbers to it once: 0.75 N m at 4.0 stroke a second delivers 3.0 W. So at the start the engine's 3.0 W takes χ = 0.75 N m, and at the end, at 8.0, it takes 0.38 N m."),
  # doc, 2026-10-22 07:31, typed into set 1: how χ is picked, and his closing sentence
- ("Torque gets χ. The power a torque delivers", "An χ hung on the wall could apply a twist to something—use that for torque. The power a torque delivers"),
+ ("Torque gets χ. The power a torque delivers", "A χ hung on the wall could apply a twist to something—use that for torque. The power a torque delivers"),
  (" The same power needs half the torque once the wheel's going twice as fast.", "\nWhen the wheel goes twice as fast, applying the same power takes just half the torque."),
  ("and that takes m times the square of the sweep times the ball's distance from the shaft, mω²ℓ sin θ.",
   "and that takes the mass at the squared sweep, at the ball's distance from the shaft: mω²ℓ sin θ."),

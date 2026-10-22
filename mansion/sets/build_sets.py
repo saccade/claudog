@@ -97,9 +97,9 @@ DOC_0806 = [
   ("So the cord cranks the spool backward about the axle with −Fr, the grip cranks it with −fR, and Iα = −Fr − fR.", "So the cord cranks the spool ↺ about the axle with Fr, the grip cranks it ↺ with fR, and Iα ↻ = [Fr + fR] ↺.")],
  [("The center speeds up at 0.80 m/s², forward: the spool rolls toward the pull", "The center speeds up at 0.80 m/s² →: the spool rolls toward the pull")],
  [("The grip is f = 1.6 − 6.0 = −4.4 N. It pulls back, and about the axle it turns the spool forward harder than the cord turns it back.",
-   "The grip is f = 1.6 − 6.0 = −4.4 N: 4.4 N ←. It pulls back, and about the axle it turns the spool ↻ harder than the cord turns it ↺."),
+   "The grip is what's left when the cord's 6.0 N → comes off the 1.6 N → the center needs: f = 1.6 N → + 6.0 N ← = 4.4 N ←. It pulls back, and about the axle it turns the spool ↻ harder than the cord turns it ↺."),
   ("The grip is f = 1.6 − 6.0 = −4.4 N. It pulls back, and about the axle it cranks the spool forward harder than the cord cranks it back.",
-   "The grip is f = 1.6 − 6.0 = −4.4 N: 4.4 N ←. It pulls back, and about the axle it cranks the spool ↻ harder than the cord cranks it ↺.")],
+   "The grip is what's left when the cord's 6.0 N → comes off the 1.6 N → the center needs: f = 1.6 N → + 6.0 N ← = 4.4 N ←. It pulls back, and about the axle it cranks the spool ↻ harder than the cord cranks it ↺.")],
  [("Forward 2.0 m/s and down 2.0 m/s make 2√2, about 2.8 m/s, 45° below forward.", "2.0 m/s → and 2.0 m/s ↓ make 2√2, about 2.8 m/s, 45° (τ/8) below →.")],
  [("a whiteface in damask", "a powdered clown in damask")],
  # doc 08:40-08:41: a hair space keeps ℓ and θ apart; the definite description, not the pronoun (only one thing has weight)
@@ -107,6 +107,13 @@ DOC_0806 = [
  [("Its 10 N weight lifted through 5 mm", "The 10 N weight lifted through 5 mm")],
  [("the whiteface has gloves", "the powdered clown has gloves")],
 ]
+NO_NEGATIVE_FORCES = [
+ ("so its torque about the axle is still −Fr; only its forward part changes, to F cos θ. Then F cos θ + f = 0 and −Fr − fR = 0. The second gives f = −Fr/R, and the first then says cos θ = r/R = 0.60.",
+  "so it still {turns} the spool ↺ with Fr; only its forward part changes, to F cos θ →. With nothing speeding up, the grip has to be F cos θ ←, and pulling ← 0.20 m below the axle it {turns} the spool ↻ with F cos θ at R. The two balance when F cos θ at R is Fr, so cos θ = r/R = 0.60."),
+ ("The circuit's emf is ε = −κȧ, and the power the emf delivers to the circuit is the voltage of the current, εi = −κiȧ. The two add to zero: whatever the rod gets, the circuit gives up. When κi and ȧ have opposite signs, κiȧ is negative, and the rod's giving its energy to the circuit instead.",
+  "The statement's minus in ε = −κȧ is a direction: the rod's motion drives an emf of κȧ back against the current that {turns} it, so the circuit gives up the voltage of the current, κȧ of i: the same κiȧ. Whatever the rod gets, the circuit gives up. When the current {turns} the rod against its sweep, the energy runs the other way, and the rod's giving its energy to the circuit instead."),
+]
+
 # The 2π is lugged around and noticed: the knife's rule and numbers (2nd and 3rd sightings, the 2 noticed),
 # the flywheel's sweeps in turns (4th, 5th, noticed again), a torque through a whole turn (6th), and there
 # the turn takes τ and torque takes χ, with doc's sentences.
@@ -116,8 +123,8 @@ SLOW_WALK = [
  ("The height, bottom speed and time for a turn stay the same.", "The height, bottom speed and time for a cycle stay the same."),
  ("At 4.0 strokes a second, half of 0.50 kg m² at 16 is 4.0 J. Four seconds at a net 3.0 W add 12 J, for 16 J, and 16 J on the same wheel needs the squared sweep to be 64. The wheel ends up sweeping at 8.0 strokes a second.",
   "At 4.0 strokes a second, half of 0.50 kg m² at 16 is 4.0 J. Counted in turns, 4.0 strokes a second is 4.0/2π, about 0.64 of a turn a second. Four seconds at a net 3.0 W add 12 J, for 16 J, and 16 J on the same wheel needs the squared sweep to be 64. The wheel ends up sweeping at 8.0 strokes a second: 8.0/2π, about 1.3 turns a second. The 2 again: every sweep we count in turns gets divided by it."),
- ("(3) Torque usually gets the letter τ, but the turn has it now. An χ hung on the wall could apply a twist to something—use that for torque. The power a torque delivers is the sweep of the torque: P = ωχ. Put numbers to it once: 0.75 N m at 4.0 strokes a second delivers 3.0 W. So at the start the engine's 3.0 W takes χ = 0.75 N m, and at the end, at 8.0, it takes 0.38 N m.\nWhen the wheel goes twice as fast, applying the same power takes just half the torque.",
-  "(3) The power a torque delivers is the sweep of the torque. Put numbers to it once: 0.75 N m at 4.0 strokes a second delivers 3.0 W. So at the start the engine's 3.0 W takes 0.75 N m, and at the end, at 8.0, it takes 0.38 N m.\nWhen the wheel goes twice as fast, applying the same power takes just half the torque.\nThrough one whole turn, 0.75 N m does 2π of itself: 4.7 J, and 0.64 of a turn a second at 4.7 J a turn is the engine's 3.0 W. There's the 2π again, two flips standing in for one turn. π only covers half of what the knife does, one swing across; the cycle is the whole of it. Give the whole turn its own sign, τ. The knife's rule is then Tω = τ, and the wheel's 4.0 strokes a second is 4.0/τ of a turn a second.\nTorque usually gets the letter τ, but the turn has it now. An χ hung on the wall could apply a twist to something—use that for torque: P = ωχ, with χ = 0.75 N m at the start."),
+ ("(3) Torque usually gets the letter τ, but the turn has it now. A χ hung on the wall could apply a twist to something—use that for torque. The power a torque delivers is the sweep of the torque: P = ωχ. Put numbers to it once: 0.75 N m at 4.0 strokes a second delivers 3.0 W. So at the start the engine's 3.0 W takes χ = 0.75 N m, and at the end, at 8.0, it takes 0.38 N m.\nWhen the wheel goes twice as fast, applying the same power takes just half the torque.",
+  "(3) The power a torque delivers is the sweep of the torque. Put numbers to it once: 0.75 N m at 4.0 strokes a second delivers 3.0 W. So at the start the engine's 3.0 W takes 0.75 N m, and at the end, at 8.0, it takes 0.38 N m.\nWhen the wheel goes twice as fast, applying the same power takes just half the torque.\nThrough one whole turn, 0.75 N m does 2π of itself: 4.7 J, and 0.64 of a turn a second at 4.7 J a turn is the engine's 3.0 W. There's the 2π again, two flips standing in for one turn. π only covers half of what the knife does, one swing across; the cycle is the whole of it. Give the whole turn its own sign, τ. The knife's rule is then Tω = τ, and the wheel's 4.0 strokes a second is 4.0/τ of a turn a second.\nTorque usually gets the letter τ, but the turn has it now. A χ hung on the wall could apply a twist to something—use that for torque: P = ωχ, with χ = 0.75 N m at the start."),
 ]
 
 STATEMENT_FIX = [("A spool of mass 2.0 kg, outer radius R = 0.20 m and hub radius r = 0.12 m has moment of inertia 0.040 kg m²† about its axle. It rests on a level counter.",
@@ -187,6 +194,11 @@ def build(k):
         for old, new in alts:
             if old in route: route = route.replace(old, new); hit = True
         assert hit, alts[0][0][:70]
+    turns = "turns" if k == 1 else "cranks"   # crank is a level-2 verb
+    for old, new in NO_NEGATIVE_FORCES:   # doc 08:50: there are no negative forces, just directions
+        new = new.format(turns=turns, turn=turns[:-1])
+        assert route.count(old) == 1, old[:70]
+        route = route.replace(old, new)
     if k == 1:
         route = STROKES.sub(" strokes", route)
     if k == 1:   # doc 2026-10-22 08:29: the slow walk to τ, in set 1 first; sets 2-4 get it at the sweep
