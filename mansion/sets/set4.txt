@@ -35,7 +35,7 @@ The pen begins the curve again. The lid lifts.
 ## Into the cabinet
 striped canvas in faded red and cream; brass corners; sawdust and lamp oil; painted stars on every lid; no one else in here; each drawer opens from its room's locked box, and you leave the way you came
 ## Drawer 4: the second knife's two tones
-Door: the dining room. A silver canteen with a juggler painted on the lid, lined in damask; inside, under glass, one knife hanging from another.
+Door: the dining room. A silver canteen with an enamel juggler on the lid, lined in damask; inside, under glass, one knife hanging from another.
 Two point masses m hang in series on light rods each ℓ long, swinging in one vertical plane. For small angles θ₁ (upper rod) and θ₂ (lower rod) from the downward vertical, positive toward the same side, 2θ̈₁ + θ̈₂ = −2(g/ℓ)θ₁ and θ̈₁ + θ̈₂ = −(g/ℓ)θ₂.
 1. In a normal mode both angles go as cos ωt, with θ₂ = +√2 θ₁ or θ₂ = −√2 θ₁. Find ω² for each.
 2. With ℓ = 1.0 m and g = 10 m/s², find both ω and their ratio. Does a motion with both modes ever exactly repeat?
@@ -341,7 +341,7 @@ Solution
 ## Ending 4: the understage — Appendix γ
 The blacks on the nail are still warm.
 The circle is still waiting for its square. The house is what grew around the unfinished work.
-The pencil marks in the ruled book are cues, and some are interruptions: a missed beat, a drive released, time for the heat to leave. The clown has been forestalling the crash.
+The pencil marks in the book are cues, and some are interruptions: a missed beat, a drive released, time for the heat to leave. The clown has been forestalling the crash.
 The last cue is the sound of your footsteps.
 The clock begins a turn.
 From charge to charge, the machine zams and zlams.

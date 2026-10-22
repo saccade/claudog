@@ -218,6 +218,11 @@ MEANING = [('= (Fr + fR) ↓\u200a×\u200a→ = (Fr + fR) ↺.', '= (Fr + fR) �
 # doc's own edits to set 1's way in, 2026-10-22 11:3x (his words; his (?) marks kept until he settles them). Set 1 only for now.
 SETUP_DOC = [('The inquiry has a place and an hour. It has no name for the dead.', 'The inquiry has a place and an hour. Left unspecified: who should arrive, and who will depart.'), ('A visitor has come to find out how it was done. The door is unlatched. A loose sheet of questions lies beside a small ruled book; the book has been opened to a page someone has already used.', 'A visitor arrives to find out how it was all done. The door is unlatched. A loose question sheet lies beside a small blank book, opened to a page half-full of notes.'), ('In the dining room the roast is going cold under its cover. A strip of paper moves beneath a pen. Above it, a knife swings.', 'In the dining room the roast goes cold under its cover. A strip of paper moves beneath a pen. Above it swings a knife.'), ('At the silver centerpiece’s pivot, a powdered clown in damask has stopped partway into a curtsy. The flowers on one repaired cuff face inward; every other spray faces out. The curtsy doesn’t deepen.', 'At the silver pivot, a powdered clown in damask is partway into a curtsy. Every flower (?) on a repaired cuff faces in, while every other spray faces out. (?) The curtsy does not deepen.'), ('A silver canteen stands locked on the sideboard. Its lid bears a painted juggler. The little lock has been polished more recently than the lid.', 'A trim silver canteen with an enamel juggler on the lid stands locked on the sideboard. The lock has been polished more recently than the lid.'), ('The visitor watches the knife go across and come back. On the paper, the same curve begins again.', 'The visitor watches the knife cycle across and back. On the paper, the curve cycles with it.')]
 
+# doc 11:36: enamel, not paint (paint would be gone fast); the book is blank unless its rules are used in a problem (they aren't).
+# Applies wherever the text appears (sets 2-4: drawer 4's door, ending 4); set 1's way in already has doc's words.
+EVERYWHERE = [("a juggler painted on the lid", "an enamel juggler on the lid"),
+              ("The pencil marks in the ruled book are cues", "The pencil marks in the book are cues")]
+
 STATEMENT_FIX = [("the center moves at speed Lω/2, where", "the center moves at speed L\u200aω/2, where"),
                  ("(moment of inertia 2mR²/5)", "(moment of inertia 2\u200am\u200aR²/5)"),   # doc's hair spaces, 09:17
                  ("A spool of mass 2.0 kg, outer radius R = 0.20 m and hub radius r = 0.12 m has moment of inertia 0.040 kg m²† about its axle. It rests on a level counter.",
@@ -293,14 +298,14 @@ def build(k):
         assert route.count(old) == 1, old[:70]
         route = route.replace(old, new)
     route = STROKES.sub(" strokes", route)
+    for old, new in SETUP_DOC:   # doc's way in, every set (sets 2-4 take it at the next sweep)
+        assert route.count(old) == 1, old[:70]
+        route = route.replace(old, new)
     if k == 1:   # doc 2026-10-22 08:29: the slow walk to τ, in set 1
         for old, new in SLOW_WALK:
             assert route.count(old) == 1, old[:70]
             route = route.replace(old, new)
         for old, new in ARROWS + MOBILES + PRETTY:
-            assert route.count(old) == 1, old[:70]
-            route = route.replace(old, new)
-        for old, new in SETUP_DOC:
             assert route.count(old) == 1, old[:70]
             route = route.replace(old, new)
         for old, new in MEANING:
@@ -368,6 +373,8 @@ def build(k):
         if ln.startswith("## "): out.append(("h3", ln[3:]))
         else: out.append(("p", ln))
     out = [(t, STROKES.sub(" strokes", x)) for t, x in out]
+    for old, new in EVERYWHERE:
+        out = [(t, x.replace(old, new)) for t, x in out]
     if k >= 2:
         for old, new in DRAWER1:
             n = sum(x.count(old) for _, x in out); assert n == 1, (n, old[:60])
