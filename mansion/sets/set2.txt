@@ -11,7 +11,7 @@ A trim silver canteen with an enamel juggler on the lid stands unlatched on the 
 The visitor watches the knife cycle across and back. On the paper, the curve cycles with it.
 ## Dining room
 ## 1. The knife
-A knife is modeled as a point mass m = 1.0 kg on a massless rod of length ℓ = 1.0 m, pivoted so it swings freely in a vertical plane. It's released from rest at θ₀ = 0.10 rad from the downward vertical. Use g = 10 m/s² and the small-angle approximation 1 − cos θ ≈ θ²/2.
+A knife is modeled as a point mass m = 1.0 kg on a massless rod of length ℓ = 1.0 m, pivoted to swing freely in a vertical plane. It gets released from rest at θ₀ = 0.10 rad from the downward vertical. Use g = 10 m/s² and the small-angle approximation 1 − cos θ ≈ θ²/2.
 1. Find the gravitational potential energy of the knife at release, relative to its lowest point.
 2. Find its greatest speed.
 3. For small oscillations the angular frequency is ω₀ = √(g/ℓ), and the period T satisfies ω₀T = 2π. Find T.
