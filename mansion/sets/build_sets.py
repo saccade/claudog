@@ -326,6 +326,41 @@ P1_GLOSS = [
      "The arrows add on their own and dot pair by pair. An arrow dotted with itself gives 1, since all of it runs its own way, and ← · ↑ gives nothing, since none of ← runs up:"),
     ("a turn of the cycle takes T with ωT = τ.", "a turn of the cycle takes T with ωT = τ, the whole turn."),
     ("here it's χ_em = κi.", "here it's χ_em = κi, with χ for torque as in the kitchen."),
+    # doc 18:51: path 1 does less, so it can be shorter and has room to play
+    ("The knife’s own direction sweeps too, at a different pace. At the bottom it sweeps at v/ℓ, about 0.32 strokes a second. At either end that sweep is zero. The knife turns back while the cycle sweeps on.", ""),
+    ("Some of what the drop lets go goes into that turning, two fifths as much again as the motion along the arc gets, so the same drop gives less speed and the ball comes round later.",
+     "Rolling, it turns at v/R, and its moment of inertia about the center is (2/5) m R², so the turning carries ½ (2/5) m R² (v/R)², "
+     "two fifths of the ½ m v² in the motion along the arc. Every 7 J the drop lets go splits 5 J to the motion and 2 J to the turning. "
+     "At any height the ball moves at √(5/7) of the bead's speed, about 0.85 of it, so it takes √(7/5) as long to come round: 1.99 s against 1.68 s."),
+    ("The bottom point is still for that instant.",
+     "The bottom point is still for that instant. That's why a photo of a moving bicycle blurs the spokes at the top of the wheel and catches them sharp near the ground."),
+]
+# Sweep 4: paths 2-4 carry path 1's notation as a highlights reel: arrows on both ledgers at the spool, the dot at 3-d
+# and the ladder, names in parentheses. Applied to the final text after solutions_only.
+H = " "
+REEL = [
+    ("Of 15 J of heat-in, 3.0 J comes out as work and the other 12 J is heat-out.",
+     "Of the 15 J that comes in (heat-in), 3.0 J comes out as work and the other 12 J leaves (heat-out)."),
+    ("The cord pulls forward (→). Take the counter's grip on the spool, f, as positive → too; the answer will say which way it really goes. "
+     "The center of mass speeds up as if both forces acted on it directly: ma = F + f. Rolling →, the spool turns back around, ↻. "
+     "The cord pulls → 0.12 m below the axle and the grip acts 0.20 m below it, and a → push below the axle turns the spool forward around, ↺. "
+     "So the cord cranks the spool ↺ about the axle with Fr, the grip cranks it ↺ with fR, and Iα ↻ = [Fr + fR] ↺.",
+     "The cord pulls forward (→), and the counter's grip f is taken → too; the answer will say which way it really goes. "
+     "The center of mass speeds up as if both forces acted on it directly: ma → = F → + f →. Rolling →, the spool turns back around, ↻: "
+     "the turning carries the bottom back, ↻ × ↓ = ←. Both pulls act below the axle, the cord 0.12 m and the grip 0.20 m, and ↓ × → = ↺, "
+     "so the cord cranks the spool ↺ about the axle with Fr and the grip cranks it ↺ with fR: Iα ↻ = [Fr + fR] ↺. "
+     "The two sides carry opposite senses (↻ = −↺), and the numbers say which way it really goes."),
+    ("only its forward part changes, to F cos θ →. With nothing speeding up, the grip has to be F cos θ ←, and pulling ← 0.20 m below the axle it cranks the spool ↻ with F cos θ at R. "
+     "The two balance when F cos θ at R is Fr, so cos θ = r/R = 0.60.",
+     f"only its forward part changes, to →{H}·{H}F, the F cos θ along the counter. With nothing speeding up, the grip is the same size pointing back, "
+     f"→{H}·{H}F{H}·{H}←, which read from the other end is ←{H}·{H}F{H}·{H}→: pulling 0.20 m below the axle, it cranks the spool ↺ along with the cord, by (←{H}·{H}F) R. "
+     f"The two turnings add, Fr ↺ + (←{H}·{H}F) R ↺, and with nothing turning that's zero. So the forward part is r/R of the pull, and cos θ = 0.60."),
+    ("The ladder doesn't stretch: with the foot x out from the wall and the top y up, x² + y² = L² the whole time. "
+     "As both change, x of the foot's velocity and y of the top's velocity cancel: 1.8 m of 0.40 m/s against 2.4 m of the top's. "
+     "So the top moves at x/y of the foot's speed, the other way: 0.30 m/s, downward.",
+     "The ladder doesn't stretch, so the ladder dotted into the top's velocity less the foot's is zero. From foot to top it runs 1.8 m ← + 2.4 m ↑; "
+     "with the top's velocity taken as v ↑, that less the foot's 0.40 m/s → is 0.40 m/s ← + v ↑. Arrows dot pair by pair: "
+     f"(1.8 m ← + 2.4 m ↑){H}·{H}(0.40 m/s ← + v ↑) = 0.72 m²/s + 2.4 m v = 0, so v ↑ = 0.30 m/s ↓."),
 ]
 F4_STATEMENT = "4. With one wave at 5.0 MHz, what frequency for the other puts the fast crests at nine times u? Where are the slow crests then?"
 F4_SOLUTION = ("(f-4) The fast crests run at u(f₁ + f₂)/(f₁ − f₂), so nine times u needs the sum to be nine times the difference: "
@@ -518,6 +553,12 @@ def build(k):
     out = solutions_only(out)   # the sweep, doc 18:22: statements live in the problem set
     if k == 1:
         for old, new in P1_GLOSS:
+            hit = [j for j, (t, x) in enumerate(out) if isinstance(x, str) and old in x]
+            assert len(hit) == 1, old[:60]
+            out[hit[0]] = (out[hit[0]][0], out[hit[0]][1].replace(old, new))
+        out = [(t, x) for t, x in out if x != ""]
+    if k in (2, 3, 4):
+        for old, new in REEL:
             hit = [j for j, (t, x) in enumerate(out) if isinstance(x, str) and old in x]
             assert len(hit) == 1, old[:60]
             out[hit[0]] = (out[hit[0]][0], out[hit[0]][1].replace(old, new))
