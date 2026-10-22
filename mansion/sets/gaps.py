@@ -32,15 +32,17 @@ TERMS = [  # name, regex, path where it first can appear
 GLOSS = re.compile(r"\b(?:call(?:ed|s)?|is the|are the|that's the|that’s the|means|we'll|we’ll|is how|is what|stands for|its own sign|for short|the word|read)\b")
 SENT = re.compile(r"(?<=[.?!])\s+(?=[A-Z(“0-9−√↺↻→←↑↓])")
 
+WHOLE_PATH = True   # count the ending too: it's where the chorus pays a word off (Codex, 2026-10-22 15:05); False = workings only
+
 def stream(k):
-    """Solution sentences in reading order: [(piece, sentence)]."""
+    """Solution sentences in reading order, then the path's ending: [(piece, sentence)]."""
     _, ps = lineup_sets.pieces(k)
     out = []
     for name, body in ps:
-        insol = False
+        insol = WHOLE_PATH and name == "ending"
         for t, s in body:
             if t == "b" and s == "Solution": insol = True; continue
-            if t in ("h2", "h3"): insol = False
+            if t in ("h2", "h3"): insol = WHOLE_PATH and name == "ending"
             if insol and t in ("p", "eq"):
                 for x in SENT.split(re.sub(r"</?b>", "", s)): out.append((name, x))
     return out

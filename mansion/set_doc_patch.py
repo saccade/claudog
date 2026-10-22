@@ -55,6 +55,9 @@ for op, i1, i2, j1, j2 in difflib.SequenceMatcher(None, a, b, autojunk=False).ge
         for o, n in zip(a[i1 + 1:i2], b[j1:j2]): pair(o, n)
     elif op == "delete":   # a paragraph the build doesn't have (a note to the bots): empty it
         for o in a[i1:i2]: rep(o, "")
+    elif op == "insert" and i1 == 0:   # new paragraphs before the first one: put them ahead of its head (Codex, 15:05)
+        head = a[0][:60]
+        rep(head, "\n".join(b[j1:j2]) + "\n" + head)
     elif op == "insert":
         prev = a[i1 - 1]
         tail = prev[-60:]

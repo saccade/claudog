@@ -77,7 +77,7 @@ button:focus-visible, input:focus-visible { outline: 2px solid var(--cobalt); ou
   <div><h3>Glossed at most uses: candidates for hammering</h3><div id="hammer"></div></div>
 </div>
 <div class="foot">
-<p>The distance is solution text in characters, in reading order, statements left out. Path 1's solutions run about 18 thousand characters, so 4 thousand is roughly three problems.</p>
+<p>The distance is the path as a reader meets it, solutions and then the ending, in characters, with the statements left out. Path 1's solutions run about 18 thousand characters, so 4 thousand is roughly three problems.</p>
 <p>A gloss is found by its wording (call, is the, that's the, means, read, we'll, or a colon right after the term), so it misses some and catches some that aren't. Hover a mark for its sentence. Arrow counts include every arrow on the page, so their staves are dense by nature.</p>
 <p>Built by gaps.py and gaps_page.py in the repo; rerun after the sweep to see the new paths.</p>
 </div>

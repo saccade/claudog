@@ -35,3 +35,4 @@ for (el, t), (tag, _, it, bold, ind) in zip(have, want):
         if ("†" in s) != (st.get("baselineOffset") == "SUPERSCRIPT"): bad.append(("dagger", s[:30]))
         pos += len(s)
 print(c["title"], "|", len(have), "paragraphs |", "OK" if not bad else bad[:20])
+sys.exit(1 if bad else 0)   # a mismatch is a failure, not just a printout (Codex, 2026-10-22 15:05)
