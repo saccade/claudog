@@ -316,9 +316,36 @@ P1_FINAL = [("With nothing speeding up, the grip has to be the same size pointin
             ("(3) In the slow mode the lower angle is +√2 times the upper: both masses swing the same way, the lower one farther. In the fast mode it's −√2 times: whenever the upper mass swings one way, the lower one swings the other.",
              "(3) The √2 belongs to the rods' angles, and the question asks about the masses. The lower mass rides on the upper one: it's out by the upper rod's swing plus its own rod's. In the slow mode the lower rod leans √2 as far the same way, so the lower mass goes 1 + √2 times as far as the upper, about 2.4. In the fast mode the lower rod leans √2 as far the other way, more than undoing what the upper rod gave it, so the lower mass swings the other way, but only √2 − 1 as far, about 0.41.")]   # doc 18:11: path 1's 9-3 in plain words, no body notation
 F4_STATEMENT = "4. With one wave at 5.0 MHz, what frequency for the other puts the fast crests at nine times u? Where are the slow crests then?"
-F4_SOLUTION = ("(4) The fast crests run at u(f₁ + f₂)/(f₁ − f₂), so nine times u needs the sum to be nine times the difference: "
+F4_SOLUTION = ("(f-4) The fast crests run at u(f₁ + f₂)/(f₁ − f₂), so nine times u needs the sum to be nine times the difference: "
                "5.0 MHz + f₂ = 9 (5.0 MHz − f₂), so 10 f₂ = 40 MHz and f₂ = 4.0 MHz. The two speeds multiply to u², so the slow crests run at u/9. "
                "That's where the hall's 4.0 MHz comes from.")
+GREEK = "αβγδ"
+def solutions_only(out):
+    """Drop each problem's statement, keep its scene lines, label the heading and the parts the way the problem set does:
+    mansion 1-a, the cabinet's drawers a-1 (drawer n is letter n), the funhouse's mirrors 1-α, under the stage α-1."""
+    res, label, skip = [], None, False
+    for t, x in out:
+        if t == "h3":
+            m = re.match(r"(\d+)\. ", x); d = re.match(r"Drawer (\d): (.*)", x); f = re.match(r"F(\d): (.*)", x); u = re.match(r"U(\d): (.*)", x)
+            if m: n = m.group(1); label = lambda i, n=n: f"{n}-{'abcdefg'[i - 1]}"
+            elif d: c = "abcdefg"[int(d.group(1)) - 1]; x = f"Drawer {c}: {d.group(2)}"; label = lambda i, c=c: f"{c}-{i}"
+            elif f: n = f.group(1); x = f"Mirror {n}: {f.group(2)}"; label = lambda i, n=n: f"{n}-{GREEK[i - 1]}"
+            elif u: g = GREEK[int(u.group(1)) - 1]; x = f"{g}: {u.group(2)}"; label = lambda i, g=g: f"{g}-{i}"
+            else: label = None
+            res.append((t, x)); skip = label is not None; continue
+        if t in ("h1", "h2"): skip = False; label = None
+        if skip:
+            if t == "b" and x == "Solution": skip = False
+            elif t == "i": res.append((t, x))
+            continue
+        if label and isinstance(x, str):
+            x = re.sub(r"^\((\d)\) ", lambda mm: f"({label(int(mm.group(1)))}) ", x)
+        if isinstance(x, str):   # the old appendix names, and drawers by number, take the problem set's labels
+            x = re.sub(r"\b([Dd]rawer) (\d)\b", lambda mm: f"{mm.group(1)} {'abcdefg'[int(mm.group(2)) - 1]}", x)
+            x = x.replace("— Appendix 1", "— Appendix a").replace("— Appendix b", "— Appendix 2")
+        res.append((t, x))
+    return res
+
 SERIAL = [("the current, charge and stored energy", "the current, charge, and stored energy"),
           ("outer radius R, hub radius r and moment", "outer radius R, hub radius r, and moment"),
           ("mass m, radius R and moment", "mass m, radius R, and moment"),
@@ -396,10 +423,9 @@ def build(k):
     ending = main[iE:]
     items, scen = appendix_items(tabs, k)
     st = statements()
-    out = [("h1", f"The Mansion, solution set {k} of 4: {NAMES[k]}")]
-    out.append(("p", f"<b>Written by Claude (Anthropic), {DATE[k]}, for dr. kraemer.</b> Set {k} of four: the whole problem set done through, end to end, the way a reader at level {k} would do it, with every optional problem open at that level placed right after the room it belongs to. Assembled from Codex's (OpenAI) release copies and the checked drafts; the thirteen mansion solutions are re-said in this level's words. The ideas and vocabulary are dr. kraemer's; the words are the models'. Statements stay in standard language."))
-    out.append(("i", f"Words this set uses: {WORDS[k]}."))
-    out.append(("i", LEGEND))
+    out = [("h1", f"The Mansion, path {k} of 4: {NAMES[k]}")]
+    out.append(("p", f"<b>Written by Claude (Anthropic), {DATE[k]}, for dr. kraemer.</b> Path {k} of four: the whole problem set worked through, end to end, the way a reader at level {k} would work it, with every optional problem open at that level placed right after the room it belongs to. The statements are in the problem set, and the labels here are its labels. Assembled from Codex's (OpenAI) release copies and the checked drafts; the thirteen mansion solutions are re-said in this level's words. The ideas and vocabulary are dr. kraemer's; the words are the models'."))
+    out.append(("i", f"Words this path uses: {WORDS[k]}."))
     after = {"1. The knife": ["Drawer 4", "F1"], "3. The governor and the spool": ["Drawer 1"],
              "4. The ladder": ["Drawer 2", "F4"], "7. The hoop": ["Drawer 3"],
              "10. The coils and the capacitor": ["Drawer 5", "F2"], "11. The line": ["Drawer 6"],
@@ -467,17 +493,23 @@ def build(k):
                 out[i] = (t, x)
     # Oxford comma, always (R-121, doc 16:07): the serial lists the sources wrote without it
     out = [(t, x if not isinstance(x, str) else _serial(x)) for t, x in out]
+    if k == 2:
+        old = "(3) In the slow mode the lower angle is +√2 times the upper: both masses swing the same way, the lower one farther. In the fast mode it's −√2 times: whenever the upper mass swings one way, the lower one swings the other."
+        hit = [j for j, (t, x) in enumerate(out) if isinstance(x, str) and old in x]
+        assert len(hit) == 1
+        out[hit[0]] = (out[hit[0]][0], out[hit[0]][1].replace(old, P1_FINAL[1][1]))
     if k == 1:
         for old, new in P1_FINAL:
             hit = [j for j, (t, x) in enumerate(out) if isinstance(x, str) and old in x]
             assert len(hit) == 1, old[:60]
             out[hit[0]] = (out[hit[0]][0], out[hit[0]][1].replace(old, new))
+    out = solutions_only(out)   # the sweep, doc 18:22: statements live in the problem set
     # doc 18:00: the reverse question goes in as drawer 6's part 4; the hall's 4 MHz dagger points here (problem set f-4)
     for j, (t, x) in enumerate(out):
-        if isinstance(x, str) and x.startswith("3. For 5.0 MHz and 4.0 MHz and u"):
+        if isinstance(x, str) and x.startswith("3. For 5.0 MHz and 4.0 MHz and u"):   # statements are gone after the sweep
             out.insert(j + 1, (t, F4_STATEMENT)); break
     for j, (t, x) in enumerate(out):
-        if isinstance(x, str) and x.startswith("(3) The sum is 9 MHz and the difference 1 MHz"):
+        if isinstance(x, str) and x.startswith("(f-3) The sum is 9 MHz and the difference 1 MHz"):
             out.insert(j + 1, (t, F4_SOLUTION)); break
     return out
 
