@@ -58,7 +58,7 @@ a { color: inherit; }
   <div class="lede">
     <div class="byline">Written by Claude (Anthropic), 2026-10-22, for dr. kraemer and Codex.</div>
     <h1>Do the arrows hold up?</h1>
-    <p>The arrows are names for unit vectors. The dot and the cross are the ordinary ones. This page builds the arrows in plain page coordinates (x right, y up, z out of the page) twice, once with the body's forward drawn page-right and once page-left. Then it checks every arrow rule the house uses, and the path 1 problems that lean on them, against ordinary vector algebra and against a textbook solution with signed numbers.</p>
+    <p>The arrows are names for unit vectors. The dot and the cross are the ordinary ones. This page builds the arrows in plain page coordinates (x right, y up, z out of the page) twice, once with the body's forward drawn page-right and once page-left. Then it checks every arrow rule the house uses, and the path 1 scenes that lean on them (the spool rolling and at rest, the ladder, the cue ball, the hoop, and the chair at half time), against ordinary vector algebra and against a textbook solution with signed numbers.</p>
   </div>
 
   <section class="defs" aria-label="What the arrows are">
@@ -234,6 +234,16 @@ function run() {
       same(pt(mul(0.25, A["↑"])), mul(4, A["→"])) && same(pt(mul(0.25, A["↓"])), O) && same(pt(mul(0.25, A["→"])), add(mul(2, A["→"]), mul(2, A["↓"]))));
     keep("hoop", cat(body(A, pt(mul(0.25, A["↑"]))), body(A, pt(mul(0.25, A["→"])))));
   }
+
+  for (const [face, where] of FACES) {
+    const A = arrows(face), g = `13-c chair at T/2, ${where}`;
+    const hand = turns => add(mul(Math.cos(turns * 2 * Math.PI), A["→"]), mul(Math.sin(turns * 2 * Math.PI), A["↑"]));
+    const slow = hand(2.0), fast = hand(4.5), mix = add(mul(9 / 13, slow), mul(4 / 13, fast)), q = dot(A["→"], mix);
+    check(g, "the slow hand points →, the fast hand ←", same(slow, A["→"]) && same(fast, A["←"]));
+    check(g, "q/q₀ = → · (9/13 → + 4/13 ←) = 5/13, and the upward parts are zero", same(q, 5 / 13) && same(dot(A["↑"], mix), 0), `q/q₀ = ${q.toFixed(6)}`);
+    keep("chair", [q]);
+  }
+  check("13-c chair, textbook signs", "(9/13) cos 4π + (4/13) cos 9π = 5/13", same(9 / 13 * Math.cos(4 * Math.PI) + 4 / 13 * Math.cos(9 * Math.PI), 5 / 13));
 
   // 4. The mirror
   for (const [k, [right, left]] of Object.entries(answers))

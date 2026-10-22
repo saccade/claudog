@@ -9,7 +9,7 @@ ordinary ones. This file builds those vectors in plain page coordinates (x right
 once with the body's forward drawn page-right, and once drawn page-left, the mirror. Then it checks
   1. every arrow identity Dog Math section 9 and path 1 use, as a vector equation;
   2. the mobile rules (sizes hang outside, a dot doesn't care about order, a cross does), on random forces;
-  3. the path 1 problems that lean on the arrows, solved twice: as vector equations written in the arrows,
+  3. the path 1 scenes that lean on the arrows (spool 3-c and 3-d, ladder 4-a, cue ball 5, hoop 7, chair 13-c), solved twice: as vector equations written in the arrows,
      and the way a textbook would, with signed scalars (x right, counterclockwise positive), independently;
   4. that the mirrored drawing gives the same answers in the body's own words;
   5. controls: wrong rules that must come out false, so the button can go red.
@@ -153,6 +153,16 @@ for face, where in FACES.items():
     check(g, "top 4.0 m/s →, bottom 0, front 2.0 m/s → + 2.0 m/s ↓",
           same(pt(0.25 * A["↑"]), 4 * A["→"]) and same(pt(0.25 * A["↓"]), 0 * X) and same(pt(0.25 * A["→"]), 2 * A["→"] + 2 * A["↓"]))
     answers.setdefault("hoop", []).append(np.concatenate([body(A, pt(0.25 * A["↑"])), body(A, pt(0.25 * A["→"]))]))
+
+for face, where in FACES.items():
+    A = arrows(face); g = f"13-c chair at T/2, {where}"
+    hand = lambda turns: math.cos(turns * 2 * math.pi) * A["→"] + math.sin(turns * 2 * math.pi) * A["↑"]   # a hand swung from →
+    slow, fast = hand(2.0), hand(4.5)                                    # 4ν·T/2 = two turns; 9ν·T/2 = four turns and a flip
+    q = dot(A["→"], 9 / 13 * slow + 4 / 13 * fast)
+    check(g, "the slow hand points →, the fast hand ←", same(slow, A["→"]) and same(fast, A["←"]))
+    check(g, "q/q₀ = → · (9/13 → + 4/13 ←) = 5/13, and the upward parts are zero", same(q, 5 / 13) and same(dot(A["↑"], 9 / 13 * slow + 4 / 13 * fast), 0), f"q/q₀ = {q:.6f}")
+    answers.setdefault("chair", []).append(np.array([q]))
+check("13-c chair, textbook signs", "(9/13) cos 4π + (4/13) cos 9π = 5/13", same(9 / 13 * math.cos(4 * math.pi) + 4 / 13 * math.cos(9 * math.pi), 5 / 13))
 
 # 4. The mirror ------------------------------------------------------------------------------------
 for k, (right, left) in answers.items():

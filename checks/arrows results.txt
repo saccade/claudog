@@ -116,12 +116,24 @@ mobile rules, forward drawn page-left (mirror)
 7 hoop, forward drawn page-left (mirror)
   ✓ top 4.0 m/s →, bottom 0, front 2.0 m/s → + 2.0 m/s ↓
 
+13-c chair at T/2, forward drawn page-right
+  ✓ the slow hand points →, the fast hand ←
+  ✓ q/q₀ = → · (9/13 → + 4/13 ←) = 5/13, and the upward parts are zero   [q/q₀ = 0.384615]
+
+13-c chair at T/2, forward drawn page-left (mirror)
+  ✓ the slow hand points →, the fast hand ←
+  ✓ q/q₀ = → · (9/13 → + 4/13 ←) = 5/13, and the upward parts are zero   [q/q₀ = 0.384615]
+
+13-c chair, textbook signs
+  ✓ (9/13) cos 4π + (4/13) cos 9π = 5/13
+
 the mirror
   ✓ spool rolling: the page-left drawing gives the same answer in the body's words
   ✓ spool at rest: the page-left drawing gives the same answer in the body's words
   ✓ ladder: the page-left drawing gives the same answer in the body's words
   ✓ cue: the page-left drawing gives the same answer in the body's words
   ✓ hoop: the page-left drawing gives the same answer in the body's words
+  ✓ chair: the page-left drawing gives the same answer in the body's words
 
 controls (each must be false)
   ✓ wrong: ↓ × → = ↻   [false, as it should be]
@@ -130,4 +142,4 @@ controls (each must be false)
   ✓ wrong: ↺ is the page's counterclockwise whichever way forward is drawn   [false, as it should be]
   ✓ wrong: the spool at rest at 45°   [false, as it should be]
 
-91 of 91 hold.
+97 of 97 hold.
