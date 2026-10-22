@@ -80,6 +80,10 @@ TIMES = [("and the center speeds up at R times that:", "and the center speeds up
          ("In a mode both rods pick up at −ω² times their angle, and the lower rod leans Ω_shape times as far as the upper.", "In a mode both rods pick up at ω² of their angle, back toward vertical, and the lower rod leans Ω_shape of the upper's lean."),
          ("One tone is ω₀ times a factor and the other is ω₀ over it: a mirror pair.", "One tone is ω₀ at a factor and the other is ω₀ on it: a mirror pair.")]
 
+SPOOL_I = [("(3) Write the statement’s moment of inertia as η. With the mass taken out, inertia is the profile: η on", "(3) With the mass taken out, inertia is the profile: I on"),
+           ("(3) Write the statement’s moment of inertia as η. ", "(3) "),
+           ("ηα = −Fr − fR", "Iα = −Fr − fR"), ("(m + η/R²)a", "(m + I/R²)a"), ("Here η/R²", "Here I/R²")]
+
 def clean(ln, k):
     for rx, rep in NAV: ln = rx.sub(rep, ln)
     for old, new in TIMES: ln = ln.replace(old, new)
@@ -130,6 +134,11 @@ def build(k):
     route = route.replace("needs the squared sweep to be 64.", "needs the square of the sweep to be 64.")
     route = route.replace("is the the sweep of the torque [ see how this means something and the other one is not English? ]  torque times the sweep:", "is the torque times the sweep:")
     route = apply_edits(route, k)
+    # doc 2026-10-22: a letter moves when it's needed. Nothing needs I for anything else at the spool,
+    # so it keeps the statement's I; inertia moves to η only where current has taken I (F2, U1).
+    for old, new in SPOOL_I:
+        if old in route: route = route.replace(old, new)
+    assert "η" not in route, "η left in the mansion route"
     ending = main[iE:]
     items, scen = appendix_items(tabs, k)
     st = statements()
