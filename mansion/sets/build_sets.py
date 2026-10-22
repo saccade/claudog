@@ -13,6 +13,7 @@ import html, re
 from levels import LEVEL
 
 STAMP = "2610212230"
+DATE = {1: "2026-10-22", 2: "2026-10-21", 3: "2026-10-21", 4: "2026-10-21"}   # set 1 fixed 2026-10-22 08:16; 2-4 marked outdated
 WORDS = {
  1: "the turn and τ, π for the flip, the cycle (it cycles), the sweep and the stroke, χ for torque, sentences the right way round (current is the conductance of the voltage; power is the voltage of the current, and the sweep of the torque), own time",
  2: "level 1's, plus heft, punch and hook; profile; pickup, and crank as a verb; spin; can and coil",
@@ -174,7 +175,7 @@ def build(k):
     items, scen = appendix_items(tabs, k)
     st = statements()
     out = [("h1", f"The Mansion, solution set {k} of 4: {NAMES[k]}")]
-    out.append(("p", f"<b>Written by Claude (Anthropic), 2026-10-21, for dr. kraemer.</b> Set {k} of four: the whole problem set done through, end to end, the way a reader at level {k} would do it, with every optional problem open at that level placed right after the room it belongs to. Assembled from Codex's (OpenAI) release copies and the checked drafts; the thirteen mansion solutions are re-said in this level's words. The ideas and vocabulary are dr. kraemer's; the words are the models'. Statements stay in standard language."))
+    out.append(("p", f"<b>Written by Claude (Anthropic), {DATE[k]}, for dr. kraemer.</b> Set {k} of four: the whole problem set done through, end to end, the way a reader at level {k} would do it, with every optional problem open at that level placed right after the room it belongs to. Assembled from Codex's (OpenAI) release copies and the checked drafts; the thirteen mansion solutions are re-said in this level's words. The ideas and vocabulary are dr. kraemer's; the words are the models'. Statements stay in standard language."))
     out.append(("i", f"Words this set uses: {WORDS[k]}."))
     out.append(("i", LEGEND))
     after = {"1. The knife": ["Drawer 4", "F1"], "3. The governor and the spool": ["Drawer 1"],
