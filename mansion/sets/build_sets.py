@@ -12,8 +12,8 @@ Usage: python3 build_sets.py   (writes set1.html .. set4.html and set*.txt besid
 import html, re
 from levels import LEVEL
 
-STAMP = "2610212230"
-DATE = {1: "2026-10-22", 2: "2026-10-21", 3: "2026-10-21", 4: "2026-10-21"}   # set 1 fixed 2026-10-22 08:16; 2-4 marked outdated
+STAMP = "2610221000"
+DATE = {1: "2026-10-22", 2: "2026-10-22", 3: "2026-10-22", 4: "2026-10-22"}   # the sweep, doc 2026-10-22 09:47
 WORDS = {
  1: "the turn and τ, π for the flip, the cycle (it cycles), the sweep and the stroke, χ for torque, sentences the right way round (current is the conductance of the voltage; power is the voltage of the current, and the sweep of the torque), own time",
  2: "level 1's, plus heft, punch and hook; profile; pickup, and crank as a verb; spin; can and coil",
@@ -142,6 +142,34 @@ SLOW_WALK += [   # doc 09:17/09:19, set 1: the cue ball in arrows, showing how t
  ("(1) The ball cycles with sweep ω where", "(1) T is the period—how long it takes to sweep through a full turn of the cycle. The ball cycles with sweep ω where"),
 ]
 
+# The sweep (doc 09:47): sets 2-4 get set 1's changes in their own level's words, and the faster walk
+# to τ (doc 08:30: "we can push it faster in later sets"): the 2π shows in the knife's rule and its
+# number, the 2 is noticed, and the turn takes τ at the knife itself.
+LATER = [
+ [("The usual small-swing rule gives T = 2π√(ℓ/g). A whole turn has arrived wearing two flips. Give the full turn its own sign, τ.\nCall a radian a stroke. A whole turn is τ, about 6.3 strokes. Half a turn is π, the flip. A turn of the knife’s cycle brings it back to the same end; a flip of the cycle takes it to the opposite end.\nCount strokes each second and call that the sweep. The cycle’s sweep is ω. The small-swing rule balances as\n    ℓω² = g,\n     Tω = τ.\nHere the cycle sweeps at √10, about 3.2 strokes a second. Its turn takes T = τ/√10 = 1.99 s, about two seconds.",
+   "Call a radian a stroke. All the way round is a turn, about 6.3 strokes, and half of that is π, the flip. A flip of the knife’s cycle takes it to the opposite end; a turn brings it back.\nCount strokes each second and call that the sweep. The cycle’s sweep is ω. The usual small-swing rule balances as\n    ℓω² = g,\n    Tω = 2π.\nHere the cycle sweeps at √10, about 3.2 strokes a second. Its cycle takes T = 2π/√10 = 1.99 s, about two seconds. There's a 2 riding along with that π: two flips standing in for one turn. π only covers half of what the knife does, one swing across; the cycle is the whole of it. Give the whole turn its own sign, τ, and the rule says so:\n    Tω = τ.")],
+ # R-097: sweep comes in as a unit where pickup arrives (level 2); from here on a stroke a second is a sweep
+ [("θ̈ = −(g/ℓ)θ.", "θ̈ = −(g/ℓ)θ. A stroke a second makes a handy unit of sweep, so call it a sweep too: the cycle sweeps at 3.2 sweep. At either end the knife picks up at 10 of its 0.10 lean: 1.0 sweep a second, back toward the bottom.")],
+ [("The height, bottom speed and time for a turn stay the same.", "The height, bottom speed and time for a cycle stay the same.")],
+ # the ladder: doc's hair spaces (R-094) and R-098
+ [("(3) The center runs at Lω/2 and the ladder sweeps about its center at the same ω. The center punches ½m(Lω/2)², or mL²ω²/8. About the center the profile is L²/12, so the turning hooks ½(mL²/12)ω², or mL²ω²/24.",
+   "(3) The center runs at L ω/2 and the ladder sweeps about its center at the same ω. The center punches ½ m (L ω/2)², or m L² ω²/8. About the center the profile is L²/12, so the turning hooks ½ (m L²/12) ω², or m L² ω²/24.")],
+ [("After the ladder's left the wall", "After the ladder has left the wall")],
+ # the cue ball in arrows (doc 09:17/09:19, 09:41), in spin, punch and hook
+ [("(1) Call the given impulse J. The strike is a blow; what it leaves in the center's motion is punch. A 2.0 N s blow on 1.0 kg leaves the center running at 2.0 m/s.\n(2) The same impulse, struck H above the table, is H − R above the ball's center, so about the center it leaves J(H − R) of spin, the angular momentum. Rolling at once means the ball sweeps at v/R. Its profile about the center is (2/5)R², so (2/5)mR² sweeping at v/R carries (2/5)RJ of spin. So H − R = 2R/5, and H = 7R/5 = 0.070 m: two fifths of a radius above the center.\n(3) The ball sweeps at 2.0/0.050 = 40 strokes a second. The center punches ½ × 1.0 × 2.0² = 2.0 J. The turning hooks ½ × (2/5)(1.0)(0.050)² × 40² = 0.80 J: two fifths of the punch again.",
+   "(1) Call the given impulse J: 2.0 N s →. The strike is a blow; what it leaves in the center's motion is punch. On 1.0 kg it leaves the center running at 2.0 m/s →.\n(2) Take the lever from the ball's center up to where the cue strikes: (H − R) ↑. The angular momentum a blow leaves about the center is spin, and it's the leverage of the blow, with ↑ × → = ↻:\n    (H − R) ↑ × J → = (H − R) J ↻.\nRolling at once means the bottom of the ball isn't sliding. The bottom's lever from the center is R ↓, and the turning moves it at the sweep crossed into that lever: ω ↻ × R ↓ = ω R ←. That has to cancel the center's v →, so the ball sweeps at v/R ↻. Its profile about the center is (2/5) R², and (2/5) m R² sweeping at v/R carries\n    (2/5) m R² (v/R) ↻ = (2/5) R J ↻\nof spin, since m v is J. The two senses agree, so the cue went in above the center, and H − R = 2R/5: H = 7R/5 = 0.070 m, two fifths of a radius above the center.\n(3) The ball sweeps at 2.0/0.050 = 40 strokes a second ↻, and its spin is (2/5)(0.050 m)(2.0 N s) = 0.040 kg m²/s ↻. The center punches half its velocity dotted into its momentum, and the turning hooks half the sweep dotted into the spin:\n    ½ (2.0 m/s →) · (2.0 N s →) = 2.0 J,\n    ½ (40 ↻) · (0.040 kg m²/s ↻) = 0.80 J.\nEach pair points the same way, so each dot is just the product of the sizes. The hook is two fifths of the punch again.")],
+ [("(1) The ball cycles with sweep ω where", "(1) T is the period—how long it takes to sweep through a full turn of the cycle. The ball cycles with sweep ω where")],
+]
+# drawer 1 (sets 2-4): the spool's ledgers in senses, not signs (R-092, R-096), the book's turning senses (R-099)
+DRAWER1 = [
+ ("The center's ledgers agree. Forward will be positive, and a positive roll would also take the spool this way. With f the counter's grip, positive forward: ma = F + f and Ia/R = −Fr − fR. Put the second into the first and the same a comes out. The grip comes out negative, pulling back, so the cord cranks the spool backward about the axle and the counter's grip cranks it forward, harder.",
+  "The center's ledgers agree. Take the counter's grip f as positive → too, like the cord: ma → = F → + f →. Rolling →, the spool turns back around, and both pulls below the axle crank it forward around: I a/R ↻ = [Fr + fR] ↺. Put the second into the first and the same a comes out. The grip comes out ←, so the cord cranks the spool ↺ about the axle and the counter's grip cranks it ↻, harder."),
+ ("a = 0.80 m/s², forward, the way the cord pulls. Friction pulls back 4.4 N.", "a = 0.80 m/s² →, the way the cord pulls. Friction pulls 4.4 N ←."),
+ ("and ω = 5.0 rad/s: the kitchen's shaft.", "and ω = 5.0 sweep: the kitchen's shaft."),
+]
+SWEEP_UNIT = [(re.compile(r"(?<=[0-9]) strokes a second each second"), " sweep a second"),
+              (re.compile(r"(?<=[0-9]) strokes a second"), " sweep")]
+
 STATEMENT_FIX = [("the center moves at speed Lω/2, where", "the center moves at speed L\u200aω/2, where"),
                  ("(moment of inertia 2mR²/5)", "(moment of inertia 2\u200am\u200aR²/5)"),   # doc's hair spaces, 09:17
                  ("A spool of mass 2.0 kg, outer radius R = 0.20 m and hub radius r = 0.12 m has moment of inertia 0.040 kg m²† about its axle. It rests on a level counter.",
@@ -216,12 +244,17 @@ def build(k):
         new = new.format(turns=turns, turn=turns[:-1])
         assert route.count(old) == 1, old[:70]
         route = route.replace(old, new)
-    if k == 1:
-        route = STROKES.sub(" strokes", route)
-    if k == 1:   # doc 2026-10-22 08:29: the slow walk to τ, in set 1 first; sets 2-4 get it at the sweep
+    route = STROKES.sub(" strokes", route)
+    if k == 1:   # doc 2026-10-22 08:29: the slow walk to τ, in set 1
         for old, new in SLOW_WALK:
             assert route.count(old) == 1, old[:70]
             route = route.replace(old, new)
+    else:        # the sweep, 09:47: the faster walk and set 1's other changes, in level-k words
+        for alts in LATER:
+            hit = False
+            for old, new in alts:
+                if route.count(old) == 1: route = route.replace(old, new); hit = True
+            assert hit, alts[0][0][:70]
     ending = main[iE:]
     items, scen = appendix_items(tabs, k)
     st = statements()
@@ -277,7 +310,22 @@ def build(k):
     for ln in ending[1:]:
         if ln.startswith("## "): out.append(("h3", ln[3:]))
         else: out.append(("p", ln))
-    return [(t, STROKES.sub(" strokes", x)) for t, x in out]
+    out = [(t, STROKES.sub(" strokes", x)) for t, x in out]
+    if k >= 2:
+        for old, new in DRAWER1:
+            n = sum(x.count(old) for _, x in out); assert n == 1, (n, old[:60])
+            out = [(t, x.replace(old, new)) for t, x in out]
+        # R-097: after the knife brings sweep in as a unit, a stroke a second is a sweep (solutions only)
+        i0 = next(i for i, (t, x) in enumerate(out) if "call it a sweep too" in x)
+        sol = False
+        for i in range(i0 + 1, len(out)):
+            t, x = out[i]
+            if t == "b" and x == "Solution": sol = True
+            elif t in ("h2", "h3"): sol = t == "h2"   # a new problem's statement is standard language
+            if sol:
+                for rx, rep in SWEEP_UNIT: x = rx.sub(rep, x)
+                out[i] = (t, x)
+    return out
 
 def to_html(items):
     h = ['<html><head><meta charset="utf-8"></head><body>']
