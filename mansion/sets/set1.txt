@@ -3,12 +3,12 @@ Written by Claude (Anthropic), 2026-10-22, for dr. kraemer. Set 1 of four: the w
 Words this set uses: the turn and τ, π for the flip, the cycle (it cycles), the sweep and the stroke, χ for torque, sentences the right way round (current is the conductance of the voltage; power is the voltage of the current, and the sweep of the torque), own time.
 A value marked † is supplied: chosen so the house works, with the reason somewhere below the mansion.
 ## The way in
-The inquiry has a place and an hour. It has no name for the dead.
-A visitor has come to find out how it was done. The door is unlatched. A loose sheet of questions lies beside a small ruled book; the book has been opened to a page someone has already used.
-In the dining room the roast is going cold under its cover. A strip of paper moves beneath a pen. Above it, a knife swings.
-At the silver centerpiece’s pivot, a powdered clown in damask has stopped partway into a curtsy. The flowers on one repaired cuff face inward; every other spray faces out. The curtsy doesn’t deepen.
-A silver canteen stands locked on the sideboard. Its lid bears a painted juggler. The little lock has been polished more recently than the lid.
-The visitor watches the knife go across and come back. On the paper, the same curve begins again.
+The inquiry has a place and an hour. Left unspecified: who should arrive, and who will depart.
+A visitor arrives to find out how it was all done. The door is unlatched. A loose question sheet lies beside a small blank book, opened to a page half-full of notes.
+In the dining room the roast goes cold under its cover. A strip of paper moves beneath a pen. Above it swings a knife.
+At the silver pivot, a powdered clown in damask is partway into a curtsy. Every flower (?) on a repaired cuff faces in, while every other spray faces out. (?) The curtsy does not deepen.
+A trim silver canteen with an enamel juggler on the lid stands locked on the sideboard. The lock has been polished more recently than the lid.
+The visitor watches the knife cycle across and back. On the paper, the curve cycles with it.
 ## Dining room
 ## 1. The knife
 A knife is modeled as a point mass m = 1.0 kg on a massless rod of length ℓ = 1.0 m, pivoted so it swings freely in a vertical plane. It's released from rest at θ₀ = 0.10 rad from the downward vertical. Use g = 10 m/s² and the small-angle approximation 1 − cos θ ≈ θ²/2.
