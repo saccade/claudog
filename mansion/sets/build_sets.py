@@ -188,6 +188,25 @@ ARROWS = [
   "(3) At T/2 the slow part has made two whole turns and the fast part four turns and a flip. So the slow cycle points → and the fast one ←, and q/q₀ = (9/13)(→ · →) + (4/13)(→ · ←) = 9/13 − 4/13 = 5/13. Both cycles lie along the start line, and their ↑ parts are zero there,"),
 ]
 
+# doc 10:59: "symmetry everywhere, make everything into mobiles". The dot also scales, so a part as a force is
+# → · F · → (symmetric, read from either end); arrows hug the operator with hair spaces, sizes hang outside with
+# full spaces; a cross keeps its arrows in order. The chair's cycles become hands, so no angle gets dotted.
+H = " "; DOT = H + "·" + H; CROSS = H + "×" + H
+MOBILES = [
+ (f"The forward part of F, →{DOT}F, is how much of the pull goes forward; as a force it points forward, → F{DOT}→. With nothing speeding up, the grip has to be ← F{DOT}→,",
+  f"The forward part of F, →{DOT}F, is how much of the pull goes forward, and as a force it points forward too: →{DOT}F{DOT}→. With nothing speeding up, the grip has to be the same size pointing back, →{DOT}F{DOT}←,"),
+ ("with ↑ × → = ↻:", f"with ↑{CROSS}→ = ↻:"),
+ ("    (H − R) ↑ × J → = (H − R) J ↻.", f"    (H − R) ↑{CROSS}→ J = (H − R) J ↻."),
+ ("ω ↻ × R ↓ = ω R ←", f"ω ↻{CROSS}↓ R = ω R ←"),
+ ("    ½ (2.0 m/s →) · (2.0 N s →) = 2.0 J,", f"    ½ 2.0 m/s →{DOT}→ 2.0 N s = 2.0 J,"),
+ ("    ½ (40 ↻) · (0.040 kg m²/s ↻) = 0.80 J.", f"    ½ 40 ↻{DOT}↻ 0.040 kg m²/s = 0.80 J."),
+ ("(2) The statement's cosines are each part's cycle dotted into where it started, → · 4νt_H and → · 9νt_H, and its sines are ↑ · 4νt_H and ↑ · 9νt_H. The weights 9/13 and 4/13 are positive and add to one, so q is back at q₀ only when both cycles point → again.",
+  "(2) Picture each part's cycle as a hand swinging round from →, the slow one 4νt_H and the fast one 9νt_H. The statement's cosines are the hands' forward parts and its sines their upward parts. The weights 9/13 and 4/13 are positive and add to one, so q is back at q₀ only when both hands point → again."),
+ ("the ↑ parts and the velocities return too.", "the upward parts and the velocities return too."),
+ ("So the slow cycle points → and the fast one ←, and q/q₀ = (9/13)(→ · →) + (4/13)(→ · ←) = 9/13 − 4/13 = 5/13. Both cycles lie along the start line, and their ↑ parts are zero there,",
+  f"So the slow hand points → and the fast one ←, and q/q₀ = 9/13 →{DOT}→ + 4/13 →{DOT}← = 9/13 − 4/13 = 5/13. Both hands lie along the start line, and their upward parts are zero there,"),
+]
+
 STATEMENT_FIX = [("the center moves at speed Lω/2, where", "the center moves at speed L\u200aω/2, where"),
                  ("(moment of inertia 2mR²/5)", "(moment of inertia 2\u200am\u200aR²/5)"),   # doc's hair spaces, 09:17
                  ("A spool of mass 2.0 kg, outer radius R = 0.20 m and hub radius r = 0.12 m has moment of inertia 0.040 kg m²† about its axle. It rests on a level counter.",
@@ -267,7 +286,7 @@ def build(k):
         for old, new in SLOW_WALK:
             assert route.count(old) == 1, old[:70]
             route = route.replace(old, new)
-        for old, new in ARROWS:
+        for old, new in ARROWS + MOBILES:
             assert route.count(old) == 1, old[:70]
             route = route.replace(old, new)
     else:        # the sweep, 09:47: the faster walk and set 1's other changes, in level-k words
