@@ -30,6 +30,12 @@ for kind, a, b, t in spans:
         if i >= 0:
             u = lambda s: len(s.encode("utf-16-le")) // 2
             reqs.append({"updateTextStyle": {"range": {"startIndex": a + u(t[:i]), "endIndex": a + u(t[:i]) + u(phrase), "tabId": TAB}, "textStyle": {"link": {"url": url}}, "fields": "link"}})
-li = [s for s in spans if s[0] == "li"]
-if li: reqs.append({"createParagraphBullets": {"range": {"startIndex": li[0][1], "endIndex": li[-1][2], "tabId": TAB}, "bulletPreset": "BULLET_DISC_CIRCLE_SQUARE"}})
+runs = []   # one bullet range per run of li paragraphs, so a plain paragraph between two lists stays plain
+for s in spans:
+    if s[0] == "li":
+        if runs and runs[-1][2] and runs[-1][1] == s[1] - 1: runs[-1][1] = s[2]
+        else: runs.append([s[1], s[2], True])
+    else: runs.append([0, 0, False])
+for a, b, isli in runs:
+    if isli: reqs.append({"createParagraphBullets": {"range": {"startIndex": a, "endIndex": b, "tabId": TAB}, "bulletPreset": "BULLET_DISC_CIRCLE_SQUARE"}})
 print(json.dumps({"revision": c["revisionId"], "requests": reqs}, ensure_ascii=False)); print(count, file=sys.stderr)
