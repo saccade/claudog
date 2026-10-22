@@ -34,8 +34,8 @@ The pen begins the curve again. The lock stays shut.
 ## Kitchen
 The line on the paper goes on behind the wall. Ahead, something breathes in steam. By the range, a toolbox in scorched canvas, locked.
 ## 2. The engine and the flywheel
-A small steam engine takes in 15 J of heat and does 3.0 J of work in each cycle, returning to its initial state at the end of each cycle. It completes one cycle per second.
-1. Find the heat rejected per cycle, the efficiency and the average power output.
+A small steam engine takes in 15 J of heat to do 3.0 J of work per one-second cycle.
+1. Find the heat rejected per cycle, the efficiency, and the average power output.
 2. The engine's 3.0 W of net power, taken as constant, drives a flywheel of moment of inertia I = 0.50 kg m², initially turning at 4.0 rad/s, for 4.0 s. Find the final angular speed.
 3. The power delivered by a torque τ to a wheel turning at angular speed ω is P = τω. Find the driving torque at the start and at the end of the 4.0 s.
 Solution
