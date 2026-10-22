@@ -315,6 +315,18 @@ P1_FINAL = [("With nothing speeding up, the grip has to be the same size pointin
              "With nothing speeding up, the grip has to be the same size pointing back, →\u200a·\u200aF\u200a·\u200a←. Read from the other end, that's the backward part of F, pointing forward, ←\u200a·\u200aF\u200a·\u200a→, and 0.20 m below the axle it turns the spool ↺ along with the cord, by (←\u200a·\u200aF) R. The two turnings add on their own: Fr ↺ + (←\u200a·\u200aF) R ↺ = (Fr + (←\u200a·\u200aF) R) ↺, the net torque about the axle, and with nothing turning that's zero. So Fr and the backward part at R add to nothing, and the forward part is r/R of the pull, 3/5."),   # FX-125 (doc 16:36-16:38): the minus moves into the dot, and the words stop bending
             ("(3) In the slow mode the lower angle is +√2 times the upper: both masses swing the same way, the lower one farther. In the fast mode it's −√2 times: whenever the upper mass swings one way, the lower one swings the other.",
              "(3) The √2 belongs to the rods' angles, and the question asks about the masses. The lower mass rides on the upper one: it's out by the upper rod's swing plus its own rod's. In the slow mode the lower rod leans √2 as far the same way, so the lower mass goes 1 + √2 times as far as the upper, about 2.4. In the fast mode the lower rod leans √2 as far the other way, more than undoing what the upper rod gave it, so the lower mass swings the other way, but only √2 − 1 as far, about 0.41.")]   # doc 18:11: path 1's 9-3 in plain words, no body notation
+# Sweep 3 (R-116, R-117): path 1 glosses a little more fully at first use, said plainly, and nods where the reader
+# has gone long enough to forget (τ, 7k characters; χ, 11k). Applied to path 1's final text after solutions_only.
+P1_GLOSS = [
+    ("A flywheel's energy is half its moment of inertia at the squared sweep.",
+     "A flywheel's energy is half its moment of inertia at the squared sweep, ½Iω²: the inertia carried at that sweep."),
+    ("the forward part of F is → · F, the pull dotted with forward, and",
+     "the forward part of F is → · F, the pull dotted with forward. The dot keeps just the part of F that runs along the arrow, which is the F cos θ from a moment ago, and"),
+    ("The arrows add on their own and dot pair by pair, and ← · ↑ gives nothing:",
+     "The arrows add on their own and dot pair by pair. An arrow dotted with itself gives 1, since all of it runs its own way, and ← · ↑ gives nothing, since none of ← runs up:"),
+    ("a turn of the cycle takes T with ωT = τ.", "a turn of the cycle takes T with ωT = τ, the whole turn."),
+    ("here it's χ_em = κi.", "here it's χ_em = κi, with χ for torque as in the kitchen."),
+]
 F4_STATEMENT = "4. With one wave at 5.0 MHz, what frequency for the other puts the fast crests at nine times u? Where are the slow crests then?"
 F4_SOLUTION = ("(f-4) The fast crests run at u(f₁ + f₂)/(f₁ − f₂), so nine times u needs the sum to be nine times the difference: "
                "5.0 MHz + f₂ = 9 (5.0 MHz − f₂), so 10 f₂ = 40 MHz and f₂ = 4.0 MHz. The two speeds multiply to u², so the slow crests run at u/9. "
@@ -504,6 +516,11 @@ def build(k):
             assert len(hit) == 1, old[:60]
             out[hit[0]] = (out[hit[0]][0], out[hit[0]][1].replace(old, new))
     out = solutions_only(out)   # the sweep, doc 18:22: statements live in the problem set
+    if k == 1:
+        for old, new in P1_GLOSS:
+            hit = [j for j, (t, x) in enumerate(out) if isinstance(x, str) and old in x]
+            assert len(hit) == 1, old[:60]
+            out[hit[0]] = (out[hit[0]][0], out[hit[0]][1].replace(old, new))
     # doc 18:00: the reverse question goes in as drawer 6's part 4; the hall's 4 MHz dagger points here (problem set f-4)
     for j, (t, x) in enumerate(out):
         if isinstance(x, str) and x.startswith("3. For 5.0 MHz and 4.0 MHz and u"):   # statements are gone after the sweep

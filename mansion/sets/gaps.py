@@ -38,12 +38,10 @@ def stream(k):
     """Solution sentences in reading order, then the path's ending: [(piece, sentence)]."""
     _, ps = lineup_sets.pieces(k)
     out = []
-    for name, body in ps:
-        insol = WHOLE_PATH and name == "ending"
+    for name, body in ps:   # the paths are solutions only since sweep 2: every p and eq is workings
+        if name == "ending" and not WHOLE_PATH: continue
         for t, s in body:
-            if t == "b" and s == "Solution": insol = True; continue
-            if t in ("h2", "h3"): insol = WHOLE_PATH and name == "ending"
-            if insol and t in ("p", "eq"):
+            if t in ("p", "eq"):
                 for x in SENT.split(re.sub(r"</?b>", "", s)): out.append((name, x))
     return out
 

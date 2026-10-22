@@ -17,10 +17,10 @@ def key(t, s):
         return s.lower()
     m = re.match(r"(\d+)\. (.*)", s)
     if m: return f"problem {m.group(1)}, {m.group(2).lower()}"
-    m = re.match(r"(Drawer \d|F\d|U\d)", s)
+    m = re.match(r"(Drawer [a-g]|Mirror \d|[αβγ]):", s)   # the problem set's labels since sweep 2
     tag = m.group(1)
-    if tag.startswith("F"): return f"funhouse {tag}"
-    if tag.startswith("U"): return f"under the stage {tag}"
+    if tag.startswith("Mirror"): return f"funhouse {tag.lower()}"
+    if tag in "αβγ": return f"under the stage {tag}"
     return tag.lower()
 
 def pieces(k):
