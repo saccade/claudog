@@ -3,7 +3,7 @@ Written by Claude (Anthropic), 2026-10-21, for dr. kraemer. Set 3 of four: the w
 Words this set uses: level 2's, plus zip and zing; the still point; flips and mirror pairs; tone, chord, beat and the shape Ω_shape; the trade (a belt, not a battery); the stripe and phase, for ghosts; shift and stretch.
 ## The way in
 The inquiry has a place and an hour. It has no name for the dead.
-A visitor has come to find out how it was done. The door is unlatched. A loose sheet of questions lies beside a small ruled book; the book has been opened to a page somebody has already used.
+A visitor has come to find out how it was done. The door is unlatched. A loose sheet of questions lies beside a small ruled book; the book has been opened to a page someone has already used.
 In the dining room the roast is going cold under its cover. A strip of paper moves beneath a pen. Above it, a knife swings.
 At the silver centerpiece’s pivot, a whiteface in damask has stopped partway into a curtsy. The flowers on one repaired cuff face inward; every other spray faces out. The curtsy doesn’t deepen.
 A silver canteen stands unlatched on the sideboard. Its lid bears a painted juggler. The little lock has been polished more recently than the lid.
@@ -65,7 +65,8 @@ A small steam engine takes in 15 J of heat and does 3.0 J of work in each cycle,
 Solution
 (1) The engine ends each cycle with the same stored energy it began with. Of the 15 J that goes in, 3.0 J comes out as work and the other 12 J goes out as heat. Work over heat in is 3/15: 20 percent. At a cycle a second, that's 3.0 W.
 (2) Energy in turning is hook: a flywheel hooks half its moment of inertia at the squared sweep. 0.50 kg m² sweeping at 4.0 stroke a second hooks 4.0 J. Four seconds at a net 3.0 W add 12 J of hook, for 16 J, and 16 J of hook on the same wheel needs the squared sweep to be 64. The wheel ends up sweeping at 8.0. The engine paid in equal hook every second, not equal sweep, so four times the hook only doubles the sweep. With the inertia taken out, hook is the zing, ½ω²: the wheel zings at 8 at the start and 32 at the end.
-(3) Torque usually gets the letter τ, but the turn has it now. Torque gets χ. A torque cranks. The power a crank delivers is the sweep of the crank: P = χω. Put numbers to it once: 0.75 N m cranking at 4.0 stroke a second delivers 3.0 W. So at the start the engine cranks the wheel with χ = 0.75 N m, and at the end, sweeping at 8.0, with 0.38 N m. The same power cranks half as hard once the wheel's going twice as fast. On 0.50 kg m², those cranks pick the wheel up at 1.5 stroke a second each second at the start and 0.75 at the end.
+(3) Torque usually gets the letter τ, but the turn has it now. An χ on wall could apply a twist to something—use that for torque. A torque cranks. The power a crank delivers is the sweep of the crank: P = ωχ. Put numbers to it once: 0.75 N m cranking at 4.0 stroke a second delivers 3.0 W. So at the start the engine cranks the wheel with χ = 0.75 N m, and at the end, sweeping at 8.0, with 0.38 N m.
+When the wheel goes twice as fast, the same power cranks just half as hard. On 0.50 kg m², those cranks pick the wheel up at 1.5 stroke a second each second at the start and 0.75 at the end.
 ## 3. The governor and the spool
 A centrifugal governor has two 1.0 kg balls, each on a massless 0.50 m arm hinged on the axis of a vertical shaft. The shaft turns steadily at 5.0 rad/s†.
 1. Find the angle each arm makes with the vertical, and how far each ball has risen above its hanging position.

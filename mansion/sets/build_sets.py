@@ -136,6 +136,7 @@ def build(k):
     route = apply_edits(route, k)
     # doc 2026-10-22: a letter moves when it's needed. Nothing needs I for anything else at the spool,
     # so it keeps the statement's I; inertia moves to η only where current has taken I (F2, U1).
+    route = route.replace("a page somebody has already used", "a page someone has already used")   # doc, set 1, 07:31
     for old, new in SPOOL_I:
         if old in route: route = route.replace(old, new)
     assert "η" not in route, "η left in the mansion route"

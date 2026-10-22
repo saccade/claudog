@@ -18,7 +18,10 @@ LEVEL[1] += [
   "A flywheel's energy is half its moment of inertia at the squared sweep. At 4.0 stroke a second, half of 0.50 kg m² at 16 is 4.0 J."),
  ("needs the square of the sweep to be 64.", "needs the squared sweep to be 64."),
  ("The power a torque delivers is the torque times the sweep: P = χω. At the start, 3.0 W at 4.0 stroke a second takes χ = 0.75 N m. At the end, at 8.0, it takes 0.38 N m.",
-  "The power a torque delivers is the sweep of the torque: P = χω. Put numbers to it once: 0.75 N m at 4.0 stroke a second delivers 3.0 W. So at the start the engine's 3.0 W takes χ = 0.75 N m, and at the end, at 8.0, it takes 0.38 N m."),
+  "The power a torque delivers is the sweep of the torque: P = ωχ. Put numbers to it once: 0.75 N m at 4.0 stroke a second delivers 3.0 W. So at the start the engine's 3.0 W takes χ = 0.75 N m, and at the end, at 8.0, it takes 0.38 N m."),
+ # doc, 2026-10-22 07:31, typed into set 1: how χ is picked, and his closing sentence
+ ("Torque gets χ. The power a torque delivers", "An χ on wall could apply a twist to something—use that for torque. The power a torque delivers"),
+ (" The same power needs half the torque once the wheel's going twice as fast.", "\nWhen the wheel goes twice as fast, applying the same power takes just half the torque."),
  ("and that takes m times the square of the sweep times the ball's distance from the shaft, mω²ℓ sin θ.",
   "and that takes the mass at the squared sweep, at the ball's distance from the shaft: mω²ℓ sin θ."),
  ("As both change, x times the foot's velocity plus y times the top's velocity is zero. So the top moves at x/y times the foot's speed, the other way: 1.8/2.4 × 0.40 = 0.30 m/s, downward.",
@@ -45,8 +48,8 @@ LEVEL[2] += [
  # flywheel: hook, crank, pickup
  ("A flywheel's energy is half its moment of inertia at the squared sweep. At 4.0 stroke a second, half of 0.50 kg m² at 16 is 4.0 J. Four seconds at a net 3.0 W add 12 J, for 16 J, and 16 J on the same wheel needs the squared sweep to be 64. The wheel ends up sweeping at 8.0 stroke a second. The engine paid in equal energy every second, not equal sweep, so four times the energy only doubles the sweep.",
   "Energy in turning is hook: a flywheel hooks half its moment of inertia at the squared sweep. 0.50 kg m² sweeping at 4.0 stroke a second hooks 4.0 J. Four seconds at a net 3.0 W add 12 J of hook, for 16 J, and 16 J of hook on the same wheel needs the squared sweep to be 64. The wheel ends up sweeping at 8.0. The engine paid in equal hook every second, not equal sweep, so four times the hook only doubles the sweep."),
- ("The power a torque delivers is the sweep of the torque: P = χω. Put numbers to it once: 0.75 N m at 4.0 stroke a second delivers 3.0 W. So at the start the engine's 3.0 W takes χ = 0.75 N m, and at the end, at 8.0, it takes 0.38 N m. The same power needs half the torque once the wheel's going twice as fast.",
-  "A torque cranks. The power a crank delivers is the sweep of the crank: P = χω. Put numbers to it once: 0.75 N m cranking at 4.0 stroke a second delivers 3.0 W. So at the start the engine cranks the wheel with χ = 0.75 N m, and at the end, sweeping at 8.0, with 0.38 N m. The same power cranks half as hard once the wheel's going twice as fast. On 0.50 kg m², those cranks pick the wheel up at 1.5 stroke a second each second at the start and 0.75 at the end."),
+ ("The power a torque delivers is the sweep of the torque: P = ωχ. Put numbers to it once: 0.75 N m at 4.0 stroke a second delivers 3.0 W. So at the start the engine's 3.0 W takes χ = 0.75 N m, and at the end, at 8.0, it takes 0.38 N m.\nWhen the wheel goes twice as fast, applying the same power takes just half the torque.",
+  "A torque cranks. The power a crank delivers is the sweep of the crank: P = ωχ. Put numbers to it once: 0.75 N m cranking at 4.0 stroke a second delivers 3.0 W. So at the start the engine cranks the wheel with χ = 0.75 N m, and at the end, sweeping at 8.0, with 0.38 N m.\nWhen the wheel goes twice as fast, the same power cranks just half as hard. On 0.50 kg m², those cranks pick the wheel up at 1.5 stroke a second each second at the start and 0.75 at the end."),
  # governor heft; spool profile, crank, pickup
  ("Each ball hangs 0.40 m below the hinge instead of 0.50 m, so it's risen 0.10 m.",
   "Each ball hangs 0.40 m below the hinge instead of 0.50 m, so it's risen 0.10 m, and each 1.0 kg ball hefts 1.0 J."),
