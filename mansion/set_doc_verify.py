@@ -28,6 +28,8 @@ for (el, t), (tag, _, it, bold, ind) in zip(have, want):
         st = tr.get("textStyle", {}); s = tr["content"].rstrip("\n")
         if not s: continue
         if st.get("foregroundColor", {}).get("color"): bad.append(("color", s[:30]))
+        for mark in ("strikethrough", "underline", "backgroundColor"):   # doc's markup is a message, not styling: report it
+            if st.get(mark): bad.append((mark, s[:40]))
         if bool(st.get("italic")) != it: bad.append(("italic", s[:30]))
         if bool(st.get("bold")) != (pos < bold): bad.append(("bold", s[:30]))
         if ("†" in s) != (st.get("baselineOffset") == "SUPERSCRIPT"): bad.append(("dagger", s[:30]))
