@@ -299,6 +299,8 @@ def build(k):
         route = route.replace(old, new)
     route = STROKES.sub(" strokes", route)
     for old, new in SETUP_DOC:   # doc's way in, every set (sets 2-4 take it at the next sweep)
+        if route.count(old) != 1:   # from level 2 the canteen stands unlatched
+            old, new = old.replace("locked", "unlatched"), new.replace("locked", "unlatched")
         assert route.count(old) == 1, old[:70]
         route = route.replace(old, new)
     if k == 1:   # doc 2026-10-22 08:29: the slow walk to τ, in set 1
