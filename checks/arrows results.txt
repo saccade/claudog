@@ -1,0 +1,133 @@
+
+identities, forward drawn page-right
+  ✓ ← = −→, ↓ = −↑, ↻ = −↺
+  ✓ ↺ is a unit turning sense, out of the plane
+  ✓ ↓ × → = ↺
+  ✓ ↑ × → = ↻
+  ✓ ↓ × ← = ↻
+  ✓ ↑ × ← = ↺
+  ✓ ↻ × ↓ = ←
+  ✓ ↺ × ↓ = →
+  ✓ ↻ × ↑ = →
+  ✓ ↻ × → = ↓
+  ✓ → · → = 1
+  ✓ ← · → = -1
+  ✓ ← · ↑ = 0
+  ✓ ↻ · ↻ = 1
+  ✓ ↻ · ↺ = -1
+  ✓ ↺ on the page is counterclockwise   [↺ = +1 z]
+
+identities, forward drawn page-left (mirror)
+  ✓ ← = −→, ↓ = −↑, ↻ = −↺
+  ✓ ↺ is a unit turning sense, out of the plane
+  ✓ ↓ × → = ↺
+  ✓ ↑ × → = ↻
+  ✓ ↓ × ← = ↻
+  ✓ ↑ × ← = ↺
+  ✓ ↻ × ↓ = ←
+  ✓ ↺ × ↓ = →
+  ✓ ↻ × ↑ = →
+  ✓ ↻ × → = ↓
+  ✓ → · → = 1
+  ✓ ← · → = -1
+  ✓ ← · ↑ = 0
+  ✓ ↻ · ↻ = 1
+  ✓ ↻ · ↺ = -1
+  ✓ ↺ on the page is clockwise: forward around follows the body, not the page   [↺ = -1 z]
+
+mobile rules, forward drawn page-right
+  ✓ → · F · ← = ← · F · →   (read the mobile from the other end)
+  ✓ (→ · F) R ↻ = (← · F) R ↺   (the minus moves into the dot)
+  ✓ Fr ↺ + (→ · F) R ↻ = (Fr + (← · F) R) ↺ = (Fr − (→ · F) R) ↺   (one vector, three ways to write it)
+  ✓ → · F · → + ↑ · F · ↑ = F   (the parts put back)
+  ✓ a dot doesn't care about order: the sizes step out of the way
+  ✓ a cross keeps its arrows in order: the sizes move, the arrows don't
+  ✓ (H − R) ↑ × → J = (H − R) J ↻
+
+mobile rules, forward drawn page-left (mirror)
+  ✓ → · F · ← = ← · F · →   (read the mobile from the other end)
+  ✓ (→ · F) R ↻ = (← · F) R ↺   (the minus moves into the dot)
+  ✓ Fr ↺ + (→ · F) R ↻ = (Fr + (← · F) R) ↺ = (Fr − (→ · F) R) ↺   (one vector, three ways to write it)
+  ✓ → · F · → + ↑ · F · ↑ = F   (the parts put back)
+  ✓ a dot doesn't care about order: the sizes step out of the way
+  ✓ a cross keeps its arrows in order: the sizes move, the arrows don't
+  ✓ (H − R) ↑ × → J = (H − R) J ↻
+
+3-c spool, rolling, forward drawn page-right
+  ✓ the center speeds up at 0.80 m/s² →: it rolls toward the pull   [a = 0.8000]
+  ✓ the grip is 4.4 N ←   [f = -4.4000 along →]
+  ✓ it picks up at 4.0 ↻: it really does turn back around   [α = +4.0000 along ↻]
+  ✓ cord 0.72 N m ↺, grip 0.88 N m ↻, net 0.16 N m ↻ = I α ↻
+  ✓ (m + I/R²) a = F (1 − r/R)
+
+3-c spool, rolling, forward drawn page-left (mirror)
+  ✓ the center speeds up at 0.80 m/s² →: it rolls toward the pull   [a = 0.8000]
+  ✓ the grip is 4.4 N ←   [f = -4.4000 along →]
+  ✓ it picks up at 4.0 ↻: it really does turn back around   [α = +4.0000 along ↻]
+  ✓ cord 0.72 N m ↺, grip 0.88 N m ↻, net 0.16 N m ↻ = I α ↻
+  ✓ (m + I/R²) a = F (1 − r/R)
+
+3-c spool, textbook signs
+  ✓ a = +0.8, f = −4.4, α = −4.0 (clockwise, with forward drawn right)   [a = +0.800, f = -4.400, α = -4.000]
+  ✓ matches the arrows: the minus signs are the arrows' ← and ↻
+
+3-d spool at rest, forward drawn page-right
+  ✓ at any angle the cord leaves at a tangent and still turns the spool Fr ↺
+  ✓ the turnings cancel where → · F is r/R = 3/5 of the pull: 53°   [θ = 53.130°]
+  ✓ there Fr ↺ + (← · F) R ↺ = 0
+  ✓ the grip is → · F · ← = ← · F · →, 3.6 N ←
+
+3-d spool at rest, forward drawn page-left (mirror)
+  ✓ at any angle the cord leaves at a tangent and still turns the spool Fr ↺
+  ✓ the turnings cancel where → · F is r/R = 3/5 of the pull: 53°   [θ = 53.130°]
+  ✓ there Fr ↺ + (← · F) R ↺ = 0
+  ✓ the grip is → · F · ← = ← · F · →, 3.6 N ←
+
+3-d spool, textbook signs
+  ✓ F r = F cos θ R gives cos θ = r/R = 0.6
+
+4-a ladder, forward drawn page-right
+  ✓ the top moves 0.30 m/s ↓   [v = -0.3000 along ↑]
+  ✓ seen from the foot it's 0.50 m/s, square to the ladder
+
+4-a ladder, forward drawn page-left (mirror)
+  ✓ the top moves 0.30 m/s ↓   [v = -0.3000 along ↑]
+  ✓ seen from the foot it's 0.50 m/s, square to the ladder
+
+4-a ladder, textbook signs
+  ✓ x² + y² = L² gives ẏ = −x ẋ / y = −0.30
+
+5 cue ball, forward drawn page-right
+  ✓ it sweeps at 40 ↻ when it rolls at once
+  ✓ H = 7R/5 = 0.070 m   [H = 0.0700 m]
+  ✓ ½ v→ · →J = 2.0 J and ½ ω↻ · ↻L = 0.80 J
+
+5 cue ball, forward drawn page-left (mirror)
+  ✓ it sweeps at 40 ↻ when it rolls at once
+  ✓ H = 7R/5 = 0.070 m   [H = 0.0700 m]
+  ✓ ½ v→ · →J = 2.0 J and ½ ω↻ · ↻L = 0.80 J
+
+5 cue ball, textbook signs
+  ✓ −(H − R) J = (2/5) m R² ω with ω = −v/R gives H = 0.070 m
+
+7 hoop, forward drawn page-right
+  ✓ top 4.0 m/s →, bottom 0, front 2.0 m/s → + 2.0 m/s ↓
+
+7 hoop, forward drawn page-left (mirror)
+  ✓ top 4.0 m/s →, bottom 0, front 2.0 m/s → + 2.0 m/s ↓
+
+the mirror
+  ✓ spool rolling: the page-left drawing gives the same answer in the body's words
+  ✓ spool at rest: the page-left drawing gives the same answer in the body's words
+  ✓ ladder: the page-left drawing gives the same answer in the body's words
+  ✓ cue: the page-left drawing gives the same answer in the body's words
+  ✓ hoop: the page-left drawing gives the same answer in the body's words
+
+controls (each must be false)
+  ✓ wrong: ↓ × → = ↻   [false, as it should be]
+  ✓ wrong: → · F · ← = → · F · →   [false, as it should be]
+  ✓ wrong: a cross doesn't care about order   [false, as it should be]
+  ✓ wrong: ↺ is the page's counterclockwise whichever way forward is drawn   [false, as it should be]
+  ✓ wrong: the spool at rest at 45°   [false, as it should be]
+
+91 of 91 hold.
