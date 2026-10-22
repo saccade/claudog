@@ -102,6 +102,9 @@ DOC_0806 = [
    "The grip is f = 1.6 − 6.0 = −4.4 N: 4.4 N ←. It pulls back, and about the axle it cranks the spool ↻ harder than the cord cranks it ↺.")],
  [("Forward 2.0 m/s and down 2.0 m/s make 2√2, about 2.8 m/s, 45° below forward.", "2.0 m/s → and 2.0 m/s ↓ make 2√2, about 2.8 m/s, 45° (τ/8) below →.")],
  [("a whiteface in damask", "a powdered clown in damask")],
+ # doc 08:40-08:41: a hair space keeps ℓ and θ apart; the definite description, not the pronoun (only one thing has weight)
+ [("lifts a point at distance ℓ by ℓ(1 − cos θ). For this small lean, that’s ℓθ²/2", "lifts a point ℓ away by ℓ(1 − cos θ). For this small lean, that’s ℓ\u200aθ²/2")],
+ [("Its 10 N weight lifted through 5 mm", "The 10 N weight lifted through 5 mm")],
  [("the whiteface has gloves", "the powdered clown has gloves")],
 ]
 # The 2π is lugged around and noticed: the knife's rule and numbers (2nd and 3rd sightings, the 2 noticed),

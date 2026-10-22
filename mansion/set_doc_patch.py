@@ -37,6 +37,8 @@ for op, i1, i2, j1, j2 in difflib.SequenceMatcher(None, a, b, autojunk=False).ge
     elif op == "replace" and i2 - i1 == j2 - j1 + 1:   # one paragraph dropped: empty the first, pair the rest
         rep(a[i1], "")
         for o, n in zip(a[i1 + 1:i2], b[j1:j2]): pair(o, n)
+    elif op == "delete":   # a paragraph the build doesn't have (a note to the bots): empty it
+        for o in a[i1:i2]: rep(o, "")
     elif op == "insert":
         prev = a[i1 - 1]
         tail = prev[-60:]

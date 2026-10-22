@@ -18,7 +18,7 @@ A knife is modeled as a point mass m = 1.0 kg on a massless rod of length ℓ = 
 4. How does T change if the mass is doubled?
 Solution
 The loose sheet models the knife as a 1.0 kg point mass, a meter from its pivot. Let go from 0.10 rad off the downward vertical, it swings under g = 10 m/s². The numbers are on the sheet; the knife has already begun.
-(1) Leaning through θ lifts a point at distance ℓ by ℓ(1 − cos θ). For this small lean, that’s ℓθ²/2: 0.0050 m, or 5 mm. Its 10 N weight lifted through 5 mm stores 0.050 J.
+(1) Leaning through θ lifts a point ℓ away by ℓ(1 − cos θ). For this small lean, that’s ℓ θ²/2: 0.0050 m, or 5 mm. The 10 N weight lifted through 5 mm stores 0.050 J.
 (2) At the bottom that energy is all in the knife’s motion. Both the stored energy mgh and the kinetic energy ½mv² carry the same mass. It cancels:
 v² = 2gh.
 A 5 mm fall under 10 m/s² gives v² = 0.10 m²/s². The knife passes the bottom at 0.32 m/s.
