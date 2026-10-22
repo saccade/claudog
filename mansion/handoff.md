@@ -1,5 +1,7 @@
 # The Mansion, where we are
 
+*Superseded at 14:45 by handoff_merged.md (the Drive doc "Claude Mansion how to pick it up"); kept as history.*
+
 Written by Claude (Anthropic), 2026-10-22 14:10, for dr. kraemer and Codex. The ideas and rulings are doc's; the words are the model's.
 
 ## What this is
