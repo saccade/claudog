@@ -238,7 +238,7 @@ LATE_DOT = [("(1) An arm ℓ long, leaning θ, hangs ↓\u200a·\u200aℓ below 
 DOC_1320 = [("one swing across; the cycle is the whole of it. Give the whole turn its own sign, τ.", "one swing across—the cycle is the whole of it.\nGive the whole turn its own sign, τ."),
             ("use that for torque: P = ωχ, with χ = 0.75 N m at the start.", "use that for torque. Power is the sweep of torque (P = ωχ), which starts at χ = 0.75 N m."),
             # doc, set 1 doc, 16:3x: his note in spool part 3, kept as he wrote it
-            ("↻ is the opposite of ↺, so the balance says", "↻ is the opposite of ↺ (↻ = - ↺, and two two add to nothing) , so the balance says")]
+            ("↻ is the opposite of ↺, so the balance says", "↻ is the opposite of ↺ (↻ = −↺, and these two add to nothing), so the balance says")]
 DOC_1320_SET1 = [("Of the 15 J that goes in, 3.0 J comes out as work and the other 12 J goes out as heat. Work over heat in is 3/15: 20 percent.",
                   "Call the heat that comes in the heat-in, and the heat that leaves the heat-out. Of 15 J of heat-in, 3.0 J comes out as work and the other 12 J is heat-out. Work over heat-in is 3/15: 20%.")]
 DOC_1320_LATER = [("Of the 15 J that goes in, 3.0 J comes out as work and the other 12 J goes out as heat. Work over heat in is 3/15: 20 percent.",
@@ -246,7 +246,8 @@ DOC_1320_LATER = [("Of the 15 J that goes in, 3.0 J comes out as work and the ot
 
 STATEMENT_FIX = [("A small steam engine takes in 15 J of heat and does 3.0 J of work in each cycle, returning to its initial state at the end of each cycle. It completes one cycle per second.",
                   "A small steam engine takes in 15 J of heat to do 3.0 J of work per one-second cycle."),   # doc, set 1 doc, 16:03: returning to its initial state just redefines cycle
-                 ("the efficiency and the average power output", "the efficiency, and the average power output"),   # doc, 16:07: Oxford comma forever
+                 ("the efficiency and the average power output", "the efficiency, and the average power output"),
+                 ("Their sum has crests that move at", "Their sum is a product of two factors whose crests move at"),   # Codex's check; the sum's own peaks don't travel at either speed (appendix f)   # doc, 16:07: Oxford comma forever
                  ("pivoted so it swings freely in a vertical plane. It's released from rest", "pivoted to swing freely in a vertical plane. It gets released from rest"),   # doc's own edit, set 1 doc, 12:1x
                  ("the center moves at speed Lω/2, where", "the center moves at speed L\u200aω/2, where"),
                  ("(moment of inertia 2mR²/5)", "(moment of inertia 2\u200am\u200aR²/5)"),   # doc's hair spaces, 09:17
@@ -310,6 +311,10 @@ def appendix_items(tabs, k):
             items[key] = [("h3", h)] + [("i", ln) for ln in intro] + number_parts(rest)
     return items, scenery
 
+P1_FINAL = [("With nothing speeding up, the grip has to be the same size pointing back, →\u200a·\u200aF\u200a·\u200a←, and pulling ← 0.20 m below the axle it turns the spool ↻ with →\u200a·\u200aF at R. The two turnings add on their own: Fr ↺ + (→\u200a·\u200aF) R ↻ = (Fr − (→\u200a·\u200aF) R) ↺, the net torque about the axle, and with nothing turning that's zero. So →\u200a·\u200aF at R is Fr, and the forward part is r/R = 0.60 of the pull.",
+             "With nothing speeding up, the grip has to be the same size pointing back, →\u200a·\u200aF\u200a·\u200a←. Read from the other end, that's the backward part of F, pointing forward, ←\u200a·\u200aF\u200a·\u200a→, and 0.20 m below the axle it turns the spool ↺ along with the cord, by (←\u200a·\u200aF) R. The two turnings add on their own: Fr ↺ + (←\u200a·\u200aF) R ↺ = (Fr + (←\u200a·\u200aF) R) ↺, the net torque about the axle, and with nothing turning that's zero. So Fr and the backward part at R add to nothing, and the forward part is r/R of the pull, 3/5."),   # FX-125 (doc 16:36-16:38): the minus moves into the dot, and the words stop bending
+            ("(3) In the slow mode the lower angle is +√2 times the upper: both masses swing the same way, the lower one farther. In the fast mode it's −√2 times: whenever the upper mass swings one way, the lower one swings the other.",
+             "(3) The √2 belongs to the rods' angles, and the question asks about the masses. The lower mass rides on the upper one: it's out by the upper rod's swing plus its own rod's. In the slow mode the lower rod leans √2 as far the same way, so the lower mass goes 1 + √2 times as far as the upper, about 2.4. In the fast mode the lower rod leans √2 as far the other way, more than undoing what the upper rod gave it, so the lower mass swings the other way, but only √2 − 1 as far, about 0.41.")]   # doc 18:11: path 1's 9-3 in plain words, no body notation
 F4_STATEMENT = "4. With one wave at 5.0 MHz, what frequency for the other puts the fast crests at nine times u? Where are the slow crests then?"
 F4_SOLUTION = ("(4) The fast crests run at u(f₁ + f₂)/(f₁ − f₂), so nine times u needs the sum to be nine times the difference: "
                "5.0 MHz + f₂ = 9 (5.0 MHz − f₂), so 10 f₂ = 40 MHz and f₂ = 4.0 MHz. The two speeds multiply to u², so the slow crests run at u/9. "
@@ -462,6 +467,11 @@ def build(k):
                 out[i] = (t, x)
     # Oxford comma, always (R-121, doc 16:07): the serial lists the sources wrote without it
     out = [(t, x if not isinstance(x, str) else _serial(x)) for t, x in out]
+    if k == 1:
+        for old, new in P1_FINAL:
+            hit = [j for j, (t, x) in enumerate(out) if isinstance(x, str) and old in x]
+            assert len(hit) == 1, old[:60]
+            out[hit[0]] = (out[hit[0]][0], out[hit[0]][1].replace(old, new))
     # doc 18:00: the reverse question goes in as drawer 6's part 4; the hall's 4 MHz dagger points here (problem set f-4)
     for j, (t, x) in enumerate(out):
         if isinstance(x, str) and x.startswith("3. For 5.0 MHz and 4.0 MHz and u"):
