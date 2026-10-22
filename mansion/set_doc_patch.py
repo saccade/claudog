@@ -2,7 +2,8 @@
 
 Claude (Anthropic), 2026-10-22. Usage: python3 set_doc_patch.py SAVED_READ setK.html > batch.json
 Each changed paragraph is cut to its differing middle plus enough context to be unique in the doc.
-A paragraph the doc doesn't have yet goes in after the one before it, as a new paragraph.
+A paragraph the doc doesn't have yet goes in after the one before it, as a new paragraph;
+a dropped paragraph is emptied (delete the blank line after, with a guarded batch).
 """
 import json, re, html, difflib, sys
 c = json.load(open(sys.argv[1])); c = c.get("content", c)
@@ -33,6 +34,9 @@ for op, i1, i2, j1, j2 in difflib.SequenceMatcher(None, a, b, autojunk=False).ge
     if op == "equal": continue
     if op == "replace" and i2 - i1 == j2 - j1:
         for o, n in zip(a[i1:i2], b[j1:j2]): pair(o, n)
+    elif op == "replace" and i2 - i1 == j2 - j1 + 1:   # one paragraph dropped: empty the first, pair the rest
+        rep(a[i1], "")
+        for o, n in zip(a[i1 + 1:i2], b[j1:j2]): pair(o, n)
     elif op == "insert":
         prev = a[i1 - 1]
         tail = prev[-60:]

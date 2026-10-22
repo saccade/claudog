@@ -23,14 +23,13 @@ The loose sheet models the knife as a 1.0 kg point mass, a meter from its pivot.
 v² = 2gh.
 A 5 mm fall under 10 m/s² gives v² = 0.10 m²/s². The knife passes the bottom at 0.32 m/s.
 (3) The knife has a cycle: from one end, through the bottom to the other end, and back. It cycles. Call the time for one complete cycle T.
-The usual small-swing rule gives T = 2π√(ℓ/g). A whole turn has arrived wearing two flips. Give the full turn its own sign, τ.
-Call a radian a stroke. A whole turn is τ, about 6.3 strokes. Half a turn is π, the flip. A turn of the knife’s cycle brings it back to the same end; a flip of the cycle takes it to the opposite end.
-Count strokes each second and call that the sweep. The cycle’s sweep is ω. The small-swing rule balances as
+Call a radian a stroke. All the way round is a turn, about 6.3 strokes, and half of that is π, the flip. A flip of the knife’s cycle takes it to the opposite end; a turn brings it back.
+Count strokes each second and call that the sweep. The cycle’s sweep is ω. The usual small-swing rule balances as
 ℓω² = g,
-Tω = τ.
-Here the cycle sweeps at √10, about 3.2 strokes a second. Its turn takes T = τ/√10 = 1.99 s, about two seconds.
+Tω = 2π.
+Here the cycle sweeps at √10, about 3.2 strokes a second. Its cycle takes T = 2π/√10 = 1.99 s, about two seconds. There's a 2 riding along with that π.
 The knife’s own direction sweeps too, at a different pace. At the bottom it sweeps at v/ℓ, about 0.32 strokes a second. At either end that sweep is zero. The knife turns back while the cycle sweeps on.
-(4) Twice the mass doubles the stored energy and the resistance to being sped up. The height, bottom speed and time for a turn stay the same. The cycle never asked for the mass.
+(4) Twice the mass doubles the stored energy and the resistance to being sped up. The height, bottom speed and time for a cycle stay the same. The cycle never asked for the mass.
 The pen begins the curve again. The lock stays shut.
 ## Kitchen
 The line on the paper goes on behind the wall. Ahead, something breathes in steam. By the range, a toolbox in scorched canvas, locked.
@@ -41,9 +40,11 @@ A small steam engine takes in 15 J of heat and does 3.0 J of work in each cycle,
 3. The power delivered by a torque τ to a wheel turning at angular speed ω is P = τω. Find the driving torque at the start and at the end of the 4.0 s.
 Solution
 (1) The engine ends each cycle with the same stored energy it began with. Of the 15 J that goes in, 3.0 J comes out as work and the other 12 J goes out as heat. Work over heat in is 3/15: 20 percent. At a cycle a second, that's 3.0 W.
-(2) A flywheel's energy is half its moment of inertia at the squared sweep. At 4.0 strokes a second, half of 0.50 kg m² at 16 is 4.0 J. Four seconds at a net 3.0 W add 12 J, for 16 J, and 16 J on the same wheel needs the squared sweep to be 64. The wheel ends up sweeping at 8.0 strokes a second. The engine paid in equal energy every second, not equal sweep, so four times the energy only doubles the sweep.
-(3) Torque usually gets the letter τ, but the turn has it now. An χ hung on the wall could apply a twist to something—use that for torque. The power a torque delivers is the sweep of the torque: P = ωχ. Put numbers to it once: 0.75 N m at 4.0 strokes a second delivers 3.0 W. So at the start the engine's 3.0 W takes χ = 0.75 N m, and at the end, at 8.0, it takes 0.38 N m.
+(2) A flywheel's energy is half its moment of inertia at the squared sweep. At 4.0 strokes a second, half of 0.50 kg m² at 16 is 4.0 J. Counted in turns, 4.0 strokes a second is 4.0/2π, about 0.64 of a turn a second. Four seconds at a net 3.0 W add 12 J, for 16 J, and 16 J on the same wheel needs the squared sweep to be 64. The wheel ends up sweeping at 8.0 strokes a second: 8.0/2π, about 1.3 turns a second. The 2 again: every sweep we count in turns gets divided by it. The engine paid in equal energy every second, not equal sweep, so four times the energy only doubles the sweep.
+(3) The power a torque delivers is the sweep of the torque. Put numbers to it once: 0.75 N m at 4.0 strokes a second delivers 3.0 W. So at the start the engine's 3.0 W takes 0.75 N m, and at the end, at 8.0, it takes 0.38 N m.
 When the wheel goes twice as fast, applying the same power takes just half the torque.
+Through one whole turn, 0.75 N m does 2π of itself: 4.7 J, and 0.64 of a turn a second at 4.7 J a turn is the engine's 3.0 W. There's the 2π again, two flips standing in for one turn. π only covers half of what the knife does, one swing across; the cycle is the whole of it. Give the whole turn its own sign, τ. The knife's rule is then Tω = τ, and the wheel's 4.0 strokes a second is 4.0/τ of a turn a second.
+Torque usually gets the letter τ, but the turn has it now. An χ hung on the wall could apply a twist to something—use that for torque: P = ωχ, with χ = 0.75 N m at the start.
 ## 3. The governor and the spool
 A centrifugal governor has two 1.0 kg balls, each on a massless 0.50 m arm hinged on the axis of a vertical shaft. The shaft turns steadily at 5.0 rad/s†.
 1. Find the angle each arm makes with the vertical, and how far each ball has risen above its hanging position.

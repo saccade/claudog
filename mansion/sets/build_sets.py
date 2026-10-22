@@ -104,6 +104,19 @@ DOC_0806 = [
  [("a whiteface in damask", "a powdered clown in damask")],
  [("the whiteface has gloves", "the powdered clown has gloves")],
 ]
+# The 2π is lugged around and noticed: the knife's rule and numbers (2nd and 3rd sightings, the 2 noticed),
+# the flywheel's sweeps in turns (4th, 5th, noticed again), a torque through a whole turn (6th), and there
+# the turn takes τ and torque takes χ, with doc's sentences.
+SLOW_WALK = [
+ ("The usual small-swing rule gives T = 2π√(ℓ/g). A whole turn has arrived wearing two flips. Give the full turn its own sign, τ.\nCall a radian a stroke. A whole turn is τ, about 6.3 strokes. Half a turn is π, the flip. A turn of the knife’s cycle brings it back to the same end; a flip of the cycle takes it to the opposite end.\nCount strokes each second and call that the sweep. The cycle’s sweep is ω. The small-swing rule balances as\n    ℓω² = g,\n     Tω = τ.\nHere the cycle sweeps at √10, about 3.2 strokes a second. Its turn takes T = τ/√10 = 1.99 s, about two seconds.",
+  "Call a radian a stroke. All the way round is a turn, about 6.3 strokes, and half of that is π, the flip. A flip of the knife’s cycle takes it to the opposite end; a turn brings it back.\nCount strokes each second and call that the sweep. The cycle’s sweep is ω. The usual small-swing rule balances as\n    ℓω² = g,\n    Tω = 2π.\nHere the cycle sweeps at √10, about 3.2 strokes a second. Its cycle takes T = 2π/√10 = 1.99 s, about two seconds. There's a 2 riding along with that π."),
+ ("The height, bottom speed and time for a turn stay the same.", "The height, bottom speed and time for a cycle stay the same."),
+ ("At 4.0 strokes a second, half of 0.50 kg m² at 16 is 4.0 J. Four seconds at a net 3.0 W add 12 J, for 16 J, and 16 J on the same wheel needs the squared sweep to be 64. The wheel ends up sweeping at 8.0 strokes a second.",
+  "At 4.0 strokes a second, half of 0.50 kg m² at 16 is 4.0 J. Counted in turns, 4.0 strokes a second is 4.0/2π, about 0.64 of a turn a second. Four seconds at a net 3.0 W add 12 J, for 16 J, and 16 J on the same wheel needs the squared sweep to be 64. The wheel ends up sweeping at 8.0 strokes a second: 8.0/2π, about 1.3 turns a second. The 2 again: every sweep we count in turns gets divided by it."),
+ ("(3) Torque usually gets the letter τ, but the turn has it now. An χ hung on the wall could apply a twist to something—use that for torque. The power a torque delivers is the sweep of the torque: P = ωχ. Put numbers to it once: 0.75 N m at 4.0 strokes a second delivers 3.0 W. So at the start the engine's 3.0 W takes χ = 0.75 N m, and at the end, at 8.0, it takes 0.38 N m.\nWhen the wheel goes twice as fast, applying the same power takes just half the torque.",
+  "(3) The power a torque delivers is the sweep of the torque. Put numbers to it once: 0.75 N m at 4.0 strokes a second delivers 3.0 W. So at the start the engine's 3.0 W takes 0.75 N m, and at the end, at 8.0, it takes 0.38 N m.\nWhen the wheel goes twice as fast, applying the same power takes just half the torque.\nThrough one whole turn, 0.75 N m does 2π of itself: 4.7 J, and 0.64 of a turn a second at 4.7 J a turn is the engine's 3.0 W. There's the 2π again, two flips standing in for one turn. π only covers half of what the knife does, one swing across; the cycle is the whole of it. Give the whole turn its own sign, τ. The knife's rule is then Tω = τ, and the wheel's 4.0 strokes a second is 4.0/τ of a turn a second.\nTorque usually gets the letter τ, but the turn has it now. An χ hung on the wall could apply a twist to something—use that for torque: P = ωχ, with χ = 0.75 N m at the start."),
+]
+
 STATEMENT_FIX = [("A spool of mass 2.0 kg, outer radius R = 0.20 m and hub radius r = 0.12 m has moment of inertia 0.040 kg m²† about its axle. It rests on a level counter.",
                   "A spool rests on a level counter. It has mass 2.0 kg, outer radius R = 0.20 m, hub radius r = 0.12 m, and moment of inertia 0.040 kg m²† about its axle.")]
 # turn-family units are count nouns and take a plural (doc, 08:06); dog park units stay bare (R-041)
@@ -171,6 +184,12 @@ def build(k):
         for old, new in alts:
             if old in route: route = route.replace(old, new); hit = True
         assert hit, alts[0][0][:70]
+    if k == 1:
+        route = STROKES.sub(" strokes", route)
+    if k == 1:   # doc 2026-10-22 08:29: the slow walk to τ, in set 1 first; sets 2-4 get it at the sweep
+        for old, new in SLOW_WALK:
+            assert route.count(old) == 1, old[:70]
+            route = route.replace(old, new)
     ending = main[iE:]
     items, scen = appendix_items(tabs, k)
     st = statements()
