@@ -1,0 +1,6 @@
+mansion_pset.pdf
+*.aux
+*.log
+*.fls
+*.fdb_latexmk
+*.xdv
