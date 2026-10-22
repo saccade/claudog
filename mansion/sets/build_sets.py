@@ -579,8 +579,22 @@ def build(k):
     ROUND = [("T = 2π/√10 = 1.99 s, about two seconds.", "T = 2π/√10, about two seconds."),
              ("T = τ/√10 = 1.99 s. That's the knife's time to the last digit,", "T = τ/√10, about 2.0 s. That's exactly the knife's time,"),
              ("T = τ/√14 = 1.68 s.", "T = τ/√14, about 1.7 s.")]
+    # doc 19:30: two figures throughout, the √2 family too ("if a difference that small matters it needs a name").
+    # The exact tuning keeps its sentence; the chair's chain goes 16 s, 20 s, 3.6 × 10⁹ m (with c: 4.8, 6.0, 3.6, a 3–4–5).
+    ROUND += [("which is 1.71 F to three figures.", "about 1.7 F."), ("1.71 is only how it's written down", "1.7 is only how it's written down"),
+              ("= 6τ/ω₀ = 15.6 s", "= 6τ/ω₀, about 16 s"),
+              ("γT = 1.25 × 15.6 = 19.5 s, and the receiver covers 0.60c × 19.5 s = 3.5 × 10⁹ m", "γT = 1.25 × 16 s = 20 s, and the receiver covers 0.60c × 20 s = 3.6 × 10⁹ m"),
+              ("The return comes at 15.6 s of your own time. Outside it's 19.5 s, and outside says you've crossed 3.5 million kilometers.",
+               "The return comes at 16 s of your own time. Outside it's 20 s, and outside says you've crossed 3.6 million kilometers."),
+              ("The return comes at 15.6 s of your own time.", "The return comes at 16 s of your own time."),
+              ("∫E dt = 1.2 J s", "∫E dt = 1.3 J s"), ("0.62 zam", "0.65 zam"), ("0.18 zlam", "0.19 zlam")]
     for a, b in ROUND:
         out = [(t, x.replace(a, b) if isinstance(x, str) else x) for t, x in out]
+    TWO = [("2.42", "2.4"), ("5.84", "5.8"), ("5.86", "5.9"), ("34.1", "34"), ("3.42", "3.4"), ("1.84 s", "1.8 s"), ("2.60 s", "2.6 s"),
+           ("1.08 s", "1.1 s"), ("1.61", "1.6"), ("3.63", "3.6"), ("1.71", "1.7")]
+    for a, b in TWO:
+        rx = re.compile(r"(?<![\d.])" + re.escape(a) + r"(?![\d])")
+        out = [(t, rx.sub(b, x) if isinstance(x, str) else x) for t, x in out]
     # doc 18:00: the reverse question goes in as drawer 6's part 4; the hall's 4 MHz dagger points here (problem set f-4)
     for j, (t, x) in enumerate(out):
         if isinstance(x, str) and x.startswith("3. For 5.0 MHz and 4.0 MHz and u"):   # statements are gone after the sweep

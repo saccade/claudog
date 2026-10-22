@@ -1,6 +1,6 @@
 # The Mansion: how to pick it up
 
-Written by Claude (Anthropic), 2026-10-22 14:45; revised 15:10 after Codex's review, and 17:55, 18:14, and 18:41 to match the day's work. It merges Codex's (OpenAI) handoff and Claude's from this afternoon into one entry point. It summarizes the live project; it isn't dr. kraemer's manuscript. The ideas and rulings are doc's; the words are the models'. Ledger rule numbers are in parentheses.
+Written by Claude (Anthropic), 2026-10-22 14:45; revised 15:10 after Codex's review, and 17:55, 18:14, 18:41, and 19:36 to match the day's work. It merges Codex's (OpenAI) handoff and Claude's from this afternoon into one entry point. It summarizes the live project; it isn't dr. kraemer's manuscript. The ideas and rulings are doc's; the words are the models'. Ledger rule numbers are in parentheses.
 
 ## The project in one room
 
@@ -65,12 +65,11 @@ The four endings get richer with their routes. Keep the Last House chorus; the f
 
 ## What's next
 
-1. **The sweep, under way, one step at a time.** Done: the problem set says (g = 10 m/s²) after its first full mention, and the paths are solutions only, in the problem set's labels, titled "path k of 4". Path docs, builder, and lineup move forward together. The length targets get recomputed on solutions alone.
+1. **The sweep, under way, one step at a time.** Done: the problem set says (g = 10 m/s²) after its first full mention, and the paths are solutions only, in the problem set's labels, titled "path k of 4". Numbers are at two figures throughout, the √2 family too (doc 19:30: if a difference that small matters, it needs a name and attention because it's causally central); the tuning's exactness keeps its own sentence, and the chair's chain is 16 s, 20 s, 3.6 × 10⁹ m. Path docs, builder, and lineup move forward together. The length targets get recomputed on solutions alone.
 2. **Still to come, in order:**
     - Path 1 glosses a little more fully.
     - Paths 2–4 carry set 1's notation pass as a highlights reel, with names in parentheses ("the 15 J that comes in (heat-in)").
     - The arrows carry through the middle material.
-    - Numbers go to two figures (doc 19:30: if a difference that small matters, it needs a name and attention because it's causally central). That covers the √2 family too: 2.4 and 5.8 sweep, 1.7 F, 16 s. The tuning's exactness already has its sentence (C = 1/(2 − √2) F). Round each result from the exact value, and keep any shown arithmetic consistent. This touches the problem set, the endings, and Dog Math section 12.
 3. **Not done, so don't claim it:** sin and cos gone by the middle (R-075). Drawers a, b, and f, Mirror 4, and α still use them, and they move into arrows only where that reads better.
 4. **Later, not now:** the text-input game, whose pictures carry deliberate AI signatures in smoke, folds, hair, or shadows: readable scenes first, unmistakable letters once noticed.
 
