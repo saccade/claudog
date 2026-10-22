@@ -150,3 +150,30 @@ LEVEL[4] += [
  ("The chair stays at x_H = 0 for the whole run.",
   "The chair stays at x_H = 0 for the whole run. This is RUN: nothing taps the machine, so its two tones lining up adds nothing."),
 ]
+
+# doc 17:17-17:18: the book's body factor (end of Straight→ Mechanics, and 1.1.1 Bodies), in paths 3 and 4 only.
+# A stagehand: offstage until there's something to do. 9-3 asks about the masses; the shape is the rods'.
+BODY_9_3 = ("The shape is the rods'. The question asks about the masses, and with two masses in one problem it helps to say whose each quantity is.\n"
+ "Call the upper mass's body U and the lower one's L. A body is the mass as the physics sees it: where it is, how it moves, what it carries, and nothing else. "
+ "Write the body last in a quantity, after its size and its direction, and read × as “of”: 0.10 m → × U is 0.10 m forward of body U. "
+ "A body of itself is just itself, U × U = U, so it rides along through a product and stays out of the way. "
+ "Two different bodies don't make a product at all: a place of U times a place of L isn't anything. "
+ "In a sum the bodies keep their parts apart, the way ← and ↑ do, and nothing gets added across.\n"
+ "Now where the masses go. Swing the upper rod 0.10 rad →. The upper mass is a meter down it, so it's out 0.10 m → × U. "
+ "The lower mass hangs from the upper one: it starts wherever U is, and its own rod adds its lean. "
+ "In the slow tone the lower rod swings √2 as far the same way, 0.14 rad →, and adds 0.14 m →:\n"
+ "    0.10 m → × U + 0.24 m → × L.\n"
+ "Both go the same way, and the lower one 1 + √2 times as far. "
+ "In the fast tone the lower rod swings √2 as far the other way, 0.14 rad ←, and its 0.14 m ← more than undoes the 0.10 m → it gets from U:\n"
+ "    0.10 m → × U + 0.041 m ← × L.\n"
+ "The lower mass goes the other way, but only √2 − 1 as far, about 0.41. Its rod leans farther than the upper one, and the mass at its end moves less.\n")
+LEVEL[3] += [
+ ("and −√2 for the fast tone, the lower rod flipped. In either tone,",
+  "and −√2 for the fast tone, the lower rod flipped.\n" + BODY_9_3 + "In either tone,"),
+]
+LEVEL[4] += [   # a highlight, not the cutscene again
+ (BODY_9_3,
+  "The shape is the rods'. The masses ride one on the other, so with the body written last (× U, of the upper mass's body U; L, the lower), "
+  "swinging the upper rod 0.10 rad → puts them at 0.10 m → × U + 0.24 m → × L in the slow tone and 0.10 m → × U + 0.041 m ← × L in the fast: "
+  "the lower mass goes the other way, but only √2 − 1 as far.\n"),
+]

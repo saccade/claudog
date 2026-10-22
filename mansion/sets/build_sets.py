@@ -236,7 +236,9 @@ SLOWDOWN = [("(3) The cord pulls forward (→). Take the counter's grip on the s
 LATE_DOT = [("(1) An arm ℓ long, leaning θ, hangs ↓\u200a·\u200aℓ below the pivot instead of ℓ. That's the downward part of ℓ: how much of the arm points straight down, the statement's ℓ cos θ. So the lean lifts its end by ℓ − ↓\u200a·\u200aℓ. For this small lean,", '(1) Leaning through θ lifts a point ℓ away by ℓ(1 − cos θ). For this small lean,'), ("That's the downward part of the arm, ↓\u200a·\u200aℓ = 0.40 m of its 0.50 m.", "On the 0.50 m arm that's cos θ = 0.80."), ('only its forward part changes. The forward part of F, →\u200a·\u200aF, is how much of the pull goes forward, and as a force it points forward too: →\u200a·\u200aF\u200a·\u200a→.', "only its forward part changes, to F cos θ in the usual notation. With the arrows already doing the directions, there's a plainer way to say it: the forward part of F is →\u200a·\u200aF, the pull dotted with forward, and as a force it points forward too, →\u200a·\u200aF\u200a·\u200a→.")]
 
 DOC_1320 = [("one swing across; the cycle is the whole of it. Give the whole turn its own sign, τ.", "one swing across—the cycle is the whole of it.\nGive the whole turn its own sign, τ."),
-            ("use that for torque: P = ωχ, with χ = 0.75 N m at the start.", "use that for torque. Power is the sweep of torque (P = ωχ), which starts at χ = 0.75 N m.")]
+            ("use that for torque: P = ωχ, with χ = 0.75 N m at the start.", "use that for torque. Power is the sweep of torque (P = ωχ), which starts at χ = 0.75 N m."),
+            # doc, set 1 doc, 16:3x: his note in spool part 3, kept as he wrote it
+            ("↻ is the opposite of ↺, so the balance says", "↻ is the opposite of ↺ (↻ = - ↺, and two two add to nothing) , so the balance says")]
 DOC_1320_SET1 = [("Of the 15 J that goes in, 3.0 J comes out as work and the other 12 J goes out as heat. Work over heat in is 3/15: 20 percent.",
                   "Call the heat that comes in the heat-in, and the heat that leaves the heat-out. Of 15 J of heat-in, 3.0 J comes out as work and the other 12 J is heat-out. Work over heat-in is 3/15: 20%.")]
 DOC_1320_LATER = [("Of the 15 J that goes in, 3.0 J comes out as work and the other 12 J goes out as heat. Work over heat in is 3/15: 20 percent.",
@@ -254,7 +256,15 @@ STATEMENT_FIX = [("A small steam engine takes in 15 J of heat and does 3.0 J of 
                  ("each on a massless 0.50 m arm", "each on a massless 0.5 m arm"),
                  ("outer radius R = 0.20 m, hub radius r = 0.12 m, and moment of inertia 0.040 kg m²†", "outer radius R = 0.2 m, hub radius r = 0.12 m, and moment of inertia 0.04 kg m²†"),
                  ("The spool rolls without slipping. Find its acceleration and the direction it rolls.", "If the spool rolls without slipping, how does it accelerate?"),
-                 ("If the cord is instead pulled at an angle θ above horizontal, for what θ does the spool stay at rest?", "If the cord is instead pulled partly upward, at what angle does the spool stay at rest?")]
+                 ("If the cord is instead pulled at an angle θ above horizontal, for what θ does the spool stay at rest?", "If the cord is instead pulled partly upward, at what angle does the spool stay at rest?"),
+                 # doc, set 1 doc, 16:2x: the knife and the governor, his wording
+                 ("A knife is modeled as a point mass m = 1.0 kg on a massless rod of length ℓ = 1.0 m, pivoted to swing freely in a vertical plane. It gets released from rest at θ₀ = 0.10 rad from the downward vertical.",
+                  "A knife, a point mass m = 1.0 kg on a massless rod of length ℓ = 1.0 m, pivots to swing freely in a vertical plane. It gets released from rest at θ₀ = 0.10 rad from down."),
+                 ("Find the gravitational potential energy of the knife at release, relative to its lowest point.", "Find the gravitational potential energy of the knife's swing."),
+                 ("Find its greatest speed.", "And its greatest speed?"),
+                 ("For small oscillations the angular frequency is ω₀ = √(g/ℓ), and the period T satisfies ω₀T = 2π. Find T.", "In a gentle swing an angular frequency of ω₀ = √(g/ℓ) gives the cycle: 2π / T. Find T."),
+                 ("How does T change if the mass is doubled?", "How does T change with a bigger knife?"),
+                 ("Find the angle each arm makes with the vertical, and how far each ball has risen above its hanging position.", "Find the angle of the arms, and how far each ball has risen.")]
 # turn-family units are count nouns and take a plural (doc, 08:06); dog park units stay bare (R-041)
 STROKES = re.compile(r"(?<=[0-9√τ]) stroke\b")
 LEGEND = "A value marked † is supplied: chosen so the house works, with the reason somewhere below the mansion."

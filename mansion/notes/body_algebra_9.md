@@ -1,10 +1,11 @@
 # Body algebra on the double pendulum (problem 9), a working note
 
-Written by Claude (Anthropic), 2026-10-22 17:20, for doc. Not in any path; shown to doc in chat first.
+Written by Claude (Anthropic), 2026-10-22 17:20; revised 17:35. doc, 17:18: the body stuff shows up only in paths 3 and 4. It's in the builder (levels.py, BODY_9_3): path 3 draws it out, path 4 gives a highlight; both docs update at the sweep.
 
 The book's demo (end of Straight→ Mechanics): quantities are written body by body, m = 2 kg × A + 5 kg × B,
-F = 10 N → × B, and applied to the model [A + B]. Dividing distributes over the bodies with B/B = 1 and B/A = 0,
-so a × [A + B] = 5 × B/A + 2 × B/B = 2 m/s² → × B: the pull on B moves B and only B.
+F = 10 N → × B, and applied to the model [A + B]. In 1.1.1 a body of itself is itself (B × B = B, and B / B = B, so the body rides through rates too);
+the product of two different bodies is unproductive and means nothing, and in the demo it drops out:
+a × [A + B] = 5 × B/A + 2 × B/B = 2 m/s² → × B: the pull on B moves B and only B.
 
 Problem 9, model [U + L], upper and lower masses, ℓ = 1 m, g = 10 m/s². Upper rod swung 0.10 rad →.
 m = 1 kg × U + 1 kg × L. The upper rod carries both weights (20 N); the lower rod carries one (10 N).

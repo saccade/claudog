@@ -11,11 +11,11 @@ A trim silver canteen with an enamel juggler on the lid stands unlatched on the 
 The visitor watches the knife cycle across and back. On the paper, the curve cycles with it.
 ## Dining room
 ## 1. The knife
-A knife is modeled as a point mass m = 1.0 kg on a massless rod of length ℓ = 1.0 m, pivoted to swing freely in a vertical plane. It gets released from rest at θ₀ = 0.10 rad from the downward vertical. Use g = 10 m/s² and the small-angle approximation 1 − cos θ ≈ θ²/2.
-1. Find the gravitational potential energy of the knife at release, relative to its lowest point.
-2. Find its greatest speed.
-3. For small oscillations the angular frequency is ω₀ = √(g/ℓ), and the period T satisfies ω₀T = 2π. Find T.
-4. How does T change if the mass is doubled?
+A knife, a point mass m = 1.0 kg on a massless rod of length ℓ = 1.0 m, pivots to swing freely in a vertical plane. It gets released from rest at θ₀ = 0.10 rad from down. Use g = 10 m/s² and the small-angle approximation 1 − cos θ ≈ θ²/2.
+1. Find the gravitational potential energy of the knife's swing.
+2. And its greatest speed?
+3. In a gentle swing an angular frequency of ω₀ = √(g/ℓ) gives the cycle: 2π / T. Find T.
+4. How does T change with a bigger knife?
 Solution
 The loose sheet models the knife as a 1.0 kg point mass, a meter from its pivot. Let go from 0.10 rad off the downward vertical, it swings under g = 10 m/s². The numbers are on the sheet; the knife has already begun.
 (1) Leaning through θ lifts a point ℓ away by ℓ(1 − cos θ). For this small lean, that’s ℓ θ²/2: 0.0050 m, or 5 mm. The 10 N weight lifted through 5 mm stores 0.050 J. Energy stored in height is heft: the weight pulls, and the height hefts. The knife hefts 0.050 J.
@@ -70,7 +70,7 @@ Solution
 When the wheel goes twice as fast, the same power cranks just half as hard. On 0.50 kg m², those cranks pick the wheel up at 1.5 sweep a second at the start and 0.75 at the end.
 ## 3. The governor and the spool
 A centrifugal governor has two 1.0 kg balls, each on a massless 0.5 m arm hinged on the axis of a vertical shaft. The shaft turns steadily at 5.0 rad/s†.
-1. Find the angle each arm makes with the vertical, and how far each ball has risen above its hanging position.
+1. Find the angle of the arms, and how far each ball has risen.
 2. Below what angular speed would the arms hang straight down?
 3. A spool rests on a level counter. It has mass 2.0 kg, outer radius R = 0.2 m, hub radius r = 0.12 m, and moment of inertia 0.04 kg m²† about its axle. A light cord wound on the hub leaves from the bottom of the hub and is pulled horizontally with a constant 6.0 N. If the spool rolls without slipping, how does it accelerate?
 4. If the cord is instead pulled partly upward, at what angle does the spool stay at rest?
@@ -205,7 +205,15 @@ Two point masses of 1.0 kg hang in series on massless rods each 1.0 m long, swin
 Solution
 (1) Each mode cycles with its own sweep, and a turn of it takes T = τ/ω. The slow one takes τ/2.42 = 2.60 s and the fast one τ/5.84 = 1.08 s.
 (2) The squares are in the ratio (2 + √2)/(2 − √2). Multiply top and bottom by 2 + √2 and it's (2 + √2)²/2, so the sweeps are in the ratio (2 + √2)/√2 = 1 + √2. Flip it and the slow over the fast is √2 − 1: the two multiply to one. That's irrational, so no whole number of slow cycles ever equals a whole number of fast ones, and a motion with both in it never exactly repeats.
-(3) Each mode is a tone, and its shape is how far the lower rod leans for the upper's lean: Ω_shape = +√2 for the slow tone, both masses swinging the same way, the lower one farther; and −√2 for the fast tone, the lower rod flipped. In either tone, each rod picks up at ω² of its own lean, back toward vertical. Both tones at once make a chord, and the chord beats at the gap, 5.84 − 2.42 = 3.42 sweep.
+(3) Each mode is a tone, and its shape is how far the lower rod leans for the upper's lean: Ω_shape = +√2 for the slow tone, both masses swinging the same way, the lower one farther; and −√2 for the fast tone, the lower rod flipped.
+The shape is the rods'. The question asks about the masses, and with two masses in one problem it helps to say whose each quantity is.
+Call the upper mass's body U and the lower one's L. A body is the mass as the physics sees it: where it is, how it moves, what it carries, and nothing else. Write the body last in a quantity, after its size and its direction, and read × as “of”: 0.10 m → × U is 0.10 m forward of body U. A body of itself is just itself, U × U = U, so it rides along through a product and stays out of the way. Two different bodies don't make a product at all: a place of U times a place of L isn't anything. In a sum the bodies keep their parts apart, the way ← and ↑ do, and nothing gets added across.
+Now where the masses go. Swing the upper rod 0.10 rad →. The upper mass is a meter down it, so it's out 0.10 m → × U. The lower mass hangs from the upper one: it starts wherever U is, and its own rod adds its lean. In the slow tone the lower rod swings √2 as far the same way, 0.14 rad →, and adds 0.14 m →:
+0.10 m → × U + 0.24 m → × L.
+Both go the same way, and the lower one 1 + √2 times as far. In the fast tone the lower rod swings √2 as far the other way, 0.14 rad ←, and its 0.14 m ← more than undoes the 0.10 m → it gets from U:
+0.10 m → × U + 0.041 m ← × L.
+The lower mass goes the other way, but only √2 − 1 as far, about 0.41. Its rod leans farther than the upper one, and the mass at its end moves less.
+In either tone, each rod picks up at ω² of its own lean, back toward vertical. Both tones at once make a chord, and the chord beats at the gap, 5.84 − 2.42 = 3.42 sweep.
 ## 10. The coils and the capacitor
 1. A 6.0 V source is connected through a 20 Ω resistor to an uncharged 0.10 F capacitor. Find the initial current, the time constant, and the current, charge and stored energy when the capacitor reaches 4.0 V.
 2. An ideal LC circuit has L = 0.10 H and C = 1/(Lω_a²) ≈ 1.71 F†, with ω_a from problem 9. Find its angular frequency ω₀ = 1/√(LC), and compare it with ω_a.
