@@ -46,6 +46,9 @@ for op, i1, i2, j1, j2 in difflib.SequenceMatcher(None, a, b, autojunk=False).ge
         prev = a[i1 - 1]
         tail = prev[-60:]
         rep(tail, tail + "\n" + "\n".join(b[j1:j2]))
+    elif op == "replace":   # any other shape: the first old paragraph takes all the new ones, the rest are emptied
+        rep(a[i1], "\n".join(b[j1:j2]))
+        for o in a[i1 + 1:i2]: rep(o, "")
     else:
         raise SystemExit(f"unhandled {op} {i1}:{i2} {j1}:{j2}")
 print(json.dumps(reqs, ensure_ascii=False))
