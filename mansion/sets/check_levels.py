@@ -11,3 +11,12 @@ for k in (1, 2, 3):
         for i, ln in enumerate(lines, 1):
             for m in re.finditer(HIGHER[lev], ln):
                 print(f"set{k} L{lev} line {i}: …{ln[max(0,m.start()-50):m.end()+30]}…")
+
+
+# American spelling (R-083): flag British forms in any set, so they get switched as we go
+import re as _re
+BRIT = _re.compile(r"\b\w*(centre|metre|litre|colour|grey|favour|behaviour|labour|honour|neighbour|organis|realis|recognis|analys|travell|modell|programme|whilst|amongst|aluminium|tyre|defence|licence)\w*\b", _re.I)
+for _k in (1, 2, 3, 4):
+    for _n, _ln in enumerate(open(f"set{_k}.txt"), 1):
+        for _m in BRIT.finditer(_ln):
+            print(f"set{_k} British line {_n}: {_m.group(0)}")
