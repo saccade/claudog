@@ -266,10 +266,12 @@ Two waves of equal amplitude A run in opposite directions on a line with wave sp
 1. Show that their sum is 2A cos(½[(k₁ − k₂)x − (ω₁ + ω₂)t]) cos(½[(k₁ + k₂)x − (ω₁ − ω₂)t]).
 2. Find the speed of each factor's crests, in terms of u and the two frequencies.
 3. For 5.0 MHz and 4.0 MHz and u = 1.0 × 10⁸ m/s, find both speeds.
+4. With one wave at 5.0 MHz, what frequency for the other puts the fast crests at nine times u? Where are the slow crests then?
 Solution
 (1) cos P + cos Q = 2 cos(½(P − Q)) cos(½(P + Q)), with P = k₁x − ω₁t and Q = k₂x + ω₂t.
 (2) A crest of either factor keeps what's inside it fixed, so it moves at the time coefficient over the place coefficient: (ω₁ + ω₂)/(k₁ − k₂) = u(f₁ + f₂)/(f₁ − f₂) for the first, and u(f₁ − f₂)/(f₁ + f₂) for the second.
 (3) The sum is 9 MHz and the difference 1 MHz, so the crests run at 9u = 9.0 × 10⁸ m/s, three times light's speed, and u/9 = 1.1 × 10⁷ m/s. The fast crest is only where waves that were already there happen to line up. It carries nothing: that's the hall's stripe.
+(4) The fast crests run at u(f₁ + f₂)/(f₁ − f₂), so nine times u needs the sum to be nine times the difference: 5.0 MHz + f₂ = 9 (5.0 MHz − f₂), so 10 f₂ = 40 MHz and f₂ = 4.0 MHz. The two speeds multiply to u², so the slow crests run at u/9. That's where the hall's 4.0 MHz comes from.
 The back of this drawer opens into the funhouse.
 ## Lounge
 A signal goes down the line at u, and two lamps answer it, aimed at your chair from either side. Across the cold hearth, the old joey keeps a hand on the clock key and looks straight at you. They've been looking since before you sat down. The silk at the shoulders has faded round two small thumbprints. On the mantel, a traveling clock case in faded red leather, unlatched.

@@ -16,7 +16,7 @@ The working method is **dog math** ([Dog Math](https://docs.google.com/document/
 - **Rules and history:** the [provenance ledger](https://docs.google.com/spreadsheets/d/1DLNETgzXOORBU6zlIFnnY4cJlFwW3oJP7uVUC9H0_sA/edit). [Rules](https://docs.google.com/spreadsheets/d/1DLNETgzXOORBU6zlIFnnY4cJlFwW3oJP7uVUC9H0_sA/edit#gid=1764092671) holds every standing ruling, R-0 to R-121; a newer, specific ruling refines an older general one. Its other sheets are Events, Documents, Corrections, Assignments, and Open. It holds short facts, not drafts or arguments.
 - **The book:** [Straight→ Mechanics](https://docs.google.com/document/d/1xOnwsUUUOZWu9VnA4-kZmBUkKgRg2qfUQ6aQXQRXr5s/edit), doc's draft. Read it for its aims: physical facts as ordinary sentences that translate straight into correct mechanics; an atrium the reader can see into, not just the loading dock where the practitioner works; a willing reader who can meet an idea early and circle back. Read it for its arrows, too (R-099). Some of its letters predate recent rulings, and the rulings win on letters.
 - **The problem set:** one LaTeX document, [mansion/pset in claudog](https://github.com/saccade/claudog/tree/main/mansion/pset), source and PDF, in standard language. Labels: mansion 1-a … 13-d; appendix a, a-1; appendix 2, 1-α; appendix γ, α-1. Don't "fix" the mixed alphabet: each label format appears once, so a label points to exactly one thing.
-- **The four solution paths** are Google Docs still titled "solution set k of 4", built by `mansion/sets/build_sets.py`. doc edits path 1 directly, so fold his edits into the builder before any rebuild or they're lost. All four matched the build at 17:53, path 1 with every edit of doc's folded in.
+- **The four solution paths** are Google Docs still titled "solution set k of 4", built by `mansion/sets/build_sets.py`. doc edits path 1 directly, so fold his edits into the builder before any rebuild or they're lost. All four matched the build at 18:04, path 1 with every edit of doc's folded in.
     - [path 1, the mansion](https://docs.google.com/document/d/1eXujaaNEpePHUmFPh7rMZVxGqlQw6vb1m1VEWOoW39Y/edit): the thirteen, with the slow, full introduction to the notation
     - [path 2, plus the cabinet](https://docs.google.com/document/d/1HOEJ-WNH8A3BoGiClTiwCUCj1wyIvzulnUqxLfRmFro/edit)
     - [path 3, plus the funhouse](https://docs.google.com/document/d/1wUcpO2B9mkwK7U4_FxT9BwKGdH2YcZCLV9R3fpLJtsQ/edit)
@@ -73,7 +73,7 @@ The four endings get richer with their routes. Keep the Last House chorus; the f
     - The paths' references move to the problem set's labels, and the docs are retitled "path k".
     - The arrows carry through the middle material.
 3. **Not done, so don't claim it:** sin and cos gone by the middle (R-075). Drawers 1, 2, and 6, F4, and U1 still use them, and they move into arrows only where that reads better.
-4. **Waiting on doc:** f-4's reverse question, 11-c's factor crests, and the cue's table impulse (from Codex's check); and path 1's 9-3, which answers with the rods' angles where the question asks about the masses.
+4. **Waiting on doc:** 11-c's factor crests (from Codex's check), and path 1's 9-3, which answers with the rods' angles where the question asks about the masses.
 5. **Later, not now:** the text-input game, whose pictures carry deliberate AI signatures in smoke, folds, hair, or shadows: readable scenes first, unmistakable letters once noticed.
 
 ## How to work here

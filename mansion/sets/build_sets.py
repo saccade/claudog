@@ -310,6 +310,10 @@ def appendix_items(tabs, k):
             items[key] = [("h3", h)] + [("i", ln) for ln in intro] + number_parts(rest)
     return items, scenery
 
+F4_STATEMENT = "4. With one wave at 5.0 MHz, what frequency for the other puts the fast crests at nine times u? Where are the slow crests then?"
+F4_SOLUTION = ("(4) The fast crests run at u(f₁ + f₂)/(f₁ − f₂), so nine times u needs the sum to be nine times the difference: "
+               "5.0 MHz + f₂ = 9 (5.0 MHz − f₂), so 10 f₂ = 40 MHz and f₂ = 4.0 MHz. The two speeds multiply to u², so the slow crests run at u/9. "
+               "That's where the hall's 4.0 MHz comes from.")
 SERIAL = [("the current, charge and stored energy", "the current, charge, and stored energy"),
           ("outer radius R, hub radius r and moment", "outer radius R, hub radius r, and moment"),
           ("mass m, radius R and moment", "mass m, radius R, and moment"),
@@ -458,6 +462,13 @@ def build(k):
                 out[i] = (t, x)
     # Oxford comma, always (R-121, doc 16:07): the serial lists the sources wrote without it
     out = [(t, x if not isinstance(x, str) else _serial(x)) for t, x in out]
+    # doc 18:00: the reverse question goes in as drawer 6's part 4; the hall's 4 MHz dagger points here (problem set f-4)
+    for j, (t, x) in enumerate(out):
+        if isinstance(x, str) and x.startswith("3. For 5.0 MHz and 4.0 MHz and u"):
+            out.insert(j + 1, (t, F4_STATEMENT)); break
+    for j, (t, x) in enumerate(out):
+        if isinstance(x, str) and x.startswith("(3) The sum is 9 MHz and the difference 1 MHz"):
+            out.insert(j + 1, (t, F4_SOLUTION)); break
     return out
 
 def to_html(items):
