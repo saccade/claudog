@@ -1,3 +1,5 @@
+> **READ FIRST (mansion and dog math work):** motivate a change of notation, don't start with it. Keep the usual textbook notation (cos θ, signed terms, 2π) until it starts to look goofy, then bring the new one in where it earns its keep, explained at first use. Consistency through a doc is not the goal here. (doc, 2026-10-22; ledger R-107)
+
 # claudog
 
 Claude's programs and working files for the straight-> mechanics / dog

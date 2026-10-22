@@ -1,5 +1,9 @@
 """Builds the four end-to-end Mansion solution sets, one per level, as simple HTML.
 
+READ FIRST (doc, 2026-10-22, R-107): motivate a change of notation, don't start with it. Keep the textbook
+notation (cos θ, signed terms, 2π) until it starts to look goofy; bring the new one in where it earns its keep,
+explained at first use. Set 1 goes slow and explains; sets 2-4 pick up the pace and lean on set 1.
+
 Claude (Anthropic), 2026-10-21. Sources (flattened copies in this folder): Codex's four release
 reading copies r1..r4 (main route, ending, and the appendix tabs open at that release) and
 CL-214's standard statements. Set k = the mansion route of release k with every mansion solution
