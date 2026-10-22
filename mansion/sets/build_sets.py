@@ -84,6 +84,31 @@ SPOOL_I = [("(3) Write the statement’s moment of inertia as η. With the mass 
            ("(3) Write the statement’s moment of inertia as η. ", "(3) "),
            ("ηα = −Fr − fR", "Iα = −Fr − fR"), ("(m + η/R²)a", "(m + I/R²)a"), ("Here η/R²", "Here I/R²")]
 
+# doc's set-1 edits of 2026-10-22 08:06, as discussed: arrows start at the governor, the spool's
+# signs become senses (→ ← straight, ↻ ↺ turning), the grip is taken positive → and comes out ←,
+# the hoop's eighth of a turn, the powdered clown. Each entry lists the level variants of one spot.
+DOC_0806 = [
+ [("(2) The cosine can't go over 1, so g/(ℓω²) has to stay under 1. Below a sweep of √(g/ℓ) = √20, about 4.5 stroke a second, hanging straight down is the only answer.",
+   "(2) The ball hangs g/ω² below the hinge: 10/25 = 0.40 m here. A drop can't be longer than the arm. Below a sweep of √(g/ℓ) = √20, about 4.5 strokes a second, g/ω² would be longer than the 0.50 m arm, so hanging straight down is all that's left.")],
+ [("Take forward, the way the cord pulls, as positive, and let f be the counter's grip on the spool, positive forward too. The center of mass speeds up as if both forces acted there: ma = F + f. For the turning, take the way the spool turns when it rolls forward as positive. The cord pulls forward 0.12 m below the axle and the grip acts 0.20 m below it, and a forward push below the axle turns the spool backward.",
+   "The cord pulls forward (→). Take the counter's grip on the spool, f, as positive → too; the answer will say which way it really goes. The center of mass speeds up as if both forces acted on it directly: ma = F + f. For turning, call the way the spool turns when it rolls → positive: ↻. The cord pulls → 0.12 m below the axle and the grip acts 0.20 m below it, and a → push below the axle turns the spool ↺.")],
+ [("So the torques about the axle are −Fr and −fR, and Iα = −Fr − fR.", "So the torques about the axle are Fr ↺ and fR ↺, and Iα ↻ = [Fr + fR] ↺."),
+  ("So the cord cranks the spool backward about the axle with −Fr, the grip cranks it with −fR, and Iα = −Fr − fR.", "So the cord cranks the spool ↺ about the axle with Fr, the grip cranks it ↺ with fR, and Iα ↻ = [Fr + fR] ↺.")],
+ [("The center speeds up at 0.80 m/s², forward: the spool rolls toward the pull", "The center speeds up at 0.80 m/s² →: the spool rolls toward the pull")],
+ [("The grip is f = 1.6 − 6.0 = −4.4 N. It pulls back, and about the axle it turns the spool forward harder than the cord turns it back.",
+   "The grip is f = 1.6 − 6.0 = −4.4 N: 4.4 N ←. It pulls back, and about the axle it turns the spool ↻ harder than the cord turns it ↺."),
+  ("The grip is f = 1.6 − 6.0 = −4.4 N. It pulls back, and about the axle it cranks the spool forward harder than the cord cranks it back.",
+   "The grip is f = 1.6 − 6.0 = −4.4 N: 4.4 N ←. It pulls back, and about the axle it cranks the spool ↻ harder than the cord cranks it ↺.")],
+ [("Forward 2.0 m/s and down 2.0 m/s make 2√2, about 2.8 m/s, 45° below forward.", "2.0 m/s → and 2.0 m/s ↓ make 2√2, about 2.8 m/s, 45° (τ/8) below →.")],
+ [("a whiteface in damask", "a powdered clown in damask")],
+ [("the whiteface has gloves", "the powdered clown has gloves")],
+]
+STATEMENT_FIX = [("A spool of mass 2.0 kg, outer radius R = 0.20 m and hub radius r = 0.12 m has moment of inertia 0.040 kg m²† about its axle. It rests on a level counter.",
+                  "A spool rests on a level counter. It has mass 2.0 kg, outer radius R = 0.20 m, hub radius r = 0.12 m, and moment of inertia 0.040 kg m²† about its axle.")]
+# turn-family units are count nouns and take a plural (doc, 08:06); dog park units stay bare (R-041)
+STROKES = re.compile(r"(?<=[0-9√τ]) stroke\b")
+LEGEND = "A value marked † is supplied: chosen so the house works, with the reason somewhere below the mansion."
+
 def clean(ln, k):
     for rx, rep in NAV: ln = rx.sub(rep, ln)
     for old, new in TIMES: ln = ln.replace(old, new)
@@ -140,12 +165,18 @@ def build(k):
     for old, new in SPOOL_I:
         if old in route: route = route.replace(old, new)
     assert "η" not in route, "η left in the mansion route"
+    for alts in DOC_0806:   # each entry: one or more (old, new) variants; at least one must apply
+        hit = False
+        for old, new in alts:
+            if old in route: route = route.replace(old, new); hit = True
+        assert hit, alts[0][0][:70]
     ending = main[iE:]
     items, scen = appendix_items(tabs, k)
     st = statements()
     out = [("h1", f"The Mansion, solution set {k} of 4: {NAMES[k]}")]
     out.append(("p", f"<b>Written by Claude (Anthropic), 2026-10-21, for dr. kraemer.</b> Set {k} of four: the whole problem set done through, end to end, the way a reader at level {k} would do it, with every optional problem open at that level placed right after the room it belongs to. Assembled from Codex's (OpenAI) release copies and the checked drafts; the thirteen mansion solutions are re-said in this level's words. The ideas and vocabulary are dr. kraemer's; the words are the models'. Statements stay in standard language."))
     out.append(("i", f"Words this set uses: {WORDS[k]}."))
+    out.append(("i", LEGEND))
     after = {"1. The knife": ["Drawer 4", "F1"], "3. The governor and the spool": ["Drawer 1"],
              "4. The ladder": ["Drawer 2", "F4"], "7. The hoop": ["Drawer 3"],
              "10. The coils and the capacitor": ["Drawer 5", "F2"], "11. The line": ["Drawer 6"],
@@ -162,7 +193,9 @@ def build(k):
         if m:
             n = int(m.group(1))
             out.append(("h3", h))
-            sl = [x.replace("problem 12(c)", "problem 12, part 3").replace("problem 10(d)", "problem 10, part 4") for x in st[n]]
+            sl = [x for x in st[n]]
+            for old, new in STATEMENT_FIX: sl = [x.replace(old, new) for x in sl]
+            sl = [x.replace("problem 12(c)", "problem 12, part 3").replace("problem 10(d)", "problem 10, part 4") for x in sl]
             if n == 10: sl = ["Four parts."] + sl
             out += [(t, s) for t, s in number_parts(sl)][1 if n == 10 else 0:]
             out.append(("b", "Solution"))
@@ -192,12 +225,12 @@ def build(k):
     for ln in ending[1:]:
         if ln.startswith("## "): out.append(("h3", ln[3:]))
         else: out.append(("p", ln))
-    return out
+    return [(t, STROKES.sub(" strokes", x)) for t, x in out]
 
 def to_html(items):
     h = ['<html><head><meta charset="utf-8"></head><body>']
     for t, s in items:
-        e = html.escape(s, quote=False).replace("&lt;b&gt;", "<b>").replace("&lt;/b&gt;", "</b>")
+        e = html.escape(s, quote=False).replace("&lt;b&gt;", "<b>").replace("&lt;/b&gt;", "</b>").replace("†", "<sup>†</sup>")
         if t in ("h1", "h2", "h3"): h.append(f"<{t}>{e}</{t}>")
         elif t == "i": h.append(f"<p><i>{e}</i></p>")
         elif t == "b": h.append(f"<p><b>{e}</b></p>")
