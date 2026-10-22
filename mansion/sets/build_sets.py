@@ -319,7 +319,7 @@ P1_FINAL = [("With nothing speeding up, the grip has to be the same size pointin
 # has gone long enough to forget (τ, 7k characters; χ, 11k). Applied to path 1's final text after solutions_only.
 P1_GLOSS = [
     ("A flywheel's energy is half its moment of inertia at the squared sweep.",
-     "A flywheel's energy is half its moment of inertia at the squared sweep, ½Iω²: the inertia carried at that sweep."),
+     "A flywheel's energy is half its moment of inertia at the squared sweep, ½Iω²."),   # Codex and doc, 19:05: the tail was extra
     ("the forward part of F is → · F, the pull dotted with forward, and",
      "the forward part of F is → · F, the pull dotted with forward. The dot keeps just the part of F that runs along the arrow, which is the F cos θ from a moment ago, and"),
     ("The arrows add on their own and dot pair by pair, and ← · ↑ gives nothing:",
@@ -334,6 +334,17 @@ P1_GLOSS = [
      "At any height the ball moves at √(5/7) of the bead's speed, about 0.85 of it, so it takes √(7/5) as long to come round: 1.99 s against 1.68 s."),
     ("The bottom point is still for that instant.",
      "The bottom point is still for that instant. That's why a photo of a moving bicycle blurs the spokes at the top of the wheel and catches them sharp near the ground."),
+]
+# Codex's five local fixes with doc (Goals, 19:05; the first is folded into P1_GLOSS above), path 1 only
+P1_GLOSS += [
+    ("Through one whole turn, 0.75 N m does 2π of itself: 4.7 J,", "Through one whole turn, 2π strokes, 0.75 N m does 4.7 J of work,"),
+    ("The mass and turning count as 3.0 kg at the axle,",
+     "Turning the spool adds another kilogram to the load the pull must speed up. That makes 3.0 kg at the axle,"),
+    ("Power is the voltage of the current: P = VI. At the start",
+     "Power is the voltage of the current: P = VI. The 20 Ω resistor has a conductance of 0.05 mho (℧). At the start"),
+    ("the current is the conductance of 6.0 V across 20 Ω: 0.30 A.", "the current is the conductance of 6.0 V: 0.30 A."),
+    ("The charge reads each part's share, 9/13 and 4/13, off its hand's forward part.",
+     "The charge takes each part's share, 9/13 and 4/13, from its hand's forward part."),
 ]
 # Sweep 4: paths 2-4 carry path 1's notation as a highlights reel: arrows on both ledgers at the spool, the dot at 3-d
 # and the ladder, names in parentheses. Applied to the final text after solutions_only.
@@ -562,6 +573,8 @@ def build(k):
             hit = [j for j, (t, x) in enumerate(out) if isinstance(x, str) and old in x]
             assert len(hit) == 1, old[:60]
             out[hit[0]] = (out[hit[0]][0], out[hit[0]][1].replace(old, new))
+    # doc 19:25: the ladder's 1.60 m was the one three-digit number among two-digit ones; 1.6 m says it (R-115, round hard)
+    out = [(t, x.replace("1.60 m", "1.6 m") if isinstance(x, str) else x) for t, x in out]
     # doc 18:00: the reverse question goes in as drawer 6's part 4; the hall's 4 MHz dagger points here (problem set f-4)
     for j, (t, x) in enumerate(out):
         if isinstance(x, str) and x.startswith("3. For 5.0 MHz and 4.0 MHz and u"):   # statements are gone after the sweep
