@@ -631,6 +631,9 @@ def build(k):
     for j, (t, x) in enumerate(out):
         if isinstance(x, str) and x.startswith("(f-3) The sum is 9 MHz and the difference 1 MHz"):
             out.insert(j + 1, (t, F4_SOLUTION)); break
+    if k == 4:   # doc 20:43-20:44: path 4 drives the old material like a fast car, in the established vocabulary
+        import p4_reel
+        out = p4_reel.apply(out)
     return out
 
 def to_html(items):
