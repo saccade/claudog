@@ -270,6 +270,27 @@ STATEMENT_FIX = [("A small steam engine takes in 15 J of heat and does 3.0 J of 
 STROKES = re.compile(r"(?<=[0-9√τ]) stroke\b")
 LEGEND = "A value marked † is supplied: chosen so the house works, with the reason somewhere below the mansion."
 
+# Path 2's painted-shut drawers, in house order (d, b, e, f, g). Nothing repeats exactly (doc, 10-23 09:33): each draft
+# is its own room's, uneven in length, and the house leans a little further in each time. The ending's line is Codex's.
+SHUT = "Behind this drawer there's a draft; the panel at its back is painted shut."   # the release copies' line, before the drafts
+DRAFTS = {"d": "A draft comes from behind this drawer. The panel at its back has been painted shut.",
+          "b": "Another draft, cooler, from behind the ladder's drawer. Its back panel has had two coats of paint, and the second doesn't quite match the first.",
+          "e": "This drawer's draft smells of ozone. The paint across its back has cracked along one edge, from the other side.",
+          "f": "The hall lamp leans toward the back of this drawer. Still painted shut.",
+          "g": "Here the draft is warm. Through a hairline in the paint, a sliver of mirror catches your lamp, and something in it moves when you don't."}
+# Paths 3 and 4: the same five passages, now open. Path 4's are brisk, with one half-remembered touch, at the last (never in step).
+OPEN = "The back of this drawer opens into the funhouse."
+OPENS = {3: {"d": OPEN,
+             "b": "Behind the ladder's drawer the panel swings in, and a long mirror leans there, showing the library backward.",
+             "e": "This drawer's back opens on glass. Your reflection reaches for the jars a beat after you do.",
+             "f": "Through the back of this one, more mirrors, with the hall lamp in all of them and none of them quite lined up.",
+             "g": "The last drawer's back is already open. Warm air, and somewhere in the glass, two lights."},
+         4: {"d": OPEN,
+             "b": "Its back opens too: a long mirror, with the library backward in it.",
+             "e": "Through the back, glass, and jars that move a beat after these do.",
+             "f": "Open. Lamps in every mirror.",
+             "g": "This one was open before you touched it."}}
+
 def clean(ln, k):
     for rx, rep in NAV: ln = rx.sub(rep, ln)
     for old, new in TIMES: ln = ln.replace(old, new)
@@ -642,7 +663,14 @@ def build(k):
             out.insert(j + 1, (t, F4_SOLUTION)); break
     if k == 4:   # doc 20:43-20:44: path 4 drives the old material like a fast car, in the established vocabulary
         import p4_reel
-        out = p4_reel.apply(out)
+        out = p4_reel.apply(out)   # it keeps only the lines it knows, so the drawer lines change after it
+    drawer = None   # each painted-shut line takes the draft of the drawer whose parts come just before it
+    for j, (t, x) in enumerate(out):
+        if not isinstance(x, str): continue
+        m = re.match(r"\(([a-g])-\d", x)
+        if m: drawer = m.group(1)
+        elif x == SHUT: out[j] = (t, DRAFTS.get(drawer, SHUT))
+        elif x == OPEN and k in OPENS: out[j] = (t, OPENS[k].get(drawer, OPEN))
     return out
 
 def to_html(items):
