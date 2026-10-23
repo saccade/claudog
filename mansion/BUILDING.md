@@ -114,3 +114,11 @@ SPEC is `{"paras": [["h", "Codex — what it's about (doc HH:MM)"], ["doc", "“
 - All four path tabs matched the build after doc's last line edits (cosines and fractions, 10:23). The builder's output is unchanged since then. repeats.py finds no repeated lines, and arrows.py passes 97 of 97.
 - The live count is always the last "Count:" line in Discussion.
 - Up next is in the Next tab: path 4 as an all-verse saga, then highlights instead of reruns in paths 2 and 3.
+
+## Shared path features (Codex extension, 10-23)
+
+`sets/path_features.json` is the shared plan for number form and editorial transitions. `path_features.py` validates it and serves both the four-path planner and gaps page. `shares.apply(..., path=k)` reads the number-form state and transition anchor. Exact roots stay symbolic; rounded values remain decimals. Only selected exact relationships become fractions, with a denominator bound. Chosen fractions above one are improper, not mixed. Inertia/spin use grams with kilo as needed; no mechanical “about” insertion. R-130 remains intact; the new choices are R-131.
+
+The preview controls filter features, change per-path modes and onsets, reset, and export JSON; they never write to Docs. Exported changes are proposals: replace the manifest, rebuild, inspect, then use the existing guarded tab write chain. Counts describe the current build, not an unbuilt preview. Poetry has editorial states, not an automatic quality score. Old length estimates are historical planning aids, not quotas.
+
+Review: `sets/PATH_FEATURES_REVIEW.md`. Checks: `cd mansion/sets && python3 -m unittest test_path_features.py`; then the usual build, repeats, level, and tab verification checks. Rebuild `paths_plan.py four_paths.html`, `gaps.py gaps.json`, and `gaps_page.py gaps.json forgetting_gaps.html` when the plan changes. This extension does not assemble the verse saga or change the AP problem set.

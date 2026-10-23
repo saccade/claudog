@@ -10,9 +10,9 @@ A trim silver canteen with an enamel juggler on the lid stands unlatched on the 
 The visitor watches the knife cycle across and back. On the paper, the curve cycles with it.
 ## Dining room
 ## 1. The knife
-The loose sheet models the knife as a 1 kg point mass, a meter from its pivot. Let go from 1/10 rad off the downward vertical, it swings under g = 10 m/s². The numbers are on the sheet; the knife has already begun.
-(1-a) A 1/10 rad lean lifts the knife ℓθ²/2, 5 mm, and 10 N of weight through 5 mm hefts 1/20 J.
-(1-b) Let go, it trades the whole 1/20 J of heft for punch by the bottom. The mass rides on both sides and cancels: v² = 2gh = 1/10 m²/s², and the knife comes through at 0.32 m/s.
+The loose sheet models the knife as a 1 kg point mass, a meter from its pivot. Let go from 0.1 rad off the downward vertical, it swings under g = 10 m/s². The numbers are on the sheet; the knife has already begun.
+(1-a) A 0.1 rad lean lifts the knife ℓθ²/2, 5 mm, and 10 N of weight through 5 mm hefts 0.05 J.
+(1-b) Let go, it trades the whole 0.05 J of heft for punch by the bottom. The mass rides on both sides and cancels: v² = 2gh = 0.1 m²/s², and the knife comes through at 0.32 m/s.
 (1-c) ℓω² = g puts the cycle at √10, about 3.2 sweep, and T = τ/√10: two seconds a turn, near enough. No stray 2 this time; the turn brought its own sign.
 (1-d) Double the mass and you double the heft, the punch, and the reluctance to be hurried, all together. T doesn't budge. The cycle never asked for the mass.
 The pen begins the curve again. The lid lifts.
@@ -35,32 +35,32 @@ Trapdoor, the swing side: in the floor under the mirror, and through it the same
 The line on the paper goes on behind the wall. Ahead, something breathes in steam. By the range, a toolbox in scorched canvas, unlatched.
 ## 2. The engine and the flywheel
 (2-a) Fifteen joules of heat-in, three of work, twelve of heat-out, and the engine's back where it began: 20%, and at a cycle a second, 3 W.
-(2-b) 1/2 kg m² sweeping at 4 hooks 4 J. Four seconds at 3 W pour in 12 J of hook, 16 J in all, and the wheel's sweeping at 8: four times the hook buys twice the sweep. Take the inertia out of the hook and what's left is the zing, ½ω²: the wheel zings at 8 to start and 32 to finish. Power on the inertia is the zlow, and its verb is zlower: 3 W on 1/2 kg m² is a zlow of 6, so the engine zlowers the wheel at a steady 6 zing a second, 8 to 32 in four seconds flat. Power on the mass is the zow, and it zowers.
-(2-c) Power is the sweep of torque. Grab the χ off the wall like usual, no time to slow down here: P = ωχ. At 4 sweep the engine's 3 W cranks with 3/4 N m; at 8, with 3/8. Twice the sweep, half the crank, and the wheel picks up at 3/2 sweep a second, then 3/4.
+(2-b) 500 g m² sweeping at 4 hooks 4 J. Four seconds at 3 W pour in 12 J of hook, 16 J in all, and the wheel's sweeping at 8: four times the hook buys twice the sweep. Take the inertia out of the hook and what's left is the zing, ½ω²: the wheel zings at 8 to start and 32 to finish. Power on the inertia is the zlow, and its verb is zlower: 3 W on 500 g m² is a zlow of 6, so the engine zlowers the wheel at a steady 6 zing a second, 8 to 32 in four seconds flat. Power on the mass is the zow, and it zowers.
+(2-c) Power is the sweep of torque. Grab the χ off the wall like usual, no time to slow down here: P = ωχ. At 4 sweep the engine's 3 W cranks with 3/4 N m; at 8, with 3/8. Twice the sweep, half the crank, and the wheel picks up at 1.5 sweep a second, then 3/4.
 ## 3. The governor and the spool
-(3-a) The arm's pull holds the weight with its upward part and bends the path with its inward part, mω² of the reach. Those parts stand as the arm's drop to its reach, so the reach cancels and the ball hangs g/ω² = 10/25 = 2/5 m below the hinge, 4/5 of the 1/2 m arm: a 3–4–5 about 37° off vertical. Each ball has climbed 1/10 m and hefts 1 J.
-(3-b) The drop g/ω² can't outgrow the 1/2 m arm. Below √(g/ℓ) = √20, about 4.5 sweep, the governor gives up and hangs straight down.
-(3-c) Both ledgers in arrows: ma → = F → + f → for the center, and Iα ↻ = [Fr + fR] ↺ about the axle, tied by α = a/R. Together, (m + I/R²)a = F(1 − r/R): the spool loads the cord like 3 kg, the cord pulls like 2.4 N, and it rolls toward the pull at 4/5 m/s² →. The grip comes out 1.6 N → + 6 N ← = 4.4 N ←, cranking ↻ harder than the cord cranks ↺.
+(3-a) The arm's pull holds the weight with its upward part and bends the path with its inward part, mω² of the reach. Those parts stand as the arm's drop to its reach, so the reach cancels and the ball hangs g/ω² = 10/25 = 0.4 m below the hinge, 4/5 of the 0.5 m arm: a 3–4–5 about 37° off vertical. Each ball has climbed 0.1 m and hefts 1 J.
+(3-b) The drop g/ω² can't outgrow the 0.5 m arm. Below √(g/ℓ) = √20, about 4.5 sweep, the governor gives up and hangs straight down.
+(3-c) Both ledgers in arrows: ma → = F → + f → for the center, and Iα ↻ = [Fr + fR] ↺ about the axle, tied by α = a/R. Together, (m + I/R²)a = F(1 − r/R): the spool loads the cord like 3 kg, the cord pulls like 12/5 N, and it rolls toward the pull at 4/5 m/s² →. The grip comes out 8/5 N → + 6 N ← = 22/5 N ←, cranking ↻ harder than the cord cranks ↺.
 (3-d) Hold it still and the grip is → · F · ←, which read from its other end is ← · F · →, cranking ↺ right along with the cord: Fr ↺ + (← · F) R ↺ = 0. The forward part of the pull is r/R of it, 3/5: θ = 53°, the 3–4–5 with its 3 on the counter. The inertia never gets a vote.
 ## Drawer a: the kitchen's two 3–4–5s
 Door: the kitchen. A toolbox in scorched canvas, patched with the same cloth turned inside out, its lid painted with a ringmaster's star; inside, a little governor on a stand and a spool on a strip of counter.
 (a-1) The governor's move again: the ball hangs g/ω² below the hinge, and that drop is ℓ cos θ, so cos θ = g/(ℓω²). Below ω = √(g/ℓ), straight down is the only way to hang.
-(a-2) Drop 4, reach 3, arm 5: the drop is 4/5 of ℓ, ω² = g/(ℓ · 4/5) = 25, and ω = 5 sweep, the kitchen's own shaft. The ball's up 1/10 m.
+(a-2) Drop 4, reach 3, arm 5: the drop is 4/5 of ℓ, ω² = g/(ℓ · 4/5) = 25, and ω = 5 sweep, the kitchen's own shaft. The ball's up 0.1 m.
 (a-3) Count about the contact; its acceleration points at the axle, so the count is fair, and friction and the counter's push get no leverage there. The cord's line runs R − r above the counter and cranks F(R − r) on the inertia about the contact, I + mR², and the center speeds up at R of that pickup: a = F(1 − r/R)/(m + I/R²). The center's two ledgers say the same.
-(a-4) 3 kg at the axle means I/R² = 1 kg: I = 1/25 kg m², half of mR², a plain uniform disk. 2.4 N on 3 kg rolls it at 4/5 m/s² →, with friction hauling 4.4 N ←.
-(a-5) A spool at rest isn't turning, so the pull gets no leverage about the contact: its line, R cos θ − r from the contact, has to run right through it. cos θ = r/R = 3/5, θ = 53°, whatever I is.
+(a-4) 3 kg at the axle means I/R² = 1 kg: I = 40 g m², half of mR², a plain uniform disk. 12/5 N on 3 kg rolls it at 4/5 m/s² →, with friction hauling 22/5 N ←.
+(a-5) Stay put: aim through the contact. The pull's forward part at R balances its full pull at r. Forward fraction 3/5; the statement calls it cos θ = r/R. θ = 53°, whatever I is.
 ## Library
 Raise the spool's cord past that angle and, still pulled forward, the spool rolls back. It knocks a catch, and the ladder is free to slide. The first question catches the ladder mid-slide; the rest start it again from rest. On the reading table, a velvet kit, unlatched.
 ## 4. The ladder
-(4-a) The ladder won't stretch, so it dots to zero against the top's velocity less the foot's: (1.8 m ← + 2.4 m ↑) · (2/5 m/s ← + v ↑) = 0.72 m²/s + 2.4 m v = 0. The top comes down at 3/10 m/s ↓.
-(4-b) The center falls from 1.2 m to 4/5 m, and 80 N through 2/5 m lets go 32 J of heft.
+(4-a) The ladder won't stretch, so it dots to zero against the top's velocity less the foot's: (1.8 m ← + 2.4 m ↑) · (0.4 m/s ← + v ↑) = 0.72 m²/s + 2.4 m v = 0. The top comes down at 0.3 m/s ↓.
+(4-b) The center falls from 1.2 m to 0.8 m, and 80 N through 0.4 m lets go 32 J of heft.
 (4-c) Count about the still point, L/2 from the center: the profile there is L²/12 + L²/4 = L²/3, and all 32 J is turning about it. The center's punch takes three quarters, 24 J, and the hook about the center the other 8. 8 kg punching 24 J runs at √6, about 2.4 m/s, with the ladder sweeping at 2v/L, about 1.6 sweep.
 ## Drawer b: the wall lets go
 Door: the library. A gentleman's reading kit in circus colors, its velvet worn to the nap: a folding rule, spectacles, a little ladder leaning on a painted wall.
 (b-1) Foot x out, top y up, center at half of each: half of √(x² + y²) = L from the corner. The center rides a circle of radius L/2.
 (b-2) Profiles add: L²/4 for riding the circle and L²/12 for turning about itself, L²/3 in all, so the ladder carries ½m(L²/3)ω² = (1/6)mL²ω².
 (b-3) The heft let go, mg(h₀ − y)/2, sets ω² = 3g(h₀ − y)/L², and the center's sideways speed is ωy/2. Only the wall can speed that up, and its square goes as y²(h₀ − y), which tops out at y = 2h₀/3. Past there the center would have to be pulled back, and a wall can't pull. It lets go, right on schedule.
-(b-4) Two thirds of 2.4 m is 1.6 m; ω² = 3 × 10 × 0.8/9 = 8/3; and the center's doing (3/2)√(8/3) = √6, about 2.4 m/s.
+(b-4) Two thirds of 2.4 m is 1.6 m; ω² = 3 × 10 × 0.8/9 = 8/3; and the center's doing 1.5√(8/3) = √6, about 2.4 m/s.
 Its back opens too: a long mirror, with the library backward in it.
 ## Mirror 4: the corner, turned over
 A tilted floor, and a mirror at the end that shows the room upside down.
@@ -75,7 +75,7 @@ After the ladder has left the wall, its fall trips the sear on a cocked cue. The
 ## 5. The cue ball
 (5-a) The cue lands 2 N s → on 1 kg, and the center punches off at 2 m/s →.
 (5-b) The blow leaves (H − R) ↑ × J → = (H − R) J ↻ of spin about the center. Rolling at once means ω ↻ × R ↓ = ω R ← cancels v →, so ω = v/R ↻, and the spin is (2/5) m R² (v/R) ↻ = (2/5) R J ↻. Same sense, so H − R = 2R/5: the cue goes in at 7R/5 = 0.07 m, two fifths of a radius over center.
-(5-c) 40 sweep ↻ and 1/25 kg m²/s ↻ of spin. ½ (2 m/s →) · (2 N s →) = 2 J of punch and ½ (40 ↻) · (1/25 kg m²/s ↻) = 4/5 J of hook: two fifths again, the center zipping at 2 J/kg and the ball zinging at 800.
+(5-c) 40 sweep ↻ and 40 g m²/s ↻ of spin. ½ (2 m/s →) · (2 N s →) = 2 J of punch and ½ (40 ↻) · (40 g m²/s ↻) = 0.8 J of hook: two fifths again, the center zipping at 2 J/kg and the ball zinging at 800.
 ## Conservatory
 The cue ball rolls free, then nudges a flap. A second ball, held a little way up the basin, is let go. Its own height pays for its motion. The striped dome's second door is here, unlatched.
 ## 6. The basin
@@ -85,7 +85,7 @@ The cue ball rolls free, then nudges a flap. A second ball, held a little way up
 ## Ballroom
 The ball keeps the knife's time, and a beat that matches draws you on. Their cycles keep time; their starting positions are still theirs to choose. The striped dome's third door is here, unlatched.
 ## 7. The hoop
-(7-a) 1/4 m sweeping at 8 runs at 2 m/s.
+(7-a) 0.25 m sweeping at 8 runs at 2 m/s.
 (7-b) The rim's 2 m/s rides on top of the center's: 4 m/s at the top, nothing at the bottom, the still point for that instant.
 (7-c) The front point is √2 radii from the still point, so it runs at √2 of 2 m/s, about 2.8 m/s, τ/8 (45°) below →.
 ## Drawer c: turning about the contact
@@ -104,10 +104,10 @@ What supplied that work, and where could it wait? The study keeps the answer rea
 (9-a) T = τ/ω: τ/2.4 = 2.6 s for the slow tone and τ/5.8 = 1.1 s for the fast.
 (9-b) (2 + √2)/(2 − √2) = (2 + √2)²/2, so the sweeps stand at 1 + √2, and flipped, √2 − 1. Irrational: no count of slow cycles ever matches a count of fast ones.
 (9-c) The modes are the second knife's two tones, and each one's shape is how far the lower rod leans for the upper's lean: Ω_shape = +√2 for the slow tone, both masses swinging the same way, the lower one farther; and −√2 for the fast tone, the lower rod flipped.
-The shape is the rods'. Each mass is out by its own rod's length of its own swing, and the lower one rides on the upper: the L of the U has nothing to be. With the body written last, swinging the upper rod 1/10 rad → puts them at 1/10 m → × U + 0.24 m → × L in the slow tone and 1/10 m → × U + 0.041 m ← × L in the fast: the lower mass goes the other way, but only √2 − 1 as far.
+The shape is the rods'. Each mass is out by its own rod's length of its own swing, and the lower one rides on the upper: the L of the U has nothing to be. With the body written last, swinging the upper rod 0.1 rad → puts them at 0.1 m → × U + 0.24 m → × L in the slow tone and 0.1 m → × U + 0.041 m ← × L in the fast: the lower mass goes the other way, but only √2 − 1 as far.
 In either tone, each rod picks up at ω² of its own lean, back toward vertical. Both tones at once make a chord, and the chord beats at the gap, 5.8 − 2.4 = 3.4 sweep.
 ## 10. The coils and the capacitor
-(10-a) Current is the conductance of the voltage, power is the voltage of the current, and the can cans the capacitance of its voltage: by now it says itself. Empty, the can leaves the resistor all 6 V: 3/10 A. RC = 2 s. With the can at 4 V, the resistor has 2 V and passes 1/10 A; the can has canned 2/5 C and 4/5 J, and the resistor burns 1/5 W.
+(10-a) Current is the conductance of the voltage, power is the voltage of the current, and the can cans the capacitance of its voltage: by now it says itself. Empty, the can leaves the resistor all 6 V: 0.3 A. RC = 2 s. With the can at 4 V, the resistor has 2 V and passes 0.1 A; the can has canned 0.4 C and 0.8 J, and the resistor burns 0.2 W.
 (10-b) LC = 1/ω_a², so the loop on its own rings at the slow tone, 2.4 sweep, exactly.
 (10-c) The current cranks the rod with χ_em = κi and delivers κiȧ; the rod's motion pushes κȧ back against the current, so the circuit gives up κȧ of i. Same number, opposite ledgers: a belt, not a battery. Crank against the sweep and the belt runs the other way.
 (10-d) (2/3) × 2.4 = 1.6 and (3/2) × 2.4 = 3.6 sweep, multiplying to ω₀² and standing at 9 to 4: a mirror pair about ω₀, the two tones of one machine, rods and loop together.
@@ -125,9 +125,9 @@ Trapdoor, the circuit side: windings and a capacitor the size of a hatbox, wired
 ## Hall
 The rods are left hanging still and the loop open. The hall asks what could announce the release. On the hall stand, a striped hatbox, unlatched.
 ## 11. The line
-(11-a) L′C′u² = 1: u = 10⁸ m/s, a third of light's speed. C′Z² = L′: Z = 50 ohm.
+(11-a) L′C′u² = 1: u = 1 × 10⁸ m/s, a third of light's speed. C′Z² = L′: Z = 50 ohm.
 (11-b) Where the pulses overlap, 12 V and not an amp to show for it: their 0.12 A currents run opposite ways and cancel. All of it's canned, ½ × 0.2 × 10⁻⁹ × 144 = 14 nJ/m, the two pulses' 7.2 nJ/m stacked in one place.
-(11-c) Crests at u/9 = 1.1 × 10⁷ m/s and 9u = 9 × 10⁸ m/s, three times light's speed. The fast one's a stripe: two waves already there, lining up, carrying nothing. A signal rides its wave at u, and nobody sent the stripe.
+(11-c) Crests at u/9 ≈ 1.1 × 10⁷ m/s and 9u = 9 × 10⁸ m/s, three times light's speed. The fast one's a stripe: two waves already there, lining up, carrying nothing. A signal rides its wave at u, and nobody sent the stripe.
 ## Drawer f: two crests from two waves
 Door: the hall. A hatbox in red and white stripes, rubberized against the wet; inside, a long coil of wire and two tuning forks.
 (f-1) cos P + cos Q = 2 cos(½(P − Q)) cos(½(P + Q)) (in arrows, → · P + → · Q = 2 (→ · ½(P − Q)) (→ · ½(P + Q))), with P = k₁x − ω₁t and Q = k₂x + ω₂t.

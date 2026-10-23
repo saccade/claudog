@@ -471,6 +471,16 @@ def _serial(x):
     for old, new in SERIAL: x = x.replace(old, new)
     return x
 
+def checked_solution(items, label, expected, replacement):
+    """A late highlight must not silently swallow a later source correction."""
+    hits = [i for i, (_, text) in enumerate(items) if isinstance(text, str) and text.startswith(label)]
+    assert len(hits) == 1, (label, "expected one source paragraph", len(hits))
+    i = hits[0]
+    assert items[i][1] == expected, (label, "source changed; reconcile before replacing")
+    out = list(items)
+    out[i] = (items[i][0], replacement)
+    return out
+
 def build(k, shares=True):
     tabs = read(f"r{k}_now.txt")
     main = tabs["The mansion"]
@@ -709,9 +719,27 @@ def build(k, shares=True):
         if m: drawer = m.group(1)
         elif x == SHUT: out[j] = (t, DRAFTS.get(drawer, SHUT))
         elif x == OPEN and k in OPENS: out[j] = (t, OPENS[k].get(drawer, OPEN))
+    # doc 10-23: path 3 brushes the familiar language aside like cobwebs.
+    # The effective mass still has to be named: three kilograms is not the spool's mass.
+    if k == 3:
+        expected = "(a-4) The bottom line counts what must speed up at the axle: the mass, plus the turning carried as inertia over R². For 3.0 kg, I/R² = 1.0 kg, so I = 0.040 kg m², half of mR². That's a uniform disk. Then 6.0 N at 1 − 3/5 is 2.4 N on 3.0 kg: a = 0.80 m/s² →, the way the cord pulls. Friction pulls 4.4 N ←."
+        replacement = "(a-4) Effectively 3 kg at the axle: 2 in the mass, 1 in the turning. So I/R² = 1 kg, I = 40 g m², half of mR²: a uniform disk. Then 6 N at 1 − 3/5 leaves 2.4 N on 3 kg. The spool picks up at 4/5 m/s² →; the grip hauls 4.4 N ←."
+        out = checked_solution(out, "(a-4)", expected, replacement)
+    # a-5 explicitly asks for cos theta. Answer once, after the physical reading.
+    if k in (2, 3):
+        line = ("(a-5) To stay put, the spool asks for no torque about the contact. The pull's forward part at R balances its full pull at r: the forward fraction is r/R = 3/5. The statement calls that cos θ = r/R, so θ = 53°. The inertia never enters, because a spool that doesn't turn never asks for it." if k == 3 else
+                "(a-5) To stay put, the spool asks for no torque about the contact, so the cord's line has to pass through it. The pull's forward part at R balances its full pull at r. Its forward fraction is therefore r/R = 3/5. In the statement's notation, cos θ = r/R, so θ = 53°: the 3–4–5 again, with the 3 along the counter. The inertia never enters, because a spool that doesn't turn never asks for it.")
+        expected = "(a-5) A spool that stays put isn't turning, so the pull has no leverage about the contact. The cord leaves the hub at a tangent, r from the axle; tilted up θ, its line passes R cos θ − r from the contact. No leverage means cos θ = r/R. The inertia never enters, because a spool that doesn't turn never asks for it. With r/R = 3/5, θ = 53°: the 3–4–5 again, with the 3 along the counter."
+        out = checked_solution(out, "(a-5)", expected, line)
+    # Path 2's determined visitor finds the fractions when the energy shares need them.
+    if k == 2:
+        for j, (t, x) in enumerate(out):
+            if isinstance(x, str) and x.startswith("(6-a)"):
+                out.insert(j, ("i", "Beside the ball, the visitor writes 0.4 for the turning, 1.4 in all. No. A line through both: 2/5, 7/5. Five parts running, two turning. Seven altogether. Now the meaning stays put."))
+                break
     if shares:   # doc 10:42: no trailing zeros; a fraction wherever a fraction is the true value (R-129)
         import shares as _shares
-        out = _shares.apply(out)
+        out = _shares.apply(out, path=k)
     return out
 
 def to_html(items):

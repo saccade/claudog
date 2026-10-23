@@ -9,6 +9,7 @@ Usage: python3 gaps.py OUT.json
 """
 import json, re, sys
 import lineup_sets
+import path_features
 
 H = " "
 TERMS = [  # name, regex, path where it first can appear
@@ -76,7 +77,8 @@ def run(k):
             if d > 0: gaps.append({"from": a["at"], "to": b["at"], "len": d, "after": a["piece"], "back": b["piece"], "nod": b["gloss"]})
         terms.append({"name": tname, "level": lvl, "hits": hits, "gaps": gaps,
                       "glosses": sum(h["gloss"] for h in hits), "uses": len(hits)})
-    return {"k": k, "total": total, "bounds": bounds, "terms": terms}
+    return {"k": k, "total": total, "bounds": bounds, "terms": terms,
+            "path_features": path_features.observe(lineup_sets.build_sets.build(k), k)}
 
 if __name__ == "__main__":
     data = [run(k) for k in (1, 2, 3, 4)]

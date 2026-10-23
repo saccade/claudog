@@ -71,6 +71,10 @@ button:focus-visible, input:focus-visible { outline: 2px solid var(--cobalt); ou
   <span><svg width="16" height="16" aria-hidden="true"><rect x="2" y="2" width="12" height="12" fill="none" stroke="var(--amber)" stroke-width="2"></rect></svg>back after a long gap, cold</span>
 </div>
 <div class="score" id="score"></div>
+<details><summary>Notation and poetic changes in this path</summary>
+<p>From the same path_features.json used by the planning matrix and number formatter.
+These are states and editorial choices, not an automatic score for a poem.</p>
+<div id="path-features"></div></details>
 <h2 id="h-lists">What the dial picks out</h2>
 <div class="lists">
   <div><h3>Comes back cold: candidates for a nod</h3><div id="cold"></div></div>
@@ -90,6 +94,11 @@ try { const s = JSON.parse(localStorage.getItem("gaps") || "{}"); if (s.k) K = s
 const esc = s => s.replace(/[&<>"]/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"}[c]));
 function draw() {
   const d = DATA[K - 1], x = a => LABEL + a / d.total * (W - LABEL - 10);
+  const f=d.path_features;
+  document.getElementById("path-features").innerHTML=f ? '<p>'+f.decimal_count+' decimal literals; '+f.fraction_count+
+    ' fraction literals in the current build.</p>'+f.features.map(x=>'<p><b>'+esc(x.title)+'</b>: '+esc(x.state.mode)+
+    ' from '+esc(x.state.starts_at)+(x.state.then?' → '+esc(x.state.then.mode)+' at '+esc(x.state.then.starts_at):'')+
+    ' · '+esc(x.implementation)+' · '+esc(x.status)+(x.state.note?'<br>'+esc(x.state.note):'')+'</p>').join('') : '';
   const H = TOP + d.terms.length * ROW + 10;
   let s = `<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="Uses and glosses of each term along path ${K}">`;
   d.bounds.forEach(([a, n], i) => {

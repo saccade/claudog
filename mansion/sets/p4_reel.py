@@ -36,7 +36,7 @@ REEL4 = {
  'a-2': "(a-2) Drop 4, reach 3, arm 5: the drop is 4/5 of ℓ, ω² = g/(ℓ · 4/5) = 25, and ω = 5.0 sweep, the kitchen's own shaft. The ball's up 0.10 m.",
  'a-3': "(a-3) Count about the contact; its acceleration points at the axle, so the count is fair, and friction and the counter's push get no leverage there. The cord's line runs R − r above the counter and cranks F(R − r) on the inertia about the contact, I + mR², and the center speeds up at R of that pickup: a = F(1 − r/R)/(m + I/R²). The center's two ledgers say the same.",
  'a-4': '(a-4) 3.0 kg at the axle means I/R² = 1.0 kg: I = 0.040 kg m², half of mR², a plain uniform disk. 2.4 N on 3.0 kg rolls it at 0.80 m/s² →, with friction hauling 4.4 N ←.',
- 'a-5': "(a-5) A spool at rest isn't turning, so the pull gets no leverage about the contact: its line, R cos θ − r from the contact, has to run right through it. cos θ = r/R = 3/5, θ = 53°, whatever I is.",
+ 'a-5': "(a-5) Stay put: aim through the contact. The pull's forward part at R balances its full pull at r. Forward fraction 3/5; the statement calls it cos θ = r/R. θ = 53°, whatever I is.",
  '4-a': f"(4-a) The ladder won't stretch, so it dots to zero against the top's velocity less the foot's: (1.8 m ← + 2.4 m ↑){D}(0.40 m/s ← + v ↑) = 0.72 m²/s + 2.4 m v = 0. The top comes down at 0.30 m/s ↓.",
  '4-b': '(4-b) The center falls from 1.2 m to 0.80 m, and 80 N through 0.40 m lets go 32 J of heft.',
  '4-c': "(4-c) Count about the still point, L/2 from the center: the profile there is L²/12 + L²/4 = L²/3, and all 32 J is turning about it. The center's punch takes three quarters, 24 J, and the hook about the center the other 8. 8.0 kg punching 24 J runs at √6, about 2.4 m/s, with the ladder sweeping at 2v/L, about 1.6 sweep.",
