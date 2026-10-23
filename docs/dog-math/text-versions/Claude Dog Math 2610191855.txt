@@ -1,0 +1,274 @@
+DOG MATH
+========
+
+Written by Claude (Anthropic), 2026-10-19 18:55. The dog math rules
+and units as they stand today, gathered from the notes in the
+Straight-> Mechanics draft and dr. kraemer's rulings in chat. Not
+doc's text; the rules are his, these words are the model's.
+
+1. What dog math is
+-------------------
+
+Dog math (dog physics is fine too) is playing with ideas on
+purpose. When hands, cats, dogs, lumps, thumps, pow and zoom are
+on the board, the work is real science or real engineering, but
+it says out loud that it isn't the final job and won't get lost
+in the weeds.
+
+It is the default for all the work unless doc says something is
+for outside eyes.
+
+2. The rules
+------------
+
+1.  Round hard. Gravity is 10 zoom (dog gravity). Anything close
+    to a round number is that round number. A mole is 3/5 of a
+    trillion trillion.
+
+2.  A result should survive rounding, dropping or scrambling
+    every digit past about the third. If 96 against 100 matters,
+    you're measuring the wrong thing: pick a simpler example or
+    find the real quantity.
+
+3.  The principal job is naming quantities that mean things,
+    saying how to measure or construct them, and relating them in
+    sentences that don't turn around on themselves.
+
+4.  A lump of algebra, or words that tangle or run long, usually
+    means a quantity hasn't been named yet. Find the body or
+    setup property it describes, say how to measure or construct
+    it, and let that quantity collapse the algebra. The quantity
+    does the structural work; friendly units make its numbers
+    easy.
+
+5.  A name has to hold up against its dictionary meaning
+    everywhere you can see it mapped. No calling a force a carrot
+    just to say you measured something.
+
+6.  One name per thing, one thing per name. That includes the
+    word's ordinary uses: in plain English "spinning at 6" names
+    the sweep, so spin has to be kept clear of it. Assigning a
+    word never bans its everyday sense; no breaking the world.
+
+7.  Make the words work hard while playing. A quantity can go
+    adjectival (a ponderous bulk), adverbial, or get verbed (the
+    drum picks up; a lever sweeps force). Drop dead words, skip
+    words outright, take shortenings, have fun with units, and
+    don't police anyone's coinages. It's okay as long as everyone
+    is having fun. Formalize later, and only where it would step
+    on toes.
+
+8.  Choose the sizes so the units eat the algebra. Radii in whole
+    hands make the radius's reflex a whole number of cards;
+    wherever there seems to be algebra, a unit on the board will
+    usually eat most of it.
+
+9.  Local units are fine. A problem may define its own unit at the
+    top when it makes the numbers whole: 1 mw is a milliwheel, so
+    a lump at a hand, at a hand, is 10 mw of inertia.
+
+10. Every quantity gets a one-word unit: its own name unless a
+    named unit already exists. You don't say "inertia" after a
+    number; you say "wheel".
+
+11. The dog units take no plural s: 5.3 hand, 7 lump, 14 push.
+    5.3 hands is a trip to the hospital.
+
+12. For outside eyes ("for college", "for high school") the dog
+    units stay in the dog park. The other rules still hold: no
+    third decimal, and name things.
+
+3. The dog units
+----------------
+
++-------------+------------------------------+-----------------+
+| Unit        | What it is                   | Standard        |
++-------------+------------------------------+-----------------+
+| hand        | about a hand's width         | 10 cm (~4 in)   |
+| card        | a square hand; about a 3x5   | 0.01 m^2        |
+|             | index card                   |                 |
+| lump        | the unit of mass             | 1 kg            |
+| cat         | the unit of speed            | 1 m/s           |
+| dog         | ten cats                     | 10 m/s          |
+| zoom        | a cat per second             | 1 m/s^2         |
+| dog gravity | a dog per second, down       | 10 zoom         |
+| push        | force: an oompf per second   | 1 N             |
+| pull        | a push, pulling              | 1 N             |
+| press       | pressure: a push per square  | 1 Pa            |
+|             | metre (Pa for company)       |                 |
+| thump       | a lump lifted a hand in dog  | 1 J             |
+|             | gravity                      |                 |
+| pow         | a thump per second           | 1 W             |
+| crank       | torque: a push at a metre,   | 1 N m           |
+|             | an arrow along the axis      |                 |
+| grunt       | trundle: the work over one   | 1 J, one        |
+|             | stroke, a plain amount       | stroke's worth  |
++-------------+------------------------------+-----------------+
+
+4. The book's own units
+-----------------------
+
+The one-word units of quantities the book assigns. Oompf, roll,
+ponder and wheel stay, for outside eyes too, wherever the
+quantities are named:
+
++-------------+------------------------------+-----------------+
+| Unit        | Quantity it measures         | Standard        |
++-------------+------------------------------+-----------------+
+| oompf       | movement, a body's motion    | 1 kg m/s        |
+| stroke      | swing (one radian's worth)   | 1 rad           |
+| quadrant    | swing: a quarter turn        | about 1.6 stroke|
+| flip        | swing: half a turn           | about 3.1 stroke|
+| turn        | swing: all the way round     | about 6.3 stroke|
+| sweep       | sweep: a stroke per second   | 1 rad/s         |
+| whirl       | pickup: a sweep per second   | 1 rad/s^2       |
+| ponder      | bulk: mass at a lever        | 1 kg m          |
+|             | ("a ponderous bulk")         |                 |
+| wheel       | inertia: a ponder at a metre | 1 kg m^2        |
+| roll        | spin                         | 1 kg m^2/s      |
+| shift       | shift: movement for a time;  | 1 kg m          |
+|             | what moves a centre of mass  |                 |
+| transit     | transit: the swing of the    | 1 kg m          |
+|             | bulk, mass along the arc     |                 |
+| zip         | punch per mass               | 1 J/kg          |
+| zing        | hook per inertia             | 1 J/(kg m^2)    |
+| zump        | hook per mass: profile       | 1 J/kg          |
+|             | across zing                  |                 |
+| zug         | work per mass, or per inertia| 1 J/kg, or      |
+|             | for turning                  | 1 J/(kg m^2)    |
+| zow         | power per mass, or per       | 1 W/kg, or      |
+|             | inertia for turning          | 1 W/(kg m^2)    |
+| zam         | action per mass, or per      | 1 J s/kg, or    |
+|             | inertia for turning          | 1 J s/(kg m^2)  |
+| zlug, zlow, | the turning ghosts, when both| per inertia     |
+| zlam        | kinds are about at once      |                 |
++-------------+------------------------------+-----------------+
+
+5. Handy facts
+--------------
+
+    1 metre                     = 10 hand
+    1 wheel                     = a ponder at a metre
+    a lump at a hand, at a hand = 10 mw (local unit)
+    1 thump                     = a lump lifted a hand, dog gravity
+    1 crank through 1 stroke    = 1 grunt
+    dog gravity                 = 10 zoom
+    a turn                      = about 6.3 stroke
+    a 3x5 card                  = within a few percent of a card
+
+6. Ghosts
+---------
+
+A ghost is a quantity with the body taken out. Straight ghosts
+come per lump; turning ghosts come per wheel. Some turning
+quantities also have a per-lump ghost.
+
+Ghosts take the passive voice. The point is to pass them around
+without anything in particular having them: 18 zing is added,
+not "it gains 18 zing". Or let the quantity act: 4 pickup over
+4.5 stroke adds 18 zing. There's still a ghost body back there,
+but it's rude to point at it. Put a body back across a ghost and
+the active voice comes back with it: half a wheel with 18 zing
+hooks 9 thump.
+
+Ghosts carry no mass, so they walk through walls, and sometimes
+they let you follow them if you dare. People get lost in those
+walls. They say if you could see into the dark in there, it would
+be nothing but algebra, everywhere; be grateful the lights are
+off. The way out is always the same: put the body back across.
+You go in after 18 zing, and on the far side a wheel steps out
+and hooks 9 thump. The ones who get lost forgot to bring the mass
+back.
+
++--------------+-----------------------+-----------------------+
+|              | per lump (mass out)   | per wheel (inertia    |
+|              |                       | out)                  |
++--------------+-----------------------+-----------------------+
+| oompf        | velocity              |                       |
+| push         | acceleration          |                       |
+| thump, punch | zip                   |                       |
+| roll         | swirl                 | sweep                 |
+| crank        | twirl                 | pickup                |
+| thump, hook  | zump                  | zing                  |
+| thump, work  | zug                   | zlug                  |
+| pow          | zow                   | zlow                  |
++--------------+-----------------------+-----------------------+
+
+Take the wheel out, with half a wheel:
+
+    3 roll on half a wheel sweeps at 6.
+    2 crank on half a wheel picks up at 4.
+    9 thump of hook on half a wheel is 18 zing.
+    4 pickup over 4.5 stroke is 18 zlug.
+    4 pickup at 6 sweep is 24 zlow.
+
+Take the lump out instead, with the 2-lump ball at 5 hand:
+
+    9 thump of hook on 2 lump is 4.5 zump.
+    25 card of profile across 18 zing is 4.5 zump.
+
+Spin and torque leave the motion itself, sweep and pickup, just
+as movement and push per lump leave the velocity and the
+acceleration. This holds where the setup fixes the axis, so the
+inertia is one number.
+
+7. At talking speed
+-------------------
+
+The point of the one-word units is saying this stuff without
+slowing down. The same sentences, said out loud, from the arm on
+the post (a 2-lump ball on a 5 hand rod, turned by 2 crank):
+
++-------------------------------+-------------------------------+
+| Just us dogs                  | Textbook units, said in full  |
++-------------------------------+-------------------------------+
+| 5 hand sweeping at 6 runs at  | A half-metre radius at six    |
+| 3 cat.                        | radians per second moves at   |
+|                               | three metres per second.      |
+| Half a wheel at 6 has 3 roll. | Half a kilogram metre squared |
+|                               | at six radians per second is  |
+|                               | three kilogram metres squared |
+|                               | per second.                   |
++-------------------------------+-------------------------------+
+| 2 crank on half a wheel picks | Two newton metres on half a   |
+| it up at 4.                   | kilogram metre squared gives  |
+|                               | an angular acceleration of    |
+|                               | four radians per second       |
+|                               | squared.                      |
++-------------------------------+-------------------------------+
+| 4 pickup over 4.5 stroke adds | At four radians per second    |
+| 18 zing.                      | squared over four and a half  |
+|                               | radians, half the square of   |
+|                               | the angular velocity rises by |
+|                               | eighteen per second squared.  |
++-------------------------------+-------------------------------+
+| Half a wheel with 18 zing     | The rotational kinetic energy |
+| hooks 9 thump.                | is one half times half a      |
+|                               | kilogram metre squared times  |
+|                               | the square of six radians per |
+|                               | second, which is nine joules. |
++-------------------------------+-------------------------------+
+| 3 roll off a 5 hand lever     | Three kilogram metres squared |
+| takes 6 oompf.                | per second at half a metre is |
+|                               | six kilogram metres per       |
+|                               | second of linear momentum.    |
++-------------------------------+-------------------------------+
+| 2 grunt through 4.5 stroke    | Two newton metres through     |
+| adds 9 thump.                 | four and a half radians is    |
+|                               | nine joules.                  |
++-------------------------------+-------------------------------+
+
+The zing row has no short textbook version at all: the textbook
+has no name for half the square of the angular velocity. The row
+after it is what zing is for: the wheel goes across the zing the
+way the mass goes across the profile, and out comes hook.
+
+Zing is a ghost, so no body has it: the pickup adds it, not "it".
+Put the wheel across it and there's a body again: half a wheel
+with 18 zing hooks 9 thump.
+
+The second row says "half a wheel at 6" and drops "sweeping":
+the row above sets up the parallel, so the ear supplies it. That
+kind of elision only works where the parallel is that clear. It
+can't be done uniformly, and it's impossible with a tongue
+covered in algebra.

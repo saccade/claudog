@@ -1,0 +1,129 @@
+DOG MATH
+========
+
+Written by Claude (Anthropic), 2026-10-19 16:39. The dog math rules
+and units as they stand today, gathered from the notes in the
+Straight-> Mechanics draft and dr. kraemer's rulings in chat. Not
+doc's text; the rules are his, these words are the model's.
+
+1. What dog math is
+-------------------
+
+Dog math (dog physics is fine too) is playing with ideas on
+purpose. When hands, cats, dogs, lumps, thumps, pow and zoom are
+on the board, the work is real science or real engineering, but
+it says out loud that it isn't the final job and won't get lost
+in the weeds.
+
+It is the default for all the work unless doc says something is
+for outside eyes.
+
+2. The rules
+------------
+
+1.  Round hard. Gravity is 10 zoom (dog gravity). Anything close
+    to a round number is that round number. A mole is 3/5 of a
+    trillion trillion.
+
+2.  A result should survive rounding, dropping or scrambling
+    every digit past about the third. If 96 against 100 matters,
+    you're measuring the wrong thing: pick a simpler example or
+    find the real quantity.
+
+3.  The principal job is naming quantities that mean things,
+    saying how to measure or construct them, and relating them in
+    sentences that don't turn around on themselves.
+
+4.  A name has to hold up against its dictionary meaning
+    everywhere you can see it mapped. No calling a force a carrot
+    just to say you measured something.
+
+5.  Make the words work hard while playing. A quantity can go
+    adjectival (a ponderous bulk), adverbial, or get verbed (the
+    drum picks up; a lever sweeps force). Drop dead words, skip
+    words outright, take shortenings, have fun with units, and
+    don't police anyone's coinages. It's okay as long as everyone
+    is having fun. Formalize later, and only where it would step
+    on toes.
+
+6.  Choose the sizes so the units eat the algebra. Radii in whole
+    hands make every profile a whole number of cards; wherever
+    there seems to be algebra, a unit on the board will usually
+    eat most of it.
+
+7.  Local units are fine. A problem may define its own unit at the
+    top when it makes the numbers whole: 1 mw is a milliwheel, so
+    a lump at one card is 10 mw of inertia.
+
+8.  Every quantity gets a one-word unit: its own name unless a
+    named unit already exists. You don't say "inertia" after a
+    number; you say "wheel".
+
+9.  The dog units take no plural s: 5.3 hand, 7 lump, 14 push.
+    5.3 hands is a trip to the hospital.
+
+10. For outside eyes ("for college", "for high school") the dog
+    units stay in the dog park. The other rules still hold: no
+    third decimal, and name things.
+
+3. The dog units
+----------------
+
++-------------+------------------------------+-----------------+
+| Unit        | What it is                   | Standard        |
++-------------+------------------------------+-----------------+
+| hand        | about a hand's width         | 10 cm (~4 in)   |
+| card        | a square hand; about a 3x5   | 0.01 m^2        |
+|             | index card                   |                 |
+| lump        | the unit of mass             | 1 kg            |
+| cat         | the unit of speed            | 1 m/s           |
+| dog         | ten cats                     | 10 m/s          |
+| zoom        | a cat per second             | 1 m/s^2         |
+| dog gravity | a dog per second, down       | 10 zoom         |
+| push        | force: an oompf per second   | 1 N             |
+| press       | pressure: a push per square  | 1 Pa            |
+|             | metre (Pa for company)       |                 |
+| thump       | a lump lifted a hand in dog  | 1 J             |
+|             | gravity                      |                 |
+| pow         | a thump per second           | 1 W             |
+| crank       | torque: a push at a metre,   | 1 N m           |
+|             | an arrow along the axis      |                 |
+| grunt       | trundle: a thump per stroke, | 1 J per stroke  |
+|             | a plain amount               |                 |
++-------------+------------------------------+-----------------+
+
+4. The book's own units
+-----------------------
+
+These aren't play units; they are the one-word units of quantities
+the book assigns, and they stay in any work:
+
++-------------+------------------------------+-----------------+
+| Unit        | Quantity it measures         | Standard        |
++-------------+------------------------------+-----------------+
+| oompf       | motion                       | 1 kg m/s        |
+| stroke      | swing (one radian's worth)   | 1 rad           |
+| sweep       | sweep: a stroke per second   | 1 rad/s         |
+| whirl       | pickup: a sweep per second   | 1 rad/s^2       |
+| ponder      | bulk ("a ponderous bulk")    | 1 kg m          |
+| wheel       | inertia                      | 1 kg m^2        |
+| roll        | spin                         | 1 kg m^2/s      |
+| zip         | zip: punch per mass          | 1 J/kg          |
+| zing        | zing: hook per inertia       | 1 J/(kg m^2)    |
+| zug, zow,   | work, power, action: per mass| per mass or     |
+| zam         | straight, per inertia turning| per inertia     |
+| shift,      | their own quantities         | 1 kg m          |
+| transit     |                              |                 |
++-------------+------------------------------+-----------------+
+
+5. Handy facts
+--------------
+
+        1 metre        = 10 hand
+        1 wheel        = a lump at 100 card
+        a lump at a card = 10 mw (local unit)
+        1 thump        = a lump lifted a hand in dog gravity
+        1 crank through 1 stroke = 1 grunt
+        dog gravity    = 10 zoom
+        a turn         = about 6.3 stroke
+        a 3x5 card     = within a few percent of a card
