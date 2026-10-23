@@ -109,6 +109,6 @@ SPEC is `{"paras": [["h", "Codex — what it's about (doc HH:MM)"], ["doc", "“
 
 ## State at handoff (10-23, about 10:10)
 
-- All four path tabs matched the build after doc's last line edit (1-γ, 10:10). The builder's output is unchanged since then. repeats.py finds no repeated lines, and arrows.py passes 97 of 97.
+- All four path tabs matched the build after doc's last line edit (path 3's 2-c, 10:17). The builder's output is unchanged since then. repeats.py finds no repeated lines, and arrows.py passes 97 of 97.
 - The live count is always the last "Count:" line in Discussion.
 - Up next is in the Next tab: path 4 as an all-verse saga, then highlights instead of reruns in paths 2 and 3.
