@@ -20,7 +20,7 @@ STAMP = "2610221000"
 DATE = {1: "2026-10-22", 2: "2026-10-22", 3: "2026-10-22", 4: "2026-10-22"}   # the sweep, doc 2026-10-22 09:47
 WORDS = {
  1: "the turn and τ, π for the flip, the cycle (it cycles), the sweep and the stroke, χ for torque, sentences the right way round (current is the conductance of the voltage; power is the voltage of the current, and the sweep of the torque), own time",
- 2: "level 1's, plus heft, punch and hook; profile; pickup, and crank as a verb; spin; can and coil",
+ 2: "level 1's, plus heft, punch and hook; profile; pickup; crank, the unit of torque, and its verb; spin; can and coil",
  3: "level 2's, plus the still point; zip and zing; flips and mirror pairs; tone, chord, beat and the shape Ω_shape; the trade (a belt, not a battery); the stripe and phase, for ghosts; shift and stretch",
  4: "level 3's, plus the one machine; zam and zlam; in step, at random, the tap; TEST and RUN; and doc's zow and zlow, with their verbs zower and zlower",
 }
