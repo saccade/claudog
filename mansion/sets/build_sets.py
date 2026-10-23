@@ -471,7 +471,7 @@ def _serial(x):
     for old, new in SERIAL: x = x.replace(old, new)
     return x
 
-def build(k):
+def build(k, shares=True):
     tabs = read(f"r{k}_now.txt")
     main = tabs["The mansion"]
     i0 = main.index("## The way in"); iE = next(i for i, l in enumerate(main) if l.startswith("## Ending"))
@@ -709,6 +709,9 @@ def build(k):
         if m: drawer = m.group(1)
         elif x == SHUT: out[j] = (t, DRAFTS.get(drawer, SHUT))
         elif x == OPEN and k in OPENS: out[j] = (t, OPENS[k].get(drawer, OPEN))
+    if shares:   # doc 10:42: no trailing zeros; a fraction wherever a fraction is the true value (R-129)
+        import shares as _shares
+        out = _shares.apply(out)
     return out
 
 def to_html(items):
