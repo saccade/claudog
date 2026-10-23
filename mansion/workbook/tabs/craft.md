@@ -16,7 +16,7 @@ A model keeps notation consistent the way it digests food, without deciding to. 
 -- Counts take plurals and rates stay bare: turns and strokes, but 4 sweep and 800 zing (R-097, on trial).
 -- "The ladder is sweeping," where a contraction would read as possessive (R-098).
 -- American spelling, with contractions by default (R-083). Oxford comma, always (R-121).
--- 20% next to a number, and a fraction in prose (R-114). Hair spaces between symbols (R-094).
+-- 20% next to a number, and a fraction in prose (R-114). Anything that's properly a fraction is written as one: r/R = 3/5, γ = 5/4, never 0.60 (R-129). Past path 1, a cosine appears only where the problem set asks for one. Hair spaces between symbols (R-094).
 -- Round hard: if 96 against 100 matters, find the real variable. Two figures throughout; play units stay in full dog mode, statements stay standard.
 ## The mansion and the ending
 The route begins in third person, and "you" creeps in: the chalk is on your cuff, the ribbon is already in your hand, the clown looks at you from the lounge. The mystery entangles the visitor with the victim and the culprit. It's supernatural, not time travel, and it's one continuous house: the cabinet, funhouse, and understage deepen it rather than starting three more. The clown never moves onstage and is never met below the mansion. The clown's presentation shifts by room, stays gender-vague, and is never sexual. The revelations come in order: hand-mending, a maker's kit, one wearer behind the costumes, then the unfinished work of squaring the circle. The house grew around that work, and the clown's interventions keep the driven machine from crashing.
