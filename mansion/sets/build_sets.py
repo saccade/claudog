@@ -346,6 +346,26 @@ P1_GLOSS += [
     ("The charge reads each part's share, 9/13 and 4/13, off its hand's forward part.",
      "The charge takes each part's share, 9/13 and 4/13, from its hand's forward part."),
 ]
+# Sweep 5 (R-075): sin and cos gone by the middle where words or arrows read better. The governor takes path 1's drop-and-reach
+# reading (no slope, no sine to cancel); the ladder's drawer and mirror count the foot and top as x and y. Kept: the
+# statements' own cos θ, the spool's line at a-5, the basin's height, and f-1's identity, which is the subject.
+MIDDLE = [
+    ("at the ball's distance from the shaft: mω²ℓ sin θ. The pull runs along the arm, so the two parts stand in the arm's own slope: tan θ = ℓω² sin θ/g. "
+     "For an arm off the vertical the sine cancels, and cos θ = g/(ℓω²) = 10/(0.50 × 25) = 0.80.",
+     "at the ball's reach from the shaft: mω² of the reach. The pull runs along the arm, so its two parts stand to each other as the arm's drop to its reach. "
+     "For an arm off the vertical the reach cancels, and the ball hangs g/ω² below the hinge: 10/25 = 0.40 m, so cos θ = 0.80 on the 0.50 m arm."),
+    ("Its inward part bends the ball's path round the axis, mℓ sin θ ω². The pull runs along the arm, so the two jobs stand in the arm's own slope: tan θ = ℓ sin θ ω²/g. "
+     "For an arm off the vertical the sine cancels, and cos θ = g/(ℓω²).",
+     "Its inward part bends the ball's path round the axis, mω² of the reach. The pull runs along the arm, so the two jobs stand as the arm's drop to its reach, "
+     "and for an arm off the vertical the reach cancels: the ball hangs g/ω² below the hinge. That drop is ℓ cos θ, so cos θ = g/(ℓω²)."),
+    ("Call the ladder's angle with the floor φ. The foot is L cos φ out and the top L sin φ up, so the center sits at half of each. That's a circle of radius L/2 about the corner.",
+     "From the corner, the foot is x out and the top y up, with x² + y² = L². The center sits at x/2 out and y/2 up, half of each, "
+     "so it's half of √(x² + y²) from the corner: L/2. That's a circle of radius L/2 about the corner."),
+    ("The center's sideways speed is (L/2)ω sin φ = ωy/2,",
+     "The center runs round its circle at (L/2)ω, square to the line from the corner, so its sideways part is that speed at the line's upward fraction, (y/2)/(L/2): ωy/2,"),
+    ("so the still point is level with it: (L cos φ, L sin φ).", "so the still point is level with it: x out and y up."),
+    ("The center, at (L cos φ, L sin φ)/2, sits halfway", "The center, x/2 out and y/2 up, sits halfway"),
+]
 # Sweep 4: paths 2-4 carry path 1's notation as a highlights reel: arrows on both ledgers at the spool, the dot at 3-d
 # and the ladder, names in parentheses. Applied to the final text after solutions_only.
 H = " "
@@ -573,6 +593,10 @@ def build(k):
         out.insert(j + 1, ("i", "The upper rod's bob is the dining room's knife, a kilogram a meter out from the same silver pivot. "
                                 "You've been watching one end of this machine since the roast went cold."))
     if k in (2, 3, 4):
+        for old, new in MIDDLE:   # 4-α and 4-β live only in paths 3 and 4
+            hit = [j for j, (t, x) in enumerate(out) if isinstance(x, str) and old in x]
+            assert len(hit) == (0 if (k == 2 and "still point" in old or k == 2 and old.startswith("The center, at")) else 1), old[:60]
+            for j in hit: out[j] = (out[j][0], out[j][1].replace(old, new))
         for old, new in REEL:
             hit = [j for j, (t, x) in enumerate(out) if isinstance(x, str) and old in x]
             assert len(hit) == 1, old[:60]
