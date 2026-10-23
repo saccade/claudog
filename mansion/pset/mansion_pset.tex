@@ -1,5 +1,5 @@
 % The Mansion: the one problem set. The four solution paths are separate documents.
-% Claude (Anthropic), 2026-10-22. Statements and scenes from the whole-house build (set 4), standard
+% Claude (Anthropic), 2026-10-22; title and metadata 2026-10-23 14:10 (doc). Statements and scenes from the whole-house build (set 4), standard
 % language throughout; labels per doc (12:54): mansion 1-a, appendix a a-1, appendix 2 1-alpha,
 % appendix gamma alpha-1. Build: latexmk -xelatex mansion_pset.tex
 \documentclass[11pt]{article}
@@ -15,8 +15,7 @@
 
 \pagestyle{fancy}
 \fancyhf{}
-\lhead{straight$\to$ mechanics}
-\rhead{The Mansion}
+\rhead{The Mansion that did not Spin}
 \cfoot{\thepage}
 \renewcommand{\headrulewidth}{0.4pt}
 
@@ -36,16 +35,17 @@
 \newcommand{\rt}{\text{√}}  % a root sign that sits on the line: \rt2, \rt(a/g). It pastes out in order; \sqrt doesn't
 % Subscript-and-power symbols are written \omega_a{}^2, so the power pastes after the subscript
 
+% What the PDF says about itself, and nothing else (doc, 10-23 14:10): the shown text carries only the title
+\usepackage{hyperref}
+\hypersetup{pdftitle={The Mansion that did not Spin}, pdfauthor={dr. kraemer},
+  pdfsubject={Made by dr. kraemer using Claude \& Codex as working notes for his draft of Straight→ Mechanics.},
+  pdfkeywords={}, pdfcreator={}, pdfproducer={}, hidelinks}
+
 \begin{document}
 \thispagestyle{plain}
-\noindent straight$\to$ mechanics \hfill Halloween 2026\par
-\vspace{-6pt}\rule{\textwidth}{0.4pt}
 \begin{center}
-{\LARGE\bfseries The Mansion}\\[4pt]
-{\large Problem set}
+{\LARGE\bfseries The Mansion that did not Spin}
 \end{center}
-
-\textit{Written by Claude (Anthropic), 2026-10-22 13:30; revised 2026-10-23 06:51. From the Mansion's statements and scenes. The ideas are dr.\ kraemer's; the words are the models'.}
 
 A value marked \textsuperscript{\dag} is supplied, chosen so the house works; the mark names the appendix part where you can find out why. The thirteen problems are the mansion. Appendices a, 2 and $\gamma$ go further in.
 

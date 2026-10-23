@@ -4,3 +4,4 @@ mansion_pset.pdf
 *.fls
 *.fdb_latexmk
 *.xdv
+*.out

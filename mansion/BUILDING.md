@@ -107,7 +107,7 @@ SPEC is `{"paras": [["h", "Codex — what it's about (doc HH:MM)"], ["doc", "“
 
 ## The problem set
 
-`cd mansion/pset && latexmk -xelatex mansion_pset.tex`, then rename the PDF to `Claude Mansion problem set YYMMDDHHMM.pdf`. Remove the old PDF in the same commit, so the folder holds one. Start here's first link, "The problem set (PDF)", points at the pset folder, which always holds just the current PDF, so it never needs updating. The current build is 2610230651 and matches the source.
+`cd mansion/pset && latexmk -xelatex mansion_pset.tex && python3 finish_pdf.py`. The PDF's shown text carries only its title, The Mansion that did not Spin; who made it lives in the PDF's metadata, set in the .tex (doc, 10-23 14:10). `finish_pdf.py` strips the tool junk from the metadata, writes the dates in local time, files the PDF as "The Mansion that did not Spin YYMMDDHHMM.pdf", and removes the old one, so the folder holds one PDF. Start here's "The problem set (PDF)" opens the folder, so it never needs updating.
 
 ## State at handoff (10-23, about 10:10)
 
