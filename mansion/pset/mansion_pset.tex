@@ -4,7 +4,9 @@
 % appendix gamma alpha-1. Build: latexmk -xelatex mansion_pset.tex
 \documentclass[11pt]{article}
 \usepackage{fontspec}  % Latin Modern, the default face
-\usepackage{amsmath,amssymb}
+\usepackage{amsmath}
+\usepackage{unicode-math}  % Latin Modern Math: roots and fractions copy out of the PDF in reading order
+\setmathfont{Latin Modern Math}
 \usepackage[margin=1in,headheight=14pt]{geometry}
 \usepackage{fancyhdr}
 \usepackage{enumitem}
@@ -38,7 +40,7 @@
 {\large Problem set}
 \end{center}
 
-\textit{Written by Claude (Anthropic), 2026-10-22 13:30; revised 19:34. From the Mansion's statements and scenes. The ideas are dr.\ kraemer's; the words are the models'.}
+\textit{Written by Claude (Anthropic), 2026-10-22 13:30; revised 2026-10-23 05:58. From the Mansion's statements and scenes. The ideas are dr.\ kraemer's; the words are the models'.}
 
 A value marked \textsuperscript{\dag} is supplied, chosen so the house works; the mark names the appendix part where you can find out why. The thirteen problems are the mansion. Appendices a, 2 and $\gamma$ go further in.
 
@@ -104,7 +106,7 @@ A uniform solid ball of mass \SI{1}{kg} and radius $R = \SI{0.05}{m}$ (moment of
 \room{Conservatory}
 \scene{The cue ball rolls free, then nudges a flap. A second ball, held a little way up the basin, is let go. Its own height pays for its motion. The striped dome's second door is here.}
 \problem{6}{The basin}
-A small uniform solid ball rolls back and forth across the bottom of a curved basin without slipping. Its center moves on a circular arc of radius $a = \frac{5}{7}$\,m\sv{c-2}, and for small swings its period is $T = 2\pi\sqrt{7a/(5g)}$. ($g = \SI{10}{m/s^2}$)
+A small uniform solid ball rolls back and forth across the bottom of a curved basin without slipping. Its center moves on a circular arc of radius $a = 5/7$\,m\sv{c-2}, and for small swings its period is $T = 2\pi\sqrt{7a/(5g)}$. ($g = \SI{10}{m/s^2}$)
 \begin{parts}
 \pt{6-a} Find $T$, and compare it with the knife's in problem 1.
 \pt{6-b} A frictionless bead sliding on the same arc has period $2\pi\sqrt{a/g}$. What is it?
@@ -144,7 +146,7 @@ Two point masses of \SI{1}{kg} hang one below the other on massless rods each \S
 \pt{10-a} A \SI{6}{V} source charges an empty \SI{0.1}{F} capacitor through a \SI{20}{\ohm} resistor. Find the starting current and the time constant, and the current, charge, and stored energy when the capacitor reaches \SI{4}{V}.
 \pt{10-b} An ideal $LC$ circuit has $L = \SI{0.1}{H}$ and $C = 1/(L\omega_a^2) \approx \SI{1.7}{F}$\sv{e-1}, with $\omega_a$ from problem 9. Find its angular frequency $\omega_0 = 1/\sqrt{LC}$, and compare it with $\omega_a$.
 \pt{10-c} A coil fixed to a pendulum rod sits in a magnetic field. With the rod's angle $a$ and the current $i$ both signed, the current exerts a torque $\tau_{\mathrm{em}} = \kappa i$ on the rod, and the rod's motion induces an emf $\varepsilon = -\kappa\dot a$ in the circuit. Show that the power delivered to the rod, $\kappa i\dot a$, is the electrical power the circuit gives up, and that it runs the other way when $\kappa i$ and $\dot a$ have opposite signs.
-\pt{10-d} Coupling the slow mode of problem 9 to the $LC$ circuit this way gives two modes\sv{2-$\gamma$}, at $\frac23\omega_0$ and $\frac32\omega_0$. Find them, their product, and their ratio.
+\pt{10-d} Coupling the slow mode of problem 9 to the $LC$ circuit this way gives two modes\sv{2-$\gamma$}, at $(2/3)\,\omega_0$ and $(3/2)\,\omega_0$. Find them, their product, and their ratio.
 \end{parts}
 
 \room{Hall}
@@ -170,7 +172,7 @@ In a frame $S$, a light pulse of \SI{80}{mJ}\sv{g-3} runs right and one of \SI{2
 \scene{In the chair's frame the opposed pulses have equal energy. The receiver captures them and transfers their 80\,mJ to its capacitor. The charging path is disconnected. The loop closes, the rods are released without a kick, and the chair's clock starts.}
 
 \problem{13}{The chair}
-A sealed receiver moves through $S$ at the speed found in 12-c; in its own rest frame $H$, time is $t_H$. Inside is the coupled apparatus of problem 10, starting with \SI{80}{mJ} in its capacitor, the rods hanging still, and no current. Once it's charged, nothing is lost: the energy moves among the capacitor, the coil, and the rods' motion and height, measured from hanging straight down. At $t = t_H = 0$ the receiver's seat is at $x = x_H = 0$. Write the two mode angular frequencies from 10-d as $4\nu$ and $9\nu$, so $\nu = \omega_0/6$. The charge follows $q = q_0\bigl[\frac{9}{13}\cos(4\nu t_H) + \frac{4}{13}\cos(9\nu t_H)\bigr]$\sv{$\alpha$-2}, and the upper rod's angle a sum of $\sin(4\nu t_H)$ and $\sin(9\nu t_H)$\sv{$\alpha$-1}.
+A sealed receiver moves through $S$ at the speed found in 12-c; in its own rest frame $H$, time is $t_H$. Inside is the coupled apparatus of problem 10, starting with \SI{80}{mJ} in its capacitor, the rods hanging still, and no current. Once it's charged, nothing is lost: the energy moves among the capacitor, the coil, and the rods' motion and height, measured from hanging straight down. At $t = t_H = 0$ the receiver's seat is at $x = x_H = 0$. Write the two mode angular frequencies from 10-d as $4\nu$ and $9\nu$, so $\nu = \omega_0/6$. The charge follows $q = q_0\bigl[(9/13)\,\cos(4\nu t_H) + (4/13)\,\cos(9\nu t_H)\bigr]$\sv{$\alpha$-2}, and the upper rod's angle a sum of $\sin(4\nu t_H)$ and $\sin(9\nu t_H)$\sv{$\alpha$-1}.
 \begin{parts}
 \pt{13-a} Find $q_0$ and the capacitor's starting voltage.
 \pt{13-b} When does the whole starting state first come back? Call that time $T$.
@@ -198,7 +200,7 @@ A sealed receiver moves through $S$ at the speed found in 12-c; in its own rest 
 A uniform ladder of mass $m$ and length $L$ leans on a frictionless wall from a frictionless floor, its top at height $h_0$, and is let go from rest. ($g = \SI{10}{m/s^2}$)
 \begin{parts}
 \pt{b-1} While both ends touch, show that the ladder's center stays $L/2$ from the corner where the wall meets the floor.
-\pt{b-2} While both ends touch, show that the ladder's kinetic energy is $\frac16 mL^2\omega^2$, where $\omega$ is its angular speed.
+\pt{b-2} While both ends touch, show that the ladder's kinetic energy is $(1/6)\,mL^2\omega^2$, where $\omega$ is its angular speed.
 \pt{b-3} The wall can push but can't pull. Show that the top leaves the wall at a height of $2h_0/3$.
 \pt{b-4} For $L = \SI{3}{m}$ and $h_0 = \SI{2.4}{m}$, find that height and the center's speed then.
 \end{parts}
@@ -206,9 +208,9 @@ A uniform ladder of mass $m$ and length $L$ leans on a frictionless wall from a 
 
 \problem{c}{turning about the contact}
 \scene{Doors: the conservatory, the billiard room, the ballroom. A clockwork diorama under a striped dome, its base trimmed in baize, taffeta, and moss-damp velvet, a strip for each door: a glass marble in a tin basin, a tiny cue, a wire hoop.}
-A uniform solid ball has mass $m$, radius $R$, and moment of inertia $\frac25 mR^2$ about its center. ($g = \SI{10}{m/s^2}$)
+A uniform solid ball has mass $m$, radius $R$, and moment of inertia $(2/5)\,mR^2$ about its center. ($g = \SI{10}{m/s^2}$)
 \begin{parts}
-\pt{c-1} It rolls without slipping, its center at speed $v$. Show that its kinetic energy is $\frac{7}{10}mv^2$, $\frac75$ of a sliding bead's at the same speed.
+\pt{c-1} It rolls without slipping, its center at speed $v$. Show that its kinetic energy is $(7/10)\,mv^2$, $7/5$ of a sliding bead's at the same speed.
 \pt{c-2} It rolls back and forth in a basin, its center on an arc of radius $a$. Show that small oscillations have $T = 2\pi\sqrt{7a/(5g)}$, and find the $a$ that matches a simple pendulum \SI{1}{m} long.
 \pt{c-3} The ball sits on a table, and a cue gives it a short horizontal impulse at height $H$ above the table. Show that it rolls at once only if $H = 7R/5$.
 \pt{c-4} A hoop rolls with its center at speed $v$. Find the speeds of its top and bottom points. Which point of the hoop is still?
@@ -275,7 +277,7 @@ The slow mode of the double pendulum acts like one swing $a$ with effective iner
 \begin{parts}
 \pt{2-$\alpha$} Try $a = A\cos\omega t$ and $q = Q\sin\omega t$. Show that $\eta L(\omega_0^2 - \omega^2)^2 = \kappa^2\omega^2$.
 \pt{2-$\beta$} Show that the two positive solutions multiply to $\omega_0^2$ and that their gap $\Delta\omega = \omega_{\mathrm{high}} - \omega_{\mathrm{low}}$ satisfies $\Delta\omega\sqrt{\eta L} = \kappa$.
-\pt{2-$\gamma$} What $\kappa$ puts the two modes at $\frac23\omega_0$ and $\frac32\omega_0$? With $\omega_0 = \SI{2.4}{rad/s}$, find both.
+\pt{2-$\gamma$} What $\kappa$ puts the two modes at $(2/3)\,\omega_0$ and $(3/2)\,\omega_0$? With $\omega_0 = \SI{2.4}{rad/s}$, find both.
 \end{parts}
 \scene{Trapdoor, the circuit side: windings and a capacitor the size of a hatbox, wired into the same chassis, with the chipped insulator again. The trapdoor is open.}
 
@@ -294,7 +296,7 @@ While the ladder of problem b is moving and both ends still touch their supports
 \begin{parts}
 \pt{4-$\alpha$} The foot moves along the floor and the top along the wall. Show that the point that's still for the instant, where the perpendiculars to the two ends' motions meet, is $(L\cos\varphi, L\sin\varphi)$.
 \pt{4-$\beta$} Show that this point is the corner turned a half turn about the ladder's center, so it's always $L/2$ from the center.
-\pt{4-$\gamma$} About that point all the motion is turning. Show that the kinetic energy is $\frac12 m(L^2/3)\omega^2$, and find the energy per kilogram when the top leaves the wall, in problem b's numbers.
+\pt{4-$\gamma$} About that point all the motion is turning. Show that the kinetic energy is $(1/2)\,m(L^2/3)\omega^2$, and find the energy per kilogram when the top leaves the wall, in problem b's numbers.
 \end{parts}
 \scene{In the far glass, the nine costumes hang empty and inside out. The long coat's lining stops at an ordinary person's height. Through the worn knees of the velvet diamonds, the pattern continues in another color.}
 \scene{Each costume is missing one stitch. It's the same stitch.}
@@ -308,12 +310,12 @@ While the ladder of problem b is moving and both ends still touch their supports
 
 \problem{$\alpha$}{the machine, all of it}
 \scene{Any of the three trapdoors comes down here.}
-Take the coupled machine of appendix 2, problem 2, with its tones at $\frac23\omega_0$ and $\frac32\omega_0$, written $4\nu$ and $9\nu$, so $\nu = \omega_0/6$. Scale the swing and the charge as $X = \sqrt\eta\,a$ and $Y = \sqrt L\,q$, so that
+Take the coupled machine of appendix 2, problem 2, with its tones at $(2/3)\,\omega_0$ and $(3/2)\,\omega_0$, written $4\nu$ and $9\nu$, so $\nu = \omega_0/6$. Scale the swing and the charge as $X = \sqrt\eta\,a$ and $Y = \sqrt L\,q$, so that
 \[ \ddot X = -\omega_0^2X + \Delta\omega\,\dot Y, \qquad \ddot Y = -\omega_0^2Y - \Delta\omega\,\dot X, \]
 with the gap $\Delta\omega = 5\nu$. It starts with $Y = Y_0 \ne 0$, $X = 0$, and $\dot X = \dot Y = 0$.
 \begin{parts}
 \pt{$\alpha$-1} Show that the slow mode has $X = -B_1\sin 4\nu t$ and $Y = B_1\cos 4\nu t$, and the fast mode $X = B_2\sin 9\nu t$ and $Y = B_2\cos 9\nu t$.
-\pt{$\alpha$-2} Fit the start and show that $B_1 = \frac{9}{13}Y_0$ and $B_2 = \frac{4}{13}Y_0$.
+\pt{$\alpha$-2} Fit the start and show that $B_1 = (9/13)\,Y_0$ and $B_2 = (4/13)\,Y_0$.
 \pt{$\alpha$-3} Find the first time the whole state returns, and how the energy is shared between the swing's motion and the capacitor halfway there.
 \pt{$\alpha$-4} Using $\omega_0^2 = 10(2 - \sqrt2)\,\mathrm{s^{-2}}$ and \SI{80}{mJ} in the machine, how long is the return?
 \end{parts}
