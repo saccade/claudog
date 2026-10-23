@@ -8,7 +8,7 @@ TAB = {
     "start": "t.0", "next": "t.mnefqzh9tgbf", "paths": "t.723tx4uvm5nl",
     "path1": "t.9gq9164tzjia", "path2": "t.n48yq7csgbx7", "path3": "t.5dyqu0kfwmvx", "path4": "t.q58y1fpf41q4",
     "craft": "t.ilzip2gkkpu6", "intrigue": "t.4zbsstxg7o9q", "phrases": "t.wmc1f4o7j736", "clowns": "t.7yb939w8cbdz",
-    "poetry": "t.3ho7r8s8a9in", "loose": "t.tr1r5bdmnlxu", "fresh": "t.2idm4yr8vpnd", "verses": "t.d8p3ngjurwmn",
+    "poetry": "t.3ho7r8s8a9in", "loose": "t.tr1r5bdmnlxu", "fresh": "t.2idm4yr8vpnd", "verses": "t.d8p3ngjurwmn", "glosses": "t.6bu70vvz222y",
     "discussion": "t.cuwtjj1bqbsi", "archive": "t.o5qj7fwmxfl2", "appendix": "t.ukjm0svct28",
 }
 def tab_url(key): return f"{URL}?tab={TAB[key]}"
