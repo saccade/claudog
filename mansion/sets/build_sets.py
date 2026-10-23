@@ -647,6 +647,8 @@ def build(k):
                "The return comes at 16 s of your own time. Outside it's 20 s, and outside says you've crossed 3.6 million kilometers."),
               ("The return comes at 15.6 s of your own time.", "The return comes at 16 s of your own time."),
               ("∫E dt = 1.2 J s", "∫E dt = 1.3 J s"), ("0.62 zam", "0.65 zam"), ("0.18 zlam", "0.19 zlam")]
+    # doc 09:38: the ribbon pulls toward the hole, so it has no torque about *it*: the stress does the work of a repeat
+    ROUND += [("so it has no torque about the hole,", "so it has no torque about <em>it</em>,")]
     for a, b in ROUND:
         out = [(t, x.replace(a, b) if isinstance(x, str) else x) for t, x in out]
     TWO = [("2.42", "2.4"), ("5.84", "5.8"), ("5.86", "5.9"), ("34.1", "34"), ("3.42", "3.4"), ("1.84 s", "1.8 s"), ("2.60 s", "2.6 s"),
@@ -677,6 +679,7 @@ def to_html(items):
     h = ['<html><head><meta charset="utf-8"></head><body>']
     for t, s in items:
         e = html.escape(s, quote=False).replace("&lt;b&gt;", "<b>").replace("&lt;/b&gt;", "</b>").replace("†", "<sup>†</sup>")
+        e = e.replace("&lt;em&gt;", "<em>").replace("&lt;/em&gt;", "</em>")   # spoken stress on a word, set in italic
         if t in ("h1", "h2", "h3"): h.append(f"<{t}>{e}</{t}>")
         elif t == "i": h.append(f"<p><i>{e}</i></p>")
         elif t == "b": h.append(f"<p><b>{e}</b></p>")
@@ -689,5 +692,5 @@ if __name__ == "__main__":
     for k in (1, 2, 3, 4):
         items = build(k)
         open(f"set{k}.html", "w").write(to_html(items))
-        open(f"set{k}.txt", "w").write("\n".join(("## " if t.startswith("h") else "") + re.sub("</?b>", "", s) for t, s in items))
+        open(f"set{k}.txt", "w").write("\n".join(("## " if t.startswith("h") else "") + re.sub("</?(b|em)>", "", s) for t, s in items))
         print(k, len(items), sum(len(s) for _, s in items))

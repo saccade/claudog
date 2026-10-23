@@ -100,7 +100,7 @@ Doors: the conservatory, the billiard room, the ballroom. A clockwork diorama un
 (c-3) Count about the line on the table under the ball. During the blow nothing else has leverage there, so the blow J at height H leaves JH of spin about it. Rolling at once means the center runs at v = J/m while the ball sweeps at v/R, and that's (7/5)mR²(v/R) = (7/5)RJ of spin about the contact. So H = 7R/5: the cue goes in two fifths of a radius above the center.
 (c-4) The center runs at v and the rim sweeps round it at v. At the top the two add, for 2v; at the bottom they cancel. The bottom point is still for that instant, and a moment later a different point is.
 ## 8. The ribbon
-(8-a) The ribbon only ever pulls toward the hole, so it has no torque about the hole, and the puck's spin about the hole, mvr, stays put. Half the radius means twice the speed: 4.0 m/s. The sweep goes from 2.0/0.60, about 3.3 sweep, to 4.0/0.30, about 13.
+(8-a) The ribbon only ever pulls toward the hole, so it has no torque about it, and the puck's spin about the hole, mvr, stays put. Half the radius means twice the speed: 4.0 m/s. The sweep goes from 2.0/0.60, about 3.3 sweep, to 4.0/0.30, about 13.
 (8-b) At the circular endpoints, the tension is what bends the path: mv²/r. That's 0.50 × 4.0/0.60 = 3.3 N at first and 0.50 × 16/0.30 = 27 N at the end. Halving the radius multiplies it by eight.
 (8-c) The ribbon's work is the punch it adds: the puck punches 1.0 J at first and 4.0 J at the end, so 3.0 J. While the radius shrinks, the puck’s path spirals inward. A small part of its velocity follows the pull, so the pull can add energy. Something drew the ribbon down. Its other end has been in your hand.
 ## Study
