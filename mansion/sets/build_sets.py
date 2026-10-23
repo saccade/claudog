@@ -104,7 +104,7 @@ DOC_0806 = [
    "The grip is what's left when the cord's 6.0 N → comes off the 1.6 N → the center needs: f = 1.6 N → + 6.0 N ← = 4.4 N ←. It pulls back, and about the axle it turns the spool ↻ harder than the cord turns it ↺."),
   ("The grip is f = 1.6 − 6.0 = −4.4 N. It pulls back, and about the axle it cranks the spool forward harder than the cord cranks it back.",
    "The grip is what's left when the cord's 6.0 N → comes off the 1.6 N → the center needs: f = 1.6 N → + 6.0 N ← = 4.4 N ←. It pulls back, and about the axle it cranks the spool ↻ harder than the cord cranks it ↺.")],
- [("Forward 2.0 m/s and down 2.0 m/s make 2√2, about 2.8 m/s, 45° below forward.", "2.0 m/s → and 2.0 m/s ↓ make 2√2, about 2.8 m/s, 45° (τ/8) below →.")],
+ [("Forward 2.0 m/s and down 2.0 m/s make 2√2, about 2.8 m/s, 45° below forward.", "2.0 m/s → and 2.0 m/s ↓ make 2√2, about 2.8 m/s, τ/8 (45°) below →.")],
  [("a whiteface in damask", "a powdered clown in damask")],
  # doc 08:40-08:41: a hair space keeps ℓ and θ apart; the definite description, not the pronoun (only one thing has weight)
  [("lifts a point at distance ℓ by ℓ(1 − cos θ). For this small lean, that’s ℓθ²/2", "lifts a point ℓ away by ℓ(1 − cos θ). For this small lean, that’s ℓ\u200aθ²/2")],

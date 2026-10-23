@@ -87,7 +87,7 @@ The ball keeps the knife's time, and a beat that matches draws you on. Their cyc
 ## 7. The hoop
 (7-a) 0.25 m sweeping at 8.0 runs at 2.0 m/s.
 (7-b) The rim's 2.0 m/s rides on top of the center's: 4.0 m/s at the top, nothing at the bottom, the still point for that instant.
-(7-c) The front point is √2 radii from the still point, so it runs at √2 of 2.0 m/s, about 2.8 m/s, 45° (τ/8) below →.
+(7-c) The front point is √2 radii from the still point, so it runs at √2 of 2.0 m/s, about 2.8 m/s, τ/8 (45°) below →.
 ## Drawer c: turning about the contact
 Doors: the conservatory, the billiard room, the ballroom. A clockwork diorama under a striped dome, its base trimmed in baize, taffeta, and moss-damp velvet, a strip for each door: a glass marble in a tin basin, a tiny cue, a wire hoop.
 (c-1) Rolling, the ball turns about the contact, profile (2/5)R² + R² = (7/5)R², and at v/R it hooks (7/10)mv²: 7/5 of a sliding bead's punch.

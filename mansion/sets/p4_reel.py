@@ -55,7 +55,7 @@ REEL4 = {
  '6-c': "(6-c) The ball pays 2 J of hook for every 5 J of punch, so the same heft runs it slower and it comes round late. About the contact its profile is (7/5)R², and an arc 5/7 the knife's pays the 7/5 right back.",
  '7-a': '(7-a) 0.25 m sweeping at 8.0 runs at 2.0 m/s.',
  '7-b': "(7-b) The rim's 2.0 m/s rides on top of the center's: 4.0 m/s at the top, nothing at the bottom, the still point for that instant.",
- '7-c': '(7-c) The front point is √2 radii from the still point, so it runs at √2 of 2.0 m/s, about 2.8 m/s, 45° (τ/8) below →.',
+ '7-c': '(7-c) The front point is √2 radii from the still point, so it runs at √2 of 2.0 m/s, about 2.8 m/s, τ/8 (45°) below →.',
  'c-1': "(c-1) Rolling, the ball turns about the contact, profile (2/5)R² + R² = (7/5)R², and at v/R it hooks (7/10)mv²: 7/5 of a sliding bead's punch.",
  'c-2': "(c-2) Heft mgaθ²/2 traded against (7/10)ma²θ̇² cycles where (7/5)aω² = g: the statement's T. For the knife's meter, a = 5/7 m.",
  'c-3': '(c-3) During the blow nothing else gets leverage about the line under the ball, so JH of spin there has to match (7/5)mR²(v/R) = (7/5)RJ: H = 7R/5.',
