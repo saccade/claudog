@@ -737,6 +737,10 @@ def build(k, shares=True):
             if isinstance(x, str) and x.startswith("(6-a)"):
                 out.insert(j, ("i", "Beside the ball, the visitor writes 0.4 for the turning, 1.4 in all. No. A line through both: 2/5, 7/5. Five parts running, two turning. Seven altogether. Now the meaning stays put."))
                 break
+    # doc 14:40: near the top of path 1, why the knife's 1.99 s is two seconds (R-115, R-130): the gap has no name and pays no rent
+    if k == 1:
+        j = next(j for j, (t, x) in enumerate(out) if isinstance(x, str) and "There's a 2 riding along with that π." in x)
+        out.insert(j + 1, ("p", "Carried further, that's 1.99 s. The half a percent between that and 2 can't be given a name, because nothing here turns on it. Keeping it is an old habit that buys a sense of our own cleverness, not any understanding. We're all stuck in the same mansion, working out what's happening, and a digit that isn't paying rent doesn't protect anyone from anything. Two seconds it is."))
     if shares:   # doc 10:42: no trailing zeros; a fraction wherever a fraction is the true value (R-129)
         import shares as _shares
         out = _shares.apply(out, path=k)
