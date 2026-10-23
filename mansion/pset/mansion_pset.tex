@@ -22,7 +22,8 @@
 
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{4pt}
-\hyphenpenalty=10000 \exhyphenpenalty=10000 \emergencystretch=2em  % no words split at line ends, so pasted text keeps them whole
+\hyphenpenalty=10000 \exhyphenpenalty=10000 \emergencystretch=3em  % no words split at line ends, so pasted text keeps them whole
+\binoppenalty=10000 \relpenalty=10000  % and no formula split across two lines
 
 \newcommand{\room}[1]{\par\bigskip{\large\bfseries #1}\par\nopagebreak\smallskip}
 \newcommand{\scene}[1]{\par{\itshape #1}\par}
@@ -31,6 +32,7 @@
 \newenvironment{parts}{\begin{itemize}[leftmargin=3.4em,labelwidth=2.8em,labelsep=0.6em,align=left,itemsep=2pt,topsep=3pt]}{\end{itemize}}
 \newcommand{\pt}[1]{\item[\textbf{#1}]}
 \newcommand{\sv}[1]{\textsuperscript{\dag\,#1}}
+\newcommand{\half}{\text{½}}  % a half that pastes as one character
 \newcommand{\rt}{\text{√}}  % a root sign that sits on the line: \rt2, \rt(a/g). It pastes out in order; \sqrt doesn't
 % Subscript-and-power symbols are written \omega_a{}^2, so the power pastes after the subscript
 
@@ -43,7 +45,7 @@
 {\large Problem set}
 \end{center}
 
-\textit{Written by Claude (Anthropic), 2026-10-22 13:30; revised 2026-10-23 06:47. From the Mansion's statements and scenes. The ideas are dr.\ kraemer's; the words are the models'.}
+\textit{Written by Claude (Anthropic), 2026-10-22 13:30; revised 2026-10-23 06:51. From the Mansion's statements and scenes. The ideas are dr.\ kraemer's; the words are the models'.}
 
 A value marked \textsuperscript{\dag} is supplied, chosen so the house works; the mark names the appendix part where you can find out why. The thirteen problems are the mansion. Appendices a, 2 and $\gamma$ go further in.
 
@@ -241,7 +243,7 @@ An $LC$ circuit has $L = \SI{0.1}{H}$.
 \scene{Door: the hall. A hatbox in red and white stripes, rubberized against the wet; inside, a long coil of wire and two tuning forks.}
 Two waves of equal amplitude $A$ run in opposite directions on a line with wave speed $u$: $A\cos(k_1x - \omega_1t)$ to the right and $A\cos(k_2x + \omega_2t)$ to the left, with $k = \omega/u$ for each.
 \begin{parts}
-\pt{f-1} Show that their sum is $2A\cos\bigl(\tfrac12[(k_1 - k_2)x - (\omega_1 + \omega_2)t]\bigr)\cos\bigl(\tfrac12[(k_1 + k_2)x - (\omega_1 - \omega_2)t]\bigr)$.
+\pt{f-1} Show that their sum is $2A\cos(\half[(k_1 - k_2)x - (\omega_1 + \omega_2)t])\cos(\half[(k_1 + k_2)x - (\omega_1 - \omega_2)t])$.
 \pt{f-2} Find the speed of each factor's crests, in terms of $u$ and the two frequencies.
 \pt{f-3} For \SI{5}{MHz} and \SI{4}{MHz} and $u = \SI{1e8}{m/s}$, find both speeds.
 \pt{f-4} With one wave at \SI{5}{MHz}, what frequency for the other puts the fast crests at nine times $u$? Where are the slow crests then?
