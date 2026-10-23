@@ -336,6 +336,15 @@ P1_GLOSS = [
      "The bottom point is still for that instant. That's why a photo of a moving bicycle blurs the spokes at the top of the wheel and catches them sharp near the ground."),
 ]
 # Codex's five local fixes with doc (Goals, 19:05; the first is folded into P1_GLOSS above), path 1 only
+# doc 08:12 (10-23): path 1 says what the arrow means. Forward is a body's, not the page's.
+P1_GLOSS += [
+    ("→ is forward: the way the cord pulls. ← is back, the opposite of forward.",
+     "→ is forward, and ← is back, the opposite of forward. The arrow points right on this page, but right isn't what it means. "
+     "Someone who thinks in text can start to feel that page-right is the universe's own direction. Neither the visitor nor the clown is made of text: "
+     "each has a body that faces one way, with bones that won't bend round to suit a page, and forward is the way a body faces and goes. "
+     "Text runs left in Arabic and Hebrew and down the page in traditional Chinese and Japanese. Turn this page so its lines run up and to the left, "
+     "and nothing in the kitchen moves any differently. The spool has no face, so its forward is the way the cord pulls it."),
+]
 P1_GLOSS += [
     ("Through one whole turn, 0.75 N m does 2π of itself: 4.7 J,", "Through one whole turn, 2π strokes, 0.75 N m does 4.7 J of work,"),
     ("The mass and turning count as 3.0 kg at the axle,",
