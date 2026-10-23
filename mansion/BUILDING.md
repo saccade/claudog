@@ -107,7 +107,7 @@ SPEC is `{"paras": [["h", "Codex — what it's about (doc HH:MM)"], ["doc", "“
 
 ## The problem set
 
-`cd mansion/pset && latexmk -xelatex mansion_pset.tex`, then rename the PDF to `Claude Mansion problem set YYMMDDHHMM.pdf`. Remove the old PDF in the same commit, so the folder holds one. Start here's first link, "The problem set (PDF)", points at that file name on GitHub, so update the link when the name changes. The current build is 2610230651 and matches the source.
+`cd mansion/pset && latexmk -xelatex mansion_pset.tex`, then rename the PDF to `Claude Mansion problem set YYMMDDHHMM.pdf`. Remove the old PDF in the same commit, so the folder holds one. Start here's first link, "The problem set (PDF)", points at the pset folder, which always holds just the current PDF, so it never needs updating. The current build is 2610230651 and matches the source.
 
 ## State at handoff (10-23, about 10:10)
 
