@@ -16,7 +16,7 @@ Codex's brief (10-23), as it stands:
 - Carry Narrative intrigue forward: uneven arrivals, the same opening returning with an ending that changes its meaning, unexamined déjà vu, and the understage reveal that recasts the earlier machine.
 - Sources: [Loose verses](tab:loose), [Fresh rhythms](tab:fresh), [Claude's verses](tab:verses), and [Narrative intrigue](tab:intrigue). The live [path 4](tab:path4) is the checked prose version, with its six déjà vu touches, ready to be reshaped.
 ## Then
-- Highlights, not reruns, in paths 2 and 3 (R-110): where a later path re-says path 1's working in full, give a reprise or a nod instead. Path 3 carries the body algebra and earns its chorus. There's no length target.
+- Highlights, not reruns, in paths 2 and 3 (R-110, R-128): each long explanation lives in one path (doc 10:20). sets/reruns.py counts 36 long explanations that appear in more than one path, 27 of them in path 3, mostly re-said from path 2. Give the later path a highlight or a nod instead; path 3's 2-c is the model (10:17). Path 3 carries the body algebra and earns its chorus. There's no length target.
 ## Not done, so don't claim it
 - The verse saga hasn't been assembled. Nothing from the poetry tabs is in a path yet.
 - sin and cos are gone from the middle material only where words read better (R-075). Kept on purpose: the statements' own cos θ, the spool's line at a-5, the basin's height, and f-1's identity, which is the subject.
