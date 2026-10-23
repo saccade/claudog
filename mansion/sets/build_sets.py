@@ -663,6 +663,9 @@ def build(k):
                "(13-b) The statement's cosines are the forward parts of two hands swinging round from →, the slow one 4νt_H and the fast one 9νt_H. Their weights are positive and add to one, so q is back at q₀ only when both hands point → again: 4νT and 9νT whole turns, which brings the upward parts and the velocities back too."),
               ("So the slow cosine is back at 1 and the fast one is at −1, and q/q₀ = 9/13 − 4/13 = 5/13. The sines are both zero there, so the current is zero",
                "The slow hand points → and the fast one ←, so q/q₀ = → · (9/13 → + 4/13 ←) = 5/13. Neither hand has an upward part there, so the current is zero")]
+    # doc 10:09-10:10: 1-γ doesn't ask for a cosine, and it's deep enough in that the slow burn is over: say the envelope with the machinery
+    ROUND += [("The signed cosine envelope takes twice that time to return; its sign flips between neighboring reinforcements.",
+               "The sum goes as the forward part of a hand turning at half the gap, and that hand points ← at every other reinforcement, so it takes twice that time to point → again.")]
     for a, b in ROUND:
         out = [(t, x.replace(a, b) if isinstance(x, str) else x) for t, x in out]
     TWO = [("2.42", "2.4"), ("5.84", "5.8"), ("5.86", "5.9"), ("34.1", "34"), ("3.42", "3.4"), ("1.84 s", "1.8 s"), ("2.60 s", "2.6 s"),
