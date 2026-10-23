@@ -176,7 +176,7 @@ SWEEP_UNIT = [(re.compile(r"(?<=[0-9]) strokes a second each second"), " sweep a
               (re.compile(r"(?<=[0-9]) strokes a second"), " sweep")]
 
 # doc 10:08-10:15: spreading the arrows and getting rid of sin and cos are the same job (Dog Math 4, 9, 13).
-# Forwardness → · θ (or θ / →), upwardness ↑ · θ (or θ / ↑); a cross only where a turning sense is the point.
+# Forward part → · θ (or forward fraction θ / →), upward part ↑ · θ (or upward fraction θ / ↑); "forwardness" is retired (doc 10-23 09:48); a cross only where a turning sense is the point.
 # Set 1 first; sets 2-4 at the next sweep.
 ARROWS = [
  ("(1) Leaning through θ lifts a point ℓ away by ℓ(1 − cos θ). For this small lean,",
@@ -652,7 +652,7 @@ def build(k):
                "The can cans charge; the inductor is a coil, and it coils its own linked flux.")]
     # the same rule for the tones: named in drawer d and mirror 1 (paths 3, 4), so 9-c uses the name instead of giving it again
     ROUND += [("(9-c) Each mode is a tone, and its shape is how far", "(9-c) The modes are the second knife's two tones, and each one's shape is how far")]
-    # doc 09:45: f-1 gives the arrow form of its central fact in parens (the book: cos θ = → · θ, the forwardness of the angle)
+    # doc 09:45: f-1 gives the arrow form of its central fact in parens (the book: cos θ = → · θ, the angle's forward part; "forwardness" is retired)
     ROUND += [("(f-1) cos P + cos Q = 2 cos(½(P − Q)) cos(½(P + Q)),",
                "(f-1) cos P + cos Q = 2 cos(½(P − Q)) cos(½(P + Q)) (in arrows, →\u200a·\u200aP + →\u200a·\u200aQ = 2 (→\u200a·\u200a½(P − Q)) (→\u200a·\u200a½(P + Q))),")]
     # doc 09:38: the ribbon pulls toward the hole, so it has no torque about *it*: the stress does the work of a repeat
