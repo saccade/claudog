@@ -9,11 +9,13 @@ import json, sys
 
 T = [
 ("h1", "Narrative intrigue"),
-("note", "Written by Claude (Anthropic), 2026-10-23, for dr. kraemer. How the Mansion keeps the reader from seeing it coming: the mobiles, the third thing, the key change, the crown move, and path 4's déjà vu. The ideas are dr. kraemer's (his words in red, from chat on 2026-10-22 and 23); the summary is Claude's."),
+("note", "Written by Claude (Anthropic), 2026-10-23, for dr. kraemer. How the Mansion keeps the reader from seeing it coming: the mobiles, the third thing, the key change, the crown move, and path 4's déjà vu. The ideas are dr. kraemer's (his words in red, from chat on 2026-10-22 and 23); the summary is Claude's. Moved into the workbook on 2026-10-23 with two amendments from Codex's review: the mobile clarification, and a softer rule for the déjà vu touches."),
 
 ("h2", "The mobiles: as unsymmetric as balance allows"),
 ("q", "“look at the mobiles I posted earlier. there's a pattern to their structure to make them sort of maximally un-symmetric” · “never let em see it coming. that's the point of having four paths too.”"),
 ("p", "His beaded twig mobile is a Fibonacci tree: 8 hangs as 3 + 5, the 5 as 2 + 3, the 3 as 1 + 2, the 2 as 1 + 1. Every split is uneven and close to the golden ratio, with the heavier side on the shorter arm, so it balances without ever repeating a symmetry. For the paths: no two do the same thing at the same depth, and no gap between surprises is the same as the last one."),
+("img", ""),
+("p", "Once the reader understands the mobile, the whole structure becomes predictable without becoming matchy (doc's clarification, as Codex reported it on 10-23). Knowing how it hangs doesn't tell you where the next bead is. So the rule isn't that a kind of surprise can never come back: it's that nothing comes back in step, at the same depth, or at an even spacing."),
 
 ("h2", "The third thing"),
 ("q", "“you give people three things, increasingly surprising and then you say now I'd like to show you a third thing and people are wait like that was three things, and I'm like oh that first one was just standard stuff, think of it as a well-constructed baseline, I just needed to establish some context first. now *this* was what I came here to show you...”"),
@@ -40,13 +42,14 @@ T = [
 ("li", "10-a: the conductance litany, “by now it says itself.”"),
 ("li", "12-b: “the 3–4–5, twenty times over. (How many is that now? Never mind. Keep moving.)”"),
 ("li", "13-b: at the chair's return, “It was 16 s last time, too.”"),
-("p", "Two lines already there do the same work: “No stray 2 this time” at the knife, and “Its other end has been in your hand” at the ribbon. Keep it from becoming a system: never two touches of one kind, never an even spacing, never explained."),
+("p", "Two lines already there do the same work: “No stray 2 this time” at the knife, and “Its other end has been in your hand” at the ribbon. Keep it from becoming a system. A kind of touch can come back once the reader knows the shape, the way the mobile's splits do, but never in step, never at an even spacing, and never explained."),
 
 ("h2", "The haunted house"),
 ("p", "From Dog Math's first page: no ghostly hullabaloo at the door, or there'd be no guests. At first things seem the tiniest bit odd; it builds at the right moments, and it keeps not quite going back down all the way. The notation follows the same rule, arriving where it pays rent, and so do the house's reveals: the hand-mending, the maker's kit, one wearer behind the costumes, then the unfinished work of squaring the circle. The route begins in third person, and “you” creeps in: the chalk is on your cuff, the ribbon is already in your hand, and the chair is where you left it. You never left it."),
 ]
 
 RED = {"red": 0.6, "green": 0, "blue": 0}
+IMG = None; IMG_SIZE = {"height": {"magnitude": 324, "unit": "PT"}, "width": {"magnitude": 468, "unit": "PT"}}
 
 def batch(tab):
     text = ""; spans = []
@@ -74,7 +77,11 @@ def batch(tab):
                          "bulletPreset": "BULLET_DISC_CIRCLE_SQUARE"}})
             i = j
         i += 1
+    for kind, a, b in spans:   # last, since it adds one index: doc's mobile photo, from the planning tab's copy (Google must be able to fetch the URL)
+        if kind == "img" and IMG:
+            reqs.append({"insertInlineImage": {"location": {"index": a, "tabId": tab}, "uri": IMG, "objectSize": IMG_SIZE}})
     return reqs
 
 if __name__ == "__main__":
+    if len(sys.argv) > 2: IMG = sys.argv[2]   # usage: TAB_ID [IMAGE_URL]
     print(json.dumps(batch(sys.argv[1]), ensure_ascii=True))

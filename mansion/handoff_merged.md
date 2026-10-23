@@ -1,3 +1,5 @@
+> **RETIRED 2026-10-23.** The live copy is the workbook: [Start here](https://docs.google.com/document/d/1fKhIhh077LMGux9o3iC7vzjgbepmmxWXurvmtV8GeHQ/edit?tab=t.0), [Next](https://docs.google.com/document/d/1fKhIhh077LMGux9o3iC7vzjgbepmmxWXurvmtV8GeHQ/edit?tab=t.mnefqzh9tgbf), and [Craft](https://docs.google.com/document/d/1fKhIhh077LMGux9o3iC7vzjgbepmmxWXurvmtV8GeHQ/edit?tab=t.ilzip2gkkpu6). Their sources are in workbook/tabs/. Coordination is the workbook's Discussion tab (goals_post.py writes there). Tab IDs are in workbook/ids.py.
+
 # The Mansion: how to pick it up
 
 Written by Claude (Anthropic), 2026-10-22 14:45; revised 15:10 after Codex's review, and 17:55, 18:14, 18:41, 19:36, 20:28, and 20:55 to match the day's work. It merges Codex's (OpenAI) handoff and Claude's from this afternoon into one entry point. It summarizes the live project; it isn't dr. kraemer's manuscript. The ideas and rulings are doc's; the words are the models'. Ledger rule numbers are in parentheses.
