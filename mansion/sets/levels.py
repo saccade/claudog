@@ -103,14 +103,8 @@ LEVEL[2] += [
 
 # ---------------- Level 3: flips; tone, chord, beat, shape; trade; phase and stripe; shift, stretch; still point; zip, zing ----------------
 LEVEL[3] += [
- ("The heft mgh and the punch ½mv² carry the same mass. It cancels:",
-  "The heft mgh and the punch ½mv² carry the same mass. Take it out: punch per kilogram is the zip, ½v², a quantity with the body's mass taken out, and heft per kilogram is gh. It cancels:"),
- ("A 5 mm fall under 10 m/s² gives v² = 0.10 m²/s².",
-  "A 5 mm fall under 10 m/s² hefts 0.050 J/kg, which all becomes zip: v² = 0.10 m²/s²."),
- ("The engine paid in equal hook every second, not equal sweep, so four times the hook only doubles the sweep.",
-  "The engine paid in equal hook every second, not equal sweep, so four times the hook only doubles the sweep. With the inertia taken out, hook is the zing, ½ω²: the wheel zings at 8 at the start and 32 at the end."),
  ("Then 8.0 kg punching 24 J runs at √6, about 2.4 m/s, when the top leaves the wall.",
-  "Then 8.0 kg punching 24 J runs at √6, about 2.4 m/s, when the top leaves the wall. Or count about the point that's still for the instant, where the perpendiculars to the foot's motion and the top's meet: call it the still point. It's L/2 from the center, the corner turned a flip about the center, so the profile there is L²/12 + L²/4 = L²/3, and all 32 J is turning about it. Per kilogram, that's 3 J/kg of zip for the center and 1 for the turning."),
+  "Then 8.0 kg punching 24 J runs at √6, about 2.4 m/s, when the top leaves the wall. Or count about the point that's still for the instant, where the perpendiculars to the foot's motion and the top's meet: call it the still point. It's L/2 from the center, the corner turned a flip about the center, so the profile there is L²/12 + L²/4 = L²/3, and all 32 J is turning about it. Take the mass out of the punch and it's the zip, ½v², energy per kilogram: 3 J/kg of zip for the center, and 1 J/kg more for the turning."),
  ("The turning hooks ½ × (2/5)(1.0)(0.050)² × 40² = 0.80 J: two fifths of the punch again.",
   "The turning hooks ½ × (2/5)(1.0)(0.050)² × 40² = 0.80 J: two fifths of the punch again. The center zips at 2.0 J/kg, and the ball zings at ½ × 40², 800."),
  ("The same heft gives less punch, the ball runs slower and comes round later.",
@@ -139,6 +133,9 @@ LEVEL[3] += [
 
 # ---------------- Level 4: one machine; zam, zlam; in step, at random, the tap; TEST and RUN; zow, zlow (zower, zlower) ----------------
 LEVEL[4] += [
+ # path 4's first new arrival is the kitchen's pair, zing and zlow (path 2 opens on a word at the knife, path 3 on a place at the ladder)
+ ("The engine paid in equal hook every second, not equal sweep, so four times the hook only doubles the sweep.",
+  "The engine paid in equal hook every second, not equal sweep, so four times the hook only doubles the sweep. With the inertia taken out, hook is the zing, ½ω²: the wheel zings at 8 at the start and 32 at the end."),
  ("With the inertia taken out, hook is the zing, ½ω²: the wheel zings at 8 at the start and 32 at the end.",
   "With the inertia taken out, hook is the zing, ½ω²: the wheel zings at 8 at the start and 32 at the end. Power on the inertia is the zlow, and its verb is zlower: 3.0 W on 0.50 kg m² is a zlow of 6, so the engine zlowers the wheel at 6 zing a second, steadily, 8 to 32 in four seconds. Power on the mass would be the zow, and its verb zower."),
  ("These are the coupled machine's two tones.",

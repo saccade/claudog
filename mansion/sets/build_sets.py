@@ -21,7 +21,7 @@ DATE = {1: "2026-10-22", 2: "2026-10-22", 3: "2026-10-22", 4: "2026-10-22"}   # 
 WORDS = {
  1: "the turn and τ, π for the flip, the cycle (it cycles), the sweep and the stroke, χ for torque, sentences the right way round (current is the conductance of the voltage; power is the voltage of the current, and the sweep of the torque), own time",
  2: "level 1's, plus heft, punch and hook; profile; pickup, and crank as a verb; spin; can and coil",
- 3: "level 2's, plus zip and zing; the still point; flips and mirror pairs; tone, chord, beat and the shape Ω_shape; the trade (a belt, not a battery); the stripe and phase, for ghosts; shift and stretch",
+ 3: "level 2's, plus the still point; zip and zing; flips and mirror pairs; tone, chord, beat and the shape Ω_shape; the trade (a belt, not a battery); the stripe and phase, for ghosts; shift and stretch",
  4: "level 3's, plus the one machine; zam and zlam; in step, at random, the tap; TEST and RUN; and doc's zow and zlow, with their verbs zower and zlower",
 }
 NAMES = {1: "the base game", 2: "with the cabinet", 3: "with the cabinet and the funhouse", 4: "the whole house"}
@@ -568,6 +568,10 @@ def build(k):
             assert len(hit) == 1, old[:60]
             out[hit[0]] = (out[hit[0]][0], out[hit[0]][1].replace(old, new))
         out = [(t, x) for t, x in out if x != ""]
+    if k == 4:   # the crown move (doc 20:15-20:20): the knife was one end of the machine all along
+        j = next(j for j, (t, x) in enumerate(out) if t == "i" and isinstance(x, str) and x.startswith("The blacks on the nail are patched"))
+        out.insert(j + 1, ("i", "The upper rod's bob is the dining room's knife, a kilogram a meter out from the same silver pivot. "
+                                "You've been watching one end of this machine since the roast went cold."))
     if k in (2, 3, 4):
         for old, new in REEL:
             hit = [j for j, (t, x) in enumerate(out) if isinstance(x, str) and old in x]
