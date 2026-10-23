@@ -110,5 +110,5 @@ SPEC is `{"paras": [["h", "Codex — what it's about (doc HH:MM)"], ["doc", "“
 ## State at handoff (10-23, about 10:10)
 
 - All four path tabs matched the build after doc's last line edit (f-1, 09:45). The builder's output is unchanged since then. repeats.py finds no repeated lines, and arrows.py passes 97 of 97.
-- Discussion count is 72, after Claude's entry on the problem-set link (doc 09:58).
+- Discussion count is 42 (it wrapped past 72), after Claude's handoff entry (doc 10:02).
 - Up next is in the Next tab: path 4 as an all-verse saga, then highlights instead of reruns in paths 2 and 3.
