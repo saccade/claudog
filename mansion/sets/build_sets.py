@@ -413,9 +413,9 @@ REEL = [
      "The two sides carry opposite senses (↻ = −↺), and the numbers say which way it really goes."),
     ("only its forward part changes, to F cos θ →. With nothing speeding up, the grip has to be F cos θ ←, and pulling ← 0.20 m below the axle it cranks the spool ↻ with F cos θ at R. "
      "The two balance when F cos θ at R is Fr, so cos θ = r/R = 0.60.",
-     f"only its forward part changes, to →{H}·{H}F, the F cos θ along the counter. With nothing speeding up, the grip is the same size pointing back, "
+     f"only its forward part changes, to →{H}·{H}F. With nothing speeding up, the grip is the same size pointing back, "
      f"→{H}·{H}F{H}·{H}←, which read from the other end is ←{H}·{H}F{H}·{H}→: pulling 0.20 m below the axle, it cranks the spool ↺ along with the cord, by (←{H}·{H}F) R. "
-     f"The two turnings add, Fr ↺ + (←{H}·{H}F) R ↺, and with nothing turning that's zero. So the forward part is r/R of the pull, and cos θ = 0.60."),
+     f"The two turnings add, Fr ↺ + (←{H}·{H}F) R ↺, and with nothing turning that's zero. So the forward part is r/R of the pull, 3/5."),   # doc 10:22: 3-d asks for an angle, not a cosine
     ("The ladder doesn't stretch: with the foot x out from the wall and the top y up, x² + y² = L² the whole time. "
      "As both change, x of the foot's velocity and y of the top's velocity cancel: 1.8 m of 0.40 m/s against 2.4 m of the top's. "
      "So the top moves at x/y of the foot's speed, the other way: 0.30 m/s, downward.",
@@ -671,6 +671,20 @@ def build(k):
     if k == 3:
         ROUND += [('(2-c) Torque usually gets the letter τ, but the turn has it now. A χ hung on the wall could apply a twist to something—use that for torque. Torque, moment, and twist are three names for the one quantity: a push applied at a lever, a newton at a meter. Its unit is the crank, 1 N m, the way the gram is a unit of mass and the amp a unit of current; a crank is a size of torque, not a new kind of twisting. What a torque does is crank, so the verb comes with the unit. The power a torque delivers is the sweep of the torque: P = ωχ. Put numbers to it once: 0.75 crank cranking at 4.0 sweep delivers 3.0 W. So at the start the engine cranks the wheel with χ = 0.75 crank, and at the end, sweeping at 8.0, with 0.38 crank.',
                    "(2-c) Power is the sweep of torque. Grab the χ off the wall like usual, no time to slow down here: P = ωχ. At 4.0 sweep the engine's 3.0 W cranks with χ = 0.75 crank; at 8.0, with 0.38 crank. Twice the sweep, half the crank.")]
+    # doc 10:22 ("there's another cos"): past path 1, a cosine stays only where the problem set asks for one (a-1, a-5, the 1-a
+    # approximation, f-1, 13's statement). 3-a and a-2 ask for an angle or a ratio; c-2 reuses the knife's lift.
+    ROUND += [(", so cos θ = 0.80 on the 0.50 m arm.", ", 4/5 of the 0.50 m arm."),
+              ("makes the arm the 5, so cos θ = 4/5.", "makes the arm the 5, so the drop is 4/5 of the arm."),
+              ("the center sits a(1 − cos θ) up, about aθ²/2,", "the center rises as the knife did at 1-a, about aθ²/2,")]
+    # doc 10:23: "put everything that's properly a fraction as a fraction" (no 0.60, no trailing zeros on a share). Measurements
+    # keep their two figures; irrational shares (about 0.64 of a turn, √(5/7), √2 − 1) keep their decimals.
+    ROUND += [("On the 0.50 m arm that's cos θ = 0.80.", "On the 0.50 m arm that's cos θ = 4/5."),
+              ("6.0 N × 0.40 gives 2.4 N", "2/5 of 6.0 N gives 2.4 N"),
+              ("6.0 N at 1 − 0.60 is 2.4 N", "6.0 N at 1 − 3/5 is 2.4 N"),
+              ("With r/R = 0.60 = 3/5,", "With r/R = 3/5,"),
+              ("= (60/100)c = 0.60c. There γ = 1/√(1 − 0.36) = 1/0.80 = 1.25.", "= (60/100)c = (3/5)c. There γ = 1/√(1 − 9/25) = 5/4."),
+              ("reads 10/1.25 = 8.0 s of its own time", "reads 4/5 as much, 8.0 s of its own time,"),
+              ("γT = 1.25 × 16 s = 20 s, and the receiver covers 0.60c × 20 s", "γT = 5/4 × 16 s = 20 s, and the receiver covers (3/5)c × 20 s")]
     for a, b in ROUND:
         out = [(t, x.replace(a, b) if isinstance(x, str) else x) for t, x in out]
     TWO = [("2.42", "2.4"), ("5.84", "5.8"), ("5.86", "5.9"), ("34.1", "34"), ("3.42", "3.4"), ("1.84 s", "1.8 s"), ("2.60 s", "2.6 s"),
