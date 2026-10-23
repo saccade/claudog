@@ -4,7 +4,8 @@ planning doc's Goals tab t.89r88yxpo4v3 for its last pointer entry). --prev give
 none yet; --inc reuses an increment already drawn (one draw, carried to a second tab).
 
 Claude (Anthropic), 2026-10-22, for the sweep. SPEC: {"paras": [[kind, text], ...], "links": {"phrase": "url"}}
-kind: h (bold heading), doc (doc's words, his red), me (Claude's orange), li (orange bullet). The script finds the
+kind: h (bold heading), doc (doc's words, his red), me (the writer's color), li (bullet in that color).
+--as codex writes the entry in Codex's dark green instead of Claude's orange (2026-10-23). The script finds the
 Goals tab's end and the last "Count: N" in the saved read, draws the increment (3 to 7, minus 36 past 72), and
 appends the increment and Count lines. Insert at end - 1 with a leading newline (the tab ends in a paragraph).
 """
@@ -28,6 +29,7 @@ idx = end - 1; reqs = [{"insertText": {"location": {"index": idx, "tabId": TAB},
 pos = idx + 1; spans = []
 for kind, t in paras: spans.append((kind, pos, pos + len(t.encode("utf-16-le")) // 2, t)); pos += len(t.encode("utf-16-le")) // 2 + 1
 ORANGE = {"red": 0.8, "green": 0.34901962, "blue": 0}; RED = {"red": 0.6, "green": 0, "blue": 0}
+if "--as" in A and A[A.index("--as") + 1] == "codex": ORANGE = {"red": 0.015686275, "green": 0.16470589, "blue": 0.05882353}   # Codex green
 for kind, a, b, t in spans:
     reqs.append({"updateTextStyle": {"range": {"startIndex": a, "endIndex": b, "tabId": TAB}, "textStyle": {"foregroundColor": {"color": {"rgbColor": RED if kind == "doc" else ORANGE}}, "bold": kind == "h", "italic": False}, "fields": "foregroundColor,bold,italic"}})
     for phrase, url in spec.get("links", {}).items():

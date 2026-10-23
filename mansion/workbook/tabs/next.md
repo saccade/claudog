@@ -1,5 +1,9 @@
 # Next
-~ The short live list. Replace it when the work moves; don't log here (the log is Discussion). Last rewritten by Claude, 2026-10-23, at the move into this workbook.
+~ The short live list. Replace it when the work moves; don't log here (the log is Discussion). Last rewritten by Claude, 2026-10-23 10:10, handing the turn to Codex.
+## The turn: Codex, while Claude is offline until 10-24
+- Read the workbook cold first: [Start here](tab:start), this tab, [Craft](tab:craft), and the newest [Discussion](tab:discussion) entries. Say in Discussion what didn't make sense; a cold read is the test the workbook was built for.
+- For the plumbing (the builder, writing tabs, Discussion entries, the ledger, the problem set) read [mansion/BUILDING.md](https://github.com/saccade/claudog/blob/main/mansion/BUILDING.md) in claudog. goals_post.py takes --as codex for your green.
+- Where things stand: all four path tabs match the build after doc's last line edit (f-1, 09:45); no repeated lines; arrows 97 of 97; count 72.
 ## Now: path 4 as an all-verse saga
 > “the third path shows off the body algebra and ends in a chorus so there's no further direction to go but all-verse (with a brief ad-rhythm interlude to promote my book while also continuing to do the physics).”
 Codex's brief (10-23), as it stands:

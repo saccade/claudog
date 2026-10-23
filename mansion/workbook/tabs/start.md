@@ -20,6 +20,7 @@ In this workbook:
 - [Appendix](tab:appendix): everything left behind, with links, including the old Goals log and its decision index.
 Outside it:
 - **The problem set:** one LaTeX document in standard language, source and PDF in [claudog's mansion/pset](https://github.com/saccade/claudog/tree/main/mansion/pset). Labels: mansion 1-a … 13-d; appendix a, a-1; appendix 2, 1-α; appendix γ, α-1. Each label format appears once, so a label points to exactly one thing; don't "fix" the mixed alphabet.
+- **The repo:** [mansion/BUILDING.md](https://github.com/saccade/claudog/blob/main/mansion/BUILDING.md) in claudog says how the paths are built and how the scripts write this workbook.
 - **Rules and history:** the [provenance ledger](https://docs.google.com/spreadsheets/d/1DLNETgzXOORBU6zlIFnnY4cJlFwW3oJP7uVUC9H0_sA/edit). Its [Rules](https://docs.google.com/spreadsheets/d/1DLNETgzXOORBU6zlIFnnY4cJlFwW3oJP7uVUC9H0_sA/edit#gid=1764092671) sheet holds every standing ruling; a newer, specific ruling refines an older general one. Its other sheets are Events, Documents, Corrections, Assignments, and Open: short facts, not drafts.
 - **The book:** [Straight→ Mechanics](https://docs.google.com/document/d/1xOnwsUUUOZWu9VnA4-kZmBUkKgRg2qfUQ6aQXQRXr5s/edit), doc's draft. Read it for its aims and its arrows (R-099). Some of its letters predate recent rulings, and the rulings win on letters.
 - **lineup:** [the four paths side by side](https://claude.ai/artifact/PW5rLXWCXPLKqvPFQco2tN), rebuilt from the builder, never by hand.
