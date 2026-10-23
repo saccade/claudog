@@ -124,7 +124,7 @@ What supplied that work, and where could it wait? The study keeps the answer rea
 ## 9. The double pendulum
 (9-a) Each mode cycles with its own sweep, and a turn of it takes T = τ/ω. The slow one takes τ/2.4 = 2.6 s and the fast one τ/5.8 = 1.1 s.
 (9-b) The squares are in the ratio (2 + √2)/(2 − √2). Multiply top and bottom by 2 + √2 and it's (2 + √2)²/2, so the sweeps are in the ratio (2 + √2)/√2 = 1 + √2. Flip it and the slow over the fast is √2 − 1: the two multiply to one. That's irrational, so no whole number of slow cycles ever equals a whole number of fast ones, and a motion with both in it never exactly repeats.
-(9-c) Each mode is a tone, and its shape is how far the lower rod leans for the upper's lean: Ω_shape = +√2 for the slow tone, both masses swinging the same way, the lower one farther; and −√2 for the fast tone, the lower rod flipped.
+(9-c) The modes are the second knife's two tones, and each one's shape is how far the lower rod leans for the upper's lean: Ω_shape = +√2 for the slow tone, both masses swinging the same way, the lower one farther; and −√2 for the fast tone, the lower rod flipped.
 The shape is the rods'. The question asks about the masses, and with two of them in one problem it helps to say whose each quantity is.
 Call the upper rod with its mass body U, and the lower one body L. A body is the thing as the physics sees it: where it is, how it moves, what it carries, and nothing else. Write the body last in a quantity, after its size and its direction, and read × as “of”: 1 m × U is the length of body U, and 0.10 rad → × U is its swing. The knife of the knife was the knife all along, but the knife of a ladder has nothing to be, and no place to go.
 A mass at the end of its rod is out by the rod's length of the rod's swing:
@@ -145,7 +145,7 @@ This is a different can, in a separate loop with a coil. A coil coils flux, and 
 ## Drawer e: a can to match the knife
 Door: the study. A doctor's bag in striped oilcloth: a capacitor the size of a teacup, a coil, a card of figures, the first of them 22/7.
 (e-1) C = 1/(Lω₀²), and ω₀² = 10(2 − √2) = 5.9 s⁻², so C = 1/(2 − √2) F, about 1.7 F. The tuning needs the exact value; 1.7 is only how it's written down.
-The capacitor cans charge; call it a can. The inductor coils its own linked flux. The can’s voltage rises with charge, the coil’s current with flux. A little added charge stores the voltage of that charge; a little added flux stores the current of that flux. For these linear stores, the energy is ½qV in the can and ½iΦ in the coil, with V = q/C and Φ = Li.
+The can cans charge; the inductor is a coil, and it coils its own linked flux. The can’s voltage rises with charge, the coil’s current with flux. A little added charge stores the voltage of that charge; a little added flux stores the current of that flux. For these linear stores, the energy is ½qV in the can and ½iΦ in the coil, with V = q/C and Φ = Li.
 (e-2) Both take 2.6 s when free. Same sweep, same turn: the loop keeps the slow motion’s time. Coupling them changes the two motions; the passage shows how.
 This drawer's back opens on glass. Your reflection reaches for the jars a beat after you do.
 ## Mirror 2: the trade, both ways

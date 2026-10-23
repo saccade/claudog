@@ -647,6 +647,11 @@ def build(k):
                "The return comes at 16 s of your own time. Outside it's 20 s, and outside says you've crossed 3.6 million kilometers."),
               ("The return comes at 15.6 s of your own time.", "The return comes at 16 s of your own time."),
               ("∫E dt = 1.2 J s", "∫E dt = 1.3 J s"), ("0.62 zam", "0.65 zam"), ("0.18 zlam", "0.19 zlam")]
+    # doc 09:43: drawer e named the can again after 10-a had ("you can't name the same dog the same thing twice")
+    ROUND += [("The capacitor cans charge; call it a can. The inductor coils its own linked flux.",
+               "The can cans charge; the inductor is a coil, and it coils its own linked flux.")]
+    # the same rule for the tones: named in drawer d and mirror 1 (paths 3, 4), so 9-c uses the name instead of giving it again
+    ROUND += [("(9-c) Each mode is a tone, and its shape is how far", "(9-c) The modes are the second knife's two tones, and each one's shape is how far")]
     # doc 09:38: the ribbon pulls toward the hole, so it has no torque about *it*: the stress does the work of a repeat
     ROUND += [("so it has no torque about the hole,", "so it has no torque about <em>it</em>,")]
     for a, b in ROUND:
