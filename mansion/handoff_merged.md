@@ -1,6 +1,6 @@
 # The Mansion: how to pick it up
 
-Written by Claude (Anthropic), 2026-10-22 14:45; revised 15:10 after Codex's review, and 17:55, 18:14, 18:41, and 19:36 to match the day's work. It merges Codex's (OpenAI) handoff and Claude's from this afternoon into one entry point. It summarizes the live project; it isn't dr. kraemer's manuscript. The ideas and rulings are doc's; the words are the models'. Ledger rule numbers are in parentheses.
+Written by Claude (Anthropic), 2026-10-22 14:45; revised 15:10 after Codex's review, and 17:55, 18:14, 18:41, 19:36, and 20:28 to match the day's work. It merges Codex's (OpenAI) handoff and Claude's from this afternoon into one entry point. It summarizes the live project; it isn't dr. kraemer's manuscript. The ideas and rulings are doc's; the words are the models'. Ledger rule numbers are in parentheses.
 
 ## The project in one room
 
@@ -21,7 +21,7 @@ The working method is **dog math** ([Dog Math](https://docs.google.com/document/
     - [path 2, plus the cabinet](https://docs.google.com/document/d/1HOEJ-WNH8A3BoGiClTiwCUCj1wyIvzulnUqxLfRmFro/edit)
     - [path 3, plus the funhouse](https://docs.google.com/document/d/1wUcpO2B9mkwK7U4_FxT9BwKGdH2YcZCLV9R3fpLJtsQ/edit)
     - [path 4, the whole house](https://docs.google.com/document/d/1VEtVpcPSRx8H27jfZvDpuvRhEGbC3PhlsaK9A1XCpKU/edit)
-- **lineup:** [the four paths side by side](https://claude.ai/artifact/PW5rLXWCXPLKqvPFQco2tN) (doc's claude.ai account). Stale since set 1's later changes; rebuild it from the paths' own text, never by hand.
+- **lineup:** [the four paths side by side](https://claude.ai/artifact/PW5rLXWCXPLKqvPFQco2tN) (doc's claude.ai account). Rebuilt at 20:28 from the builder; rebuild it from the paths' own text, never by hand.
 - **Sources:** Codex's release copies [1](https://docs.google.com/document/d/1g0l2mo466y_QVqJ5MYMT6coz3VYe_qwz3x8AkViSnsg/edit), [2](https://docs.google.com/document/d/1_envXJfdn6UD2Z6NDDhKlXC4M1D0vDsLq4EVuYzENr4/edit), [3](https://docs.google.com/document/d/1e06Bxkxj-U2OQdiaOiMkrwpseBzgCJL_1teFYdLbAgA/edit), and [4](https://docs.google.com/document/d/1uvyRA1nQqJ5i7x55g0dlPOzuO-Ufy2kpxQ8AtBhoyKc/edit) are the builder's input; don't polish them. The others hold earlier checked material; check the latest rulings before carrying their notation forward:
     - [endings, four finales](https://docs.google.com/document/d/1ZYoboEtEXScyguXsUjw3LuUxbE-91f6noIKMUJODMgg/edit)
     - [below stairs](https://docs.google.com/document/d/1JFD4v5o3lWCYg4KoXnzQ0d3EGUxk_e2iAJdt3gg_Y44/edit)
@@ -65,12 +65,12 @@ The four endings get richer with their routes. Keep the Last House chorus; the f
 
 ## What's next
 
-1. **The sweep, under way, one step at a time.** Done: the problem set says (g = 10 m/s²) after its first full mention, and the paths are solutions only, in the problem set's labels, titled "path k of 4". Numbers are at two figures throughout, the √2 family too (doc 19:30: if a difference that small matters, it needs a name and attention because it's causally central); the tuning's exactness keeps its own sentence, and the chair's chain is 16 s, 20 s, 3.6 × 10⁹ m. Path docs, builder, and lineup move forward together. The length targets get recomputed on solutions alone.
+1. **The sweep, under way, one step at a time.** Done: the problem set says (g = 10 m/s²) after its first full mention, and the paths are solutions only, in the problem set's labels, titled "path k of 4". Numbers are at two figures throughout, the √2 family too (doc 19:30: if a difference that small matters, it needs a name and attention because it's causally central); the tuning's exactness keeps its own sentence, and the chair's chain is 16 s, 20 s, 3.6 × 10⁹ m. Path docs, builder, and lineup move forward together. Path 1 glosses more fully; paths 2–4 carry path 1's notation as a short reprise; the middle material is off sin and cos where words read better; the lineup, plan, and gaps pages are rebuilt from the build (20:28).
 2. **Still to come, in order:**
-    - Path 1 glosses a little more fully.
-    - Paths 2–4 carry set 1's notation pass as a highlights reel, with names in parentheses ("the 15 J that comes in (heat-in)").
-    - The arrows carry through the middle material.
-3. **Not done, so don't claim it:** sin and cos gone by the middle (R-075). Drawers a, b, and f, Mirror 4, and α still use them, and they move into arrows only where that reads better.
+    - Shorten paths 2–4 toward the plan's targets (BALANCE.md): their solutions run 24, 32, and 34 thousand characters against 20, 20, and 17. That's the real work left in the highlights reel: Reel and Nod forms in place of re-said solutions.
+    - Each path opens on a different kind of move, at an uneven depth (doc's mobile, 20:15 to 20:20: never let 'em see it coming). Path 2 has a word at the knife (heft), path 3 a place at the ladder (the still point), and path 4 the kitchen's pair (zing, zlow), then the crown move under the stage. Never use the same move twice.
+    - Codex has ideas for path 4's chorus (doc, 20:22), with all the ghosts assembled.
+3. **Not done, so don't claim it:** sin and cos gone by the middle (R-075). As of 20:28 they're gone where words read better. Kept on purpose: the statements' own cos θ, the spool's line at a-5, the basin's height, and f-1's identity, which is the subject.
 4. **Later, not now:** the text-input game, whose pictures carry deliberate AI signatures in smoke, folds, hair, or shadows: readable scenes first, unmistakable letters once noticed.
 
 ## How to work here

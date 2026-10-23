@@ -146,6 +146,41 @@ PIECES = [
 ]
 FIXED = [13.1, 18.5, 20.4, 23.1]  # statements, the way in, rooms, doors, endings: the same text whatever the pace
 
+
+def measure():
+    """Sweep 6: 'now' measured from the current builds, solution text only (p and eq lines); FIXED is the rest
+    (headings, scenes, the way in, endings). The statements live in the problem set since sweep 2, so FIXED shrank."""
+    import lineup_sets
+    def key(name):
+        m = __import__("re").match(r"(\d+) ", name)
+        if m: return ("problem", m.group(1))
+        if name.startswith("drawer"): return ("drawer", "abcdefg"[int(name.split()[1]) - 1])
+        if name.startswith("F"): return ("mirror", name[1])
+        if name.startswith("U"): return ("under", "αβ"[int(name[1]) - 1])
+    fixed = []
+    for i, k in enumerate((1, 2, 3, 4)):
+        words, ps = lineup_sets.pieces(k)
+        sol, rest = {}, sum(len(x) for _, x in words)
+        for name, body in ps:
+            n = sum(len(x) for t, x in body if t in ("p", "eq")) if name != "ending" else 0
+            rest += sum(len(x) for t, x in body) - n
+            if name.startswith("problem "): sol[("problem", name.split()[1].rstrip(","))] = n
+            elif name.startswith("drawer "): sol[("drawer", name.split()[1])] = n
+            elif name.startswith("funhouse mirror "): sol[("mirror", name.split()[2])] = n
+            elif name.startswith("under the stage "): sol[("under", name.split()[3])] = n
+        for row in PIECES:
+            v = sol.get(key(row[0]))
+            row[1][i] = None if v is None else round(v / 1000, 1)
+        fixed.append(round(rest / 1000, 1))
+    FIXED[:] = fixed
+
+
+PIECES = [[a, list(b), c, d] for a, b, c, d in PIECES]
+measure()
+LABEL = {"drawer 1": "drawer a", "drawer 2": "drawer b", "drawer 3": "drawer c", "drawer 4": "drawer d", "drawer 5": "drawer e",
+         "drawer 6": "drawer f", "drawer 7": "drawer g", "F1": "mirror 1", "F2": "mirror 2", "F3": "mirror 3", "F4": "mirror 4", "U1": "α", "U2": "β"}
+for row in PIECES: row[0] = LABEL.get(row[0], row[0])
+
 VIEWS = [
  (1, "flywheel (2), at the walk to τ", "Calipers measure across, so the diameter was the ruler, and π came from there. A turn measured from the center is τ.", "doc's teaching notes say calipers belong in the book"),
  (1, "cue ball (5), after (H − R) ↑" + X + "→ J = (H − R) J ↻", "Hit above center and the cross gives ↻, topspin: the pool player's follow. Below center it's ↓" + X + "→ = ↺, draw.", "the couple pays rent in the room it's named for"),
@@ -177,7 +212,7 @@ def md():
         cells = [("-" if n is None else f"{n} → {t}: {ff}") for n, t, ff in zip(now, tgt, f)]
         o.append(f"| {name} | " + " | ".join(cells) + " |")
     o.append("| solutions | " + " | ".join(f"{tot(i, 1)} → {tot(i, 2)}" for i in range(4)) + " |")
-    o.append("| statements, rooms | " + " | ".join(str(x) for x in FIXED) + " |")
+    o.append("| rooms, scenes, endings | " + " | ".join(str(x) for x in FIXED) + " |")
     o.append("| whole path | " + " | ".join(f"{round(FIXED[i] + tot(i, 1), 1)} → {round(FIXED[i] + tot(i, 2), 1)}" for i in range(4)) + " |")
     o += ["", "## Views (R-111)", "", "| Path | Where | The view | Why there |", "|---|---|---|---|"]
     o += [f"| {k} | {w} | {v} | {why} |" for k, w, v, why in VIEWS]
@@ -218,7 +253,7 @@ def page():
                 pieces += f'<td><span class="num">{n:.1f} → <b>{t:.1f}</b></span>{tag}<span class="note">{e(rest)}</span></td>'
         pieces += "</tr>"
     sums = '<tr class="sum"><th scope="row">solutions</th>' + "".join(f'<td><span class="num">{tot(i, 1)} → <b>{tot(i, 2)}</b></span></td>' for i in range(4)) + "</tr>"
-    sums += '<tr class="sum"><th scope="row">statements, rooms</th>' + "".join(f'<td><span class="num">{x}</span></td>' for x in FIXED) + "</tr>"
+    sums += '<tr class="sum"><th scope="row">rooms, scenes, endings</th>' + "".join(f'<td><span class="num">{x}</span></td>' for x in FIXED) + "</tr>"
     sums += '<tr class="sum big"><th scope="row">whole path</th>' + "".join(f'<td><span class="num">{round(FIXED[i] + tot(i, 1), 1)} → <b>{round(FIXED[i] + tot(i, 2), 1)}</b></span></td>' for i in range(4)) + "</tr>"
     views = "".join(f'<tr><td class="pk">{k}</td><th scope="row">{e(w)}</th><td>{e(v)}</td><td class="rent">{e(why)}</td></tr>' for k, w, v, why in VIEWS)
     return f"""<title>The Four Paths</title>
@@ -298,7 +333,7 @@ td.pk {{ font: 600 1rem/1.3 var(--ui); color: var(--brown); width: 3rem; }}
 <tbody>{words}</tbody></table></div>
 
 <h2>Pieces</h2>
-<p class="sub">Solution text only, in thousands of characters: the current build, then the target. Statements, rooms and endings are the same text whatever the pace, so they're counted below, apart.</p>
+<p class="sub">Solution text only, in thousands of characters: the current build, then the target. Rooms, scenes and endings are the same text whatever the pace, so they're counted below, apart; the statements live in the problem set.</p>
 <div class="scroll pieces"><table>
 <thead><tr><th>Piece</th><th>Path 1</th><th>Path 2</th><th>Path 3</th><th>Path 4</th></tr></thead>
 <tbody>{pieces}{sums}</tbody></table></div>
@@ -312,7 +347,7 @@ td.pk {{ font: 600 1rem/1.3 var(--ui); color: var(--brown); width: 3rem; }}
 <div class="foot">
 <p>The statements and rooms set a floor: 13 thousand characters in path 1, 23 thousand in path 4. Shortening solutions alone takes the paths from about {', '.join(str(round(FIXED[i] + tot(i, 1))) for i in range(4))} thousand to about {', '.join(str(round(FIXED[i] + tot(i, 2))) for i in range(4))}. The rest of the gap is the problems themselves, and path 1 shouldn't be padded to close it.</p>
 <p>A later path can point back by name (\"as at the spool in path 1\") so a reader who skipped ahead knows where the full version lives.</p>
-<p>The docs are still titled \"solution set k of 4\". They could become \"path k\" at the next sweep.</p>
+<p>The paths are solutions only since the sweep (doc, 18:22), titled \"path k of 4\"; the statements live in the problem set.</p>
 </div>
 </div>"""
 

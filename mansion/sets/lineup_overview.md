@@ -1,14 +1,14 @@
-**Written by Claude (Anthropic), 2026-10-22, for dr. kraemer.** The page is lineup's; the four solution sets are the ones in the Google Docs (CL-219 to CL-222), cut into pieces.
+**Written by Claude (Anthropic), 2026-10-22, for dr. kraemer.** The page is lineup's; the four paths are the ones in the Google Docs ("Claude Mansion path k of 4"), cut into pieces. Rebuilt 20:30 from the builder, after sweep steps 1 to 5.
 
-# The four solution sets, lined up
+# The four paths, lined up
 
-Each tab is one set, done end to end the way a reader at that level would do it. Set 1 is the base game; sets 2, 3 and 4 add the cabinet, the funhouse and the stage, in pset order.
+Each tab is one path: the whole problem set worked end to end, the way a reader at that level would work it. The statements live in the problem set; the paths are solutions only, in its labels. Path 1 is the mansion, and paths 2, 3, and 4 add the cabinet, the funhouse, and the stage.
 
-Every set is cut into the same pieces: the way in, each room, each problem, each drawer, funhouse and understage problem, and the ending. A piece has the same name and number in every set it's in, so `13 problem 4, the ladder.md` is the ladder in all four. The numbers follow the whole house, so set 1 skips the ones it doesn't have.
+Every path is cut into the same pieces: the way in, each room, each problem, each drawer, mirror, and understage problem, and the ending. A piece has the same name and number in every path it's in, so the ladder is the same file in all four. The numbers follow the whole house, so path 1 skips the ones it doesn't have.
 
 Prose is one sentence per line, so a change marks the sentence that changed.
 
-- **A set's tab**: sets 2–4 open on what they changed from set 1. Each changed piece switches between its diff and the whole piece.
-- **Side by side**: every piece that differs between sets, in house order, in columns, with set 1 pinned at the left. Stepping through one column's changes brings the others to the same place.
+- **A path's tab**: paths 2–4 open on what they changed from path 1. Each changed piece switches between its diff and the whole piece.
+- **Side by side**: every piece that differs between paths, in house order, in columns, with path 1 pinned at the left. Stepping through one column's changes brings the others to the same place.
 
-The endings are all `99 ending.md`, so they sit side by side too, though each level's ending is its own.
+The endings sit side by side too, though each path's ending is its own.

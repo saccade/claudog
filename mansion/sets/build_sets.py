@@ -592,7 +592,8 @@ def build(k):
         j = next(j for j, (t, x) in enumerate(out) if t == "i" and isinstance(x, str) and x.startswith("The blacks on the nail are patched"))
         out.insert(j + 1, ("i", "The upper rod's bob is the dining room's knife, a kilogram a meter out from the same silver pivot. "
                                 "You've been watching one end of this machine since the roast went cold."))
-    if k in (2, 3, 4):
+    if k in (2, 3, 4):   # the τ nod at the basin, as in path 1 (R-117: the gap there runs 9 to 11 thousand characters)
+        out = [(t, x.replace("a turn of the cycle takes T with ωT = τ.", "a turn of the cycle takes T with ωT = τ, the whole turn.") if isinstance(x, str) else x) for t, x in out]
         for old, new in MIDDLE:   # 4-α and 4-β live only in paths 3 and 4
             hit = [j for j, (t, x) in enumerate(out) if isinstance(x, str) and old in x]
             assert len(hit) == (0 if (k == 2 and "still point" in old or k == 2 and old.startswith("The center, at")) else 1), old[:60]
