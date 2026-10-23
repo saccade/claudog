@@ -27,6 +27,7 @@ mansion/
   sets/r1_now.txt .. r4_now.txt, cl214_now.txt
                          flattened inputs (Codex's four release copies; the standard statements). Don't edit them;
                          patch in the builder, so every change has a line and a comment
+  sets/shares.py         the last step of the build: no padding zeros, fractions where exact (R-129, R-130)
   sets/repeats.py        any line that appears twice in a path (nothing repeats exactly: R-125)
   sets/check_levels.py   words a path uses before its level brings them in (some hits are story text: read them)
   sets/gaps.py           how long a reader goes without each term (R-117; a picture, not a target)
@@ -64,6 +65,7 @@ The other top-level scripts in `mansion/` (rooms, check_rooms*, goals_*.py, pass
 7. `TWO`: rounding to two figures.
 8. Path 4: `p4_reel.REEL4` replaces each labeled part wholesale. **A wording change in path 4 usually has to go in REEL4 too**, or the reel overwrites it.
 9. The drawer passage lines (`SHUT` → `DRAFTS` for path 2, `OPENS` for paths 3 and 4), keyed by drawer letter after the reel.
+10. `sets/shares.py`, last: no trailing zeros (a made-up number is exact, R-130), and an exact value standing alone becomes a fraction (R-129). Its PRE list holds sentences that read better said than divided out. `python3 shares.py` prints every change in context.
 
 Markup the builder passes through: `<em>…</em>` is spoken stress, set in italic. A whole-paragraph `<i>` is an italic paragraph, and a leading `<b>` is a bold lead. Hair spaces (U+200A) go around · and between arrows. Write them as ` ` in Python, and print every batch with `ensure_ascii=True`, so they can't be lost in transit.
 
