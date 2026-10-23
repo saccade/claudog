@@ -666,6 +666,11 @@ def build(k):
     # doc 10:09-10:10: 1-γ doesn't ask for a cosine, and it's deep enough in that the slow burn is over: say the envelope with the machinery
     ROUND += [("The signed cosine envelope takes twice that time to return; its sign flips between neighboring reinforcements.",
                "The sum goes as the forward part of a hand turning at half the gap, and that hand points ← at every other reinforcement, so it takes twice that time to point → again.")]
+    # doc 10:17: path 3 takes path 4's brisk 2-c ("Grab the χ off the wall like usual, no time to slow down here"); path 2 keeps the
+    # full introduction of χ and the crank, and path 4 is going all-verse. Values stay in crank (R-124).
+    if k == 3:
+        ROUND += [('(2-c) Torque usually gets the letter τ, but the turn has it now. A χ hung on the wall could apply a twist to something—use that for torque. Torque, moment, and twist are three names for the one quantity: a push applied at a lever, a newton at a meter. Its unit is the crank, 1 N m, the way the gram is a unit of mass and the amp a unit of current; a crank is a size of torque, not a new kind of twisting. What a torque does is crank, so the verb comes with the unit. The power a torque delivers is the sweep of the torque: P = ωχ. Put numbers to it once: 0.75 crank cranking at 4.0 sweep delivers 3.0 W. So at the start the engine cranks the wheel with χ = 0.75 crank, and at the end, sweeping at 8.0, with 0.38 crank.',
+                   "(2-c) Power is the sweep of torque. Grab the χ off the wall like usual, no time to slow down here: P = ωχ. At 4.0 sweep the engine's 3.0 W cranks with χ = 0.75 crank; at 8.0, with 0.38 crank. Twice the sweep, half the crank.")]
     for a, b in ROUND:
         out = [(t, x.replace(a, b) if isinstance(x, str) else x) for t, x in out]
     TWO = [("2.42", "2.4"), ("5.84", "5.8"), ("5.86", "5.9"), ("34.1", "34"), ("3.42", "3.4"), ("1.84 s", "1.8 s"), ("2.60 s", "2.6 s"),
