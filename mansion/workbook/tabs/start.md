@@ -8,6 +8,7 @@ The Mansion is one haunted house: nine Clue rooms, thirteen main problems, three
 It belongs to doc's larger project, **straight→ mechanics** (lowercase; s→m): ordinary words whose meanings do physical work. His book is his own prose; the models write labeled experiments and examples, carry the algebra, and check it against conventional physics.
 The working method is **dog math**: find the quantity that matters, give it a useful name, say how to measure or build it, and let the words explain what happens. Read [Dog Math](https://docs.google.com/document/d/1qDecvGSGpzf6NkTIouDkan-fTphtDHBKZEC5TmcghOQ/edit) (the one canonical copy) before writing any path, and reread it after a context reset.
 ## Where things are
+[The problem set (PDF)](https://github.com/saccade/claudog/blob/main/mansion/pset/Claude%20Mansion%20problem%20set%202610230651.pdf)
 In this workbook:
 - [Next](tab:next): the short live list of what's being done now.
 - [Paths](tab:paths): the four solution paths, one tab each: [path 1, the mansion](tab:path1); [path 2, plus the cabinet](tab:path2); [path 3, plus the funhouse](tab:path3); [path 4, the whole house](tab:path4).
@@ -18,7 +19,7 @@ In this workbook:
 - [Discussion](tab:discussion): the one live coordination thread, with the count. Older entries go to the [Discussion archive](tab:archive).
 - [Appendix](tab:appendix): everything left behind, with links, including the old Goals log and its decision index.
 Outside it:
-- **The problem set:** one LaTeX document in standard language, source and PDF in [claudog's mansion/pset](https://github.com/saccade/claudog/tree/main/mansion/pset); the PDF doc reads and comments on is on Drive, [Claude_Mansion_problem_set_2610230605](https://drive.google.com/file/d/17rIJ1ywDwNb3EJWjQ92SojnImzKpIhZ8/view). Labels: mansion 1-a … 13-d; appendix a, a-1; appendix 2, 1-α; appendix γ, α-1. Each label format appears once, so a label points to exactly one thing; don't "fix" the mixed alphabet.
+- **The problem set:** one LaTeX document in standard language, source and PDF in [claudog's mansion/pset](https://github.com/saccade/claudog/tree/main/mansion/pset). Labels: mansion 1-a … 13-d; appendix a, a-1; appendix 2, 1-α; appendix γ, α-1. Each label format appears once, so a label points to exactly one thing; don't "fix" the mixed alphabet.
 - **Rules and history:** the [provenance ledger](https://docs.google.com/spreadsheets/d/1DLNETgzXOORBU6zlIFnnY4cJlFwW3oJP7uVUC9H0_sA/edit). Its [Rules](https://docs.google.com/spreadsheets/d/1DLNETgzXOORBU6zlIFnnY4cJlFwW3oJP7uVUC9H0_sA/edit#gid=1764092671) sheet holds every standing ruling; a newer, specific ruling refines an older general one. Its other sheets are Events, Documents, Corrections, Assignments, and Open: short facts, not drafts.
 - **The book:** [Straight→ Mechanics](https://docs.google.com/document/d/1xOnwsUUUOZWu9VnA4-kZmBUkKgRg2qfUQ6aQXQRXr5s/edit), doc's draft. Read it for its aims and its arrows (R-099). Some of its letters predate recent rulings, and the rulings win on letters.
 - **lineup:** [the four paths side by side](https://claude.ai/artifact/PW5rLXWCXPLKqvPFQco2tN), rebuilt from the builder, never by hand.
