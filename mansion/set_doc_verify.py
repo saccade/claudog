@@ -1,8 +1,10 @@
 """Checks a set doc against a built set: text, named styles, indents, italic/bold/superscript, no color, no blank paragraphs.
 Claude (Anthropic), 2026-10-22. Usage: python3 set_doc_verify.py SAVED_READ setK.html"""
 import json, re, html, sys
+import os; sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "workbook")); from tabsel import tab_doc, tabify
+TAB = sys.argv[sys.argv.index("--tab") + 1] if "--tab" in sys.argv else None   # a workbook tab ID (2026-10-23)
 c = json.load(open(sys.argv[1])); c = c.get("content", c)
-els = [el for el in c["tabs"][0]["documentTab"]["body"]["content"] if "paragraph" in el]
+els = [el for el in tab_doc(c, TAB)["body"]["content"] if "paragraph" in el]
 src = re.search(r"<body>(.*)</body>", open(sys.argv[2]).read(), re.S).group(1)
 want = []
 for m in re.finditer(r"<(h1|h2|h3|p)([^>]*)>(.*?)</\1>", src, re.S):
@@ -34,5 +36,5 @@ for (el, t), (tag, _, it, bold, ind) in zip(have, want):
         if bool(st.get("bold")) != (pos < bold): bad.append(("bold", s[:30]))
         if ("†" in s) != (st.get("baselineOffset") == "SUPERSCRIPT"): bad.append(("dagger", s[:30]))
         pos += len(s)
-print(c["title"], "|", len(have), "paragraphs |", "OK" if not bad else bad[:20])
+print(c["title"] + (f" [{TAB}]" if TAB else ""), "|", len(have), "paragraphs |", "OK" if not bad else bad[:20])
 sys.exit(1 if bad else 0)   # a mismatch is a failure, not just a printout (Codex, 2026-10-22 15:05)

@@ -6,9 +6,11 @@ A paragraph the doc doesn't have yet goes in after the one before it, as a new p
 a dropped paragraph is emptied (delete the blank line after, with a guarded batch).
 """
 import json, re, html, difflib, sys, unicodedata
+import os; sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "workbook")); from tabsel import tab_doc, tabify
+TAB = sys.argv[sys.argv.index("--tab") + 1] if "--tab" in sys.argv else None   # a workbook tab ID (2026-10-23)
 c = json.load(open(sys.argv[1])); c = c.get("content", c)
 a = []
-for el in c["tabs"][0]["documentTab"]["body"]["content"]:
+for el in tab_doc(c, TAB)["body"]["content"]:
     if "paragraph" in el:
         s = "".join(e.get("textRun", {}).get("content", "") for e in el["paragraph"]["elements"]).rstrip("\n")
         if s.strip(): a.append(s)
@@ -67,4 +69,4 @@ for op, i1, i2, j1, j2 in difflib.SequenceMatcher(None, a, b, autojunk=False).ge
         for o in a[i1 + 1:i2]: rep(o, "")
     else:
         raise SystemExit(f"unhandled {op} {i1}:{i2} {j1}:{j2}")
-print(json.dumps(reqs, ensure_ascii=False))
+print(json.dumps(tabify(reqs, TAB), ensure_ascii=False))

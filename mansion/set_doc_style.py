@@ -7,8 +7,10 @@ then deletes empty paragraphs from the bottom up. Paragraph styles go first: a n
 text style resets it.
 """
 import json, re, html, sys
+import os; sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "workbook")); from tabsel import tab_doc, tabify
+TAB = sys.argv[sys.argv.index("--tab") + 1] if "--tab" in sys.argv else None   # a workbook tab ID (2026-10-23)
 c = json.load(open(sys.argv[1])); c = c.get("content", c)
-els = [el for el in c["tabs"][0]["documentTab"]["body"]["content"] if "paragraph" in el]
+els = [el for el in tab_doc(c, TAB)["body"]["content"] if "paragraph" in el]
 src = re.search(r"<body>(.*)</body>", open(sys.argv[2]).read(), re.S).group(1)
 want = []
 for m in re.finditer(r"<(h1|h2|h3|p)([^>]*)>(.*?)</\1>", src, re.S):
@@ -42,4 +44,4 @@ for (el, t), (tag, _, it, bold, ind) in zip(have, want):
 dele = [{"deleteContentRange": {"range": {"startIndex": el["startIndex"], "endIndex": el["endIndex"]}}}
         for el, _ in sorted(empty, key=lambda x: -x[0]["startIndex"]) if el["endIndex"] < end]
 print(c["revisionId"], file=sys.stderr)
-print(json.dumps(pre + txt + dele, ensure_ascii=False))
+print(json.dumps(tabify(pre + txt + dele, TAB), ensure_ascii=False))
