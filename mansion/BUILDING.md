@@ -107,7 +107,7 @@ SPEC is `{"paras": [["h", "Codex — what it's about (doc HH:MM)"], ["doc", "“
 
 ## The problem set
 
-`cd mansion/pset && latexmk -xelatex mansion_pset.tex && python3 finish_pdf.py`. The PDF's shown text carries only its title, The Mansion that did not Spin; who made it lives in the PDF's metadata, set in the .tex (doc, 10-23 14:10). `finish_pdf.py` strips the tool junk from the metadata, writes the dates in local time, files the PDF as "The Mansion that did not Spin YYMMDDHHMM.pdf", and removes the old one, so the folder holds one PDF. Start here's "The problem set (PDF)" opens the folder, so it never needs updating.
+`cd mansion/pset && python3 build_pdf.py` (Codex's wrapper; `--final --aim ISO` for a timed edition: it compiles, waits once, and saves at the real instant, never a set time). The PDF's shown text carries only its title, The Mansion that did not Spin, and the compile time; who made it lives in the PDF's metadata, set in the .tex (doc, 10-23 14:10). The released edition is also a GitHub release whose asset is always named The_Mansion_that_did_not_Spin.pdf, so https://github.com/saccade/claudog/releases/latest/download/The_Mansion_that_did_not_Spin.pdf always downloads the newest; Start here's "The problem set (PDF)" uses that link (doc 16:58). This session can't create releases (GitHub 403), so doc publishes each one: tag mansion-YYYYMMDDHHMMSScc on main, attach the edition renamed to the fixed name.
 
 ## State at handoff (10-23, about 10:10)
 

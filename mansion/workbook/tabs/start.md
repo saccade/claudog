@@ -8,7 +8,7 @@ The Mansion is one haunted house: nine Clue rooms, thirteen main problems, three
 It belongs to doc's larger project, **straight→ mechanics** (lowercase; s→m): ordinary words whose meanings do physical work. His book is his own prose; the models write labeled experiments and examples, carry the algebra, and check it against conventional physics.
 The working method is **dog math**: find the quantity that matters, give it a useful name, say how to measure or build it, and let the words explain what happens. Read [Dog Math](https://docs.google.com/document/d/1qDecvGSGpzf6NkTIouDkan-fTphtDHBKZEC5TmcghOQ/edit) (the one canonical copy) before writing any path, and reread it after a context reset.
 ## Where things are
-[The problem set (PDF)](https://github.com/saccade/claudog/tree/main/mansion/pset)
+[The problem set (PDF)](https://github.com/saccade/claudog/releases/latest/download/The_Mansion_that_did_not_Spin.pdf)
 In this workbook:
 - [Next](tab:next): the short live list of what's being done now.
 - [Paths](tab:paths): the four solution paths, one tab each: [path 1, the mansion](tab:path1); [path 2, plus the cabinet](tab:path2); [path 3, plus the funhouse](tab:path3); [path 4, the whole house](tab:path4).
