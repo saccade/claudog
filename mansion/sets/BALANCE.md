@@ -64,35 +64,35 @@ Path 1 explains each idea fully where it first pays rent. Paths 2-4 quote it in 
 
 | Piece | Path 1 | Path 2 | Path 3 | Path 4 |
 |---|---|---|---|---|
-| 1 knife | 1.5 → 1.7: Full, textbook | 2.3 → 2.0: Lands: heft, punch, pickup, sweep | 2.3 → 1.3: Reel; lands: zip, flip | 2.3 → 0.9: Nod |
-| 2 flywheel | 1.8 → 1.8: Full: τ walk, χ. View | 1.2 → 1.1: Lands: hook, crank | 1.2 → 0.8: Reel; lands: zing | 1.6 → 1.0: Reel; lands: zow, zlow |
-| 3 governor, spool | 4.7 → 4.3: Full: arrows, crosses, roll, balance, dot | 3.0 → 1.4: Reprise; lands: profile | 3.0 → 0.9: Reel | 3.0 → 0.6: Nod |
-| 4 ladder | 1.5 → 1.4: Full: one dot, seen from the foot | 1.0 → 0.8: Reel (drawer 2 follows) | 1.4 → 0.9: Reel; lands: still point | 1.4 → 0.6: Nod |
-| 5 cue ball | 1.4 → 1.5: Full: crosses, slip, brackets. View | 1.3 → 1.1: Reel; lands: spin | 1.4 → 0.8: Reel | 1.4 → 0.6: Nod |
-| 6 basin | 0.9 → 0.6: Full | 0.8 → 0.6: Reel | 0.8 → 0.5: Reel | 0.8 → 0.4: Nod |
-| 7 hoop | 0.7 → 0.7: Full. View | 0.6 → 0.4: Reel | 0.8 → 0.5: Reel; still point again | 0.8 → 0.4: Nod |
-| 8 ribbon | 0.8 → 0.8: Full | 0.8 → 0.7: Reel | 0.8 → 0.5: Reel | 0.8 → 0.4: Nod |
-| 9 double pendulum | 0.9 → 0.7: Full | 1.0 → 0.6: Reel | 2.7 → 1.0: Lands: tone, chord, beat. View | 1.3 → 0.5: Nod |
-| 10 coils, capacitor | 1.5 → 1.4: Full | 1.6 → 1.5: Lands: can, coil | 1.7 → 1.0: Reel | 1.8 → 1.0: Reel; lands: one machine |
-| 11 line | 1.0 → 1.0: Full | 1.0 → 0.8: Reel | 1.2 → 0.9: Reel; lands: stripe | 1.2 → 0.6: Nod |
-| 12 two lights | 0.7 → 0.7: Full | 0.7 → 0.5: Reel | 0.8 → 1.0: Lands: shift, stretch. View | 0.8 → 0.5: Nod |
-| 13 chair | 1.7 → 1.7: Full: hands; the emphatic sum | 1.3 → 1.1: Reel; emphatic once | 1.3 → 1.0: Reel; emphatic once | 1.5 → 1.0: Reel; RUN |
-| drawer d | - | 0.6 → 0.6: Full | 0.6 → 0.4: Reel | 0.6 → 0.3: Nod |
-| drawer a | - | 2.3 → 2.0: Full: the dot's second rent. View | 2.3 → 1.0: Reel | 2.3 → 0.6: Nod |
-| drawer b | - | 1.2 → 1.1: Full | 1.2 → 0.6: Reel | 1.2 → 0.4: Nod |
-| drawer c | - | 1.4 → 1.4: Full | 1.4 → 0.9: Reel; lands: trade | 1.4 → 0.5: Nod |
-| drawer e | - | 0.7 → 0.8: Full | 0.7 → 0.4: Reel | 0.7 → 0.3: Nod |
-| drawer f | - | 0.9 → 0.6: Full | 0.9 → 0.4: Reel | 0.9 → 0.3: Nod |
-| drawer g | - | 0.4 → 0.4: Full | 0.4 → 0.3: Reel | 0.4 → 0.2: Nod |
-| mirror 1 | - | - | 1.3 → 1.3: Full: tone, phase, hands | 1.3 → 0.8: Reel |
-| mirror 4 | - | - | 1.2 → 1.2: Full: still point | 1.2 → 0.7: Reel |
-| mirror 2 | - | - | 1.1 → 1.1: Full | 1.1 → 0.7: Reel |
-| mirror 3 | - | - | 1.2 → 1.2: Full | 1.2 → 0.8: Reel |
+| 1 knife | 1.5 → 1.7: Full, textbook | 2.3 → 2.0: Lands: heft, punch, pickup, sweep | 2.3 → 1.3: Reel; lands: zip, flip | 0.9 → 0.9: Nod |
+| 2 flywheel | 1.8 → 1.8: Full: τ walk, χ. View | 1.2 → 1.1: Lands: hook, crank | 1.2 → 0.8: Reel; lands: zing | 0.9 → 1.0: Reel; lands: zow, zlow |
+| 3 governor, spool | 4.7 → 4.3: Full: arrows, crosses, roll, balance, dot | 3.0 → 1.4: Reprise; lands: profile | 3.0 → 0.9: Reel | 1.1 → 0.6: Nod |
+| 4 ladder | 1.5 → 1.4: Full: one dot, seen from the foot | 1.0 → 0.8: Reel (drawer 2 follows) | 1.4 → 0.9: Reel; lands: still point | 0.6 → 0.6: Nod |
+| 5 cue ball | 1.4 → 1.5: Full: crosses, slip, brackets. View | 1.3 → 1.1: Reel; lands: spin | 1.4 → 0.8: Reel | 0.6 → 0.6: Nod |
+| 6 basin | 0.9 → 0.6: Full | 0.8 → 0.6: Reel | 0.8 → 0.5: Reel | 0.4 → 0.4: Nod |
+| 7 hoop | 0.7 → 0.7: Full. View | 0.6 → 0.4: Reel | 0.8 → 0.5: Reel; still point again | 0.3 → 0.4: Nod |
+| 8 ribbon | 0.8 → 0.8: Full | 0.8 → 0.7: Reel | 0.8 → 0.5: Reel | 0.4 → 0.4: Nod |
+| 9 double pendulum | 0.9 → 0.7: Full | 1.0 → 0.6: Reel | 2.7 → 1.0: Lands: tone, chord, beat. View | 1.0 → 0.5: Nod |
+| 10 coils, capacitor | 1.5 → 1.4: Full | 1.6 → 1.5: Lands: can, coil | 1.7 → 1.0: Reel | 0.9 → 1.0: Reel; lands: one machine |
+| 11 line | 1.0 → 1.0: Full | 1.0 → 0.8: Reel | 1.2 → 0.9: Reel; lands: stripe | 0.5 → 0.6: Nod |
+| 12 two lights | 0.7 → 0.7: Full | 0.7 → 0.5: Reel | 0.8 → 1.0: Lands: shift, stretch. View | 0.5 → 0.5: Nod |
+| 13 chair | 1.7 → 1.7: Full: hands; the emphatic sum | 1.3 → 1.1: Reel; emphatic once | 1.3 → 1.0: Reel; emphatic once | 0.8 → 1.0: Reel; RUN |
+| drawer d | - | 0.6 → 0.6: Full | 0.6 → 0.4: Reel | 0.4 → 0.3: Nod |
+| drawer a | - | 2.3 → 2.0: Full: the dot's second rent. View | 2.3 → 1.0: Reel | 1.0 → 0.6: Nod |
+| drawer b | - | 1.2 → 1.1: Full | 1.2 → 0.6: Reel | 0.7 → 0.4: Nod |
+| drawer c | - | 1.4 → 1.4: Full | 1.4 → 0.9: Reel; lands: trade | 0.5 → 0.5: Nod |
+| drawer e | - | 0.7 → 0.8: Full | 0.7 → 0.4: Reel | 0.2 → 0.3: Nod |
+| drawer f | - | 0.9 → 0.6: Full | 0.9 → 0.4: Reel | 0.5 → 0.3: Nod |
+| drawer g | - | 0.4 → 0.4: Full | 0.4 → 0.3: Reel | 0.3 → 0.2: Nod |
+| mirror 1 | - | - | 1.3 → 1.3: Full: tone, phase, hands | 0.8 → 0.8: Reel |
+| mirror 4 | - | - | 1.2 → 1.2: Full: still point | 0.8 → 0.7: Reel |
+| mirror 2 | - | - | 1.1 → 1.1: Full | 0.7 → 0.7: Reel |
+| mirror 3 | - | - | 1.2 → 1.2: Full | 0.7 → 0.8: Reel |
 | α | - | - | - | 1.3 → 1.3: Full |
 | β | - | - | - | 1.3 → 1.2: Full |
-| solutions | 19.1 → 18.3 | 24.1 → 19.5 | 31.7 → 19.9 | 33.6 → 16.6 |
+| solutions | 19.1 → 18.3 | 24.1 → 19.5 | 31.7 → 19.9 | 18.1 → 16.6 |
 | rooms, scenes, endings | 5.9 | 7.5 | 7.2 | 8.6 |
-| whole path | 25.0 → 24.2 | 31.6 → 27.0 | 38.9 → 27.1 | 42.2 → 25.2 |
+| whole path | 25.0 → 24.2 | 31.6 → 27.0 | 38.9 → 27.1 | 26.7 → 25.2 |
 
 ## Views (R-111)
 

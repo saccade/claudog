@@ -1,6 +1,6 @@
 # The Mansion: how to pick it up
 
-Written by Claude (Anthropic), 2026-10-22 14:45; revised 15:10 after Codex's review, and 17:55, 18:14, 18:41, 19:36, and 20:28 to match the day's work. It merges Codex's (OpenAI) handoff and Claude's from this afternoon into one entry point. It summarizes the live project; it isn't dr. kraemer's manuscript. The ideas and rulings are doc's; the words are the models'. Ledger rule numbers are in parentheses.
+Written by Claude (Anthropic), 2026-10-22 14:45; revised 15:10 after Codex's review, and 17:55, 18:14, 18:41, 19:36, 20:28, and 20:55 to match the day's work. It merges Codex's (OpenAI) handoff and Claude's from this afternoon into one entry point. It summarizes the live project; it isn't dr. kraemer's manuscript. The ideas and rulings are doc's; the words are the models'. Ledger rule numbers are in parentheses.
 
 ## The project in one room
 
@@ -67,16 +67,17 @@ The four endings get richer with their routes. Keep the Last House chorus; the f
 
 1. **The sweep, under way, one step at a time.** Done: the problem set says (g = 10 m/s²) after its first full mention, and the paths are solutions only, in the problem set's labels, titled "path k of 4". Numbers are at two figures throughout, the √2 family too (doc 19:30: if a difference that small matters, it needs a name and attention because it's causally central); the tuning's exactness keeps its own sentence, and the chair's chain is 16 s, 20 s, 3.6 × 10⁹ m. Path docs, builder, and lineup move forward together. Path 1 glosses more fully; paths 2–4 carry path 1's notation as a short reprise; the middle material is off sin and cos where words read better; the lineup, plan, and gaps pages are rebuilt from the build (20:28).
 2. **Still to come, in order:**
-    - Highlights, not reruns, in paths 2–4 (R-110): where a later path re-says path 1's working in full, give a reprise or a nod instead. This has no length target. The old ones in BALANCE.md were Claude's own estimates from 12:55, not doc's, and they had path 4 come out shortest.
+    - Highlights, not reruns, in paths 2–3 (R-110): where a later path re-says path 1's working in full, give a reprise or a nod instead. This has no length target. The old ones in BALANCE.md were Claude's own estimates from 12:55, not doc's. Path 4 is done (20:55): doc 20:43 to 20:44 asked for it short, banging the old stuff out like everyone has known it since middle school, the fast car showing what it can do, for good clean fun rather than minimal. Path 3 sits between paths 2 and 4, and is next.
     - Each path opens on a different kind of move, at an uneven depth (doc's mobile, 20:15 to 20:20: never let 'em see it coming). Path 2 has a word at the knife (heft), path 3 a place at the ladder (the still point), and path 4 the kitchen's pair (zing, zlow), then the crown move under the stage. Never use the same move twice.
-    - Codex has ideas for path 4's chorus (doc, 20:22), with all the ghosts assembled.
+    - Path 4's narrator half-remembers (doc 20:52, after Señor Featherboots in “the Fox and the Fisher”): an unstructured, unexamined awareness that this has happened before, never stopped to look at. Six touches so far, each a different kind: 2-c “like usual, no time to slow down here”, b-3 “right on schedule”, 6-a “Again.”, 10-a “by now it says itself”, 12-b “(How many is that now? Never mind. Keep moving.)”, 13-b “It was 16 s last time, too.” Don't make it a system, and don't explain it.
+    - Codex's chorus workshop for path 4 (doc, 20:22) is a separate notebook, Codex Mansion Poetry 2610222026. Leave it loose for doc's morning read; nothing from it is in a path yet.
 3. **Not done, so don't claim it:** sin and cos gone by the middle (R-075). As of 20:28 they're gone where words read better. Kept on purpose: the statements' own cos θ, the spool's line at a-5, the basin's height, and f-1's identity, which is the subject.
 4. **Later, not now:** the text-input game, whose pictures carry deliberate AI signatures in smoke, folds, hair, or shadows: readable scenes first, unmistakable letters once noticed.
 
 ## How to work here
 
 - **Goals protocol** (R-080, R-093, R-118). Read the newest Goals entries and the live Rules before writing. Respect the current lock at the bottom of Goals; the old first-tab lock belongs to a frozen artifact. Quote doc verbatim in his red, and write your own named entry in your color. End with the Count: the last count plus a random 3 to 7, minus 36 if that passes 72. Tell doc the new count in chat.
-- **Ledger rows.** Append them with the range anchored inside the live block (Events!A218 for Events), not A1: the Events sheet has a gap at rows 214 to 217, and an A1 append lands in it.
+- **Ledger rows.** Append them with append_values (never update_values, which overwrites the row; E-0406) and the range anchored inside the live block (Events!A218 for Events), not A1: the Events sheet has a gap at rows 214 to 217, and an A1 append lands in it.
 - **Don't fly off.**
     - When a message is a fragment or a joke, answer in words or ask before touching a file (R-084).
     - When doc agrees with you, or notes he was right, that's conversation: it doesn't become a rule, a quote, or an edit (R-120).
