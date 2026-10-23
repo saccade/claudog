@@ -657,6 +657,12 @@ def build(k):
                "(f-1) cos P + cos Q = 2 cos(½(P − Q)) cos(½(P + Q)) (in arrows, →\u200a·\u200aP + →\u200a·\u200aQ = 2 (→\u200a·\u200a½(P − Q)) (→\u200a·\u200a½(P + Q))),")]
     # doc 09:38: the ribbon pulls toward the hole, so it has no torque about *it*: the stress does the work of a repeat
     ROUND += [("so it has no torque about the hole,", "so it has no torque about <em>it</em>,")]
+    # doc 10:05: "why are we suddenly back in cosines here? we have the forward part and all the other machinery": 13-b and 13-c in
+    # paths 2 and 3 say the hands' forward and upward parts, as path 1 does, more briefly (path 4's reel has its own)
+    ROUND += [("(13-b) The two cosine weights are positive and add to one, so q reaches its initial maximum q₀ only when both cosines return to 1. Then 4νT and 9νT are each a whole number of turns; the sine terms and the velocities return too.",
+               "(13-b) The statement's cosines are the forward parts of two hands swinging round from →, the slow one 4νt_H and the fast one 9νt_H. Their weights are positive and add to one, so q is back at q₀ only when both hands point → again: 4νT and 9νT whole turns, which brings the upward parts and the velocities back too."),
+              ("So the slow cosine is back at 1 and the fast one is at −1, and q/q₀ = 9/13 − 4/13 = 5/13. The sines are both zero there, so the current is zero",
+               "The slow hand points → and the fast one ←, so q/q₀ = → · (9/13 → + 4/13 ←) = 5/13. Neither hand has an upward part there, so the current is zero")]
     for a, b in ROUND:
         out = [(t, x.replace(a, b) if isinstance(x, str) else x) for t, x in out]
     TWO = [("2.42", "2.4"), ("5.84", "5.8"), ("5.86", "5.9"), ("34.1", "34"), ("3.42", "3.4"), ("1.84 s", "1.8 s"), ("2.60 s", "2.6 s"),
