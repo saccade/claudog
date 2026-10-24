@@ -1,0 +1,46 @@
+## Standard solutions: the 44 main parts, solutions-manual style
+Written by Claude (Anthropic), 2026-10-24, for dr. kraemer's question (11:42): do the path solutions use more symbols than a standard textbook set, counting a word like "zinging" as one symbol? This is the yardstick: the same 44 parts, worked the way an instructor's solutions manual would, terse but complete.
+(1-a) U = mgℓ(1 − cos θ₀) ≈ mgℓθ₀²/2 = (1)(10)(1)(0.1)²/2 = 0.05 J
+(1-b) ½mv² = U ⇒ v = √(2U/m) = √(2(0.05)/1) = 0.32 m/s
+(1-c) ω₀ = √(g/ℓ) = √10 = 3.16 rad/s, so T = 2π/ω₀ = 2π/3.16 = 1.99 s
+(1-d) T = 2π√(ℓ/g) is independent of m, so T is unchanged.
+(2-a) Q_out = Q_in − W = 15 − 3 = 12 J. e = W/Q_in = 3/15 = 20%. P = W/t = 3 J/1 s = 3 W.
+(2-b) K₀ = ½Iω₀² = ½(0.5)(4)² = 4 J. K = K₀ + Pt = 4 + (3)(4) = 16 J. ω = √(2K/I) = √(2(16)/0.5) = 8 rad/s.
+(2-c) τ = P/ω. Start: τ = 3/4 = 0.75 N m. End: τ = 3/8 = 0.375 N m.
+(3-a) T cos θ = mg and T sin θ = mω²ℓ sin θ, so cos θ = g/(ω²ℓ) = 10/((25)(0.5)) = 0.8 and θ = 37°. The ball rises h = ℓ(1 − cos θ) = 0.5(0.2) = 0.1 m.
+(3-b) cos θ ≤ 1 requires ω ≥ √(g/ℓ) = √(10/0.5) = 4.5 rad/s. Below that, θ = 0.
+(3-c) F + f = ma and (F r + f R) = −I a/R with a = αR, so a = F(1 − r/R)/(m + I/R²) = 6(1 − 0.6)/(2 + 1) = 0.8 m/s², forward. Friction f = ma − F = 1.6 − 6 = −4.4 N, so 4.4 N backward.
+(3-d) At rest: F cos θ = f and F r = f R, so cos θ = r/R = 0.12/0.2 = 0.6 and θ = 53°.
+(4-a) x² + y² = L², so x dx/dt + y dy/dt = 0 and dy/dt = −x(dx/dt)/y = −(1.8)(0.4)/2.4 = −0.3 m/s. The top moves down at 0.3 m/s.
+(4-b) ΔU = mgΔy_cm = (8)(10)(1.2 − 0.8) = 32 J.
+(4-c) K_t = ½m(Lω/2)² = mL²ω²/8 and K_r = ½(mL²/12)ω² = mL²ω²/24, so K_t : K_r = 3 : 1, giving 24 J and 8 J. v_cm = √(2(24)/8) = √6 = 2.4 m/s.
+(5-a) v = J/m = 2/1 = 2 m/s.
+(5-b) J(H − R) = Iω with ω = v/R = J/(mR): J(H − R) = (2/5)mR²J/(mR), so H − R = 2R/5 and H = 7R/5 = 0.07 m.
+(5-c) ω = v/R = 2/0.05 = 40 rad/s. K_t = ½mv² = ½(1)(2)² = 2 J. K_r = ½Iω² = ½(2/5)(1)(0.05)²(40)² = 0.8 J.
+(6-a) T = 2π√(7a/(5g)) = 2π√(1/10) = 1.99 s, the same as the knife's.
+(6-b) T = 2π√(a/g) = 2π√(5/70) = 1.68 s.
+(6-c) Rolling, K = ½mv² + ½Iω² = (7/10)mv², so for the same drop v is smaller by √(5/7): part of the energy goes into rotation, and the ball takes longer.
+(7-a) v = ωR = (8)(0.25) = 2 m/s.
+(7-b) v_top = 2v = 4 m/s and v_bottom = 0.
+(7-c) v = √(v² + (ωR)²) = 2√2 = 2.8 m/s, at 45° below the horizontal.
+(8-a) L = mvr is conserved: v₂ = v₁r₁/r₂ = (2)(0.6)/0.3 = 4 m/s, and ω₂ = v₂/r₂ = 4/0.3 = 13.3 rad/s.
+(8-b) T = mv²/r: T₁ = (0.5)(2)²/0.6 = 3.3 N and T₂ = (0.5)(4)²/0.3 = 26.7 N.
+(8-c) W = ΔK = ½m(v₂² − v₁²) = ½(0.5)(16 − 4) = 3 J.
+(9-a) T_a = 2π/ω_a = 2π/2.42 = 2.6 s and T_b = 2π/ω_b = 2π/5.84 = 1.08 s.
+(9-b) ω_b²/ω_a² = (2 + √2)/(2 − √2) = (2 + √2)²/2, so ω_b/ω_a = (2 + √2)/√2 = 1 + √2. The ratio is irrational, so the motion never exactly repeats.
+(9-c) Slow mode: the lower mass swings the same way as the upper, (1 + √2) ≈ 2.4 times as far. Fast mode: the lower mass swings the opposite way, (√2 − 1) ≈ 0.41 times as far.
+(10-a) I₀ = V/R = 6/20 = 0.3 A. τ = RC = (20)(0.1) = 2 s. At V_C = 4 V: I = (6 − 4)/20 = 0.1 A, Q = CV = (0.1)(4) = 0.4 C, and U = ½CV² = ½(0.1)(16) = 0.8 J.
+(10-b) ω₀ = 1/√(LC) = 1/√(L/(Lω_a²)) = ω_a = 2.4 rad/s.
+(10-c) The rod receives P = τ_em ȧ = κiȧ. The emf does work εi = −κiȧ on the circuit, so the circuit loses κiȧ. If κi and ȧ have opposite signs, P < 0 and the energy flows from the rod to the circuit.
+(10-d) ω₁ = (2/3)(2.4) = 1.6 rad/s and ω₂ = (3/2)(2.4) = 3.6 rad/s. ω₁ω₂ = ω₀² = 5.9 s⁻² and ω₂/ω₁ = 9/4.
+(11-a) u = 1/√(L′C′) = 1/√((0.5×10⁻⁶)(0.2×10⁻⁹)) = 1×10⁸ m/s = c/3. Z = √(L′/C′) = √(0.5×10⁻⁶/0.2×10⁻⁹) = 50 Ω.
+(11-b) V = 6 + 6 = 12 V. I = 6/50 − 6/50 = 0. The energy per meter is ½C′V² = ½(0.2×10⁻⁹)(12)² = 14.4 nJ/m.
+(11-c) v₁ = u(f₊ − f₋)/(f₊ + f₋) = u/9 = 1.1×10⁷ m/s and v₂ = u(f₊ + f₋)/(f₊ − f₋) = 9u = 9×10⁸ m/s = 3c. The fast crests can't carry a signal; information travels at u.
+(12-a) E = 80 + 20 = 100 mJ. p = (80 − 20)/c = 60 mJ/c = 2×10⁻¹⁰ kg m/s, to the right.
+(12-b) Mc² = √(E² − (pc)²) = √(100² − 60²) = 80 mJ.
+(12-c) p′ = 0 when v = pc²/E = (60/100)c = 0.6c = 1.8×10⁸ m/s. γ = 1/√(1 − 0.36) = 1.25.
+(12-d) Δt₀ = Δt/γ = 10/1.25 = 8 s.
+(13-a) U = q₀²/(2C), so q₀ = √(2CU) = √(2(1.71)(0.080)) = 0.52 C and V₀ = q₀/C = 0.52/1.71 = 0.31 V.
+(13-b) 4νT and 9νT must both be multiples of 2π; gcd(4, 9) = 1, so νT = 2π and T = 2π/ν = 12π/ω₀ = 12π/2.42 = 15.6 s.
+(13-c) At T/2, 4νt = 4π and 9νt = 9π, so q/q₀ = 9/13 − 4/13 = 5/13. The current and the rod angle are sums of sines, both 0. U_C = (5/13)²(80) = 11.8 mJ; the inductor holds 0, so the other 68 mJ is the rods' kinetic energy.
+(13-d) Δt = γT = 1.25(15.6) = 19.5 s and Δx = vΔt = (1.8×10⁸)(19.5) = 3.5×10⁹ m. x = vt, so x_H = γ(x − vt) = 0 throughout.
