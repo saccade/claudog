@@ -471,6 +471,59 @@ def _serial(x):
     for old, new in SERIAL: x = x.replace(old, new)
     return x
 
+_OLD_13B_23 = ("(13-b) The statement's cosines are the forward parts of two hands swinging round from →, the slow one 4νt_H and the fast one "
+               "9νt_H. Their weights are positive and add to one, so q is back at q₀ only when both hands point → again: 4νT and 9νT whole "
+               "turns, which brings the upward parts and the velocities back too. Four and nine share no factor, so the first full return is "
+               "νT = τ: four turns of the slow ")
+_NEW_13B_23 = ("(13-b) The statement's cosines are the forward parts of two hands swinging round from →, the slow one sweeping at 1.6 strokes "
+               "a second and the fast one at 3.6, its 4ν and 9ν. Their weights are positive and add to one, so q is back at q₀ only when both "
+               "hands point → again, which brings the upward parts and the velocities back too. The fast hand sweeps 9 strokes for every 4 of "
+               "the slow one's, and four and nine share no factor, so the first full return takes four turns of the slow ")
+_HALFWAY = ("Halfway, the slow part has made two whole turns and the fast part four and a flip. Then Y = (5/13)Y₀ and Ẋ = −(12/13)ω₀Y₀, "
+            "so the capacitor holds (5/13)² of the energy and the swing's motion (12/13)²: 25 and 144 out of 169, a 5–12–13 triangle "
+            "made from 2² and 3².")
+_TALLY = ("The fixed 80 mJ held through that return gives ∫E dt = 1.3 J s. Here the action counted is that energy-time tally. On the "
+          "rods’ 2 kg, it’s 0.65 zam. Against the a-swing’s η = 6.8 kg m², the same tally is 0.19 zlam. The reference profile η/(2 kg) "
+          "takes zlam to zam. Neither tally is energy used up. Nobody asked for either of them.")
+SWEEPS = {   # (the part as it stands before shares, the part in sweeps): doc 10-24 22:15-22:16, applied at the end of build()
+    1: {"(13-b)": (
+        "(13-b) Picture each part's cycle as a hand swinging round from →, the slow one 4νt_H and the fast one 9νt_H. The statement's "
+        "cosines are the hands' forward parts and its sines their upward parts. The weights 9/13 and 4/13 are positive and add to one, so "
+        "q is back at q₀ only when both hands point → again. Then 4νT and 9νT are each a whole number of turns, and the upward parts and "
+        "the velocities return too. Four and nine share no factor, so the first full return is νT = τ: four turns of the slow part and "
+        "nine of the fast. That's T = τ/ν = 6τ/ω₀, about 16 s.",
+        "(13-b) Picture each part's cycle as a hand swinging round from →. The slow hand sweeps at 1.6 strokes a second and the fast one "
+        "at 3.6, the two tones from 10-d (the statement writes them 4ν and 9ν). The statement's cosines are the hands' forward parts and "
+        "its sines their upward parts. The weights 9/13 and 4/13 are positive and add to one, so q is back at q₀ only when both hands "
+        "point → again, and then the upward parts and the velocities are back too. That takes a whole number of turns from each hand. "
+        "The fast hand sweeps 9 strokes for every 4 of the slow one's, and four and nine share no factor, so the first time both are "
+        "home, the slow hand has gone round four times, about 25 strokes, and the fast one nine times, about 57. At 1.6 strokes a "
+        "second, 25 strokes take about 16 s.")},
+    2: {"(13-b)": (
+        _OLD_13B_23 + "part and nine of the fast. That's T = τ/ν = 6τ/ω₀, about 16 s.",
+        _NEW_13B_23 + "part and nine of the fast: about 25 strokes at 1.6 strokes a second, about 16 s.")},
+    3: {"(13-b)": (
+        _OLD_13B_23 + "tone and nine of the fast, the chord whole again. That's T = τ/ν = 6τ/ω₀, about 16 s.",
+        _NEW_13B_23 + "tone and nine of the fast, the chord whole again: about 25 strokes at 1.6 strokes a second, about 16 s.")},
+    4: {"(13-b)": (
+        "(13-b) q gets back to q₀ only when both hands point → again: 4νT and 9νT both whole turns. Four and nine share nothing, so "
+        "the first time is νT = τ, four turns low and nine high, the one machine's return: T = 6τ/ω₀, about 16 s. It was 16 s last "
+        "time, too.",
+        "(13-b) q gets back to q₀ only when both hands point → again. The slow one sweeps 1.6 strokes a second and the fast 3.6, four "
+        "to nine, and four and nine share nothing, so the first time is four turns low and nine high, about 25 strokes at 1.6, the "
+        "one machine's return: about 16 s. It was 16 s last time, too."),
+        "(α-3)": (
+        "(α-3) Both parts come back when 4νT and 9νT are whole turns. Four and nine share no factor, so the first time is νT = τ: "
+        "four turns low and nine turns high. " + _HALFWAY,
+        "(α-3) The slow part sweeps at 4ν and the fast at 9ν, four strokes to nine, and both are back when each has swept whole "
+        "turns. Four and nine share no factor, so the first time is four turns low and nine turns high. " + _HALFWAY),
+        "(α-4)": (
+        "(α-4) T = τ/ν = 6τ/ω₀, about 16 s. " + _TALLY,
+        "(α-4) ω₀ is about 2.4 strokes a second, so the slow part sweeps at 2/3 of it, 1.6. Its four turns, about 25 strokes, take "
+        "about 16 s. " + _TALLY)},
+}
+
+
 def checked_solution(items, label, expected, replacement):
     """A late highlight must not silently swallow a later source correction."""
     hits = [i for i, (_, text) in enumerate(items) if isinstance(text, str) and text.startswith(label)]
@@ -741,6 +794,12 @@ def build(k, shares=True):
     if k == 1:
         j = next(j for j, (t, x) in enumerate(out) if isinstance(x, str) and "There's a 2 riding along with that π." in x)
         out.insert(j + 1, ("p", "Carried further, it's 1.99 s. The half a percent between that and 2 has nothing to do in this house, so it doesn't even get a name. A digit that isn't paying rent can move out. Two seconds it is."))
+    # doc 10-24 22:15-22:16: "stop using the weird rotation workaround ... do it in sweeps instead", the workaround being
+    # "using lots of turns everywhere and multiplying by frequencies instead of keeping track of what's actually happening".
+    # The two hands sweep at 1.6 and 3.6 strokes a second (10-d), so 13-b and α-3, α-4 count the strokes each one sweeps
+    # instead of νT = τ and T = τ/ν. The statement's own ν stays in α-1 and α-2, where it's a local unit eating the algebra.
+    for label, (expected, line) in SWEEPS[k].items():
+        out = checked_solution(out, label, expected, line)
     if shares:   # doc 10:42: no trailing zeros; a fraction wherever a fraction is the true value (R-129)
         import shares as _shares
         out = _shares.apply(out, path=k)
