@@ -127,9 +127,9 @@ def test_controls_keep_the_pose_and_update_both_accounts():
     angle = c['angle'].value
     c['windings'].value = 36
     assert c['angle'].value == angle
-    assert 'crank' in panel.comparison.value
+    assert 'N·m' in panel.comparison.value
     c['current'].value = 0
-    assert '0 crank' in panel.comparison.value
+    assert '0 N·m' in panel.comparison.value
     c['heading'].value = 1
     c['edge'].click()
     assert c['angle'].value == np.pi/2
@@ -175,3 +175,4 @@ def test_sweep_torque_matches_the_shaft_part_of_the_total_moment():
         for angle in [.3, 1.5, 3.9]:
             flux = follow_flux(case, angle)
             assert_allclose(flux.torque, torque_about_shaft(case, flux.moment), atol=1e-12)
+

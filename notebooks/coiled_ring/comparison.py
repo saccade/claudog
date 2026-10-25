@@ -2,6 +2,7 @@
 
 import numpy as np
 from ring import state_at, torque_about_shaft, across_shaft
+from display_units import selection, scaled, words
 
 
 def reading(value, figures=5):
@@ -25,29 +26,32 @@ def torque_reading(case, value, unit, figures=5):
     return f'{reading(abs(value), figures)} {unit} {sense}'
 
 
-def flux_reading(value, figures=5):
+def flux_reading(value, figures=5, unit="weber"):
     if abs(value)<1e-9:
-        return '0 weber'
+        return f'0 {unit}'
     sense = 'in the home sense' if value>0 else 'in the reverse sense'
-    return f'{reading(abs(value), figures)} weber {sense}'
+    return f'{reading(abs(value), figures)} {unit} {sense}'
 
 
-def comparison_at(case, time):
+def comparison_at(case, time, units=None):
+    units = selection(units)
+    torque_unit = units["torque"]
+    tf = lambda value: scaled(value, "torque", units)
     state = state_at(case, time)
     force, flux = state.forces, state.flux
     error = np.linalg.norm(force.moment-flux.moment)
     rows = [
         ('What gets added', 'Forces on wire pieces, then their leverage',
          'Signed shadow areas; flux gained by the area arrow’s sweep'),
-        ('Net push', f'{reading(np.linalg.norm(force.net))} N',
-         '0 push · a uniform field keeps the linked flux unchanged during translation'),
-        ('Torque about the shaft', torque_reading(case, torque_about_shaft(case, force.moment), 'N m'),
-         torque_reading(case, flux.torque, 'crank')),
-        ('Across-shaft moment', moment_reading(across_shaft(case, force.moment), 'N m'),
-         moment_reading(across_shaft(case, flux.moment), 'crank')),
-        ('Total moment · world axes', moment_reading(force.moment, 'N m'),
-         moment_reading(flux.moment, 'crank')),
-        ('Linked flux', 'not used', flux_reading(flux.linked)),
+        ('Net push', words(np.linalg.norm(force.net), 'force', units),
+         '0 '+units['force']+' · a uniform field keeps the linked flux unchanged during translation'),
+        ('Torque about the shaft', torque_reading(case, tf(torque_about_shaft(case, force.moment)), torque_unit),
+         torque_reading(case, tf(flux.torque), torque_unit)),
+        ('Across-shaft moment', moment_reading(tf(across_shaft(case, force.moment)), torque_unit),
+         moment_reading(tf(across_shaft(case, flux.moment)), torque_unit)),
+        ('Total moment · world axes', moment_reading(tf(force.moment), torque_unit),
+         moment_reading(tf(flux.moment), torque_unit)),
+        ('Linked flux', 'not used', flux_reading(scaled(flux.linked,"flux",units),unit=units["flux"])),
     ]
     body = ''.join(f'<tr><th style="text-align:left;padding:9px">{name}</th>'
                    f'<td style="padding:9px">{left}</td><td style="padding:9px">{right}</td></tr>'
@@ -57,8 +61,9 @@ def comparison_at(case, time):
             '<th style="color:#24489c;padding:10px">Usual · add the forces</th>'
             '<th style="color:#a85147;padding:10px">Straightforward · follow the flux</th>'
             '</tr></thead><tbody>'+body+'</tbody></table>'
-            f'<p>Vector difference: {error:.2g} crank. '
+            f'<p>Vector difference: {words(error, 'torque', units, 2)}. '
             'The flux account uses straight wire segments; refining them shrinks this difference. '
             'Positive axis sense follows the right-hand convention. '
             'The bearings balance any across-shaft moment; it is zero in this model. '
             'Changing heading changes the world components of the same torque about the shaft.</p>')
+

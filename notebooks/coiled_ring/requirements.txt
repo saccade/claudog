@@ -7,3 +7,8 @@ ipykernel==7.4.0
 nbformat==5.11.1
 sympy==1.14.0
 pytest==9.1.1
+
+
+# Capture-behavior experiments and a still-image fallback if Manim is absent.
+scipy>=1.10
+matplotlib>=3.7

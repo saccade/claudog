@@ -105,3 +105,46 @@ takes its torque from it. `test_capture.py` checks it against a small turn, a si
 voltmeter, and the summed wire forces. `units.txt` gains `catch`, and `rad` as another
 name for the stroke. The ring's angle counts away from face-on, so its captures read
 with the opposite sign from the write-up, which counts toward alignment.
+
+
+
+## Capture behavior — Codex, 2026-10-25
+
+Open **Codex-Capture-Behavior-261025.ipynb** for three experiments: a prescribed
+turn, equal-charge pulses delivered early or late, and a freely responding shaft
+with damping and a separate periodic torque drive. Constant capture gives the
+simple product rules. Changing capture requires the local derivative and integral
+rules. A driven bare ring supplies an example consistent with chaos; with no
+periodic drive the same changing capture settles regularly.
+
+The behavior notebook is independent of Manim. Its small environment can be
+installed with `python -m pip install -r requirements-behavior.txt`. It supports
+Python 3.11 and later. Keep capture_behavior.py, behavior_panel.py, and
+display_units.py beside it. Saved static figures make the comparisons readable
+without a kernel; Run All connects the live controls.
+
+All five interactive panels in this folder now have unit selectors with SI
+defaults: the original ring panel, the Capture panel, and the three new behavior
+panels. Units change presentation, not the apparatus. Book units remain explicit
+code choices, for example `Ring(radius=(10, 'hand'))` or
+`explore(case, view, units={'length': 'hand', 'torque': 'crank'})`. For the new
+notebook use `DISPLAY_UNITS = {'spin': 'roll', 'energy': 'thump'}`.
+
+The original ring problem statement is unchanged. A short precision aside now
+precedes its convergence comparison, with the 3.2044245 m² versus 3.2 m² example.
+An equivalent aside precedes the Capture notebook's first numerical comparison.
+The new notebook has its own pulse-precision example before numerical methods.
+
+Manim remains the renderer when installed. A Matplotlib still-image fallback
+lets the existing panels and numerical checks work without its native libraries.
+The older Capture notebook explicitly reports generated EMF, with a minus; the
+new behavior notebook uses the agreed terminal voltage drop, with a plus. Their
+physical power accounts are identical.
+
+### Provenance — appended by Codex
+
+2026-10-25 — Applied dr. kraemer's SI-default and selectable-unit instructions
+after his instruction to apply updates as work proceeds. Added the precision
+asides while preserving the original problem statement. Built the three behavior
+experiments from his and Claude's capture mapping table. Existing Claude sources
+retain their authorship. New implementations and renderer fallback are Codex's.

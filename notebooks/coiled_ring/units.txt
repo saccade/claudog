@@ -19,3 +19,4 @@ tesla = weber / sheet = T
 catch = weber / stroke
 foot = 0.3048 * meter = ft
 inch = foot / 12 = in
+

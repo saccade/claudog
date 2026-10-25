@@ -11,3 +11,15 @@ q = registry.Quantity
 def number(amount, unit):
     value, source = amount
     return q(value, source).to(unit).magnitude
+
+
+
+def field_number(amount):
+    """Accept SI tesla or the explicit-angle book field."""
+    from pint.errors import DimensionalityError
+    value, source = amount
+    field = q(value, source)
+    try:
+        return field.to('tesla').magnitude
+    except DimensionalityError:
+        return field.to('tesla * stroke').magnitude

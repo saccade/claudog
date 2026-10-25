@@ -5,17 +5,17 @@ from functools import cached_property, lru_cache
 from typing import NamedTuple
 
 import numpy as np
-from units import number
+from units import number, field_number
 
 
 @dataclass(frozen=True)
 class Ring:
-    radius: tuple = (10, 'hand')
-    tube: tuple = (2, 'hand')
+    radius: tuple = (1, 'meter')
+    tube: tuple = (.2, 'meter')
     current: tuple = (2, 'ampere')
-    field: tuple = (1, 'tesla * stroke')
-    sweep: tuple = (1, 'sweep')
-    heading: tuple = (0, 'stroke')
+    field: tuple = (1, 'tesla')
+    sweep: tuple = (1, 'rad/second')
+    heading: tuple = (0, 'rad')
     windings: int = 25
     samples_per_winding: int = 512
 
@@ -24,7 +24,7 @@ class Ring:
         return dict(radius=number(self.radius, 'meter'),
                     tube=number(self.tube, 'meter'),
                     current=number(self.current, 'ampere'),
-                    field=number(self.field, 'tesla * stroke'),
+                    field=field_number(self.field),
                     sweep=number(self.sweep, 'sweep'),
                     heading=number(self.heading, 'stroke'))
 
@@ -142,3 +142,4 @@ def torque_about_shaft(case, moment):
 
 def across_shaft(case, moment):
     return moment - torque_about_shaft(case, moment)*shaft(case)
+

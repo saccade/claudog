@@ -1,9 +1,14 @@
 """One Manim camera for the winding and its shadow. Codex."""
 
 import numpy as np
-from manim import Camera, VGroup, VMobject, Line, Arrow, Text, Dot
+try:
+    from manim import Camera, VGroup, VMobject, Line, Arrow, Text, Dot
+    HAS_MANIM = True
+except ImportError:
+    HAS_MANIM = False
 from ring import state_at, shaft, torque_about_shaft
 from comparison import flux_reading, torque_reading
+from display_units import selection, scaled
 
 PAPER = '#f8f7f2'
 INK = '#24489c'
@@ -54,7 +59,8 @@ def ring_figure(case, points, area):
 
 
 class RingView:
-    def __init__(self, pixels=1100):
+    def __init__(self, pixels=1100, units=None):
+        self.display_units = selection(units)
         self.camera = Camera(pixel_width=pixels, pixel_height=round(pixels*9/16),
                              frame_width=14.2, frame_height=14.2*9/16,
                              background_color=PAPER)
@@ -87,12 +93,16 @@ class RingView:
                                       max_tip_length_to_length_ratio=.22))
         objects.add(Dot(shadow([0,0,0]), color=GHOST, radius=.025))
         objects.add(label(f'{case.windings} windings around the tube', [-3.65,-2.85,0], 19))
-        objects.add(label(flux_reading(state.flux.linked, 3), [3.4,-2.85,0], 17, FLUX))
+        objects.add(label(flux_reading(scaled(state.flux.linked,"flux",self.display_units),3,self.display_units["flux"]), [3.4,-2.85,0], 17, FLUX))
         for torque, center, unit, color in (
-            (torque_about_shaft(case, state.forces.moment), -3.65, 'N m', INK),
-            (state.flux.torque, 3.4, 'crank', FORCE)):
-            words = torque_reading(case, torque, unit, 3)
+            (torque_about_shaft(case, state.forces.moment), -3.65, self.display_units['torque'], INK),
+            (state.flux.torque, 3.4, self.display_units['torque'], FORCE)):
+            words = torque_reading(case, scaled(torque,"torque",self.display_units), unit, 3)
             objects.add(label(f'torque: {words}', [center,-3.23,0], 16, color))
         self.camera.reset()
         self.camera.capture_mobjects([objects])
         return self.camera.get_image().copy()
+
+
+if not HAS_MANIM:
+    from fallback_view import RingView

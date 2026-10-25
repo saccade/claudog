@@ -78,3 +78,4 @@ def test_catch_closes_both_laws():
     assert q(1, 'catch * sweep').to('volt').magnitude == pytest.approx(1)
     assert q(1, 'newton * meter / rad / ampere').to('catch').magnitude == pytest.approx(1)
     assert q(1, 'volt * second / rad').to('catch').magnitude == pytest.approx(1)
+
