@@ -503,7 +503,7 @@ SWEEPS = {   # (the part as it stands before shares, the part in sweeps): doc 10
         "(α-3)": (
         "(α-3) Both parts come back when 4νT and 9νT are whole turns. Four and nine share no factor, so the first time is νT = τ: "
         "four turns low and nine turns high. " + _HALFWAY,
-        "(α-3) The slow part sweeps at 4ν and the fast at 9ν, four strokes to nine, and both are back when each has swept whole "
+        "(α-3) The slow part sweeps at 4ν and the fast at 9ν, four to nine, and both are back when each has swept whole "
         "turns. Four and nine share no factor, so the first time is four turns low and nine turns high. " + _HALFWAY),
         "(α-4)": (
         "(α-4) T = τ/ν = 6τ/ω₀, about 16 s. " + _TALLY,
