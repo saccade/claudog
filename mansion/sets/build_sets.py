@@ -486,19 +486,7 @@ _TALLY = ("The fixed 80 mJ held through that return gives ∫E dt = 1.3 J s. Her
           "rods’ 2 kg, it’s 0.65 zam. Against the a-swing’s η = 6.8 kg m², the same tally is 0.19 zlam. The reference profile η/(2 kg) "
           "takes zlam to zam. Neither tally is energy used up. Nobody asked for either of them.")
 SWEEPS = {   # (the part as it stands before shares, the part in sweeps): doc 10-24 22:15-22:16, applied at the end of build()
-    1: {"(13-b)": (
-        "(13-b) Picture each part's cycle as a hand swinging round from →, the slow one 4νt_H and the fast one 9νt_H. The statement's "
-        "cosines are the hands' forward parts and its sines their upward parts. The weights 9/13 and 4/13 are positive and add to one, so "
-        "q is back at q₀ only when both hands point → again. Then 4νT and 9νT are each a whole number of turns, and the upward parts and "
-        "the velocities return too. Four and nine share no factor, so the first full return is νT = τ: four turns of the slow part and "
-        "nine of the fast. That's T = τ/ν = 6τ/ω₀, about 16 s.",
-        "(13-b) Picture each part's cycle as a hand swinging round from →. The slow hand sweeps at 1.6 strokes a second and the fast one "
-        "at 3.6, the two tones from 10-d (the statement writes them 4ν and 9ν). The statement's cosines are the hands' forward parts and "
-        "its sines their upward parts. The weights 9/13 and 4/13 are positive and add to one, so q is back at q₀ only when both hands "
-        "point → again, and then the upward parts and the velocities are back too. That takes a whole number of turns from each hand. "
-        "The fast hand sweeps 9 strokes for every 4 of the slow one's, and four and nine share no factor, so the first time both are "
-        "home, the slow hand has gone round four times, about 25 strokes, and the fast one nine times, about 57. At 1.6 strokes a "
-        "second, 25 strokes take about 16 s.")},
+    1: {},   # doc 22:26: "definitely put path 1 back to normal" (its slow burn keeps the statement's ν and turns)
     2: {"(13-b)": (
         _OLD_13B_23 + "part and nine of the fast. That's T = τ/ν = 6τ/ω₀, about 16 s.",
         _NEW_13B_23 + "part and nine of the fast: about 25 strokes at 1.6 strokes a second, about 16 s.")},
@@ -796,7 +784,8 @@ def build(k, shares=True):
         out.insert(j + 1, ("p", "Carried further, it's 1.99 s. The half a percent between that and 2 has nothing to do in this house, so it doesn't even get a name. A digit that isn't paying rent can move out. Two seconds it is."))
     # doc 10-24 22:15-22:16: "stop using the weird rotation workaround ... do it in sweeps instead", the workaround being
     # "using lots of turns everywhere and multiplying by frequencies instead of keeping track of what's actually happening".
-    # The two hands sweep at 1.6 and 3.6 strokes a second (10-d), so 13-b and α-3, α-4 count the strokes each one sweeps
+    # The two hands sweep at 1.6 and 3.6 strokes a second (10-d), so 13-b (paths 2 to 4; doc 22:26 put path 1 back)
+    # and α-3, α-4 count the strokes each one sweeps
     # instead of νT = τ and T = τ/ν. The statement's own ν stays in α-1 and α-2, where it's a local unit eating the algebra.
     for label, (expected, line) in SWEEPS[k].items():
         out = checked_solution(out, label, expected, line)
