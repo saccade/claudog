@@ -489,6 +489,9 @@ SWEEPS = {   # (the part as it stands before shares, the part in sweeps): doc 10
     # doc 22:49-22:53: 10-b states the identity (a stroke counts as one) in paths 2 and 3; path 3 then treats 13-b as
     # obvious, and path 2 builds 13-b up in parts
     2: {"(10-b)": (_OLD_10B, _NEW_10B),
+        # doc 10-25 09:19-09:21: the handle on flux is in 10-c, packed into κ; path 2 ("just 2") unpacks it in one line
+        "(10-c)": ("(10-c) The statement writes the torque τ_em; here it's χ_em = κi: the current cranks the rod. The power is the rod's sweep of that torque, κiȧ. The statement's minus in ε = −κȧ is a direction: the rod's motion drives an emf of κȧ back against the current that cranks it, so the circuit gives up the voltage of the current, κȧ of i: the same κiȧ. Whatever the rod gets, the circuit gives up. When the current cranks the rod against its sweep, the energy runs the other way, and the rod's giving its energy to the circuit instead.",
+                   "(10-c) The statement writes the torque τ_em; here it's χ_em = κi: the current cranks the rod. The power is the rod's sweep of that torque, κiȧ. The statement's minus in ε = −κȧ is a direction: the rod's motion drives an emf of κȧ back against the current that cranks it, so the circuit gives up the voltage of the current, κȧ of i: the same κiȧ. Whatever the rod gets, the circuit gives up. When the current cranks the rod against its sweep, the energy runs the other way, and the rod's giving its energy to the circuit instead. The κ is how much the coil's linked flux changes per stroke the rod swings: ε dt = −κ da = −dΦ. So κ does two jobs, torque per amp and flux per stroke, and they're the same unit, a weber per stroke."),
         "(13-b)": (
         _OLD_13B_23 + "part and nine of the fast. That's T = τ/ν = 6τ/ω₀, about 16 s.",
         "(13-b) Take it in parts. Each of the statement's cosines is the forward part of a hand swinging round from →, the slow one "
