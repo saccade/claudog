@@ -475,24 +475,33 @@ _OLD_13B_23 = ("(13-b) The statement's cosines are the forward parts of two hand
                "9νt_H. Their weights are positive and add to one, so q is back at q₀ only when both hands point → again: 4νT and 9νT whole "
                "turns, which brings the upward parts and the velocities back too. Four and nine share no factor, so the first full return is "
                "νT = τ: four turns of the slow ")
-_NEW_13B_23 = ("(13-b) The statement's cosines are the forward parts of two hands swinging round from →, the slow one sweeping at 1.6 strokes "
-               "a second and the fast one at 3.6, its 4ν and 9ν. Their weights are positive and add to one, so q is back at q₀ only when both "
-               "hands point → again, which brings the upward parts and the velocities back too. The fast hand sweeps 9 strokes for every 4 of "
-               "the slow one's, and four and nine share no factor, so the first full return takes four turns of the slow ")
 _HALFWAY = ("Halfway, the slow part has made two whole turns and the fast part four and a flip. Then Y = (5/13)Y₀ and Ẋ = −(12/13)ω₀Y₀, "
             "so the capacitor holds (5/13)² of the energy and the swing's motion (12/13)²: 25 and 144 out of 169, a 5–12–13 triangle "
             "made from 2² and 3².")
 _TALLY = ("The fixed 80 mJ held through that return gives ∫E dt = 1.3 J s. Here the action counted is that energy-time tally. On the "
           "rods’ 2 kg, it’s 0.65 zam. Against the a-swing’s η = 6.8 kg m², the same tally is 0.19 zlam. The reference profile η/(2 kg) "
           "takes zlam to zam. Neither tally is energy used up. Nobody asked for either of them.")
+_OLD_10B = "(10-b) With C = 1/(Lω_a²), LC = 1/ω_a², so ω₀ = 1/√(LC) = ω_a = 2.4 sweep. The loop on its own cycles with the slow mode exactly."
+_NEW_10B = ("(10-b) With C = 1/(Lω_a²), LC = 1/ω_a², so ω₀ = 1/√(LC) = ω_a. The coil and the can give a plain 2.4 per second. "
+            "A stroke counts as one, so that's 2.4 strokes a second: the loop sweeps with the slow mode exactly.")
 SWEEPS = {   # (the part as it stands before shares, the part in sweeps): doc 10-24 22:15-22:16, applied at the end of build()
     1: {},   # doc 22:26: "definitely put path 1 back to normal" (its slow burn keeps the statement's ν and turns)
-    2: {"(13-b)": (
+    # doc 22:49-22:53: 10-b states the identity (a stroke counts as one) in paths 2 and 3; path 3 then treats 13-b as
+    # obvious, and path 2 builds 13-b up in parts
+    2: {"(10-b)": (_OLD_10B, _NEW_10B),
+        "(13-b)": (
         _OLD_13B_23 + "part and nine of the fast. That's T = τ/ν = 6τ/ω₀, about 16 s.",
-        _NEW_13B_23 + "part and nine of the fast: about 25 strokes at 1.6 strokes a second, about 16 s.")},
-    3: {"(13-b)": (
+        "(13-b) Take it in parts. Each of the statement's cosines is the forward part of a hand swinging round from →, the slow one "
+        "sweeping at 4ν, 1.6 strokes a second, and the fast one at 9ν, 3.6. The weights are positive and add to one, so q is back at "
+        "q₀ only when both hands point → again, and then the upward parts and the velocities are back too. A hand points → again "
+        "each time it finishes a turn. The fast hand sweeps 9 strokes for every 4 of the slow one's, and four and nine share no "
+        "factor, so they first finish turns together after four of the slow hand's and nine of the fast one's. Four turns is about "
+        "25 strokes, and at 1.6 strokes a second that takes about 16 s.")},
+    3: {"(10-b)": (_OLD_10B, _NEW_10B),
+        "(13-b)": (
         _OLD_13B_23 + "tone and nine of the fast, the chord whole again. That's T = τ/ν = 6τ/ω₀, about 16 s.",
-        _NEW_13B_23 + "tone and nine of the fast, the chord whole again: about 25 strokes at 1.6 strokes a second, about 16 s.")},
+        "(13-b) The hands sweep at 1.6 and 3.6, four to nine, so both first point → again after four turns low and nine high, the "
+        "chord whole again: about 25 strokes at 1.6, about 16 s.")},
     4: {"(13-b)": (
         "(13-b) q gets back to q₀ only when both hands point → again: 4νT and 9νT both whole turns. Four and nine share nothing, so "
         "the first time is νT = τ, four turns low and nine high, the one machine's return: T = 6τ/ω₀, about 16 s. It was 16 s last "
