@@ -15,7 +15,7 @@ fwd, left, up = np.eye(3)                     # →, ↑ on the page, ↺ out of
 vA, wA = 3*fwd, 200*up
 vB, wB = 0*fwd, 0*up
 
-# Energy per lump before: most of it is in the spin.
+# Energy per lump (thump per lump) before: most of it is in the spin.
 def zip_(v, w):
     return v @ v/2 + k*R**2*(w @ w)/2
 before = zip_(vA, wA) + zip_(vB, wB)
@@ -57,4 +57,4 @@ assert np.isclose(before - after, heat) and np.isclose(heat, .6696)
 assert np.isclose(3*5/7, 2.142857, atol=1e-6)
 print(f'B: 3 cat →, {vB1 @ left:g} cat left, ↻ sweeping at {-wB1 @ up:g}. '
       f'A: stopped, {-vA1 @ left:g} cat right, ↺ at {wA1 @ up:g}. '
-      f'zip {before:g} → {after:.4g}, heat {heat:.4g}. All checks pass.')
+      f'{before:g} → {after:.4g} thump per lump, heat {heat:.4g}. All checks pass.')

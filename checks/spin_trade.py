@@ -49,7 +49,7 @@ assert before / F(7, 5) == 4
 J = v1 - v0                                    # impulse per mass
 assert np.allclose(J, -4*fwd + 11*up) and F(4, 11) < F(37, 100)
 
-# Both ledgers: energy per mass before and after; the rest went to heat in the bounce and the skid.
+# Both ledgers: energy per lump (thump per lump) before and after; the rest went to heat in the bounce and the skid.
 def zip_(v, w):
     return v @ v / 2 + k*R**2*(w @ w)/2
 e0, e1 = zip_(v0, w0), zip_(v1, w1)
@@ -59,4 +59,4 @@ assert np.isclose(bounce, 5.5) and np.isclose(e0 - e1 - bounce, 28)   # the rest
 # The one backward pull: each cat off the travel moves the rim's pace 1/k = 5/2 cat.
 assert np.isclose((v0 - v1) @ fwd / k, 10)      # 6 forward at the bottom to 4 back
 print(f'out: {v1x:g} cat forward, 5 cat up, topspin sweeping at {-w1 @ out:g}; '
-      f'zip {e0:g} before, {e1:g} after; grip needs 4/11. All checks pass.')
+      f'{e0:g} thump per lump before, {e1:g} after; grip needs 4/11. All checks pass.')
