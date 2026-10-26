@@ -1148,22 +1148,33 @@ in brief.
     is noise, and results are meant to survive rounding. Don't ask
     for more significant figures, and don't report a rounding
     difference as an error.
-    Units: hand 0.1 m; card 0.01 m^2, a profile; lump 1 kg; cat 1
-    m/s, a speed; zoom 1 m/s^2, and gravity is 10 zoom; push 1 N,
-    a force, and a pull is a push pulling; thump 1 J; pow 1 W;
-    crank 1 N m, a torque; stroke 1 radian, and a turn is about
-    6.3 stroke; oompf 1 kg m/s; roll 1 kg m^2/s; ponder 1 kg m;
-    wheel 1 kg m^2. Units take no plural s, except strokes.
-    Quantities: movement is a body's mass at its velocity, in
-    oompf. Sweep is how fast a thing turns, in strokes a second.
-    Pace is how fast a point on a turning lever moves, the sweep
-    of the lever, in cat. Spin is turning movement, in roll;
-    inertia is mass at a lever, at a lever, in wheel; torque is
-    the leverage of a push, in crank. Punch is the energy of a
+    Units: hand 0.1 m, for sizes; the meter stays the meter
+    wherever a push acts through it; card 0.01 m^2; lump 1 kg; cat
+    1 m/s, a speed; zoom 1 m/s^2, and gravity is 10 zoom; push
+    1 N, a force, and a pull is a push pulling; thump 1 J, a push
+    through a meter; pow 1 W, a thump a second; crank 1 N m, a
+    torque; stroke 1 radian, and a turn is about 6.3 stroke; oompf
+    1 kg m/s; roll 1 kg m^2/s; ponder 1 kg m; wheel 1 kg m^2.
+    Units take no plural s (5.3 hand), except stroke: 4.5 strokes
+    a second.
+    Quantities: movement is mass at velocity, in oompf. Sweep is
+    how fast a thing turns, in strokes a second. Pace is how fast
+    a point on a turning lever moves, the sweep of the lever:
+    1 hand sweeping at 50 has a pace of 5 cat. Spin is turning
+    movement, in roll. Bulk is mass at a lever, in ponder, and
+    inertia is bulk at a lever, in wheel. Torque is the leverage
+    of a push, in crank. Work is a push through a distance, in
+    thump, and power is work per second, in pow: a push at a
+    velocity, or a torque at a sweep. Punch is the energy of a
     body's travel, hook the energy of its spin, and heft the
-    energy height stores, all in thump. Zip is punch per lump,
-    zing is hook per wheel, zump is hook per lump, and swirl is
-    spin per lump: they're already per mass or per inertia.
+    energy height stores (weight is the pull; heft is what the
+    height stores), all in thump. Zip is punch per lump, zing is
+    hook per wheel, zump is hook per lump, and swirl is spin per
+    lump: they're already per mass or per inertia.
+    Speed added from rest comes in a bit at a time, at every speed
+    from 0 up, so it's counted at half the final speed on average:
+    10 cat from rest is 10 cat added at an average of 5, which
+    keeps 50 zip, and a 60 lump body stores 3000 thump of punch.
     So "zip per lump" is a slip.
     Arrows name directions in the scene, not on the page. → is
     forward, whichever way the page sits; label a figure's forward
@@ -1192,38 +1203,49 @@ in brief.
     A word you don't know is probably one of this work's defined
     words. Ask whoever sent you before treating it as an error.
     WRITING A SIDE-BY-SIDE
-    Units: hand 0.1 m; card 0.01 m^2, a profile; lump 1 kg; cat 1
-    m/s, a speed; zoom 1 m/s^2, and gravity is 10 zoom; push 1 N,
-    a force, and a pull is a push pulling; thump 1 J; pow 1 W;
-    crank 1 N m, a torque; stroke 1 radian, and a turn is about
-    6.3 stroke; oompf 1 kg m/s; roll 1 kg m^2/s; ponder 1 kg m;
-    wheel 1 kg m^2. Units take no plural s, except strokes.
-    Quantities: movement is a body's mass at its velocity, in
-    oompf. Sweep is how fast a thing turns, in strokes a second.
-    Pace is how fast a point on a turning lever moves, the sweep
-    of the lever, in cat. Spin is turning movement, in roll;
-    inertia is mass at a lever, at a lever, in wheel; torque is
-    the leverage of a push, in crank. Punch is the energy of a
+    Units: hand 0.1 m, for sizes; the meter stays the meter
+    wherever a push acts through it; card 0.01 m^2; lump 1 kg; cat
+    1 m/s, a speed; zoom 1 m/s^2, and gravity is 10 zoom; push
+    1 N, a force, and a pull is a push pulling; thump 1 J, a push
+    through a meter; pow 1 W, a thump a second; crank 1 N m, a
+    torque; stroke 1 radian, and a turn is about 6.3 stroke; oompf
+    1 kg m/s; roll 1 kg m^2/s; ponder 1 kg m; wheel 1 kg m^2.
+    Units take no plural s (5.3 hand), except stroke: 4.5 strokes
+    a second.
+    Quantities: movement is mass at velocity, in oompf. Sweep is
+    how fast a thing turns, in strokes a second. Pace is how fast
+    a point on a turning lever moves, the sweep of the lever:
+    1 hand sweeping at 50 has a pace of 5 cat. Spin is turning
+    movement, in roll. Bulk is mass at a lever, in ponder, and
+    inertia is bulk at a lever, in wheel. Torque is the leverage
+    of a push, in crank. Work is a push through a distance, in
+    thump, and power is work per second, in pow: a push at a
+    velocity, or a torque at a sweep. Punch is the energy of a
     body's travel, hook the energy of its spin, and heft the
-    energy height stores, all in thump. Zip is punch per lump,
-    zing is hook per wheel, zump is hook per lump, and swirl is
-    spin per lump: they're already per mass or per inertia.
-    Use these names; if you need a new one, mark it as new.
+    energy height stores (weight is the pull; heft is what the
+    height stores), all in thump. Zip is punch per lump, zing is
+    hook per wheel, zump is hook per lump, and swirl is spin per
+    lump: they're already per mass or per inertia.
+    Speed added from rest comes in a bit at a time, at every speed
+    from 0 up, so it's counted at half the final speed on average:
+    10 cat from rest is 10 cat added at an average of 5, which
+    keeps 50 zip, and a 60 lump body stores 3000 thump of punch.
+    Use these names. If you need a new one, mark it as new with
+    "(new)" after its first use.
     Two columns, the usual way and the dog way, from the same
     inputs. Don't give one column rpm and degrees and the other
     sweeps and 3-4-5 slants.
     Each column stands alone. Read without the other, every number
     on it has a source on it.
-    The dog column is math, not commentary. Give each quantity that
-    keeps coming back an English name and one line on why to
+    The dog column is math, not commentary. Give each quantity
+    that keeps coming back an English name and one line on why to
     believe the name, and keep pushes and speeds apart. For
-    example: the push along the line of centers changes B's
-    velocity along it by 3 cat. The faces slide the whole hit, and
-    friction is 1/25 of the push at every moment, so friction
-    changes B's velocity across the line by 1/25 of 3 cat, 0.12
-    cat. (Two pushes
-    through the same instant, one a fixed share of the other, make
-    changes in that share.)
+    example, from a pool shot: the push along the line of centers
+    changes B's velocity along it by 3 cat. The faces slide the
+    whole hit, and friction is 1/25 of the push at every moment,
+    so friction changes B's velocity across the line by 1/25 of
+    3 cat, 0.12 cat. (Two pushes through the same instant, one a
+    fixed share of the other, make changes in that share.)
     Translate one to one first. Only where the translation reads
     badly, flip it, model it, and reflip it: turn the step into
     the form that reads best in the dog column, work it there, and
@@ -1253,36 +1275,51 @@ in brief.
     reasoning shows. The units say out loud that this is playing
     with ideas, not the last word. Readers are curious people
     learning mechanics.
-    Units: hand 0.1 m; card 0.01 m^2, a profile; lump 1 kg; cat 1
-    m/s, a speed; zoom 1 m/s^2, and gravity is 10 zoom; push 1 N,
-    a force, and a pull is a push pulling; thump 1 J; pow 1 W;
-    crank 1 N m, a torque; stroke 1 radian, and a turn is about
-    6.3 stroke; oompf 1 kg m/s; roll 1 kg m^2/s; ponder 1 kg m;
-    wheel 1 kg m^2. Units take no plural s, except strokes.
-    Quantities: movement is a body's mass at its velocity, in
-    oompf. Sweep is how fast a thing turns, in strokes a second.
-    Pace is how fast a point on a turning lever moves, the sweep
-    of the lever, in cat. Spin is turning movement, in roll;
-    inertia is mass at a lever, at a lever, in wheel; torque is
-    the leverage of a push, in crank. Punch is the energy of a
+    Units: hand 0.1 m, for sizes; the meter stays the meter
+    wherever a push acts through it; card 0.01 m^2; lump 1 kg; cat
+    1 m/s, a speed; zoom 1 m/s^2, and gravity is 10 zoom; push
+    1 N, a force, and a pull is a push pulling; thump 1 J, a push
+    through a meter; pow 1 W, a thump a second; crank 1 N m, a
+    torque; stroke 1 radian, and a turn is about 6.3 stroke; oompf
+    1 kg m/s; roll 1 kg m^2/s; ponder 1 kg m; wheel 1 kg m^2.
+    Units take no plural s (5.3 hand), except stroke: 4.5 strokes
+    a second.
+    Quantities: movement is mass at velocity, in oompf. Sweep is
+    how fast a thing turns, in strokes a second. Pace is how fast
+    a point on a turning lever moves, the sweep of the lever:
+    1 hand sweeping at 50 has a pace of 5 cat. Spin is turning
+    movement, in roll. Bulk is mass at a lever, in ponder, and
+    inertia is bulk at a lever, in wheel. Torque is the leverage
+    of a push, in crank. Work is a push through a distance, in
+    thump, and power is work per second, in pow: a push at a
+    velocity, or a torque at a sweep. Punch is the energy of a
     body's travel, hook the energy of its spin, and heft the
-    energy height stores, all in thump. Zip is punch per lump,
-    zing is hook per wheel, zump is hook per lump, and swirl is
-    spin per lump: they're already per mass or per inertia.
+    energy height stores (weight is the pull; heft is what the
+    height stores), all in thump. Zip is punch per lump, zing is
+    hook per wheel, zump is hook per lump, and swirl is spin per
+    lump: they're already per mass or per inertia.
+    Speed added from rest comes in a bit at a time, at every speed
+    from 0 up, so it's counted at half the final speed on average:
+    10 cat from rest is 10 cat added at an average of 5, which
+    keeps 50 zip, and a 60 lump body stores 3000 thump of punch.
     Rewrite a problem's SI numbers in dog units where they match:
-    3 kg is 3 lump, 1.8 m is 18 hand. Where a dog word collides
-    with something in the scene (a real cat, a real wheel), the
-    scene keeps its word and the dog word steps aside.
+    3 kg is 3 lump, 2 m/s is 2 cat. Keep meters where a push acts
+    through them, and use hands for sizes, like a drum 1 hand in
+    radius. Where a dog word collides with something in the scene
+    (a real cat, a real wheel), the scene keeps its word and the
+    dog word steps aside.
     Round hard: gravity is 10 zoom. Pick sizes so the units eat the
     algebra, and pick values that aren't halfway. Made-up numbers
     are exact: 6, not 6.0.
-    Dog units take no plural s (5.3 hand), except strokes.
     Name the quantity that means something, say how to measure it,
     and relate it to the others in sentences that don't circle.
-    Say products in English: "of" leads with the operator, the
-    rate or effort doing the multiplying, and "at" leads with the
-    thing. 12 V of 2 A is 24 W; 3 lump at 10 zoom is a 30 push
-    weight; 2 lump at 5 hand is a ponder.
+    Say products in English. "Of" leads with the operator, the
+    rate or effort doing the multiplying: 12 V of 2 A is 24 W; the
+    sweep of the lever. "At" leads with the thing: 3 lump at
+    10 zoom is a 30 push weight; 2 lump at 5 hand is a ponder.
+    "Through" is a push along a distance: 40 push through 3 meter
+    is 120 thump. "On" and "over" divide: 5 cat on 1 hand sweeps
+    at 50.
     Say directions like they're ordinary: 2 cat uphill. A force is
     a size with a sense.
     Operators' words: powering is a motor driving its load;
