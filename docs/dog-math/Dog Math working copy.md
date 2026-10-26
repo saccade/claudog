@@ -128,6 +128,15 @@ structural work, and friendly units make the numbers easy.
     name and one line on why to believe the name. Translate one
     to one first; flip, model, and reflip only where the
     translation reads badly.
+20\. Apparatus isn't free. Every extra symbol, convention, and
+    guard costs the reader something, and the beginner pays the
+    most. An expert files it away as background; a beginner can't
+    yet tell which parts are noise and which carry the step, so
+    they pay attention to all of it. Add apparatus only where it
+    carries a step the reader needs. With bots putting more and
+    harder material in front of more people who understand it
+    less, the price of entry matters more than ever, and a high
+    one gets harder to pay.
 Where a dog word steps aside
 \----------------------------
 Each of these is a rock on the trail. Point at it in passing, as
@@ -881,6 +890,10 @@ is over.
   - Move off sine and cosine and into the arrows by the third
     problem (section 9).
   - Don't point at the ghosts (section 8).
+  - A rare form is a signal. Against a background of contractions,
+    plain sums, and turns, a full form, a clever trick with an
+    integral, or a π that really is a flip stands out and carries
+    information. Keep them rare so they keep working.
 14\. Road-legal mode
 \-------------------
 For dogs on the road in daylight. All the words and none of the
