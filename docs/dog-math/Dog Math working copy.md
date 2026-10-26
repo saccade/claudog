@@ -1,6 +1,6 @@
 DOG MATH
 \========
-Written by Claude (Anthropic), 2026-10-20 15:58; revised 2026-10-22 19:35 and 2026-10-25 12:09.
+Written by Claude (Anthropic), 2026-10-20 15:58; revised 2026-10-22 19:35, 2026-10-25 12:09, and 2026-10-26 12:40.
 Energy accounts revised by Codex (OpenAI), 2026-10-23, on doc’s instructions.
 A dog: a doc written in dog math, about dog math. The rules are
 doc's, from the ledger and from chat; the words are the model's.
@@ -115,6 +115,19 @@ structural work, and friendly units make the numbers easy.
     world bolted on. Turning around is a scale of minus one,
     and borrowing a pencil leaves you minus a pencil. Neither
     takes a graphing calculator to keep track of.
+18\. Say a direction the way it looks, and say it like it's
+    ordinary: 2 cat uphill, the slope pushes into the hill, the
+    hand points at the 3. Nobody gets confused about which way a
+    clock hand points. Guarding it with an angle from the
+    vertical in a named plane only adds a conversion, and the
+    conversions are where the real confusion lives.
+19\. In a side-by-side, both columns start from the same inputs,
+    and each one stands alone: read without the other, every
+    number on it has a source on it. The dog column is still
+    math. Each quantity that keeps coming back gets an English
+    name and one line on why to believe the name. Translate one
+    to one first; flip, model, and reflip only where the
+    translation reads badly.
 Where a dog word steps aside
 \----------------------------
 Each of these is a rock on the trail. Point at it in passing, as
@@ -237,6 +250,18 @@ directed, so the o wears its arrow, joined on at the stem: o→
 forward, ←o back, and the same up and down. A lone o is rare;
 think once about the context before leaving one on its own.
 (An o can look like a zero. Students haven't found that it does.)
+The other motion units wear their arrows the same way, built into
+the glyph. A bar on the tail makes a velocity, a second head is
+another per second, an o on the tail puts mass on it, and a second
+shaft makes a force:
+    ↦   1 cat forward           ↥   1 cat up
+    o→  1 oompf forward         o↑  1 oompf up
+    ⇒   1 push forward          ⇑   1 push up
+    ↠   1 zoom forward          ↟   1 zoom up
+So 4.4 ⇐ is 4.4 push back, and ⇒ · ↦ is a push at a cat, 1 pow.
+↦ and ⇒ already mean "maps to" and "implies" to mathematicians.
+The borrowed meanings point the same way: a velocity maps moments
+to places, and a force implies a change of motion.
 Ring is the phase rate of anything that oscillates or waves, a
 stroke of phase a second (trial).
 Sheet and blanket count the area of something laid out: a wing, a
@@ -521,6 +546,29 @@ spaces. 1 m/s → · → 2 N s is 2 J; (H − R) ↑ × → J is
 (H − R) J ↻. A dot doesn't care about order, so the sizes step
 out of the way. A cross keeps its arrows in order, so the sizes
 move and the arrows don't.
+The arrow table. Two arrows dot to 1 when they point the same
+way, to minus 1 when they point opposite ways, and to nothing at
+right angles. Two arrows in the page at right angles cross to a
+turning, and two along each other cross to nothing. For leverage the lever
+goes first and what it levers second: a push forward below the
+pivot, ↓ × →, turns it forward around.
+\+-------+-----+-----+-----+-----+   \+-------+-----+-----+-----+-----+
+| dot   |  →  |  ←  |  ↑  |  ↓  |   | cross |  →  |  ←  |  ↑  |  ↓  |
+\+-------+-----+-----+-----+-----+   \+-------+-----+-----+-----+-----+
+| →     |  1  | −1  |  0  |  0  |   | →     |  0  |  0  |  ↺  |  ↻  |
+| ←     | −1  |  1  |  0  |  0  |   | ←     |  0  |  0  |  ↻  |  ↺  |
+| ↑     |  0  |  0  |  1  | −1  |   | ↑     |  ↻  |  ↺  |  0  |  0  |
+| ↓     |  0  |  0  | −1  |  1  |   | ↓     |  ↺  |  ↻  |  0  |  0  |
+\+-------+-----+-----+-----+-----+   \+-------+-----+-----+-----+-----+
+The cross table reads row first: ↓ × → is the ↓ row, → column.
+So ← of ← is 1. The backward part of backward is all of it, and
+nothing is left pointing, which is why energy and power, each a
+dot of two arrows, never point anywhere. The opposite of ← is →:
+that's the minus (rule 16), not a product. A pace runs the other
+way round from a leverage, the sweep first and then the lever: a
+ball turning forward around, ↺ × ↓, runs forward at its bottom.
+A direction that isn't on an axis gets a name, like "the line of
+centers", and parts along and across it.
 Letting the arrows work out their differences inside the
 parentheses, with the meaning said outside, is an emphatic move,
 like the unreduced form of a contraction. Keep it for where it
@@ -1039,3 +1087,91 @@ The puck on a string
     through 3 meters adds 12 thump, all of it.
     Punch's share is the profile over the profile and the radius's
     reflex: 2 card over 6 card, a third.
+18\. Blocks to hand off
+\----------------------
+Each block below is written to be handed whole to a helper, a bot
+given one job and nothing else. So each one stands alone and
+repeats what it needs. People can read them too: they're the doc
+in brief.
+    READING THE ARROWS
+    Arrows name directions in the scene, not on the page. → is
+    forward, whichever way the page sits. ↑ is up in a wall
+    picture, and the shot's left on a table seen from above. ↺ is
+    forward around: counterclockwise on a wall as you face it,
+    widdershins on the ground seen from above. ↻ is backward
+    around. If you're translating to x, y, and z, → is the forward
+    axis, not page-right. You'll be tempted to read it as
+    page-right again. Keep the axes attached to the scene when the
+    picture turns.
+    A minus means "the opposite of": −← is →. A force is a size
+    with a sense, 4.4 push ←, never a negative force.
+    "Of" is whichever product the two things take: two arrows dot,
+    a lever and what it levers cross, a number just scales.
+    Dot: the same way is 1, opposite ways minus 1, right angles 0.
+    So ← · ← is 1, with nothing left pointing, and ← · → is −1.
+    Cross, for leverage, takes the lever first: ↓ × → is ↺, ↑ × →
+    is ↻, and two arrows along each other cross to nothing. For
+    pace the sweep comes first: ↺ × ↓ is →.
+    Unit arrows: ↦ is a cat (m/s), o→ an oompf (kg m/s), ⇒ a push
+    (N), ↠ a zoom (m/s^2), each pointing where its head points.
+    Energy and power are dots, so they never point. Power is the
+    push at the speed: ⇒ · ↦ is 1 pow, and ⇐ · ↦ is minus 1 pow,
+    the load overhauling.
+    A direction off the axes gets a name, like "the line of
+    centers", and parts along and across it.
+    CHECKING A DOG-MATH SOLUTION
+    Your job is to find real slips, not to restyle the solution.
+    The rounding is deliberate: gravity is 10 zoom, a third digit
+    is noise, and results are meant to survive rounding. Don't ask
+    for more significant figures, and don't report a rounding
+    difference as an error.
+    The units are real: hand 0.1 m, card 0.01 m^2, lump 1 kg, cat
+    1 m/s, zoom 1 m/s^2, push 1 N, thump 1 J, pow 1 W, crank 1 N m,
+    stroke 1 radian, sweep in strokes a second, wheel 1 kg m^2,
+    oompf 1 kg m/s, roll 1 kg m^2/s. Zip is punch per lump and zing
+    is hook per wheel: they're already per mass or per inertia, so
+    "zip per lump" is a slip.
+    Read the arrows as in READING THE ARROWS. Before calling a step
+    inconsistent, make sure you didn't translate → as page-right or
+    ↺ as clockwise.
+    Check both ledgers, motion and energy, and both sides of every
+    push. A floor, a frame, or a tractor that takes a push counts.
+    Recompute the numbers yourself, in code if you can. Report each
+    slip with its line, what it says, and what it should say.
+    A word you don't know is probably defined in the doc. Ask
+    before treating it as an error.
+    WRITING A SIDE-BY-SIDE
+    Two columns, the usual way and the dog way, from the same
+    inputs. Don't give one column rpm and degrees and the other
+    sweeps and 3-4-5 slants.
+    Each column stands alone. Read without the other, every number
+    on it has a source on it.
+    The dog column is math, not commentary. Give each quantity that
+    keeps coming back an English name and one line on why to
+    believe the name: friction is 1/25 of the push, 0.12 cat,
+    because the faces slide the whole hit.
+    Translate one to one first. Only where the translation reads
+    badly, flip it, model it, and reflip it.
+    Put the first paragraph of READING THE ARROWS at the top as a
+    key.
+    Say what can't change, and why, in one plain sentence: the
+    floor pushes where it has no lever, so the swirl about that
+    point holds. Then let the equation do the accounting.
+    Check it with a script, and keep the script with the work.
+    WRITING IN DOG MATH
+    Round hard: gravity is 10 zoom. Pick sizes so the units eat the
+    algebra, and pick values that aren't halfway. Made-up numbers
+    are exact: 6, not 6.0.
+    Dog units take no plural s (5.3 hand), except strokes.
+    Name the quantity that means something, say how to measure it,
+    and relate it to the others in sentences that don't circle.
+    Say products in English: "of" leads with the operator, "at"
+    with the thing. 12 V of 2 A is 24 W; 2 lump at 5 hand is a
+    ponder.
+    Say directions like they're ordinary: 2 cat uphill. A force is
+    a size with a sense.
+    Use operators' words where they have them: powering and
+    overhauling, drag, slewing, topspin.
+    Point at a rough spot in passing, as if obvious, and move on.
+    Use contractions, American spelling, and the Oxford comma.
+    Say at the top which bot wrote it.
