@@ -562,8 +562,12 @@ pivot, ↓ × →, turns it forward around.
 \+-------+-----+-----+-----+-----+   \+-------+-----+-----+-----+-----+
 The cross table reads row first: ↓ × → is the ↓ row, → column.
 So ← of ← is 1. The backward part of backward is all of it, and
-nothing is left pointing, which is why energy and power, each a
-dot of two arrows, never point anywhere. The opposite of ← is →:
+nothing is left pointing: a dot leaves a plain amount. Power pairs
+an effort with a flow, a push at a velocity, a crank at a sweep, a
+voltage of a current. Each pairing keeps track of which way, and
+leaves nothing pointing. (A voltage is the drop along the current's
+reference way; reverse that way and both signs flip, so the pair
+comes out the same.) The opposite of ← is →:
 that's the minus (rule 16), not a product. A pace runs the other
 way round from a leverage, the sweep first and then the lever: a
 ball turning forward around, ↺ × ↓, runs forward at its bottom.
@@ -1114,9 +1118,13 @@ in brief.
     pace the sweep comes first: ↺ × ↓ is →.
     Unit arrows: ↦ is a cat (m/s), o→ an oompf (kg m/s), ⇒ a push
     (N), ↠ a zoom (m/s^2), each pointing where its head points.
-    Energy and power are dots, so they never point. Power is the
-    push at the speed: ⇒ · ↦ is 1 pow, and ⇐ · ↦ is minus 1 pow,
-    the load overhauling.
+    A dot leaves a plain amount, with nothing pointing. Power
+    pairs an effort with a flow: a push at a velocity, a crank at
+    a sweep, a voltage of a current. Each pairing keeps track of
+    which way. ⇒ · ↦ is 1 pow; ⇐ · ↦ is minus 1 pow, power flowing
+    back through that push. If it's a motor's push on its load,
+    the load is overhauling; say what's driving what before you
+    call it that.
     A direction off the axes gets a name, like "the line of
     centers", and parts along and across it.
     CHECKING A DOG-MATH SOLUTION
@@ -1131,15 +1139,27 @@ in brief.
     oompf 1 kg m/s, roll 1 kg m^2/s. Zip is punch per lump and zing
     is hook per wheel: they're already per mass or per inertia, so
     "zip per lump" is a slip.
-    Read the arrows as in READING THE ARROWS. Before calling a step
+    Arrows name directions in the scene, not on the page. → is
+    forward, whichever way the page sits. ↑ is up in a wall
+    picture, and the shot's left on a table seen from above. ↺ is
+    forward around: counterclockwise on a wall as you face it,
+    widdershins on the ground seen from above. ↻ is backward
+    around. If you're translating to x, y, and z, → is the forward
+    axis, not page-right. You'll be tempted to read it as
+    page-right again. Keep the axes attached to the scene when the
+    picture turns.
+    A minus means "the opposite of": −← is →. Two arrows dot to 1
+    the same way, minus 1 opposite, and 0 at right angles. A cross
+    for leverage takes the lever first: ↓ × → is ↺. For pace the
+    sweep comes first: ↺ × ↓ is →. Before calling a step
     inconsistent, make sure you didn't translate → as page-right or
     ↺ as clockwise.
     Check both ledgers, motion and energy, and both sides of every
     push. A floor, a frame, or a tractor that takes a push counts.
     Recompute the numbers yourself, in code if you can. Report each
     slip with its line, what it says, and what it should say.
-    A word you don't know is probably defined in the doc. Ask
-    before treating it as an error.
+    A word you don't know is probably one of this work's defined
+    words. Ask whoever sent you before treating it as an error.
     WRITING A SIDE-BY-SIDE
     Two columns, the usual way and the dog way, from the same
     inputs. Don't give one column rpm and degrees and the other
@@ -1148,12 +1168,23 @@ in brief.
     on it has a source on it.
     The dog column is math, not commentary. Give each quantity that
     keeps coming back an English name and one line on why to
-    believe the name: friction is 1/25 of the push, 0.12 cat,
-    because the faces slide the whole hit.
+    believe the name, and keep pushes and speeds apart. For
+    example: the push along the line of centers changes B's travel
+    along it by 3 cat. The faces slide the whole hit, and friction
+    is 1/25 of the push at every moment, so friction changes B's
+    travel across the line by 1/25 of 3 cat, 0.12 cat.
     Translate one to one first. Only where the translation reads
     badly, flip it, model it, and reflip it.
-    Put the first paragraph of READING THE ARROWS at the top as a
-    key.
+    Put this key at the top:
+      Arrows name directions in the scene, not on the page. → is
+      forward, whichever way the page sits. ↑ is up in a wall
+      picture, and the shot's left on a table seen from above. ↺ is
+      forward around: counterclockwise on a wall as you face it,
+      widdershins on the ground seen from above. ↻ is backward
+      around. If you're translating to x, y, and z, → is the forward
+      axis, not page-right. You'll be tempted to read it as
+      page-right again. Keep the axes attached to the scene when the
+      picture turns.
     Say what can't change, and why, in one plain sentence: the
     floor pushes where it has no lever, so the swirl about that
     point holds. Then let the equation do the accounting.
