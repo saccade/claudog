@@ -642,6 +642,15 @@ When the carrying changes the rate itself, there is a second term
 for it. Roll kept and the wheel shrinking: each wheel lost adds a zing of hook.
 That is the skater drawing her arms
 in; the hook she gains is what her arms spent.
+Same instant, same share. Two pushes that act through the same
+instant, one a fixed share of the other the whole time, add up in
+that share: their efforts do, and so do the changes they make in
+one body's motion. So friction that's 1/25 of the push all
+through a hit changes the travel across by 1/25 of what the push
+changes along. The mass never needs dividing in and out. It holds
+only while the share does: if the faces stop sliding partway,
+friction drops below its share from then on, so check that the
+skid lasted.
 11\. Electricity
 \---------------
     Current is the conductance of the voltage:   I = G V
@@ -1172,7 +1181,9 @@ in brief.
     example: the push along the line of centers changes B's travel
     along it by 3 cat. The faces slide the whole hit, and friction
     is 1/25 of the push at every moment, so friction changes B's
-    travel across the line by 1/25 of 3 cat, 0.12 cat.
+    travel across the line by 1/25 of 3 cat, 0.12 cat. (Two pushes
+    through the same instant, one a fixed share of the other, make
+    changes in that share.)
     Translate one to one first. Only where the translation reads
     badly, flip it, model it, and reflip it.
     Put this key at the top:
