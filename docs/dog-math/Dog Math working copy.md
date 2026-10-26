@@ -1108,14 +1108,17 @@ repeats what it needs. People can read them too: they're the doc
 in brief.
     READING THE ARROWS
     Arrows name directions in the scene, not on the page. → is
-    forward, whichever way the page sits. ↑ is up in a wall
-    picture, and the shot's left on a table seen from above. ↺ is
-    forward around: counterclockwise on a wall as you face it,
-    widdershins on the ground seen from above. ↻ is backward
-    around. If you're translating to x, y, and z, → is the forward
-    axis, not page-right. You'll be tempted to read it as
-    page-right again. Keep the axes attached to the scene when the
-    picture turns.
+    forward, whichever way the page sits; label a figure's forward
+    with → so a turned page still shows it. In a wall picture ↑ is
+    up; on a table seen from above, ↑ is to the left of →. ↺ is
+    forward around, the turn that carries → toward ↑, and its
+    arrow points out of the picture toward you: counterclockwise
+    on a wall as you face it with forward to your right, and
+    counterclockwise seen from above on the ground (widdershins).
+    ↻ is backward around. If you translate to x, y, and z, x is →,
+    y is ↑, and z is ↺, so → × ↑ is ↺. x is the forward axis, not
+    page-right. You'll be tempted to read it as page-right again.
+    Keep the axes attached to the scene when the picture turns.
     A minus means "the opposite of": −← is →. A force is a size
     with a sense, 4.4 push ←, never a negative force.
     "Of" is whichever product the two things take: two arrows dot,
@@ -1123,17 +1126,20 @@ in brief.
     Dot: the same way is 1, opposite ways minus 1, right angles 0.
     So ← · ← is 1, with nothing left pointing, and ← · → is −1.
     Cross, for leverage, takes the lever first: ↓ × → is ↺, ↑ × →
-    is ↻, and two arrows along each other cross to nothing. For
-    pace the sweep comes first: ↺ × ↓ is →.
+    is ↻, and two arrows along each other cross to nothing. Sweep
+    is how fast a thing turns, in strokes a second; pace is how
+    fast a point on a turning lever moves, the sweep of the lever.
+    For pace the sweep comes first: ↺ × ↓ is →. A crank is the
+    unit of torque.
     Unit arrows: ↦ is a cat (m/s), o→ an oompf (kg m/s), ⇒ a push
     (N), ↠ a zoom (m/s^2), each pointing where its head points.
     A dot leaves a plain amount, with nothing pointing. Power
     pairs an effort with a flow: a push at a velocity, a crank at
     a sweep, a voltage of a current. Each pairing keeps track of
-    which way. ⇒ · ↦ is 1 pow; ⇐ · ↦ is minus 1 pow, power flowing
-    back through that push. If it's a motor's push on its load,
-    the load is overhauling; say what's driving what before you
-    call it that.
+    which way. ⇒ · ↦ is 1 pow, a push of 1 at 1 cat. ⇐ · ↦ is
+    minus 1 pow: power flows back through that push, into
+    whatever's pushing. When the push is a motor's on its load,
+    that's the load overhauling the motor.
     A direction off the axes gets a name, like "the line of
     centers", and parts along and across it.
     CHECKING A DOG-MATH SOLUTION
@@ -1142,21 +1148,35 @@ in brief.
     is noise, and results are meant to survive rounding. Don't ask
     for more significant figures, and don't report a rounding
     difference as an error.
-    The units are real: hand 0.1 m, card 0.01 m^2, lump 1 kg, cat
-    1 m/s, zoom 1 m/s^2, push 1 N, thump 1 J, pow 1 W, crank 1 N m,
-    stroke 1 radian, sweep in strokes a second, wheel 1 kg m^2,
-    oompf 1 kg m/s, roll 1 kg m^2/s. Zip is punch per lump and zing
-    is hook per wheel: they're already per mass or per inertia, so
-    "zip per lump" is a slip.
+    Units: hand 0.1 m; card 0.01 m^2, a profile; lump 1 kg; cat 1
+    m/s, a speed; zoom 1 m/s^2, and gravity is 10 zoom; push 1 N,
+    a force, and a pull is a push pulling; thump 1 J; pow 1 W;
+    crank 1 N m, a torque; stroke 1 radian, and a turn is about
+    6.3 stroke; oompf 1 kg m/s; roll 1 kg m^2/s; ponder 1 kg m;
+    wheel 1 kg m^2. Units take no plural s, except strokes.
+    Quantities: movement is a body's mass at its velocity, in
+    oompf. Sweep is how fast a thing turns, in strokes a second.
+    Pace is how fast a point on a turning lever moves, the sweep
+    of the lever, in cat. Spin is turning movement, in roll;
+    inertia is mass at a lever, at a lever, in wheel; torque is
+    the leverage of a push, in crank. Punch is the energy of a
+    body's travel, hook the energy of its spin, and heft the
+    energy height stores, all in thump. Zip is punch per lump,
+    zing is hook per wheel, zump is hook per lump, and swirl is
+    spin per lump: they're already per mass or per inertia.
+    So "zip per lump" is a slip.
     Arrows name directions in the scene, not on the page. → is
-    forward, whichever way the page sits. ↑ is up in a wall
-    picture, and the shot's left on a table seen from above. ↺ is
-    forward around: counterclockwise on a wall as you face it,
-    widdershins on the ground seen from above. ↻ is backward
-    around. If you're translating to x, y, and z, → is the forward
-    axis, not page-right. You'll be tempted to read it as
-    page-right again. Keep the axes attached to the scene when the
-    picture turns.
+    forward, whichever way the page sits; label a figure's forward
+    with → so a turned page still shows it. In a wall picture ↑ is
+    up; on a table seen from above, ↑ is to the left of →. ↺ is
+    forward around, the turn that carries → toward ↑, and its
+    arrow points out of the picture toward you: counterclockwise
+    on a wall as you face it with forward to your right, and
+    counterclockwise seen from above on the ground (widdershins).
+    ↻ is backward around. If you translate to x, y, and z, x is →,
+    y is ↑, and z is ↺, so → × ↑ is ↺. x is the forward axis, not
+    page-right. You'll be tempted to read it as page-right again.
+    Keep the axes attached to the scene when the picture turns.
     A minus means "the opposite of": −← is →. Two arrows dot to 1
     the same way, minus 1 opposite, and 0 at right angles. A cross
     for leverage takes the lever first: ↓ × → is ↺. For pace the
@@ -1164,12 +1184,31 @@ in brief.
     inconsistent, make sure you didn't translate → as page-right or
     ↺ as clockwise.
     Check both ledgers, motion and energy, and both sides of every
-    push. A floor, a frame, or a tractor that takes a push counts.
+    push: a push left without its other side is a slip. A floor, a
+    frame, or a tractor that takes a push counts. Friction on a
+    face points the way the other face slides past it.
     Recompute the numbers yourself, in code if you can. Report each
     slip with its line, what it says, and what it should say.
     A word you don't know is probably one of this work's defined
     words. Ask whoever sent you before treating it as an error.
     WRITING A SIDE-BY-SIDE
+    Units: hand 0.1 m; card 0.01 m^2, a profile; lump 1 kg; cat 1
+    m/s, a speed; zoom 1 m/s^2, and gravity is 10 zoom; push 1 N,
+    a force, and a pull is a push pulling; thump 1 J; pow 1 W;
+    crank 1 N m, a torque; stroke 1 radian, and a turn is about
+    6.3 stroke; oompf 1 kg m/s; roll 1 kg m^2/s; ponder 1 kg m;
+    wheel 1 kg m^2. Units take no plural s, except strokes.
+    Quantities: movement is a body's mass at its velocity, in
+    oompf. Sweep is how fast a thing turns, in strokes a second.
+    Pace is how fast a point on a turning lever moves, the sweep
+    of the lever, in cat. Spin is turning movement, in roll;
+    inertia is mass at a lever, at a lever, in wheel; torque is
+    the leverage of a push, in crank. Punch is the energy of a
+    body's travel, hook the energy of its spin, and heft the
+    energy height stores, all in thump. Zip is punch per lump,
+    zing is hook per wheel, zump is hook per lump, and swirl is
+    spin per lump: they're already per mass or per inertia.
+    Use these names; if you need a new one, mark it as new.
     Two columns, the usual way and the dog way, from the same
     inputs. Don't give one column rpm and degrees and the other
     sweeps and 3-4-5 slants.
@@ -1178,42 +1217,82 @@ in brief.
     The dog column is math, not commentary. Give each quantity that
     keeps coming back an English name and one line on why to
     believe the name, and keep pushes and speeds apart. For
-    example: the push along the line of centers changes B's travel
-    along it by 3 cat. The faces slide the whole hit, and friction
-    is 1/25 of the push at every moment, so friction changes B's
-    travel across the line by 1/25 of 3 cat, 0.12 cat. (Two pushes
+    example: the push along the line of centers changes B's
+    velocity along it by 3 cat. The faces slide the whole hit, and
+    friction is 1/25 of the push at every moment, so friction
+    changes B's velocity across the line by 1/25 of 3 cat, 0.12
+    cat. (Two pushes
     through the same instant, one a fixed share of the other, make
     changes in that share.)
     Translate one to one first. Only where the translation reads
-    badly, flip it, model it, and reflip it.
+    badly, flip it, model it, and reflip it: turn the step into
+    the form that reads best in the dog column, work it there, and
+    turn the answer back.
     Put this key at the top:
       Arrows name directions in the scene, not on the page. → is
-      forward, whichever way the page sits. ↑ is up in a wall
-      picture, and the shot's left on a table seen from above. ↺ is
-      forward around: counterclockwise on a wall as you face it,
-      widdershins on the ground seen from above. ↻ is backward
-      around. If you're translating to x, y, and z, → is the forward
-      axis, not page-right. You'll be tempted to read it as
-      page-right again. Keep the axes attached to the scene when the
-      picture turns.
-    Say what can't change, and why, in one plain sentence: the
-    floor pushes where it has no lever, so the swirl about that
-    point holds. Then let the equation do the accounting.
+      forward, whichever way the page sits; label a figure's
+      forward with → so a turned page still shows it. In a wall
+      picture ↑ is up; on a table seen from above, ↑ is to the
+      left of →. ↺ is forward around, the turn that carries →
+      toward ↑, and its arrow points out of the picture toward
+      you: counterclockwise on a wall as you face it with
+      forward to your right, and counterclockwise seen from
+      above on the ground (widdershins). ↻ is backward around.
+      If you translate to x, y, and z, x is →, y is ↑, and z is
+      ↺, so → × ↑ is ↺. x is the forward axis, not page-right.
+      You'll be tempted to read it as page-right again. Keep the
+      axes attached to the scene when the picture turns.
+    Say what holds, and why, in one plain sentence: a quantity
+    that can't change (the floor pushes where it has no lever, so
+    the swirl about that point holds) or a balance (the wrench
+    turns too slowly to gain spin, so the bolt takes back all the
+    torque). Then let the equation do the accounting.
     Check it with a script, and keep the script with the work.
     WRITING IN DOG MATH
+    Dog math is real physics in playful units, rounded hard so the
+    reasoning shows. The units say out loud that this is playing
+    with ideas, not the last word. Readers are curious people
+    learning mechanics.
+    Units: hand 0.1 m; card 0.01 m^2, a profile; lump 1 kg; cat 1
+    m/s, a speed; zoom 1 m/s^2, and gravity is 10 zoom; push 1 N,
+    a force, and a pull is a push pulling; thump 1 J; pow 1 W;
+    crank 1 N m, a torque; stroke 1 radian, and a turn is about
+    6.3 stroke; oompf 1 kg m/s; roll 1 kg m^2/s; ponder 1 kg m;
+    wheel 1 kg m^2. Units take no plural s, except strokes.
+    Quantities: movement is a body's mass at its velocity, in
+    oompf. Sweep is how fast a thing turns, in strokes a second.
+    Pace is how fast a point on a turning lever moves, the sweep
+    of the lever, in cat. Spin is turning movement, in roll;
+    inertia is mass at a lever, at a lever, in wheel; torque is
+    the leverage of a push, in crank. Punch is the energy of a
+    body's travel, hook the energy of its spin, and heft the
+    energy height stores, all in thump. Zip is punch per lump,
+    zing is hook per wheel, zump is hook per lump, and swirl is
+    spin per lump: they're already per mass or per inertia.
+    Rewrite a problem's SI numbers in dog units where they match:
+    3 kg is 3 lump, 1.8 m is 18 hand. Where a dog word collides
+    with something in the scene (a real cat, a real wheel), the
+    scene keeps its word and the dog word steps aside.
     Round hard: gravity is 10 zoom. Pick sizes so the units eat the
     algebra, and pick values that aren't halfway. Made-up numbers
     are exact: 6, not 6.0.
     Dog units take no plural s (5.3 hand), except strokes.
     Name the quantity that means something, say how to measure it,
     and relate it to the others in sentences that don't circle.
-    Say products in English: "of" leads with the operator, "at"
-    with the thing. 12 V of 2 A is 24 W; 2 lump at 5 hand is a
-    ponder.
+    Say products in English: "of" leads with the operator, the
+    rate or effort doing the multiplying, and "at" leads with the
+    thing. 12 V of 2 A is 24 W; 3 lump at 10 zoom is a 30 push
+    weight; 2 lump at 5 hand is a ponder.
     Say directions like they're ordinary: 2 cat uphill. A force is
     a size with a sense.
-    Use operators' words where they have them: powering and
-    overhauling, drag, slewing, topspin.
+    Operators' words: powering is a motor driving its load;
+    overhauling is the load driving the motor, the way a heavy
+    load lowered on a hoist runs the hoist's motor as a generator.
+    Drag is a pull against motion that grows with speed and can't
+    hold anything still. Slewing is a crane turning about its
+    upright. Topspin and backspin are the players' words.
+    Use them only where they fit: a falling box isn't overhauling
+    anything.
     Point at a rough spot in passing, as if obvious, and move on.
     Use contractions, American spelling, and the Oxford comma.
     Say at the top which bot wrote it.
