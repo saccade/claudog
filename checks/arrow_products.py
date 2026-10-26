@@ -25,14 +25,17 @@ assert name(np.cross(A['↓'], A['→'])) == '↺'
 
 # Dot: the forward part of backward is the opposite of 1; backward of backward is 1.
 flat = ['→', '←', '↑', '↓']
-print('dot   ' + ' '.join(f'{b:>3}' for b in flat))
-for a in flat:
-    print(f'{a:>5} ' + ' '.join(f'{int(A[a] @ A[b]):>3}' for b in flat))
+six = flat + ['↺', '↻']
+print('dot   ' + ' '.join(f'{b:>3}' for b in six))
+for a in six:
+    print(f'{a:>5} ' + ' '.join(f'{int(A[a] @ A[b]):>3}' for b in six))
 assert A['←'] @ A['←'] == 1 and A['←'] @ A['→'] == -1 and A['↑'] @ A['→'] == 0
 
-print('\ncross ' + ' '.join(f'{b:>3}' for b in flat))
-for a in flat:
-    print(f'{a:>5} ' + ' '.join(f'{name(np.cross(A[a], A[b])):>3}' for b in flat))
+print('\ncross ' + ' '.join(f'{b:>3}' for b in six))
+for a in six:
+    print(f'{a:>5} ' + ' '.join(f'{name(np.cross(A[a], A[b])):>3}' for b in six))
+# Two at right angles cross to the third; a sweep about → carries ↑ toward ↺.
+assert name(np.cross(A['↺'], A['→'])) == '↑' and name(np.cross(A['→'], A['↑'])) == '↺'
 
 # The opposite of ← is →.
 assert name(-A['←']) == '→'

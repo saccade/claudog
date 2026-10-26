@@ -1,7 +1,7 @@
 DOG MATH
 \========
-Written by Claude (Anthropic), 2026-10-20 15:58; revised 2026-10-22 19:35, 2026-10-25 12:09, and 2026-10-26 12:40.
-Energy accounts revised by Codex (OpenAI), 2026-10-23, on doc’s instructions.
+Written by Claude (Anthropic), October 2026.
+Energy accounts revised by Codex (OpenAI), October 2026, on doc’s instructions.
 A dog: a doc written in dog math, about dog math. The rules are
 doc's, from the ledger and from chat; the words are the model's.
 Not doc's text.
@@ -546,33 +546,52 @@ spaces. 1 m/s → · → 2 N s is 2 J; (H − R) ↑ × → J is
 (H − R) J ↻. A dot doesn't care about order, so the sizes step
 out of the way. A cross keeps its arrows in order, so the sizes
 move and the arrows don't.
-The arrow table. Two arrows dot to 1 when they point the same
-way, to minus 1 when they point opposite ways, and to nothing at
-right angles. Two arrows in the page at right angles cross to a
-turning, and two along each other cross to nothing. For leverage the lever
-goes first and what it levers second: a push forward below the
-pivot, ↓ × →, turns it forward around.
-\+-------+-----+-----+-----+-----+   \+-------+-----+-----+-----+-----+
-| dot   |  →  |  ←  |  ↑  |  ↓  |   | cross |  →  |  ←  |  ↑  |  ↓  |
-\+-------+-----+-----+-----+-----+   \+-------+-----+-----+-----+-----+
-| →     |  1  | −1  |  0  |  0  |   | →     |  0  |  0  |  ↺  |  ↻  |
-| ←     | −1  |  1  |  0  |  0  |   | ←     |  0  |  0  |  ↻  |  ↺  |
-| ↑     |  0  |  0  |  1  | −1  |   | ↑     |  ↻  |  ↺  |  0  |  0  |
-| ↓     |  0  |  0  | −1  |  1  |   | ↓     |  ↺  |  ↻  |  0  |  0  |
-\+-------+-----+-----+-----+-----+   \+-------+-----+-----+-----+-----+
-The cross table reads row first: ↓ × → is the ↓ row, → column.
+The arrow table. Two arrows dot to 1 when they point the same way,
+to minus 1 when they point opposite ways, and to nothing at right
+angles. Two arrows at right angles cross to the third, and two
+along each other cross to nothing. ↺ and ↻ are arrows like the
+rest: ↺ points out of the page and ↻ into it. For leverage the
+lever goes first and what it levers second: a push forward below
+the pivot, ↓ × →, turns it forward around. The cross table reads
+row first: ↓ × → is the ↓ row, → column.
+\+-------+-----+-----+-----+-----+-----+-----+
+| dot   |  →  |  ←  |  ↑  |  ↓  |  ↺  |  ↻  |
+\+-------+-----+-----+-----+-----+-----+-----+
+| →     |  1  | −1  |  0  |  0  |  0  |  0  |
+| ←     | −1  |  1  |  0  |  0  |  0  |  0  |
+| ↑     |  0  |  0  |  1  | −1  |  0  |  0  |
+| ↓     |  0  |  0  | −1  |  1  |  0  |  0  |
+| ↺     |  0  |  0  |  0  |  0  |  1  | −1  |
+| ↻     |  0  |  0  |  0  |  0  | −1  |  1  |
+\+-------+-----+-----+-----+-----+-----+-----+
+\+-------+-----+-----+-----+-----+-----+-----+
+| cross |  →  |  ←  |  ↑  |  ↓  |  ↺  |  ↻  |
+\+-------+-----+-----+-----+-----+-----+-----+
+| →     |  0  |  0  |  ↺  |  ↻  |  ↓  |  ↑  |
+| ←     |  0  |  0  |  ↻  |  ↺  |  ↑  |  ↓  |
+| ↑     |  ↻  |  ↺  |  0  |  0  |  →  |  ←  |
+| ↓     |  ↺  |  ↻  |  0  |  0  |  ←  |  →  |
+| ↺     |  ↑  |  ↓  |  ←  |  →  |  0  |  0  |
+| ↻     |  ↓  |  ↑  |  →  |  ←  |  0  |  0  |
+\+-------+-----+-----+-----+-----+-----+-----+
 So ← of ← is 1. The backward part of backward is all of it, and
 nothing is left pointing: a dot leaves a plain amount. Power pairs
 an effort with a flow, a push at a velocity, a crank at a sweep, a
 voltage of a current. Each pairing keeps track of which way, and
-leaves nothing pointing. (A voltage is the drop along the current's
-reference way; reverse that way and both signs flip, so the pair
-comes out the same.) The opposite of ← is →:
-that's the minus (rule 16), not a product. A pace runs the other
+leaves nothing pointing. (A voltage is the drop along the
+current's reference way; reverse that way and both signs flip, so
+the pair comes out the same.) The opposite of ← is →: that's ←
+scaled by minus one (rules 16 and 17), a number times an arrow,
+which still points. ← of ←, a dot, doesn't. A pace runs the other
 way round from a leverage, the sweep first and then the lever: a
 ball turning forward around, ↺ × ↓, runs forward at its bottom.
-A direction that isn't on an axis gets a name, like "the line of
-centers", and parts along and across it.
+Any arrow can be the axis of a sweep, not just ↺. A sweep about an
+arrow turns forward around it unless it's said otherwise, the way
+4.3 means +4.3: about ↺ it carries → toward ↑, and about → it
+carries ↑ toward ↺. Say the sense only for contrast or when it's
+backward.
+A direction that isn't on an axis gets a name, like north, uphill,
+or toward Boston, and parts along and across it.
 Letting the arrows work out their differences inside the
 parentheses, with the meaning said outside, is an emphatic move,
 like the unreduced form of a contraction. Keep it for where it
@@ -645,12 +664,12 @@ in; the hook she gains is what her arms spent.
 Same instant, same share. Two pushes that act through the same
 instant, one a fixed share of the other the whole time, add up in
 that share: their efforts do, and so do the changes they make in
-one body's motion. So friction that's 1/25 of the push all
-through a hit changes the travel across by 1/25 of what the push
-changes along. The mass never needs dividing in and out. It holds
-only while the share does: if the faces stop sliding partway,
-friction drops below its share from then on, so check that the
-skid lasted.
+one body's motion. So friction that's 1/25 of the push all through
+a hit changes the travel across by 1/25 of what the push changes
+along. The mass never needs dividing in and out. It holds only
+while the share does. If the faces stop sliding partway, that
+sliding-friction rule no longer fixes the share, so check what
+happens next.
 11\. Electricity
 \---------------
     Current is the conductance of the voltage:   I = G V
@@ -1103,8 +1122,8 @@ The puck on a string
 18\. Blocks to hand off
 \----------------------
 Each block below is written to be handed whole to a helper, a bot
-given one job and nothing else. So each one stands alone and
-repeats what it needs. People can read them too: they're the doc
+given one job, so each one stands alone and repeats what it
+needs. People can read them too: they're the doc
 in brief.
     READING THE ARROWS
     Arrows name directions in the scene, not on the page. → is
@@ -1119,29 +1138,40 @@ in brief.
     y is ↑, and z is ↺, so → × ↑ is ↺. x is the forward axis, not
     page-right. You'll be tempted to read it as page-right again.
     Keep the axes attached to the scene when the picture turns.
-    A minus means "the opposite of": −← is →. A force is a size
-    with a sense, 4.4 push ←, never a negative force.
+    A minus means "the opposite of": −← is →, ← scaled by minus
+    one. A force is a size with a sense, 4.4 push ← or 2.2 pull ↓,
+    never a negative force.
     "Of" is whichever product the two things take: two arrows dot,
-    a lever and what it levers cross, a number just scales.
+    a lever and what it levers cross, a number just scales. It's
+    the all-purpose word for a product: it almost always works,
+    but a more exact word is usually there, like at, through, or a
+    verb that multiplies (2 oompf levered at 5 hand is 1 roll).
     Dot: the same way is 1, opposite ways minus 1, right angles 0.
     So ← · ← is 1, with nothing left pointing, and ← · → is −1.
     Cross, for leverage, takes the lever first: ↓ × → is ↺, ↑ × →
-    is ↻, and two arrows along each other cross to nothing. Sweep
-    is how fast a thing turns, in strokes a second; pace is how
-    fast a point on a turning lever moves, the sweep of the lever.
-    For pace the sweep comes first: ↺ × ↓ is →. A crank is the
-    unit of torque.
+    is ↻, two arrows at right angles cross to the third, and two
+    along each other cross to nothing. Sweep is how fast a thing
+    turns, in strokes a second; pace is how fast a point on a
+    turning lever moves, the sweep of the lever. For pace the
+    sweep comes first: ↺ × ↓ is →. A crank is the unit of torque.
+    Any arrow can be the axis of a sweep. ↺ reads most easily that
+    way, but a sweep about → or ↑ is just as good. A sweep turns
+    forward around its axis unless it's said otherwise, the way
+    4.3 means +4.3: about ↺ it carries → toward ↑, and about → it
+    carries ↑ toward ↺.
     Unit arrows: ↦ is a cat (m/s), o→ an oompf (kg m/s), ⇒ a push
     (N), ↠ a zoom (m/s^2), each pointing where its head points.
     A dot leaves a plain amount, with nothing pointing. Power
     pairs an effort with a flow: a push at a velocity, a crank at
     a sweep, a voltage of a current. Each pairing keeps track of
     which way. ⇒ · ↦ is 1 pow, a push of 1 at 1 cat. ⇐ · ↦ is
-    minus 1 pow: power flows back through that push, into
-    whatever's pushing. When the push is a motor's on its load,
-    that's the load overhauling the motor.
-    A direction off the axes gets a name, like "the line of
-    centers", and parts along and across it.
+    minus 1 pow: that push takes 1 pow out of the body's motion.
+    Where the energy goes depends on the push: friction turns it
+    to heat, and a motor holding back a load takes it into the
+    motor. When the load drives the motor against the motor's
+    push, the load is overhauling the motor (an overhauling load).
+    A direction off the axes gets a name, like north, uphill, or
+    toward Boston, and parts along and across it.
     CHECKING A DOG-MATH SOLUTION
     Your job is to find real slips, not to restyle the solution.
     The rounding is deliberate: gravity is 10 zoom, a third digit
@@ -1174,7 +1204,7 @@ in brief.
     Speed added from rest comes in a bit at a time, at every speed
     from 0 up, so it's counted at half the final speed on average:
     10 cat from rest is 10 cat added at an average of 5, which
-    keeps 50 zip, and a 60 lump body stores 3000 thump of punch.
+    keeps 50 zip; 60 lump with 50 zip punches 3000 thump.
     So "zip per lump" is a slip.
     Arrows name directions in the scene, not on the page. → is
     forward, whichever way the page sits; label a figure's forward
@@ -1229,7 +1259,7 @@ in brief.
     Speed added from rest comes in a bit at a time, at every speed
     from 0 up, so it's counted at half the final speed on average:
     10 cat from rest is 10 cat added at an average of 5, which
-    keeps 50 zip, and a 60 lump body stores 3000 thump of punch.
+    keeps 50 zip; 60 lump with 50 zip punches 3000 thump.
     Use these names. If you need a new one, mark it as new with
     "(new)" after its first use.
     Two columns, the usual way and the dog way, from the same
@@ -1301,7 +1331,7 @@ in brief.
     Speed added from rest comes in a bit at a time, at every speed
     from 0 up, so it's counted at half the final speed on average:
     10 cat from rest is 10 cat added at an average of 5, which
-    keeps 50 zip, and a 60 lump body stores 3000 thump of punch.
+    keeps 50 zip; 60 lump with 50 zip punches 3000 thump.
     Rewrite a problem's SI numbers in dog units where they match:
     3 kg is 3 lump, 2 m/s is 2 cat. Keep meters where a push acts
     through them, and use hands for sizes, like a drum 1 hand in
@@ -1313,17 +1343,21 @@ in brief.
     are exact: 6, not 6.0.
     Name the quantity that means something, say how to measure it,
     and relate it to the others in sentences that don't circle.
-    Say products in English. "Of" leads with the operator, the
-    rate or effort doing the multiplying: 12 V of 2 A is 24 W; the
-    sweep of the lever. "At" leads with the thing: 3 lump at
-    10 zoom is a 30 push weight; 2 lump at 5 hand is a ponder.
-    "Through" is a push along a distance: 40 push through 3 meter
-    is 120 thump. "On" and "over" divide: 5 cat on 1 hand sweeps
-    at 50.
+    Say products in English. "Of" is the all-purpose word: it
+    almost always works, but it's seldom the most exact. "At"
+    leads with the thing: 3 lump at 10 zoom is a 30 push weight;
+    2 lump at 5 hand is a ponder. "Through" is a push along a
+    distance: 40 push through 3 meter is 120 thump. "On" and
+    "over" divide: 5 cat on 1 hand sweeps at 50. Verbs multiply
+    too: 2 oompf levered at 5 hand is 1 roll; half a wheel
+    sweeping at 2 carries 1 roll; 4 push at half a meter cranks at
+    2. Reach for the exact word first, and for "of" when nothing
+    fits better.
     Say directions like they're ordinary: 2 cat uphill. A force is
     a size with a sense.
     Operators' words: powering is a motor driving its load;
-    overhauling is the load driving the motor, the way a heavy
+    overhauling is the load driving the motor (an overhauling
+    load overhauls the motor), the way a heavy
     load lowered on a hoist runs the hoist's motor as a generator.
     Drag is a pull against motion that grows with speed and can't
     hold anything still. Slewing is a crane turning about its
@@ -1331,5 +1365,9 @@ in brief.
     Use them only where they fit: a falling box isn't overhauling
     anything.
     Point at a rough spot in passing, as if obvious, and move on.
-    Use contractions, American spelling, and the Oxford comma.
+    Use contractions, American spelling, and the Oxford comma. The
+    full form, kept rare, is emphasis. The same goes for anything
+    usually avoided, like a clever trick with an integral or a π
+    that really is a flip: kept rare against what the reader
+    expects, it carries information.
     Say at the top which bot wrote it.
