@@ -30,7 +30,8 @@ def swirl(v, w):
 s0 = swirl(v0, w0)
 assert np.allclose(s0, -0.56*out)              # 0.56 m²/s, ↻: 5.6 hand-cat
 
-# After: up part 5/6 of the down part, and rolling (the bottom stops).
+# After: up part 5/6 of the down part, and rolling (the bottom stops sliding along the floor;
+# it still rises at 5 cat). Impact taken as instantaneous: no travel, no gravity during the push.
 v1x = s0 @ -out / (R*(1 + k))
 v1 = v1x*fwd + 5*up
 w1 = -(v1x/R)*out
@@ -53,5 +54,9 @@ def zip_(v, w):
     return v @ v / 2 + k*R**2*(w @ w)/2
 e0, e1 = zip_(v0, w0), zip_(v1, w1)
 assert np.isclose(e0, 57.2) and np.isclose(e1, 23.7) and e1 < e0
+bounce = (6**2 - 5**2)/2                       # the down part's share, lost in the bounce
+assert np.isclose(bounce, 5.5) and np.isclose(e0 - e1 - bounce, 28)   # the rest, lost in the skid
+# The one backward pull: each cat off the travel moves the rim's pace 1/k = 5/2 cat.
+assert np.isclose((v0 - v1) @ fwd / k, 10)      # 6 forward at the bottom to 4 back
 print(f'out: {v1x:g} cat forward, 5 cat up, topspin sweeping at {-w1 @ out:g}; '
       f'zip {e0:g} before, {e1:g} after; grip needs 4/11. All checks pass.')
