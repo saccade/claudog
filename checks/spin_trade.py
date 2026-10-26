@@ -50,9 +50,9 @@ J = v1 - v0                                    # impulse per mass
 assert np.allclose(J, -4*fwd + 11*up) and F(4, 11) < F(37, 100)
 
 # Both ledgers: energy per lump (thump per lump) before and after; the rest went to heat in the bounce and the skid.
-def zip_(v, w):
+def per_lump(v, w):
     return v @ v / 2 + k*R**2*(w @ w)/2
-e0, e1 = zip_(v0, w0), zip_(v1, w1)
+e0, e1 = per_lump(v0, w0), per_lump(v1, w1)
 assert np.isclose(e0, 57.2) and np.isclose(e1, 23.7) and e1 < e0
 bounce = (6**2 - 5**2)/2                       # the down part's share, lost in the bounce
 assert np.isclose(bounce, 5.5) and np.isclose(e0 - e1 - bounce, 28)   # the rest, lost in the skid

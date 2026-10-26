@@ -16,10 +16,10 @@ vA, wA = 3*fwd, 200*up
 vB, wB = 0*fwd, 0*up
 
 # Energy per lump (thump per lump) before: most of it is in the spin.
-def zip_(v, w):
+def per_lump(v, w):
     return v @ v/2 + k*R**2*(w @ w)/2
-before = zip_(vA, wA) + zip_(vB, wB)
-assert np.isclose(zip_(vA, wA), 11.7) and np.isclose(k*R**2*(wA @ wA)/2, 7.2)
+before = per_lump(vA, wA) + per_lump(vB, wB)
+assert np.isclose(per_lump(vA, wA), 11.7) and np.isclose(k*R**2*(wA @ wA)/2, 7.2)
 
 # The hit along the line of centers: equal balls, full bounce, A hands over its forward part.
 Jn = 3.0                                      # per lump, on B along →
@@ -49,7 +49,7 @@ def spin_about(p, v, w, c):                     # per lump, about point c
 pA, pB = -R*fwd, R*fwd
 assert np.allclose(spin_about(pA, vA, wA, 0) + spin_about(pB, vB, wB, 0),
                    spin_about(pA, vA1, wA1, 0) + spin_about(pB, vB1, wB1, 0))
-after = zip_(vA1, wA1) + zip_(vB1, wB1)
+after = per_lump(vA1, wA1) + per_lump(vB1, wB1)
 heat = .12*(6 + slip1 @ left)/2
 assert np.isclose(before - after, heat) and np.isclose(heat, .6696)
 
