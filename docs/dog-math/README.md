@@ -17,3 +17,7 @@ There's nothing to rebuild from, and the doc has taken hand edits a script would
 - **Export the live doc and diff it against the newest snapshot.** Every difference is either an edit made since then or export noise. Read each one; don't "fix" it back.
 - **Commit each new export as the next snapshot,** named "Dog Math doc as read YYMMDDHHMM", so the history keeps growing in one place.
 - **A rule check** (round numbers, unit plurals, contractions) can flag lines, but it reports. It doesn't edit the doc, since a flagged line may be one doc wrote on purpose.
+
+## Proposing changes
+
+`Dog Math working copy.md` is the live doc's text as of its newest snapshot. To propose changes, branch, edit the working copy, and open a pull request: the diff shows exactly what would change in the doc. Once doc approves, the changes go into the Google Doc by hand or by API batch, a new snapshot is taken, and the working copy is reset to it. The working copy is never the source of truth; the Google Doc is.
