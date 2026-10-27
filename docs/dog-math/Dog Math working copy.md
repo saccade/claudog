@@ -1214,10 +1214,12 @@ in brief.
     height stores), all in thump. Zip is punch per lump, zing is
     hook per wheel, zump is hook per lump, and swirl is spin per
     lump: they're already per mass or per inertia.
-    Speed added from rest comes in a bit at a time, at every speed
-    from 0 up, so it's counted at half the final speed on average:
-    10 cat from rest is 10 cat added at an average of 5, which
-    keeps 50 zip; 60 lump with 50 zip punches 3000 thump.
+    The velocity of added motion is stored as punch: an oompf
+    added while the body moves at 4 cat stores 4 thump. From
+    rest, the velocity climbs evenly as the motion comes in, so
+    the motion is added at half the final velocity on average:
+    60 lump brought to 10 cat takes 600 oompf, added at an average
+    of 5 cat, which stores 3000 thump, or 50 zip.
     So "zip per lump" is a slip.
     Arrows name directions in the scene, not on the page. → is
     forward, whichever way the page sits; label a figure's forward
@@ -1269,10 +1271,12 @@ in brief.
     height stores), all in thump. Zip is punch per lump, zing is
     hook per wheel, zump is hook per lump, and swirl is spin per
     lump: they're already per mass or per inertia.
-    Speed added from rest comes in a bit at a time, at every speed
-    from 0 up, so it's counted at half the final speed on average:
-    10 cat from rest is 10 cat added at an average of 5, which
-    keeps 50 zip; 60 lump with 50 zip punches 3000 thump.
+    The velocity of added motion is stored as punch: an oompf
+    added while the body moves at 4 cat stores 4 thump. From
+    rest, the velocity climbs evenly as the motion comes in, so
+    the motion is added at half the final velocity on average:
+    60 lump brought to 10 cat takes 600 oompf, added at an average
+    of 5 cat, which stores 3000 thump, or 50 zip.
     Use these names. If you need a new one, mark it as new with
     "(new)" after its first use.
     Two columns, the usual way and the dog way, from the same
@@ -1341,10 +1345,12 @@ in brief.
     height stores), all in thump. Zip is punch per lump, zing is
     hook per wheel, zump is hook per lump, and swirl is spin per
     lump: they're already per mass or per inertia.
-    Speed added from rest comes in a bit at a time, at every speed
-    from 0 up, so it's counted at half the final speed on average:
-    10 cat from rest is 10 cat added at an average of 5, which
-    keeps 50 zip; 60 lump with 50 zip punches 3000 thump.
+    The velocity of added motion is stored as punch: an oompf
+    added while the body moves at 4 cat stores 4 thump. From
+    rest, the velocity climbs evenly as the motion comes in, so
+    the motion is added at half the final velocity on average:
+    60 lump brought to 10 cat takes 600 oompf, added at an average
+    of 5 cat, which stores 3000 thump, or 50 zip.
     Rewrite a problem's SI numbers in dog units where they match:
     3 kg is 3 lump, 2 m/s is 2 cat. Keep meters where a push acts
     through them, and use hands for sizes, like a drum 1 hand in
