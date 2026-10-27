@@ -1,4 +1,4 @@
-"""A backspun ball bouncing off a rough floor at a slant: checks for the side-by-side. Claude, 2026-10-26.
+"""A backspun ball bouncing off a rough floor at a slant: checks for the side-by-side. Claude, 2026-10-26; inputs matched 2026-10-27.
 
 Solid ball, radius R = 0.1 m (1 hand), coming in at 10 m/s, 8 forward and 6 down, with backspin
 sweeping at 60 strokes a second. Restitution 5/6 on the downward part. The floor grips well enough
@@ -14,10 +14,8 @@ v0 = 8*fwd - 6*up
 w0 = 60*out                                    # backspin on a ball running → is ↺
 k = 2/5                                        # solid ball: inertia per mass is k R²
 
-# The usual way: 573 rpm, cos and sin of 36.87°.
-assert abs(573*2*np.pi/60 - 60) < .01
-th = np.degrees(np.arctan2(6, 8))
-assert abs(10*np.cos(np.radians(th)) - 8) < 1e-9 and abs(10*np.sin(np.radians(th)) - 6) < 1e-9
+# Both columns get the same inputs (doc's rule 19): 8 forward and 6 down, backspin at 60.
+assert np.isclose(np.linalg.norm(v0), 10) and np.isclose(R*60, 6)   # 10 cat in all; rim pace 6 cat
 
 # Slip at the bottom before: center's motion plus the spin's pace there (sweep × lever).
 bottom = -R*up
@@ -38,7 +36,6 @@ w1 = -(v1x/R)*out
 assert np.isclose(v1x, 4) and np.allclose(swirl(v1, w1), s0)
 assert np.allclose(v1 + np.cross(w1, bottom), 0*fwd + 5*up)   # no forward slip at the bottom
 assert np.isclose(w1 @ out, -40)               # topspin, ↻, sweeping at 40
-assert abs(w1 @ -out * 60/(2*np.pi) - 382) < 1  # 382 rpm, for the usual way
 
 # Exact fractions for the arrow way, in hand-cat (1 hand × 1 cat = 0.1 m²/s).
 before = F(8) - F(2, 5)*6                       # 8 ↻ and 2.4 ↺
@@ -48,6 +45,7 @@ assert before / F(7, 5) == 4
 # Grip needed: friction's share of the floor's push.
 J = v1 - v0                                    # impulse per mass
 assert np.allclose(J, -4*fwd + 11*up) and F(4, 11) < F(37, 100)
+# Same instant, same share: friction averaged 4/11 of the floor's push, so the grip must be at least that.
 
 # Both ledgers: energy per lump (thump per lump) before and after; the rest went to heat in the bounce and the skid.
 def per_lump(v, w):

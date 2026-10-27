@@ -10,7 +10,7 @@ spin passes. Pool balls are slick, so the spin stays home.
 git pull
 conda activate dog-math
 cd notebooks/pool_spin
-jupyter lab Claude-Pool-Spin-2610261000.ipynb
+jupyter lab Claude-Pool-Spin-2610271110.ipynb
 ```
 
 The saved notebook shows its pictures and numbers without a kernel; the panel at the end

@@ -53,6 +53,15 @@ after = per_lump(vA1, wA1) + per_lump(vB1, wB1)
 heat = .12*(6 + slip1 @ left)/2
 assert np.isclose(before - after, heat) and np.isclose(heat, .6696)
 
+
+# The arrow column's energy, worked as the velocity of added motion (doc's Dog Math, section 6).
+m = 1/6
+assert np.isclose(3*1.5, 4.5) and np.isclose(m*4.5, .75)                      # 4.5 zip; 0.75 thump of punch
+assert np.isclose(k*6*3, 7.2) and np.isclose(m*7.2, 1.2)                      # 7.2 zump; 1.2 thump of hook
+assert np.isclose(R*190, 5.7) and np.isclose(m*k*5.7**2/2, 1.083)             # A keeps about 1.08 of hook
+assert np.isclose(m*.12*(6 + 5.16)/2, heat*m)                                 # 0.02 oompf at 5.58 cat: 0.11 thump
+small = m*(.12**2/2 + .12**2/2 + k*(R*10)**2/2)
+assert small < .01 and np.isclose(m*before, .75 + m*k*5.7**2/2 + small + m*heat)
 # Afterward the cloth sets B rolling at 5/7 of its travel (its swirl about the cloth point holds).
 assert np.isclose(3*5/7, 2.142857, atol=1e-6)
 print(f'B: 3 cat →, {vB1 @ left:g} cat left, ↻ sweeping at {-wB1 @ up:g}. '
