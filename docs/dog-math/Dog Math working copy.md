@@ -788,8 +788,8 @@ Hold the two problems side by side and they're one problem in the
 mirror. The can took charge in, filling at the voltage; the coil
 lets flux out, emptying at the current.
 The electrical units stay in their own names (V, A, C, F, H, Wb),
-and the ohm is spelled out wherever the ghosts wear Ω and are also
-on the page. The dog park has no volt of its own.
+and the ohm is spelled out wherever the ghosts are wearing Ω. The
+dog park has no volt of its own.
 A pattern that slides
 \---------------------
 A line has a coil and a can in every meter: L\_line H and C\_line F.
