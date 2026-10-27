@@ -348,7 +348,8 @@ an adjective. The center of verbing is what's happening.
     20 pickup over 10 stroke adds 200 zing.
 6\. Ghosts
 \---------
-Ghost energy is kept; body energy is stored. The velocity of
+Ghost energy is kept and given; body energy is stored and
+transferred. The velocity of
 added velocity is kept as zip. The sweep of added sweep is kept
 as zing. Put the mass or inertia back across: the velocity of
 added motion is stored as punch; the sweep of added spin is
@@ -1219,7 +1220,9 @@ in brief.
     rest, the velocity climbs evenly as the motion comes in, so
     the motion is added at half the final velocity on average:
     60 lump brought to 10 cat takes 600 oompf, added at an average
-    of 5 cat, which stores 3000 thump, or 50 zip.
+    of 5 cat, which stores 3000 thump. Per lump, the ghost keeps
+    50 zip. A body stores energy and transfers it; a ghost keeps
+    it and gives it.
     So "zip per lump" is a slip.
     Arrows name directions in the scene, not on the page. → is
     forward, whichever way the page sits; label a figure's forward
@@ -1276,7 +1279,9 @@ in brief.
     rest, the velocity climbs evenly as the motion comes in, so
     the motion is added at half the final velocity on average:
     60 lump brought to 10 cat takes 600 oompf, added at an average
-    of 5 cat, which stores 3000 thump, or 50 zip.
+    of 5 cat, which stores 3000 thump. Per lump, the ghost keeps
+    50 zip. A body stores energy and transfers it; a ghost keeps
+    it and gives it.
     Use these names. If you need a new one, mark it as new with
     "(new)" after its first use.
     Two columns, the usual way and the dog way, from the same
@@ -1350,7 +1355,9 @@ in brief.
     rest, the velocity climbs evenly as the motion comes in, so
     the motion is added at half the final velocity on average:
     60 lump brought to 10 cat takes 600 oompf, added at an average
-    of 5 cat, which stores 3000 thump, or 50 zip.
+    of 5 cat, which stores 3000 thump. Per lump, the ghost keeps
+    50 zip. A body stores energy and transfers it; a ghost keeps
+    it and gives it.
     Rewrite a problem's SI numbers in dog units where they match:
     3 kg is 3 lump, 2 m/s is 2 cat. Keep meters where a push acts
     through them, and use hands for sizes, like a drum 1 hand in
