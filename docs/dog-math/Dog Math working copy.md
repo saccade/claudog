@@ -274,8 +274,8 @@ to places, and a force implies a change of motion.
 Ring is the phase rate of anything that oscillates or waves, a
 stroke of phase a second (trial).
 Sheet and blanket count the area of something laid out: a wing, a
-field, a floor. Card \[not specifically\] counts profiles, which carry no mass. The
-shapes are alike and the jobs differ.
+field, a floor. Card counts smaller areas, and it's handy for
+profiles, which carry no mass.
 Handy facts:
     1 meter                     = 10 hand
     1 sheet                     = 100 card
@@ -1056,7 +1056,10 @@ in algebra.
 When doc says a piece is for college, for high school, or for
 anyone outside the park, the dog units stay in the dog park: SI,
 with oompf, roll, ponder, and wheel wherever those quantities are
-named. \[\[I feel like these categories are not going to have a lot of clear hard edges. like, the mansion solutions are in part designed to show off the language. they’re road legal, but they’re still not just doing a boring commute-to-work, they’re showing off a bit. I’m not saying it’s not worth having the idea of multiple modalities, just warning that any rules here are likely to get trampled eventually.   ::  Road-legal mode (section 14) is the usual way to write it.\]\]
+named. Road-legal mode (section 14) is the usual way to write it.
+The modes don't have hard edges: the mansion solutions are road
+legal and still show the language off. Treat the rules here as
+defaults, and expect some to get trampled.
 The other rules hold: no third decimal, and name things. The verbs
 still run:
     The 2 kg center, running at 3.0 m/s, punches 9.0 J.
@@ -1372,12 +1375,15 @@ People can read them too: they're the doc in brief.
     almost always works, but it's seldom the most exact. "At"
     leads with the thing: 3 lump at 10 zoom is a 30 push weight;
     2 lump at 5 hand is a ponder. "Through" is a push along a
-    distance: 40 push through 3 meter is 120 thump. "On" and
-    "over" divide: 5 cat on 1 hand sweeps at 50. Verbs multiply
-    too: 2 oompf levered at 5 hand is 1 roll; half a wheel
-    sweeping at 2 carries 1 roll; 4 push at half a meter cranks at
-    2. Reach for the exact word first, and for "of" when nothing
-    fits better.
+    distance: 40 push through 3 meter is 120 thump. "Over"
+    divides, and so does "on" when a rate is spread on a lever:
+    5 cat on 1 hand sweeps at 50. "On" can also lay one thing
+    across another: a 0.1 mm coat on 40 m^2 of wall is 4 liters of
+    paint. The units tell you which. Verbs multiply too: 2 oompf
+    levered at 5 hand is 1 roll; half a wheel sweeping at
+    2 carries 1 roll; 4 push at half a meter cranks at 2. Reach
+    for the exact word first, and for "of" when nothing fits
+    better.
     Say directions like they're ordinary: 2 cat uphill. A force is
     a size with a sense.
     Operators' words: powering is a motor driving its load;
