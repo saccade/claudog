@@ -1136,9 +1136,8 @@ The puck on a string
 18\. Blocks to hand off
 \----------------------
 Each block below is written to be handed whole to a helper, a bot
-given one job, so each one stands alone and repeats what it
-needs. People can read them too: they're the doc
-in brief.
+given one job, so each one stands alone and repeats what it needs.
+People can read them too: they're the doc in brief.
     READING THE ARROWS
     Arrows name directions in the scene, not on the page. → is
     forward, whichever way the page sits; label a figure's forward
@@ -1382,9 +1381,9 @@ in brief.
     Say directions like they're ordinary: 2 cat uphill. A force is
     a size with a sense.
     Operators' words: powering is a motor driving its load;
-    overhauling is the load driving the motor (an overhauling
-    load overhauls the motor), the way a heavy
-    load lowered on a hoist runs the hoist's motor as a generator.
+    overhauling is the load driving the motor (an overhauling load
+    overhauls the motor), the way a heavy load lowered on a hoist
+    runs the hoist's motor as a generator.
     Drag is a pull against motion that grows with speed and can't
     hold anything still. Slewing is a crane turning about its
     upright. Topspin and backspin are the players' words.
