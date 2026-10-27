@@ -61,6 +61,9 @@ for x in (10, 20, 30, 40):
 v0 = stream(2); t = 20/(v0 @ fwd); v = v0 - g*t*up
 assert np.isclose((v @ up)/(v @ fwd), -.5)
 assert np.isclose(2*20, 40)                                      # the best aim line passes 40 m over the target's spot
+# The arrows column: u = f(→ + 2↑), f² = 80, t = 20/f, gravity adds 2.5 f ↓, v = f(→ − ½↑).
+f = np.sqrt(80); assert np.allclose(stream(2), f*(fwd + 2*up)) and np.isclose(g*20/f, 2.5*f)
+assert np.allclose(v, f*(fwd - up/2))
 # Nudging the aim swings the water square to the aim; at the merge that swing runs along the stream.
 def where(slope, t):
     return stream(slope)*t - g*t**2/2*up
