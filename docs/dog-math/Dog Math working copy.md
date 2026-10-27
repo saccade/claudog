@@ -490,10 +490,11 @@ and make no sudden moves.
   - The familiar ones, velocity and the sweep, soothe, and need
     no letter. A problem with one scary ghost can give it a
     letter. Ghosts go around as Z, since most of their names start
-    with z: Z for the one scary ghost, and Z\_profile, Z\_zing,
-    Z\_zlow when several are in play. Marks stay (Z₁, Z₂, Z₊, Z₋);
-    a different ghost gets a different subscript, and a repeated
-    symbol is the same quantity.
+    with z: Z for the one scary ghost. When several are in play,
+    each takes the shortest prefix of its name that tells it from
+    the others: profile, zing, and zlow are Z\_p, Z\_zi, and Z\_zl.
+    Marks stay (Z₁, Z₂, Z₊, Z₋); a different ghost gets a different
+    subscript, and a repeated symbol is the same quantity.
   - The conventional quantities keep their usual symbols: K, ω,
     α, v, and, in electricity, I for current and Z for impedance.
     Inertia depends on the company. Here it's η, which leaves I
