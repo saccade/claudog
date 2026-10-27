@@ -21,3 +21,8 @@ There's nothing to rebuild from, and the doc takes hand edits a script wouldn't 
 ## Proposing changes
 
 Branch, edit the working copy, and open a pull request: the diff shows exactly what would change in the doc. Once doc approves, the changes go into the Google Doc by hand or by API batch, and a fresh read of the doc is committed over the working copy on `main`. The working copy is never the source of truth; the Google Doc is.
+
+## Queued for the next pass
+
+- The WRITING IN DOG MATH block says "'On' and 'over' divide." Too strong (doc, 10-27): "on" can lay one thing across another, so a 0.1 mm coat on 40 m² of wall is 4 liters of paint, a product. Say that "on" divides when a rate is spread on a lever (5 cat on 1 hand sweeps at 50), lays one thing across another when it's a coat on an area, and that the units tell you which.
+- Pool notebook and Spin Hit: "Friction ↑ on B's face, at a lever ← from B's center" → "Friction ↑ on B's face acts on a lever ← from B's center and turns B ← × ↑ = ↻."
