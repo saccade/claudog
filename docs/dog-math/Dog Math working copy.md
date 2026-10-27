@@ -72,7 +72,7 @@ structural work, and friendly units make the numbers easy.
     a load up takes effort and does no work. Spending is for
     energy, power, and motion.
  9. Make the words work hard. A quantity can go adjectival (a
-    ponderous bulk), adverbial, or get verbed (the drum picks
+    ponderous bulk), act adverbially, or get verbed (the drum picks
     up). Drop dead words, skip words, take shortenings, have fun
     with units, and don't police anyone's coinages. Formalize
     later, and only where it would step on toes.
@@ -274,7 +274,7 @@ to places, and a force implies a change of motion.
 Ring is the phase rate of anything that oscillates or waves, a
 stroke of phase a second (trial).
 Sheet and blanket count the area of something laid out: a wing, a
-field, a floor. Card counts profiles, which carry no mass. The
+field, a floor. Card \[not specifically\] counts profiles, which carry no mass. The
 shapes are alike and the jobs differ.
 Handy facts:
     1 meter                     = 10 hand
@@ -489,7 +489,7 @@ and make no sudden moves.
     taken out. After that the ghosts do their work quietly.
   - The familiar ones, velocity and the sweep, soothe, and need
     no letter. A problem with one scary ghost can give it a
-    letter. That letter is Ω, the ghosts' true form, the base
+    letter. That letter is Ω,\[usually Z, unless it’s needed by impedance is I think what we’ve been doing. most of the ghost quantities start with z.\] the ghosts' true form, the base
     letter for the whole family: Ω for the one scary ghost, and
     Ω\_profile, Ω\_zing, Ω\_zlow when several are in play. Marks
     stay (Ω₁, Ω₂, Ω₊, Ω₋); a different ghost gets a different
@@ -503,7 +503,7 @@ and make no sudden moves.
     way to them, never the other way round. Ω the ghost never
     shares an expression with the ohm: quantity algebra and unit
     statements stay separate.
-  - All the ghosts wear Ω, or none do. Nobody gets left visible
+  - All the ghosts wear Ω, or none do \[see this is about Z. if there are multiple ghosts all of them should be Z or omega, not a mixture\]. Nobody gets left visible
     alone. If a later room needs the switch, the earlier rooms
     change with it.
 9\. Turning words
@@ -1056,7 +1056,7 @@ in algebra.
 When doc says a piece is for college, for high school, or for
 anyone outside the park, the dog units stay in the dog park: SI,
 with oompf, roll, ponder, and wheel wherever those quantities are
-named. Road-legal mode (section 14) is the usual way to write it.
+named. \[\[I feel like these categories are not going to have a lot of clear hard edges. like, the mansion solutions are in part designed to show off the language. they’re road legal, but they’re still not just doing a boring commute-to-work, they’re showing off a bit. I’m not saying it’s not worth having the idea of multiple modalities, just warning that any rules here are likely to get trampled eventually.   ::  Road-legal mode (section 14) is the usual way to write it.\]\]
 The other rules hold: no third decimal, and name things. The verbs
 still run:
     The 2 kg center, running at 3.0 m/s, punches 9.0 J.
