@@ -489,23 +489,25 @@ and make no sudden moves.
     taken out. After that the ghosts do their work quietly.
   - The familiar ones, velocity and the sweep, soothe, and need
     no letter. A problem with one scary ghost can give it a
-    letter. That letter is Ω,\[usually Z, unless it’s needed by impedance is I think what we’ve been doing. most of the ghost quantities start with z.\] the ghosts' true form, the base
-    letter for the whole family: Ω for the one scary ghost, and
-    Ω\_profile, Ω\_zing, Ω\_zlow when several are in play. Marks
-    stay (Ω₁, Ω₂, Ω₊, Ω₋); a different ghost gets a different
-    subscript, and a repeated symbol is the same quantity.
+    letter. Ghosts go around as Z, since most of their names start
+    with z: Z for the one scary ghost, and Z\_profile, Z\_zing,
+    Z\_zlow when several are in play. Marks stay (Z₁, Z₂, Z₊, Z₋);
+    a different ghost gets a different subscript, and a repeated
+    symbol is the same quantity.
   - The conventional quantities keep their usual symbols: K, ω,
     α, v, and, in electricity, I for current and Z for impedance.
     Inertia depends on the company. Here it's η, which leaves I
     to the current; with company, and in the problem statements,
     it's I as usual, and the letters move only where current and
-    inertia meet. The ghosts give
-    way to them, never the other way round. Ω the ghost never
-    shares an expression with the ohm: quantity algebra and unit
-    statements stay separate.
-  - All the ghosts wear Ω, or none do \[see this is about Z. if there are multiple ghosts all of them should be Z or omega, not a mixture\]. Nobody gets left visible
-    alone. If a later room needs the switch, the earlier rooms
-    change with it.
+    inertia meet. The ghosts give way to them, never the other
+    way round.
+  - When something else needs the Z, like an impedance, the
+    ghosts change into their true form, Ω, all of them together.
+    They all wear Z or all wear Ω, never a mix, so nobody gets
+    left visible alone. If a later room needs the switch, the
+    earlier rooms change with it. Ω the ghost never shares an
+    expression with the ohm: quantity algebra and unit statements
+    stay separate.
 9\. Turning words
 \----------------
 A stroke is a radian. A turn is about 6.3 stroke, and what is
@@ -786,7 +788,7 @@ Hold the two problems side by side and they're one problem in the
 mirror. The can took charge in, filling at the voltage; the coil
 lets flux out, emptying at the current.
 The electrical units stay in their own names (V, A, C, F, H, Wb),
-and the ohm is spelled out wherever the ghost letter Ω is also
+and the ohm is spelled out wherever the ghosts wear Ω and are also
 on the page. The dog park has no volt of its own.
 A pattern that slides
 \---------------------
