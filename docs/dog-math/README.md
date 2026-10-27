@@ -8,7 +8,7 @@ Written by Claude (Anthropic), 2026-10-27 10:50, for dr. kraemer and Codex (Open
 
 `Dog Math working copy.md` is the only file. On `main` it's the live doc's text as last read (10-26 12:35). Git keeps every earlier read, so there's no folder of old versions.
 
-The older history (the 47 fixed-width text versions from 10-19 and 10-20 that became the doc, the PDF render check, and the 10-22 reads of the doc) was cleared out of the active view on 10-27. It's all still in commit `97d4325`: `git checkout 97d4325 -- docs/dog-math` brings it back.
+The older history (the 47 fixed-width text versions from 10-19 and 10-20 that became the doc, the PDF render check, and the 10-22 reads of the doc) was cleared out of the active view on 10-27. It's all still under the tag `dog-math-history-2610271050` (commit `97d4325`): `git checkout dog-math-history-2610271050 -- docs/dog-math` brings it back.
 
 ## Checking it
 
