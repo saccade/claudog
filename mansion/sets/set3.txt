@@ -12,7 +12,7 @@ The visitor watches the knife cycle across and back. On the paper, the curve cyc
 ## 1. The knife
 The loose sheet models the knife as a 1 kg point mass, a meter from its pivot. Let go from 0.1 rad off the downward vertical, it swings under g = 10 m/s². The numbers are on the sheet; the knife has already begun.
 (1-a) Leaning through θ lifts a point ℓ away by ℓ(1 − cos θ). For this small lean, the knife rises about ℓ θ²/2: 5 mm. The 10 N weight lifted through 5 mm stores 0.05 J. Energy stored in height is heft: the weight pulls, and the height hefts. The knife hefts 0.05 J.
-(1-b) The velocity of added motion is stored as punch. Count the motion added from rest at the average velocity along the rise. The mass rides on both sides and cancels:
+(1-b) The velocity of added motion is stored as punch, each bit at the velocity it arrives at. Per meter of drop, the velocity of added velocity is g, and v² takes it in through both of its v’s: 2g a meter. The mass rides on both sides and cancels:
 v² = 2gh.
 A 5 mm fall under 10 m/s² gives v² = 0.1 m²/s². The knife passes the bottom at 0.32 m/s.
 (1-c) The knife has a cycle: from one end, through the bottom to the other end, and back. It cycles. Call the time for one complete cycle T.
@@ -44,7 +44,7 @@ Trapdoor, the swing side: in the floor under the mirror, and through it the same
 The line on the paper goes on behind the wall. Ahead, something breathes in steam. The leather at the clown’s elbow shines on the side that doesn’t bend. The shaft keeps going. By the range, a toolbox in scorched canvas, unlatched.
 ## 2. The engine and the flywheel
 (2-a) The engine ends each cycle with the same stored energy it began with. Of the 15 J that comes in (heat-in), 3 J comes out as work and the other 12 J leaves (heat-out). Work over heat-in is 3/15: 20%. At a cycle a second, that's 3 W.
-(2-b) Added spin stores the sweep at which it arrives: hook. A sweep of 4, 2 kg m²/s of spin, added from rest at an average sweep of 2: 4 J. Four seconds at 3 W add 12 J. At 8, the spin is 4 kg m²/s, added at an average sweep of 4: all 16 J. Twice the spin at twice the sweep hooks four times as much.
+(2-b) Added spin stores the sweep at which it arrives: hook. Sweep and spin grow together, so their product counts the hook twice over: a sweep of 4 on 2 kg m²/s of spin makes 8, so 4 J. Four seconds at 3 W add 12 J: 16 J, counted twice 32, which is a sweep of 8 on 4 kg m²/s. Twice the spin at twice the sweep hooks four times as much.
 (2-c) Power is the sweep of torque. Grab the χ off the wall like usual, no time to slow down here: P = ωχ. At 4 sweep the engine's 3 W cranks with χ = 3/4 crank; at 8, with 3/8 crank. Twice the sweep, half the crank.
 When the wheel goes twice as fast, the same power cranks just half as hard. On 500 g m², those torques pick the wheel up at 1.5 sweep a second at the start and 3/4 at the end.
 ## 3. The governor and the spool
@@ -72,7 +72,7 @@ Raise the spool's cord past that angle and, still pulled forward, the spool roll
 ## Drawer b: the wall lets go
 Door: the library. A gentleman's reading kit in circus colors, its velvet worn to the nap: a folding rule, spectacles, a little ladder leaning on a painted wall.
 (b-1) From the corner, the foot is x out and the top y up, with x² + y² = L². The center sits at x/2 out and y/2 up, half of each, so it's half of √(x² + y²) from the corner: L/2. That's a circle of radius L/2 about the corner.
-(b-2) Riding the center’s circle counts as mL²/4 of inertia; turning about the center adds mL²/12. They sweep together, so the inertias add: mL²/3. Each added sweep dω adds (mL²/3) dω of spin. Its sweep stores the added energy: dK = ω (mL²/3) dω.
+(b-2) Riding the center’s circle counts as mL²/4 of inertia; turning about the center adds mL²/12. They sweep together, so the inertias add: mL²/3. Each added sweep dω adds (mL²/3) dω of spin. Its sweep stores the added energy: dK = ω (mL²/3) dω. Through the sweep from rest to ω, the product of the sweep and the spin, ω (mL²/3) ω, grows through both factors at once, by two equal steps, so it counts K twice: K = (1/6)mL²ω².
 (b-3) With the top at height y, the center has dropped (h₀ − y)/2, so the heft let go is mg(h₀ − y)/2, and ω² = 3g(h₀ − y)/L². The wall's push is the only sideways force, so it's what speeds the center up sideways. The center runs round its circle at (L/2)ω, square to the line from the corner, so its sideways part is that speed at the line's upward fraction, (y/2)/(L/2): ωy/2, and its square, 3gy²(h₀ − y)/(4L²), grows while y²(h₀ − y) grows. That peaks where 2h₀y = 3y², at y = 2h₀/3. Past there the center would have to slow down sideways, and that takes a pull. The wall can't pull, so it lets go.
 (b-4) Two thirds of 2.4 m is 1.6 m. Then ω² = 3 × 10 × 0.8/9 = 8/3, and the center runs at 1.5√(8/3) = √6 = 2.4 m/s.
 Behind the ladder's drawer the panel swings in, and a long mirror leans there, showing the library backward.
@@ -93,10 +93,10 @@ After the ladder has left the wall, its fall trips the sear on a cocked cue. The
 Rolling at once means the bottom of the ball isn't sliding. The bottom's lever from the center is R ↓, and the turning moves it at the sweep crossed into that lever: ω ↻ × R ↓ = ω R ←. That has to cancel the center's v →, so the ball sweeps at v/R ↻. Its profile about the center is (2/5) R², and (2/5) m R² sweeping at v/R carries
 (2/5) m R² (v/R) ↻ = (2/5) R J ↻
 of spin, since m v is J. The two senses agree, so the cue went in above the center, and H − R = 2R/5: H = 7R/5 = 0.07 m, two fifths of a radius above the center.
-(5-c) The ball sweeps at 2/0.05 = 40 sweep ↻, and its spin is (2/5)(0.05 m)(2 N s) = 40 g m²/s ↻. The added 2 N s arrives at velocities from rest to 2 m/s, averaging 1; the added spin arrives at sweeps from rest to 40, averaging 20. The velocity of added motion stores punch; the sweep of added spin stores hook:
-(1 m/s →) · (2 N s →) = 2 J,
-(20 ↻) · (40 g m²/s ↻) = 0.8 J.
-Each pair points the same way, so each dot multiplies the sizes. The hook is two fifths of the punch again. The center keeps 2 J/kg as zip; the added sweep, 40 at an average 20, keeps 800 zing.
+(5-c) The ball sweeps at 2/0.05 = 40 sweep ↻, and its spin is (2/5)(0.05 m)(2 N s) = 40 g m²/s ↻. The velocity of added motion stores punch; the sweep of added spin stores hook. Built from rest, each pair grows together, by equal amounts, so each product counts its store twice over:
+(2 m/s →) · (2 N s →) = 4 J, twice 2 J,
+(40 ↻) · (40 g m²/s ↻) = 1.6 J, twice 0.8 J.
+Each pair points the same way, so each dot multiplies the sizes. The hook is two fifths of the punch again. The center keeps 2 J/kg as zip; the sweep of 40 on itself, 1600, counts the zing twice: 800 zing.
 ## Conservatory
 The cue ball rolls free, then nudges a flap. A second ball, held a little way up the basin, is let go. Its own height pays for its motion. The striped dome's second door is here, unlatched.
 ## 6. The basin
@@ -137,7 +137,7 @@ In a sum the bodies keep their parts apart, the way ← and ↑ do, so the two m
 The masses sit at 0.1 m → × U + 0.041 m ← × L. The lower one goes the other way, but only √2 − 1 as far, about 0.41. Its rod leans farther than the upper one, and the mass at its end moves less.
 In either tone, each rod picks up at ω² of its own lean, back toward vertical. Both tones at once make a chord, and the chord beats at the gap, 5.8 − 2.4 = 3.4 sweep.
 ## 10. The coils and the capacitor
-(10-a) Say these the right way round. Current is the conductance of the voltage: I = GV, with G = 1/R. Power is the voltage of the current: P = VI. A capacitor is a can: it cans charge, and the charge it cans is the capacitance of its voltage, q = CV. At the start the can holds no charge, so the resistor gets the whole 6 V, and the current is the conductance of 6 V across 20 Ω: 0.3 A. The time constant is RC = 20 × 0.1 = 2 s. When the can's at 4 V, the resistor has the other 2 V, and the current is 0.1 A. The can holds 0.4 C. Charged from empty to 4 V, that charge arrives at voltages averaging 2 V and stores 0.8 J, and the resistor's burning the voltage of the current, 2 V of 0.1 A, 0.2 W, as heat.
+(10-a) Say these the right way round. Current is the conductance of the voltage: I = GV, with G = 1/R. Power is the voltage of the current: P = VI. A capacitor is a can: it cans charge, and the charge it cans is the capacitance of its voltage, q = CV. At the start the can holds no charge, so the resistor gets the whole 6 V, and the current is the conductance of 6 V across 20 Ω: 0.3 A. The time constant is RC = 20 × 0.1 = 2 s. When the can's at 4 V, the resistor has the other 2 V, and the current is 0.1 A. The can holds 0.4 C. Voltage and charge grow together, so 4 V of 0.4 C, 1.6 J, counts the can's store twice over: 0.8 J. The resistor's burning the voltage of the current, 2 V of 0.1 A, 0.2 W, as heat.
 This is a different can, in a separate loop with a coil. A coil coils flux, and the flux it coils is the inductance of its current, Φ = Li.
 (10-b) With C = 1/(Lω_a²), LC = 1/ω_a², so ω₀ = 1/√(LC) = ω_a. The coil and the can give a plain 2.4 per second. A stroke counts as one, so that's 2.4 strokes a second: the loop sweeps with the slow mode exactly.
 (10-c) The statement writes the torque τ_em; here it's χ_em = κi: the current cranks the rod. The power is the rod's sweep of that torque, κiȧ. The statement's minus in ε = −κȧ is a direction: the rod's motion drives an emf of κȧ back against the current that cranks it, so the circuit gives up the voltage of the current, κȧ of i: the same κiȧ. Whatever the rod gets, the circuit gives up. When the current cranks the rod against its sweep, the energy runs the other way, and the rod's giving its energy to the circuit instead. It's a trade: a belt, not a battery. Nothing's made.
@@ -158,7 +158,7 @@ Trapdoor, the circuit side: windings and a capacitor the size of a hatbox, wired
 The rods are left hanging still and the loop open. The hall asks what could announce the release. On the hall stand, a striped hatbox, unlatched.
 ## 11. The line
 (11-a) Per meter, the line cans C′ and coils L′. Its values balance as L′C′u² = 1 and C′Z² = L′. Here L′C′ = 10⁻¹⁶ s²/m², so u = 1 × 10⁸ m/s, a third of light’s speed. The impedance balance gives Z² = 2500 ohm², so Z = 50 ohm.
-(11-b) The voltages add: 12 V. Each pulse's current is 6/50 = 0.12 A in its own direction of travel, and they travel opposite ways, so the currents cancel: no current at all. The energy per meter is all canned there, none coiled: 2.4 nC/m of charge, counted from empty to 12 V at an average 6 V, stores 14 nJ/m. That's the same as the two pulses' 7.2 nJ/m each, so nothing's gone missing; it's just all in one place.
+(11-b) The voltages add: 12 V. Each pulse's current is 6/50 = 0.12 A in its own direction of travel, and they travel opposite ways, so the currents cancel: no current at all. The energy per meter is all canned there, none coiled: 2.4 nC/m of charge at 12 V. Charge and voltage grow together, so their product counts the store twice over: 14 nJ/m. That's the same as the two pulses' 7.2 nJ/m each, so nothing's gone missing; it's just all in one place.
 (11-c) The sum is 9 MHz and the difference 1 MHz, so the crests move at u/9 ≈ 1.1 × 10⁷ m/s and at 9u = 9 × 10⁸ m/s, three times light's speed. The fast crests can't carry a signal. A signal is a change made at a source, and the change travels with its wave at u. The fast crest is only where two waves that were already there happen to line up. It seems to arrive before anyone sends anything because nobody sent it. The fast crest is a stripe: a ghost body with a place, a velocity, and a phase, and nothing stored. Phase is for ghosts. The two crest speeds are each other's flip about u: u/9 and 9u multiply to u².
 The hall clown’s shoulders are close to the cornice. The lining stops; the coat goes on.
 ## Drawer f: two crests from two waves

@@ -40,7 +40,7 @@ REEL4 = {
  '4-a': f"(4-a) The ladder won't stretch, so it dots to zero against the top's velocity less the foot's: (1.8 m ← + 2.4 m ↑){D}(0.40 m/s ← + v ↑) = 0.72 m²/s + 2.4 m v = 0. The top comes down at 0.30 m/s ↓.",
  '4-b': '(4-b) The center falls from 1.2 m to 0.80 m, and 80 N through 0.40 m lets go 32 J of heft.',
  '4-c': "(4-c) Count about the still point, L/2 from the center: the profile there is L²/12 + L²/4 = L²/3, and all 32 J is turning about it. The center's punch takes three quarters, 24 J, and the hook about the center the other 8. 8.0 kg punching 24 J runs at √6, about 2.4 m/s, with the ladder sweeping at 2v/L, about 1.6 sweep.",
- 'b-1': '(b-1) Foot x out, top y up, center at half of each: half of √(x² + y²) = L from the corner. The center rides a circle of radius L/2.',
+ 'b-1': '(b-1) Foot x out, top y up, center at half of each: half of √(x² + y²), so L/2 from the corner. The center rides a circle of radius L/2.',
  'b-2': '(b-2) Profiles add: L²/4 for riding the circle and L²/12 for turning about itself, L²/3 in all, so the ladder carries ½m(L²/3)ω² = (1/6)mL²ω².',
  'b-3': "(b-3) The heft let go, mg(h₀ − y)/2, sets ω² = 3g(h₀ − y)/L², and the center's sideways speed is ωy/2. Only the wall can speed that up, and its square goes as y²(h₀ − y), which tops out at y = 2h₀/3. Past there the center would have to be pulled back, and a wall can't pull. It lets go, right on schedule.",
  'b-4': "(b-4) Two thirds of 2.4 m is 1.6 m; ω² = 3 × 10 × 0.8/9 = 8/3; and the center's doing 1.5√(8/3) = √6, about 2.4 m/s.",

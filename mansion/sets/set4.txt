@@ -57,8 +57,8 @@ Raise the spool's cord past that angle and, still pulled forward, the spool roll
 (4-c) Count about the still point, L/2 from the center: the profile there is L²/12 + L²/4 = L²/3, and all 32 J is turning about it. The center's punch takes three quarters, 24 J, and the hook about the center the other 8. 8 kg punching 24 J runs at √6, about 2.4 m/s, with the ladder sweeping at 2v/L, about 1.6 sweep.
 ## Drawer b: the wall lets go
 Door: the library. A gentleman's reading kit in circus colors, its velvet worn to the nap: a folding rule, spectacles, a little ladder leaning on a painted wall.
-(b-1) Foot x out, top y up, center at half of each: half of √(x² + y²) = L from the corner. The center rides a circle of radius L/2.
-(b-2) Riding the center’s circle counts as mL²/4 of inertia; turning about the center adds mL²/12. They sweep together, so the inertias add: mL²/3. Each added sweep dω adds (mL²/3) dω of spin. Its sweep stores the added energy: dK = ω (mL²/3) dω.
+(b-1) Foot x out, top y up, center at half of each: half of √(x² + y²), so L/2 from the corner. The center rides a circle of radius L/2.
+(b-2) Riding the center’s circle counts as mL²/4 of inertia; turning about the center adds mL²/12. They sweep together, so the inertias add: mL²/3. Each added sweep dω adds (mL²/3) dω of spin. Its sweep stores the added energy: dK = ω (mL²/3) dω. Through the sweep from rest to ω, the product of the sweep and the spin, ω (mL²/3) ω, grows through both factors at once, by two equal steps, so it counts K twice: K = (1/6)mL²ω².
 (b-3) The heft let go, mg(h₀ − y)/2, sets ω² = 3g(h₀ − y)/L², and the center's sideways speed is ωy/2. Only the wall can speed that up, and its square goes as y²(h₀ − y), which tops out at y = 2h₀/3. Past there the center would have to be pulled back, and a wall can't pull. It lets go, right on schedule.
 (b-4) Two thirds of 2.4 m is 1.6 m; ω² = 3 × 10 × 0.8/9 = 8/3; and the center's doing 1.5√(8/3) = √6, about 2.4 m/s.
 Its back opens too: a long mirror, with the library backward in it.
@@ -75,7 +75,7 @@ After the ladder has left the wall, its fall trips the sear on a cocked cue. The
 ## 5. The cue ball
 (5-a) The cue lands 2 N s → on 1 kg, and the center punches off at 2 m/s →.
 (5-b) The blow leaves (H − R) ↑ × J → = (H − R) J ↻ of spin about the center. Rolling at once means ω ↻ × R ↓ = ω R ← cancels v →, so ω = v/R ↻, and the spin is (2/5) m R² (v/R) ↻ = (2/5) R J ↻. Same sense, so H − R = 2R/5: the cue goes in at 7R/5 = 0.07 m, two fifths of a radius over center.
-(5-c) 40 sweep ↻, 40 g m²/s ↻ of spin. Added motion at an average 1 m/s punches 2 J; added spin at an average 20 hooks 0.8 J. Two fifths again. The center keeps 2 J/kg as zip; the ball keeps 800 zing.
+(5-c) 40 sweep ↻, 40 g m²/s ↻ of spin. 2 m/s on 2 N s counts the punch twice: 2 J. 40 on 40 g m²/s counts the hook twice: 0.8 J. Two fifths again. The center keeps 2 J/kg as zip; the ball keeps 800 zing.
 ## Conservatory
 The cue ball rolls free, then nudges a flap. A second ball, held a little way up the basin, is let go. Its own height pays for its motion. The striped dome's second door is here, unlatched.
 ## 6. The basin
@@ -127,7 +127,7 @@ Trapdoor, the circuit side: windings and a capacitor the size of a hatbox, wired
 The rods are left hanging still and the loop open. The hall asks what could announce the release. On the hall stand, a striped hatbox, unlatched.
 ## 11. The line
 (11-a) L′C′u² = 1: u = 1 × 10⁸ m/s, a third of light's speed. C′Z² = L′: Z = 50 ohm.
-(11-b) Where the pulses overlap, 12 V and not an amp to show for it: their 0.12 A currents run opposite ways and cancel. All canned: 2.4 nC/m, charged from empty at an average 6 V, stores 14 nJ/m. The two pulses’ 7.2 nJ/m stack in one place.
+(11-b) Where the pulses overlap, 12 V and not an amp to show for it: their 0.12 A currents run opposite ways and cancel. All canned: 12 V on 2.4 nC/m counts the store twice, 14 nJ/m. The two pulses’ 7.2 nJ/m stack in one place.
 (11-c) Crests at u/9 ≈ 1.1 × 10⁷ m/s and 9u = 9 × 10⁸ m/s, three times light's speed. The fast one's a stripe: two waves already there, lining up, carrying nothing. A signal rides its wave at u, and nobody sent the stripe.
 Stripes run up the clown’s stockings. Not a stitch goes with them.
 ## Drawer f: two crests from two waves

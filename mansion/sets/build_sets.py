@@ -861,15 +861,17 @@ def to_html(items):
 # in any solution path; AP statements keep their conventional language.
 ENERGY_ACCOUNTS = {1: [('54e5465bd74daca61a45990ec0cb50c81bfa200b703290fe7259303bf3e4f709',
       '(1-b) At the bottom that energy is all in the knife’s motion. The velocity of added momentum is '
-      'stored as energy. From rest, momentum grows with velocity: each bit arrives at a different velocity, '
-      'running evenly from zero to the final v. Count the added momentum at that average velocity. The '
-      'height account and the momentum both carry the same mass, so it cancels:'),
+      'stored as energy: each bit of momentum is stored at the velocity the knife has as it arrives. '
+      'Falling, the knife picks up velocity at g each second while it drops v each second, so for each '
+      'meter of drop, the velocity of added velocity is g. The square v² takes that in through both of its '
+      'v’s at once: 2g for each meter of drop. The height account and the momentum both carry the same '
+      'mass, so it never enters:'),
      ('7cb40431dd95702c3f4913a20479140aeb888b338c6c0ffa793a7e63f8acece5',
       '(2-b) The sweep of added angular momentum is stored as turning energy. At 4 strokes a second, 500 g '
-      'm² carries 2 kg m²/s. Built from rest, that angular momentum arrives at sweeps from zero to 4, '
-      'averaging 2: 2 of 2 is 4 J. Counted in turns, 4 strokes a second is 4/2π, about 0.64 of a turn a '
-      'second. Four seconds at a net 3 W add 12 J, for 16 J, and at 8 the wheel carries 4 kg m²/s of angular '
-      'momentum, added from rest at an average sweep of 4: 16 J. It ends up sweeping at 8 strokes a second: '
+      'm² carries 2 kg m²/s. Built from rest, the sweep and the angular momentum grow together, by equal '
+      'amounts of energy, so their product, 4 × 2, counts the stored energy twice over: 4 J. Counted in turns, 4 strokes a second is 4/2π, about 0.64 of a turn a '
+      'second. Four seconds at a net 3 W add 12 J, for 16 J. Counted twice over that’s 32, and at a sweep of 8 '
+      'the wheel carries 4 kg m²/s: 8 × 4 = 32. It ends up sweeping at 8 strokes a second: '
       '8/2π, about 1.3 turns a second. The 2 again: every sweep we count in turns gets divided by it. The '
       'engine paid in equal energy every second, not equal sweep, so four times the energy only doubles the '
       'sweep.'),
@@ -877,15 +879,17 @@ ENERGY_ACCOUNTS = {1: [('54e5465bd74daca61a45990ec0cb50c81bfa200b703290fe7259303
       '(4-c) The center rides a circle of radius L/2, which counts as mL²/4 of inertia; turning about the '
       'center adds mL²/12. Both pick up at the same sweep, so each bit of added sweep puts energy into them '
       'in the ratio 3 to 1. The 32 J therefore splits 24 J to the center’s motion and 8 J to the turning. '
-      'Use the same added-momentum account as at the knife: 8 kg with 24 J moves at √6, about 2.4 m/s. The '
+      'Count it as at the wheel: 24 J twice over is 48, the velocity on the momentum, 8 kg at a velocity '
+      'squared of 6. The center moves at √6, about 2.4 m/s. The '
       'ladder is sweeping at 2v/L, about 1.6 strokes a second.'),
      ('317963d3a45669a5a8a34db4b33d4aa0b0e8117b3762b67a7803600f5672bf2a',
       '(5-c) The ball sweeps at 2/0.05 = 40 strokes a second ↻, and its angular momentum is (2/5)(0.05 m)(2 '
       'N s) = 40 g m²/s ↻. The velocity of added momentum stores energy; the sweep of added angular momentum '
-      'does the same for turning. From rest to 2 m/s, the added 2 N s arrives at an average velocity of 1 '
-      'm/s. From rest to 40, the added 40 g m²/s arrives at an average sweep of 20:'),
-     ('c92a89dbbb947a735d5744ea362eb53829b4b973c1dd39cc6adbaa0e6894e28d', '(1 m/s →) · (2 N s →) = 2 J,'),
-     ('0fce7b23ce0b25908c747334992141de448f2381c7c79546f19b872acc2b18ed', '(20 ↻) · (40 g m²/s ↻) = 0.8 J.'),
+      'does the same for turning. Built from rest, the velocity and the momentum grow together, by equal '
+      'amounts of energy, so their product counts the energy twice over; so do the sweep and the angular '
+      'momentum:'),
+     ('c92a89dbbb947a735d5744ea362eb53829b4b973c1dd39cc6adbaa0e6894e28d', '(2 m/s →) · (2 N s →) = 4 J, twice 2 J,'),
+     ('0fce7b23ce0b25908c747334992141de448f2381c7c79546f19b872acc2b18ed', '(40 ↻) · (40 g m²/s ↻) = 1.6 J, twice 0.8 J.'),
      ('94ba0d0b97ef6a230439b930524beb3c1917f4b3f7ee2a9eb455a41a2fc8d17f',
       '(6-c) Rolling, the ball sweeps at v/R. Carrying the center at that sweep counts as mR² of inertia; '
       'the ball’s own turning adds (2/5)mR². The same added sweep therefore puts two fifths as much energy '
@@ -893,9 +897,9 @@ ENERGY_ACCOUNTS = {1: [('54e5465bd74daca61a45990ec0cb50c81bfa200b703290fe7259303
       'to the turning. At any height the ball moves at √(5/7) of the bead’s speed, about 0.85 of it, so it '
       'takes √(7/5) as long to come round: 2 s against 1.7 s.'),
      ('c5c73e90d4dfe1906ecb576df00030c10fb63d5f5992e8a9a0d05572d7aba640',
-      '(8-c) Only the part of added momentum along the velocity stores energy. The speed grows from 2 to 4 '
-      'm/s, adding 0.5 kg of that change: 1 N s along the motion, at speeds averaging 3 m/s. That stores 3 '
-      'J. While the radius shrinks, the puck’s path spirals inward. A small part of its velocity follows the '
+      '(8-c) Only the part of added momentum along the velocity stores energy. The speed goes from 2 to 4 '
+      'm/s, and the momentum along the motion from 1 to 2 N s. They grow together, so their product, 2 at '
+      'first and 8 at the end, counts the stored energy twice over: 3 J. While the radius shrinks, the puck’s path spirals inward. A small part of its velocity follows the '
       'pull, so the pull can add energy. Something drew the ribbon down. Its other end has been in your '
       'hand.'),
      ('b8e9a421bd479b1373bacbd356a31a8f531b9915c82391f39aa71362f36f9e49',
@@ -903,43 +907,48 @@ ENERGY_ACCOUNTS = {1: [('54e5465bd74daca61a45990ec0cb50c81bfa200b703290fe7259303
       '1/R. Power is the voltage of the current: P = VI. The 20 Ω resistor has a conductance of 0.05 mho '
       '(℧). At the start the capacitor holds no charge, so the resistor gets the whole 6 V, and the current '
       "is the conductance of 6 V: 0.3 A. The time constant is RC = 20 × 0.1 = 2 s. When the capacitor's at 4 "
-      'V, the resistor has the other 2 V, and the current is 0.1 A. The capacitor holds 0.4 C. Charged from '
-      "empty to 4 V, that charge arrives at voltages averaging 2 V and stores 0.8 J, and the resistor's "
+      'V, the resistor has the other 2 V, and the current is 0.1 A. The capacitor holds 0.4 C. Voltage and '
+      "charge grow together, so 4 V of 0.4 C, 1.6 J, counts the store twice over: 0.8 J. The resistor's "
       'burning the voltage of the current, 2 V of 0.1 A, 0.2 W, as heat.'),
      ('7d56e1a98013621b4bf9c8c303c5548f95e153ed1edb30fa4eee048abc8219c8',
       "(11-b) The voltages add: 12 V. Each pulse's current is 6/50 = 0.12 A in its own direction of travel, "
       'and they travel opposite ways: 0.12 A → + 0.12 A ← = 0, no current at all. The energy per meter is '
-      'all in the voltage there: 2.4 nC/m of charge, counted from empty to 12 V at an average 6 V, stores 14 '
-      "nJ/m. That's the same as the two pulses' 7.2 nJ/m each, so nothing's gone missing; it's just all in "
+      'all in the voltage there: 2.4 nC/m of charge at 12 V. Charge and voltage grow together, so their '
+      "product counts the store twice over: 14 nJ/m. That's the same as the two pulses' 7.2 nJ/m each, so nothing's gone missing; it's just all in "
       'one place.'),
      ('fcb6d29b263b0e83c159ee2e6b08059c6f26f1ab0d38b0a820ceabd030269b7c',
       '(1-a) Leaning through θ lifts a point ℓ away by ℓ(1 − cos θ). For this small lean, the knife rises '
       'about ℓ\u200aθ²/2: 5 mm. The 10 N weight lifted through 5 mm stores 0.05 J.')],
  2: [('9b53705402bdf13a5c9337f6dbf1814aa9a6aa1af1236ed9a8a198260690d145',
-      '(1-b) The velocity of added motion is stored as punch. From rest, motion grows with velocity, so '
-      'count the added motion at the average velocity along that rise. The heft and the punch both carry the '
-      'same mass, so it cancels:'),
+      '(1-b) The velocity of added motion is stored as punch: each bit of motion goes in at the velocity the '
+      'knife has as it arrives. Falling, the knife picks up velocity at g each second while it drops v each '
+      'second, so for each meter of drop, the velocity of added velocity is g. The square v² takes that in '
+      'through both of its v’s at once: 2g for each meter. The heft and the punch both carry the same mass, '
+      'so it cancels:'),
      ('e0940fa14ee53032cf42f56d6148d7b4b6d1f3f6af17f84e6263a6f2953284fe',
-      '(2-b) The sweep of added spin is stored as hook. Built from rest to 4, the spin reaches 2 kg m²/s at '
-      'an average sweep of 2: 4 J of hook. Four seconds at 3 W add 12 J, for 16 J. At a sweep of 8 the spin '
-      'is 4 kg m²/s, added at an average sweep of 4: the 16 J. Doubling the sweep doubles both the spin and '
+      '(2-b) The sweep of added spin is stored as hook. Built from rest to 4, the spin reaches 2 kg m²/s. '
+      'The sweep and the spin grow together, by equal amounts of hook, so their product, 4 × 2, counts the '
+      'hook twice over: 4 J. Four seconds at 3 W add 12 J, for 16 J. Counted twice over, that’s 32, and at a '
+      'sweep of 8 the spin is 4 kg m²/s: 8 × 4 = 32. Doubling the sweep doubles both the spin and '
       'the sweep at which it was added. Four times the hook buys twice the sweep.'),
      ('63020b04e94d9e903d30faf560328714a97691cf27451eb2f874c44743f1e377',
       '(4-c) The center rides a circle of radius L/2, which counts as mL²/4 of inertia; turning about the '
       'center adds mL²/12. Both pick up at the same sweep, so each bit of added sweep puts energy into them '
-      'in the ratio 3 to 1. The 32 J of heft splits 24 J of punch and 8 J of hook. The knife’s added-motion '
-      'account gives √6, about 2.4 m/s, for 8 kg punching 24 J. The ladder sweeps at 2v/L, about 1.6 sweep.'),
+      'in the ratio 3 to 1. The 32 J of heft splits 24 J of punch and 8 J of hook. '
+      'The 24 J of punch counted twice over is 48, velocity on motion: 8 kg at a velocity squared of 6, so √6, '
+      'about 2.4 m/s. The ladder sweeps at 2v/L, about 1.6 sweep.'),
      ('0ff278fc18dd33815f06ba450fe7e5f91d0329bca5e2cf744ff0aa8160b44b34',
       '(b-2) Riding the center’s circle counts as mL²/4 of inertia; turning about the center adds mL²/12. '
       'They sweep together, so the inertias add: mL²/3. Each added sweep dω adds (mL²/3) dω of spin. Its '
-      'sweep stores the added energy: dK = ω (mL²/3) dω.'),
+      'sweep stores the added energy: dK = ω (mL²/3) dω. Through the sweep from rest to ω, the product of '
+      'the sweep and the spin, ω (mL²/3) ω, grows through both factors at once, by two equal steps, so it '
+      'counts K twice: K = (1/6)mL²ω².'),
      ('c5c5a05925457d525abecffc113f35f53675c999eba898add20a10f90f5f25ac',
       '(5-c) The ball sweeps at 2/0.05 = 40 sweep ↻, and its spin is (2/5)(0.05 m)(2 N s) = 40 g m²/s ↻. The '
-      'added 2 N s arrives at velocities from rest to 2 m/s, averaging 1; the added spin arrives at sweeps '
-      'from rest to 40, averaging 20. The velocity of added motion stores punch; the sweep of added spin '
-      'stores hook:'),
-     ('cc51a23823aa3bd40e7a09fd5e6f2b712adb81677e65b3934d1c805b02c11303', '(1 m/s →) · (2 N s →) = 2 J,'),
-     ('26dfac3d663106ad481140beaac4e825f35ef77eb92ee454bbfff6c413ac436a', '(20 ↻) · (40 g m²/s ↻) = 0.8 J.'),
+      'velocity of added motion stores punch; the sweep of added spin stores hook. Built from rest, each '
+      'pair grows together, by equal amounts, so each product counts its store twice over:'),
+     ('cc51a23823aa3bd40e7a09fd5e6f2b712adb81677e65b3934d1c805b02c11303', '(2 m/s →) · (2 N s →) = 4 J, twice 2 J,'),
+     ('26dfac3d663106ad481140beaac4e825f35ef77eb92ee454bbfff6c413ac436a', '(40 ↻) · (40 g m²/s ↻) = 1.6 J, twice 0.8 J.'),
      ('a996c43733a0f68949517364c9904ce713b9ad11f6aec251ee8eac6f2b39c0d9',
       '(c-1) Rolling, the bottom is still for the instant, so count about the contact. The profile gains R² '
       'on top of (2/5)R²: (7/5)R². With sweep v/R, the center’s part of the inertia is mR² and the turning '
@@ -956,8 +965,8 @@ ENERGY_ACCOUNTS = {1: [('54e5465bd74daca61a45990ec0cb50c81bfa200b703290fe7259303
       'charge it cans is the capacitance of its voltage, q = CV. At the start the can holds no charge, so '
       'the resistor gets the whole 6 V, and the current is the conductance of 6 V across 20 Ω: 0.3 A. The '
       "time constant is RC = 20 × 0.1 = 2 s. When the can's at 4 V, the resistor has the other 2 V, and the "
-      'current is 0.1 A. The can holds 0.4 C. Charged from empty to 4 V, that charge arrives at voltages '
-      "averaging 2 V and stores 0.8 J, and the resistor's burning the voltage of the current, 2 V of 0.1 A, "
+      'current is 0.1 A. The can holds 0.4 C. Voltage and charge grow together, so 4 V of 0.4 C, 1.6 J, '
+      "counts the can's store twice over: 0.8 J. The resistor's burning the voltage of the current, 2 V of 0.1 A, "
       '0.2 W, as heat.'),
      ('46695ccb51086adff1044c978b3d71b2050cf2b3b89493fb850dbe6b3636254c',
       'The can cans charge; the inductor is a coil, and it coils its own linked flux. Through added charge '
@@ -967,20 +976,21 @@ ENERGY_ACCOUNTS = {1: [('54e5465bd74daca61a45990ec0cb50c81bfa200b703290fe7259303
      ('fabce80e51b0712bed9ee24e4aa974d2015ef90806ac70d61e73a6f8dc0923f3',
       "(11-b) The voltages add: 12 V. Each pulse's current is 6/50 = 0.12 A in its own direction of travel, "
       'and they travel opposite ways, so the currents cancel: no current at all. The energy per meter is all '
-      'canned there, none coiled: 2.4 nC/m of charge, counted from empty to 12 V at an average 6 V, stores '
-      "14 nJ/m. That's the same as the two pulses' 7.2 nJ/m each, so nothing's gone missing; it's just all "
+      'canned there, none coiled: 2.4 nC/m of charge at 12 V. Charge and voltage grow together, so their '
+      "product counts the store twice over: 14 nJ/m. That's the same as the two pulses' 7.2 nJ/m each, so nothing's gone missing; it's just all "
       'in one place.'),
      ('ff13ff3d16551b5c71aebfd336f08a8b462cd49a1be5e5324ea7f28f62beffe8',
       '(1-a) Leaning through θ lifts a point ℓ away by ℓ(1 − cos θ). For this small lean, the knife rises '
       'about ℓ\u200aθ²/2: 5 mm. The 10 N weight lifted through 5 mm stores 0.05 J. Energy stored in height '
       'is heft: the weight pulls, and the height hefts. The knife hefts 0.05 J.')],
  3: [('9b53705402bdf13a5c9337f6dbf1814aa9a6aa1af1236ed9a8a198260690d145',
-      '(1-b) The velocity of added motion is stored as punch. Count the motion added from rest at the '
-      'average velocity along the rise. The mass rides on both sides and cancels:'),
+      '(1-b) The velocity of added motion is stored as punch, each bit at the velocity it arrives at. Per '
+      'meter of drop, the velocity of added velocity is g, and v² takes it in through both of its v’s: 2g '
+      'a meter. The mass rides on both sides and cancels:'),
      ('e0940fa14ee53032cf42f56d6148d7b4b6d1f3f6af17f84e6263a6f2953284fe',
-      '(2-b) Added spin stores the sweep at which it arrives: hook. A sweep of 4, 2 kg m²/s of spin, added '
-      'from rest at an average sweep of 2: 4 J. Four seconds at 3 W add 12 J. At 8, the spin is 4 kg m²/s, '
-      'added at an average sweep of 4: all 16 J. Twice the spin at twice the sweep hooks four times as '
+      '(2-b) Added spin stores the sweep at which it arrives: hook. Sweep and spin grow together, so their '
+      'product counts the hook twice over: a sweep of 4 on 2 kg m²/s of spin makes 8, so 4 J. Four seconds '
+      'at 3 W add 12 J: 16 J, counted twice 32, which is a sweep of 8 on 4 kg m²/s. Twice the spin at twice the sweep hooks four times as '
       'much.'),
      ('31b7e407bb82aaeddbe2771853cd513bc51cef76c32bbb6ace5a0066b29ee91c',
       '(4-c) For riding the center’s circle, mL²/4; for turning about the center, mL²/12. The same added '
@@ -993,7 +1003,9 @@ ENERGY_ACCOUNTS = {1: [('54e5465bd74daca61a45990ec0cb50c81bfa200b703290fe7259303
      ('0ff278fc18dd33815f06ba450fe7e5f91d0329bca5e2cf744ff0aa8160b44b34',
       '(b-2) Riding the center’s circle counts as mL²/4 of inertia; turning about the center adds mL²/12. '
       'They sweep together, so the inertias add: mL²/3. Each added sweep dω adds (mL²/3) dω of spin. Its '
-      'sweep stores the added energy: dK = ω (mL²/3) dω.'),
+      'sweep stores the added energy: dK = ω (mL²/3) dω. Through the sweep from rest to ω, the product of '
+      'the sweep and the spin, ω (mL²/3) ω, grows through both factors at once, by two equal steps, so it '
+      'counts K twice: K = (1/6)mL²ω².'),
      ('1673459aeb3c978bdd604b96a68bf52b4383b551fb17a60bc623496930074140',
       '(4-γ) About the still point, the profile is L²/12 + (L/2)² = L²/3. The sweep of added sweep is kept '
       'as zing; inertia across it stores hook. Double the inertia at the same sweep and the hook doubles; '
@@ -1001,14 +1013,14 @@ ENERGY_ACCOUNTS = {1: [('54e5465bd74daca61a45990ec0cb50c81bfa200b703290fe7259303
       'zing. The center keeps 3 J/kg as zip; turning about the center accounts for the other 1.'),
      ('c5c5a05925457d525abecffc113f35f53675c999eba898add20a10f90f5f25ac',
       '(5-c) The ball sweeps at 2/0.05 = 40 sweep ↻, and its spin is (2/5)(0.05 m)(2 N s) = 40 g m²/s ↻. The '
-      'added 2 N s arrives at velocities from rest to 2 m/s, averaging 1; the added spin arrives at sweeps '
-      'from rest to 40, averaging 20. The velocity of added motion stores punch; the sweep of added spin '
-      'stores hook:'),
-     ('cc51a23823aa3bd40e7a09fd5e6f2b712adb81677e65b3934d1c805b02c11303', '(1 m/s →) · (2 N s →) = 2 J,'),
-     ('26dfac3d663106ad481140beaac4e825f35ef77eb92ee454bbfff6c413ac436a', '(20 ↻) · (40 g m²/s ↻) = 0.8 J.'),
+      'velocity of added motion stores punch; the sweep of added spin stores hook. Built from rest, each '
+      'pair grows together, by equal amounts, so each product counts its store twice over:'),
+     ('cc51a23823aa3bd40e7a09fd5e6f2b712adb81677e65b3934d1c805b02c11303', '(2 m/s →) · (2 N s →) = 4 J, twice 2 J,'),
+     ('26dfac3d663106ad481140beaac4e825f35ef77eb92ee454bbfff6c413ac436a', '(40 ↻) · (40 g m²/s ↻) = 1.6 J, twice 0.8 J.'),
      ('52bde83e43a7f79b544456b72b1f631c77d83725897b4343697d23e3c6deb0ca',
       'Each pair points the same way, so each dot multiplies the sizes. The hook is two fifths of the punch '
-      'again. The center keeps 2 J/kg as zip; the added sweep, 40 at an average 20, keeps 800 zing.'),
+      'again. The center keeps 2 J/kg as zip; the sweep of 40 on itself, 1600, counts the zing twice: 800 '
+      'zing.'),
      ('a996c43733a0f68949517364c9904ce713b9ad11f6aec251ee8eac6f2b39c0d9',
       '(c-1) Rolling, the bottom is still for the instant, so count about the contact. The profile gains R² '
       'on top of (2/5)R²: (7/5)R². With sweep v/R, the center’s part of the inertia is mR² and the turning '
@@ -1025,8 +1037,8 @@ ENERGY_ACCOUNTS = {1: [('54e5465bd74daca61a45990ec0cb50c81bfa200b703290fe7259303
       'charge it cans is the capacitance of its voltage, q = CV. At the start the can holds no charge, so '
       'the resistor gets the whole 6 V, and the current is the conductance of 6 V across 20 Ω: 0.3 A. The '
       "time constant is RC = 20 × 0.1 = 2 s. When the can's at 4 V, the resistor has the other 2 V, and the "
-      'current is 0.1 A. The can holds 0.4 C. Charged from empty to 4 V, that charge arrives at voltages '
-      "averaging 2 V and stores 0.8 J, and the resistor's burning the voltage of the current, 2 V of 0.1 A, "
+      'current is 0.1 A. The can holds 0.4 C. Voltage and charge grow together, so 4 V of 0.4 C, 1.6 J, '
+      "counts the can's store twice over: 0.8 J. The resistor's burning the voltage of the current, 2 V of 0.1 A, "
       '0.2 W, as heat.'),
      ('46695ccb51086adff1044c978b3d71b2050cf2b3b89493fb850dbe6b3636254c',
       'The can cans charge; the inductor is a coil, and it coils its own linked flux. Through added charge '
@@ -1036,8 +1048,8 @@ ENERGY_ACCOUNTS = {1: [('54e5465bd74daca61a45990ec0cb50c81bfa200b703290fe7259303
      ('fabce80e51b0712bed9ee24e4aa974d2015ef90806ac70d61e73a6f8dc0923f3',
       "(11-b) The voltages add: 12 V. Each pulse's current is 6/50 = 0.12 A in its own direction of travel, "
       'and they travel opposite ways, so the currents cancel: no current at all. The energy per meter is all '
-      'canned there, none coiled: 2.4 nC/m of charge, counted from empty to 12 V at an average 6 V, stores '
-      "14 nJ/m. That's the same as the two pulses' 7.2 nJ/m each, so nothing's gone missing; it's just all "
+      'canned there, none coiled: 2.4 nC/m of charge at 12 V. Charge and voltage grow together, so their '
+      "product counts the store twice over: 14 nJ/m. That's the same as the two pulses' 7.2 nJ/m each, so nothing's gone missing; it's just all "
       'in one place.'),
      ('3e9541969c266a4a293fc694a71e5c6e318fb277459c3390c62619a7ebe0782b',
       '(3-β) Call the energy per meter traveling right e₊, and that traveling left e₋. Both are positive '
@@ -1056,14 +1068,16 @@ ENERGY_ACCOUNTS = {1: [('54e5465bd74daca61a45990ec0cb50c81bfa200b703290fe7259303
      ('2d3bf6e521ef1032c825d592f8c2640cda823cab3b0dfb68dc493953b5c109fc',
       '(b-2) Riding the center’s circle counts as mL²/4 of inertia; turning about the center adds mL²/12. '
       'They sweep together, so the inertias add: mL²/3. Each added sweep dω adds (mL²/3) dω of spin. Its '
-      'sweep stores the added energy: dK = ω (mL²/3) dω.'),
+      'sweep stores the added energy: dK = ω (mL²/3) dω. Through the sweep from rest to ω, the product of '
+      'the sweep and the spin, ω (mL²/3) ω, grows through both factors at once, by two equal steps, so it '
+      'counts K twice: K = (1/6)mL²ω².'),
      ('273f303abbc4b45d3ee4b562212d590cc9e0c43db6b207a7d6c89cbcea08f4f2',
       '(4-γ) Profile L²/3 about the still point: 3 m². The 32 J on 8 kg keeps 4 J/kg; the profile across the '
       'zing gives that, so 4/3 zing. The center’s zip keeps 3 of the 4; turning about the center accounts '
       'for the other 1.'),
      ('71367459b3638c42c294861848a327bc15b821cef176b80d4444db8e0ad03701',
-      '(5-c) 40 sweep ↻, 40 g m²/s ↻ of spin. Added motion at an average 1 m/s punches 2 J; added spin at an '
-      'average 20 hooks 0.8 J. Two fifths again. The center keeps 2 J/kg as zip; the ball keeps 800 zing.'),
+      '(5-c) 40 sweep ↻, 40 g m²/s ↻ of spin. 2 m/s on 2 N s counts the punch twice: 2 J. 40 on 40 g m²/s '
+      'counts the hook twice: 0.8 J. Two fifths again. The center keeps 2 J/kg as zip; the ball keeps 800 zing.'),
      ('cf39749957b9d6c290d4f927d4a49aa455d0333e08ddf7fa052dd2cd9bd27ab3',
       '(c-1) Profile about the contact: (2/5)R² + R² = (7/5)R². Each added sweep stores seven parts where '
       'the sliding bead stores five. Same pace, 7/5 of the energy.'),
@@ -1072,7 +1086,7 @@ ENERGY_ACCOUNTS = {1: [('54e5465bd74daca61a45990ec0cb50c81bfa200b703290fe7259303
       '(7/5)aω² = g. For the knife’s meter, a = 5/7 m.'),
      ('254c53cfc884a5e9ed46ddaa18b31b5fa068d437a17be179505c5179254bde41',
       '(11-b) Where the pulses overlap, 12 V and not an amp to show for it: their 0.12 A currents run '
-      'opposite ways and cancel. All canned: 2.4 nC/m, charged from empty at an average 6 V, stores 14 nJ/m. '
+      'opposite ways and cancel. All canned: 12 V on 2.4 nC/m counts the store twice, 14 nJ/m. '
       'The two pulses’ 7.2 nJ/m stack in one place.'),
      ('faa5cc4c2aca0fd230656e9b77a0c7cf9a202f35b025e0a88b6d23e393b97f91',
       '(3-β) Two stores, e₊ and e₋ per meter, each traveling at u. Energy adds them; power opposes them: e = '
