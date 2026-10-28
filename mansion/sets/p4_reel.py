@@ -93,7 +93,7 @@ REEL4 = {
  '13-a': '(13-a) q₀²/(2C) = 0.080 J with C about 1.7 F: q₀ = 0.52 C, and the can starts at 0.31 V.',
  '13-b': "(13-b) q gets back to q₀ only when both hands point → again: 4νT and 9νT both whole turns. Four and nine share nothing, so the first time is νT = τ, four turns low and nine high, the one machine's return: T = 6τ/ω₀, about 16 s. It was 16 s last time, too.",
  '13-c': "(13-c) Halfway, the slow hand points → and the fast ←: q/q₀ = → · (9/13 → + 4/13 ←) = 5/13, no current, both rods through vertical. The can holds 25/169 of the 80 mJ, about 12 mJ, and the rods punch the other 144/169, 68 mJ: a 5–12–13.",
- '13-d': '(13-d) In S, γT = 5/4 × 16 s = 20 s, and the receiver covers (3/5)c × 20 s = 3.6 × 10⁹ m. Its seat rides x = vt, so x_H = 0 throughout. This is RUN: nothing taps the machine, so its tones lining up add nothing.',
+ '13-d': '(13-d) In S, γT = (5/4)T, about 19 s, and the receiver covers (3/5)(5/4)cT = (3/4)cT, about 3.5 × 10⁹ m. Its seat rides x = vt, so x_H = 0 throughout. This is RUN: nothing taps the machine, so its tones lining up add nothing.',
 }
 
 

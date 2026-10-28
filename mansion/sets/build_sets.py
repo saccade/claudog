@@ -702,7 +702,7 @@ def build(k, shares=True):
              ("T = τ/√10 = 1.99 s. That's the knife's time to the last digit,", "T = τ/√10, about 2.0 s. That's exactly the knife's time,"),
              ("T = τ/√14 = 1.68 s.", "T = τ/√14, about 1.7 s.")]
     # doc 19:30: two figures throughout, the √2 family too ("if a difference that small matters it needs a name").
-    # The exact tuning keeps its sentence; the chair's chain goes 16 s, 20 s, 3.6 × 10⁹ m (with c: 4.8, 6.0, 3.6, a 3–4–5).
+    # The exact tuning keeps its sentence; the chair's chain goes 16 s, then (doc 10-28) about 19 s and 3.5 × 10⁹ m, rounded once at the end.
     ROUND += [("which is 1.71 F to three figures.", "about 1.7 F."), ("1.71 is only how it's written down", "1.7 is only how it's written down"),
               ("= 6τ/ω₀ = 15.6 s", "= 6τ/ω₀, about 16 s"),
               ("γT = 1.25 × 15.6 = 19.5 s, and the receiver covers 0.60c × 19.5 s = 3.5 × 10⁹ m", "γT = 1.25 × 16 s = 20 s, and the receiver covers 0.60c × 20 s = 3.6 × 10⁹ m"),
@@ -748,6 +748,13 @@ def build(k, shares=True):
               ("= (60/100)c = 0.60c. There γ = 1/√(1 − 0.36) = 1/0.80 = 1.25.", "= (60/100)c = (3/5)c. There γ = 1/√(1 − 9/25) = 5/4."),
               ("reads 10/1.25 = 8.0 s of its own time", "reads 4/5 as much, 8.0 s of its own time,"),
               ("γT = 1.25 × 16 s = 20 s, and the receiver covers 0.60c × 20 s", "γT = 5/4 × 16 s = 20 s, and the receiver covers (3/5)c × 20 s")]
+    # doc 10-28 06:43: "it looks like there's a 3.6 where 3.5 is much closer?" Rounding T to 16 s before multiplying
+    # gave 20 s and 3.6 × 10⁹ m; the true chain is 15.6 s, 19.5 s, 3.50 × 10⁹ m. Round once, at the end: the 3/5 and
+    # the 5/4 make 3/4 exactly, so the distance is (3/4)cT (still a 3–4–5 with cT and cγT, just at the true size).
+    ROUND += [("γT = 5/4 × 16 s = 20 s, and the receiver covers (3/5)c × 20 s = 3.6 × 10⁹ m",
+               "γT = (5/4)T, about 19 s, and the receiver covers vγT = (3/5)(5/4)cT = (3/4)cT, about 3.5 × 10⁹ m"),
+              ("Outside it's 20 s, and outside says you've crossed 3.6 million kilometers.",
+               "Outside it's about 19 s, and outside says you've crossed 3.5 million kilometers.")]
     for a, b in ROUND:
         out = [(t, x.replace(a, b) if isinstance(x, str) else x) for t, x in out]
     TWO = [("2.42", "2.4"), ("5.84", "5.8"), ("5.86", "5.9"), ("34.1", "34"), ("3.42", "3.4"), ("1.84 s", "1.8 s"), ("2.60 s", "2.6 s"),
