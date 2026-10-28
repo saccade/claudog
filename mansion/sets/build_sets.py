@@ -748,6 +748,8 @@ def build(k, shares=True):
               ("= (60/100)c = 0.60c. There γ = 1/√(1 − 0.36) = 1/0.80 = 1.25.", "= (60/100)c = (3/5)c. There γ = 1/√(1 − 9/25) = 5/4."),
               ("reads 10/1.25 = 8.0 s of its own time", "reads 4/5 as much, 8.0 s of its own time,"),
               ("γT = 1.25 × 16 s = 20 s, and the receiver covers 0.60c × 20 s", "γT = 5/4 × 16 s = 20 s, and the receiver covers (3/5)c × 20 s")]
+    # doc 10-28 06:48: "round it to 20 in the parts where the 19.5 would be disappointing, like in the chant-like parts";
+    # 06:49 "art doesn't need consistency". The solutions say 19.5 s; the closing scene line keeps its 16 and 20.
     # doc 10-28 06:47: say 19.5 s ("that's really close and fairly round"), a decimal since the value is rounded (R-131).
     # doc 10-28 06:43: "it looks like there's a 3.6 where 3.5 is much closer?" Rounding T to 16 s before multiplying
     # gave 20 s and 3.6 × 10⁹ m; the true chain is 15.6 s, 19.5 s, 3.50 × 10⁹ m. Round once, at the end: the 3/5 and
@@ -755,7 +757,7 @@ def build(k, shares=True):
     ROUND += [("γT = 5/4 × 16 s = 20 s, and the receiver covers (3/5)c × 20 s = 3.6 × 10⁹ m",
                "γT = (5/4)T, about 19.5 s, and the receiver covers vγT = (3/5)(5/4)cT = (3/4)cT, about 3.5 × 10⁹ m"),
               ("Outside it's 20 s, and outside says you've crossed 3.6 million kilometers.",
-               "Outside it's about 19.5 s, and outside says you've crossed 3.5 million kilometers.")]
+               "Outside it's 20 s, and outside says you've crossed 3.5 million kilometers.")]
     for a, b in ROUND:
         out = [(t, x.replace(a, b) if isinstance(x, str) else x) for t, x in out]
     TWO = [("2.42", "2.4"), ("5.84", "5.8"), ("5.86", "5.9"), ("34.1", "34"), ("3.42", "3.4"), ("1.84 s", "1.8 s"), ("2.60 s", "2.6 s"),
