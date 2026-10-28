@@ -1165,6 +1165,10 @@ DOC_1028 = [
         "(2-β) Take the square root of 2-α's balance: ω₀² − ω² = ±[κ/√(ηL)]ω. The low tone sits below ω₀ and takes the + sign; the high tone sits above it and takes the −. Subtract the high balance from the low: ω_high² − ω_low² = [κ/√(ηL)](ω_high + ω_low). The left side is (ω_high − ω_low)(ω_high + ω_low), and the sum is positive, so it cancels, leaving Δω√(ηL) = κ. Put that back into the low balance: ω₀² − ω_low² = (ω_high − ω_low)ω_low, so ω₀² = ω_low ω_high. The two tones sit the same factor below and above ω₀, one ω₀ divided by it and the other ω₀ times it: a mirror pair."),
  # doc 07:46: the rods' motion is punch (13-c), so the endings say so
  ((2,), "a crank is a size of torque, not a new kind of twisting.", "a crank is a size of torque, not a new kind of turning."),
+ # doc 08:35 (a reviewer's catch): the tones' middle and half their gap make a 5–12–13, the same one as 13-c, from the 3 to 2
+ ((3,), "κ = (5/6)ω₀√(ηL). ", "κ = (5/6)ω₀√(ηL). The tones multiply to ω₀² and differ by Δω, so their middle is √(ω₀² + (Δω/2)²) = 13/12 of ω₀: ω₀ and half the gap, 5/12 of it, are the legs of a 5–12–13, and the tones sit at 13/12 ± 5/12, which is 18/12 and 8/12. That's the 3 to 2 at work, 3² − 2², 2·3·2, and 3² + 2², and the same triangle comes back in 13-c. "),
+ ((3,), "so the other 68 mJ is the rods' punch.", "so the other 68 mJ, 144/169, is the rods' punch: the 5–12–13 from 2-γ again."),
+ ((4,), "κ = (5/6)ω₀√(ηL), and the tones run at 1.6 and 3.6 sweep.", "κ = (5/6)ω₀√(ηL), and the tones run at 1.6 and 3.6 sweep. Their middle is 13/12 of ω₀ and half their gap 5/12: a 5–12–13, which 13-c meets again."),
  ((3, 4), "What leaves the can comes back as hook;", "What leaves the can comes back as punch;"),
  # doc 07:46: the dot keeps the forward part of the phase; what's a choice there and what isn't
  ((2,), "with P = k₁x − ω₁t and Q = k₂x + ω₂t.",
