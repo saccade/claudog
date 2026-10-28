@@ -17,3 +17,12 @@ There's nothing to rebuild from, and the doc has taken hand edits a script would
 - **Export the live doc and diff it against the newest snapshot.** Every difference is either an edit made since then or export noise. Read each one; don't "fix" it back.
 - **Commit each new export as the next snapshot,** named "Dog Math doc as read YYMMDDHHMM", so the history keeps growing in one place.
 - **A rule check** (round numbers, unit plurals, contractions) can flag lines, but it reports. It doesn't edit the doc, since a flagged line may be one doc wrote on purpose.
+
+## Current snapshot, 2026-10-23
+
+Codex preserved the live document, including intervening hand edits, before
+making doc’s requested energy-account changes. The next snapshot is
+`Dog Math doc as read 2610231338.txt`. Ghost energy is kept; worked energy
+accounts follow additions rather than half-square shortcuts. The older
+snapshots and all text versions remain untouched. The Google Doc stays the
+source of truth; this snapshot is evidence, never a regeneration input.
