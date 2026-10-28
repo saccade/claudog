@@ -1169,6 +1169,9 @@ DOC_1028 = [
  ((3,), "κ = (5/6)ω₀√(ηL). ", "κ = (5/6)ω₀√(ηL). The tones multiply to ω₀² and differ by Δω, so their middle is √(ω₀² + (Δω/2)²) = 13/12 of ω₀: ω₀ and half the gap, 5/12 of it, are the legs of a 5–12–13, and the tones sit at 13/12 ± 5/12, which is 18/12 and 8/12. That's the 3 to 2 at work, 3² − 2², 2·3·2, and 3² + 2², and the same triangle comes back in 13-c. "),
  ((3,), "so the other 68 mJ is the rods' punch.", "so the other 68 mJ, 144/169, is the rods' punch: the 5–12–13 from 2-γ again."),
  ((4,), "κ = (5/6)ω₀√(ηL), and the tones run at 1.6 and 3.6 sweep.", "κ = (5/6)ω₀√(ηL), and the tones run at 1.6 and 3.6 sweep. Their middle is 13/12 of ω₀ and half their gap 5/12: a 5–12–13, which 13-c meets again."),
+ # doc 08:38: nothing is stored by a ghost; the body stores the energy, the ghost has the echo of it
+ ((3,), "a ghost body with a place, a velocity, and a phase, and nothing stored.", "a ghost body with a place, a velocity, and a phase. The waves under it store energy, and that travels at u; the stripe stores nothing itself, being a ghost, and only echoes where their stores line up."),
+ ((3,), "It has a place, a velocity, and a phase, and carries no independent store.", "It has a place, a velocity, and a phase; the energy is stored in the waves, and the stripe, a ghost, stores none itself, only an echo of theirs."),
  ((3, 4), "What leaves the can comes back as hook;", "What leaves the can comes back as punch;"),
  # doc 07:46: the dot keeps the forward part of the phase; what's a choice there and what isn't
  ((2,), "with P = k₁x − ω₁t and Q = k₂x + ω₂t.",
