@@ -478,8 +478,8 @@ _OLD_13B_23 = ("(13-b) The statement's cosines are the forward parts of two hand
 _HALFWAY = ("Halfway, the slow part has made two whole turns and the fast part four and a flip. Then Y = (5/13)Y₀ and Ẋ = −(12/13)ω₀Y₀, "
             "so the capacitor holds (5/13)² of the energy and the swing's motion (12/13)²: 25 and 144 out of 169, a 5–12–13 triangle "
             "made from 2² and 3².")
-_TALLY = ("The fixed 80 mJ held through that return gives ∫E dt = 1.3 J s. Here the action counted is that energy-time tally. On the "
-          "rods’ 2 kg, it’s 0.65 zam. Against the a-swing’s η = 6.8 kg m², the same tally is 0.19 zlam. The reference profile η/(2 kg) "
+_TALLY = ("The fixed 80 mJ held through that return gives ∫E dt = 1.2 J s. Here the action counted is that energy-time tally. On the "
+          "rods’ 2 kg, it’s 0.62 zam. Against the a-swing’s η = 6.8 kg m², the same tally is 0.18 zlam. The reference profile η/(2 kg) "
           "takes zlam to zam. Neither tally is energy used up. Nobody asked for either of them.")
 _OLD_10B = "(10-b) With C = 1/(Lω_a²), LC = 1/ω_a², so ω₀ = 1/√(LC) = ω_a = 2.4 sweep. The loop on its own cycles with the slow mode exactly."
 _NEW_10B = ("(10-b) With C = 1/(Lω_a²), LC = 1/ω_a², so ω₀ = 1/√(LC) = ω_a. The coil and the can give a plain 2.4 per second. "
@@ -709,7 +709,7 @@ def build(k, shares=True):
               ("The return comes at 15.6 s of your own time. Outside it's 19.5 s, and outside says you've crossed 3.5 million kilometers.",
                "The return comes at 16 s of your own time. Outside it's 20 s, and outside says you've crossed 3.6 million kilometers."),
               ("The return comes at 15.6 s of your own time.", "The return comes at 16 s of your own time."),
-              ("∫E dt = 1.2 J s", "∫E dt = 1.3 J s"), ("0.62 zam", "0.65 zam"), ("0.18 zlam", "0.19 zlam")]
+              ]  # doc 10-28: α-4 keeps the true return, 1.2 J s, 0.62 zam, 0.18 zlam (rounding T first gave 1.3)
     # doc 09:43: drawer e named the can again after 10-a had ("you can't name the same dog the same thing twice")
     ROUND += [("The capacitor cans charge; call it a can. The inductor coils its own linked flux.",
                "The can cans charge; the inductor is a coil, and it coils its own linked flux.")]
@@ -840,6 +840,7 @@ def build(k, shares=True):
     import clown_noticing
     out = clown_noticing.apply(out, k)
     out = energy_accounts(out, k)
+    out = doc_1028(out, k)
     return out
 
 def to_html(items):
@@ -1102,6 +1103,65 @@ def energy_accounts(items, path):
         assert len(hits) == 1, ('reconcile energy account before replacing', path, digest)
         i = hits[0]
         out[i] = (out[i][0], replacement)
+    return out
+
+
+# doc 10-28 06:55-07:17 ("velocity of the added motion. process, not endpoint"; "check for consistency as you go and at
+# the end"): the independent consistency read's fixes, the flux split λ = Li + κa, and "on" kept for dividing. Applied
+# last, to the finished text, each asserted once per listed path.
+DOC_1028 = [
+ # 13-a: the can's store through the process, not the half-square
+ ((1,), "(13-a) The capacitor holds q₀²/(2C), with C = 1/(2 − √2) F, about 1.7 F. Setting that to 80 mJ gives q₀ = √(2C × 80 mJ) ≈ 0.52 C, and the voltage is q₀/C ≈ 0.31 V.",
+        "(13-a) C = 1/(2 − √2) F, about 1.7 F. Charged from empty, the charge and the voltage grow together, so q₀ times its voltage q₀/C counts the 80 mJ twice over: q₀²/C = 160 mJ, so q₀ = √(C × 160 mJ) ≈ 0.52 C, and the voltage is q₀/C ≈ 0.31 V."),
+ ((2, 3), "(13-a) The can holds q₀²/(2C), with C = 1/(2 − √2) F, about 1.7 F. Setting that to 80 mJ gives q₀ = √(2C × 80 mJ) ≈ 0.52 C, and the voltage is q₀/C ≈ 0.31 V.",
+        "(13-a) The can's C = 1/(2 − √2) F, about 1.7 F. Charge and voltage grow together, so q₀ times its voltage q₀/C counts the 80 mJ twice over: q₀²/C = 160 mJ, so q₀ = √(C × 160 mJ) ≈ 0.52 C, and the voltage is q₀/C ≈ 0.31 V."),
+ ((4,), "(13-a) q₀²/(2C) = 80 mJ with C about 1.7 F: q₀ = 0.52 C, and the can starts at 0.31 V.",
+        "(13-a) q₀ times q₀/C counts the 80 mJ twice: q₀²/C = 160 mJ with C about 1.7 F, so q₀ = 0.52 C, and the can starts at 0.31 V."),
+ # 1-b: a pendulum, not free fall; only the ratio is g
+ ((1, 2), "Falling, the knife picks up velocity at g each second while it drops v each second, so for each meter of drop, the velocity of added velocity is g.",
+          "On the arc, the weight's pull along the path and the knife's drop share the same slope, so for each meter of drop the velocity of added velocity is g, wherever the knife is."),
+ # b-2: same sweep, opposite senses about the corner; energy is blind to sense
+ ((2, 3, 4), "They sweep together, so the inertias add: mL²/3. Each added sweep dω adds (mL²/3) dω of spin. Its sweep stores the added energy: dK = ω (mL²/3) dω. Through the sweep from rest to ω, the product of the sweep and the spin, ω (mL²/3) ω, grows through both factors at once, by two equal steps, so it counts K twice: K = (1/6)mL²ω².",
+             "They go at the same sweep, in opposite senses about the corner, and stored energy doesn't care about the sense, so for energy the inertias add: mL²/3. Each added sweep dω stores dK = ω (mL²/3) dω. Through the sweep from rest to ω, the product ω (mL²/3) ω grows through both of its ω's at once, by two equal steps, so it counts K twice: K = (1/6)mL²ω²."),
+ # 2-b: the twice-over device explained where it first appears
+ ((1,), "Built from rest, the sweep and the angular momentum grow together, by equal amounts of energy, so their product, 4 × 2, counts the stored energy twice over: 4 J.",
+        "Built from rest, the sweep and the angular momentum grow together. Their product grows through both factors at once, by two equal steps, each the size of the bit stored, so the product counts the stored energy twice over: 4 × 2 = 8, so 4 J."),
+ ((2,), "The sweep and the spin grow together, by equal amounts of hook, so their product, 4 × 2, counts the hook twice over: 4 J.",
+        "The sweep and the spin grow together. Their product grows through both factors at once, by two equal steps, each the size of the bit of hook stored, so it counts the hook twice over: 4 × 2 = 8, so 4 J."),
+ ((1,), "Built from rest, the velocity and the momentum grow together, by equal amounts of energy, so their product counts the energy twice over;",
+        "Built from rest, the velocity and the momentum grow together, so their product counts the energy twice over, as at the wheel;"),
+ ((4,), "(2-b) 500 g m² sweeping at 4 hooks 4 J.", "(2-b) 500 g m² sweeping at 4 carries 2 kg m²/s of spin, and 4 times 2 counts the hook twice: 4 J."),
+ # "on" divides in these paths; products say "times"
+ ((1,), "24 J twice over is 48, the velocity on the momentum, 8 kg at a velocity squared of 6.", "24 J twice over is 48, the velocity times the momentum: 8 kg at a velocity squared of 6."),
+ ((2,), "is 48, velocity on motion: 8 kg", "is 48, velocity times motion: 8 kg"),
+ ((3,), "a sweep of 4 on 2 kg m²/s of spin makes 8", "a sweep of 4 times 2 kg m²/s of spin makes 8"),
+ ((3,), "which is a sweep of 8 on 4 kg m²/s.", "which is a sweep of 8 times 4 kg m²/s."),
+ ((3,), "the sweep of 40 on itself, 1600,", "the sweep of 40 times itself, 1600,"),
+ ((4,), "2 m/s on 2 N s counts the punch twice: 2 J. 40 on 40 g m²/s counts", "2 m/s times 2 N s counts the punch twice: 2 J. 40 times 40 g m²/s counts"),
+ ((4,), "12 V on 2.4 nC/m counts", "12 V times 2.4 nC/m counts"),
+ # 8-c: the stores through the process in every path
+ ((1,), "counts the stored energy twice over: 3 J.", "counts the stored energy twice over: 1 J at first and 4 J at the end, so the ribbon adds 3 J."),
+ ((2, 3), "The ribbon's work is the punch it adds: the puck punches 1 J at first and 4 J at the end, so 3 J.",
+          "The ribbon's work is the punch it adds. Velocity times motion goes from 2 × 1 to 4 × 2, and each counts the punch twice: 1 J at first and 4 J at the end, so 3 J."),
+ ((4,), "(8-c) The puck punches 1 J, then 4 J:", "(8-c) Velocity times motion, 2 then 8, counts the puck's punch twice: 1 J, then 4 J:"),
+ # wording
+ ((3,), "sweep hooks them 3 to 1:", "sweep stores them 3 to 1:"),
+ ((2, 3), "The same heft gives less punch, the ball runs slower", "The same heft gives less punch, so the ball runs slower"),
+ ((3,), "When the wheel goes twice as fast, the same power cranks just half as hard. ", ""),
+ ((1,), "with 32 J let go:", "with 32 J given up:"),
+ # which flux (doc 07:17): the coil links Li of its own and κa from the rod
+ ((2,), "The κ is how much the coil's linked flux changes per stroke the rod swings: ε dt = −κ da = −dΦ.",
+        "The κ is how much of the coil's linked flux comes from where the rod sits: per stroke the rod swings, that part changes by κ, so ε dt = −κ da. The coil's own current links Li on top of that, so in all the coil links Φ = Li + κa, and only the κa part is the rod's doing."),
+ ((2, 3), "Here V = q/C and Φ = Li.", "Here V = q/C and Φ = Li + κa: of i dΦ, i d(Li) stays in the coil, and i κ da is the work the current does on the rod, as in 10-c."),
+]
+
+def doc_1028(items, path):
+    out = list(items)
+    for paths, old, new in DOC_1028:
+        if path not in paths: continue
+        hits = [i for i, (_, x) in enumerate(out) if isinstance(x, str) and old in x]
+        assert len(hits) == 1 and out[hits[0]][1].count(old) == 1, ("doc_1028", path, old[:60], len(hits))
+        i = hits[0]; out[i] = (out[i][0], out[i][1].replace(old, new))
     return out
 
 if __name__ == "__main__":
