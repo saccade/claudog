@@ -1174,6 +1174,9 @@ DOC_1028 = [
  ((3,), "It has a place, a velocity, and a phase, and carries no independent store.", "It has a place, a velocity, and a phase; the energy is stored in the waves, and the stripe, a ghost, stores none itself, only an echo of theirs."),
  # doc 08:45: sneak in the rapidity where path 3 uses it; the shift of 2 is a rapidity of ln 2
  ((3,), "the 20 mJ pulse up by 2: 40 mJ each.", "the 20 mJ pulse up by 2, a rapidity of ln 2 each way: 40 mJ each."),
+ # doc 08:47 (a reviewer): drawer g defines s = √((1 − β)/(1 + β)), which is 1/2 at 3/5, not 2
+ ((3,), "The shift is s = 2, and the stretch is the mean of the shift and its flip, (2 + 1/2)/2 = 5/4: drawer g's γ.", "The shift is s = 1/2, as drawer g defined it, and its flip is 2; the stretch is their mean, (1/2 + 2)/2 = 5/4: drawer g's γ."),
+ ((4,), "80 mJ of rest energy, s = 2, and a stretch of 5/4", "80 mJ of rest energy, s = 1/2, and a stretch of 5/4"),
  ((3, 4), "What leaves the can comes back as hook;", "What leaves the can comes back as punch;"),
  # doc 07:46: the dot keeps the forward part of the phase; what's a choice there and what isn't
  ((2,), "with P = k₁x − ω₁t and Q = k₂x + ω₂t.",

@@ -155,7 +155,7 @@ This one was open before you touched it.
 A hall of mirrors that never ends, and a lamp in it that can't decide how bright it is.
 (3-α) The two crest speeds multiply to u²: reflections about u, nine under and nine over.
 (3-β) Two stores, e₊ and e₋ per meter, each traveling at u. Energy adds them; power opposes them: e = e₊ + e₋, P = u(e₊ − e₋). Difference never beats sum: |P| ≤ ue. The stripe has a place, a velocity, and a phase, and no store of its own. Phase is for ghosts.
-(3-γ) Moving along the line multiplies one pulse by s and divides the other, so 80 × 20 = 40 × 40 holds: 40 mJ each where they match, 80 mJ of rest energy, s = 2, and a stretch of 5/4, drawer g's γ.
+(3-γ) Moving along the line multiplies one pulse by s and divides the other, so 80 × 20 = 40 × 40 holds: 40 mJ each where they match, 80 mJ of rest energy, s = 1/2, and a stretch of 5/4, drawer g's γ.
 Trapdoor, the timing side: a clock face on the same chassis, one hand, marked in turns, with the chipped insulator under it. The trapdoor is open.
 In the chair’s frame the opposed pulses have equal energy, 40 mJ apiece. The receiver captures them and transfers their 80 mJ to its capacitor. The charging path is disconnected. The loop closes, the rods are released without a kick, and the chair’s clock starts.
 ## 13. The chair
