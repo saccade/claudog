@@ -120,7 +120,7 @@ This is a different can, in a separate loop with a coil. A coil coils flux, and 
 ## Drawer e: a can to match the knife
 Door: the study. A doctor's bag in striped oilcloth: a capacitor the size of a teacup, a coil, a card of figures, the first of them 22/7.
 (e-1) C = 1/(Lω₀²), and ω₀² = 10(2 − √2) ≈ 5.9 s⁻², so C = 1/(2 − √2) F, about 1.7 F. The tuning needs the exact value; 1.7 is only how it's written down.
-The can cans charge; the inductor is a coil, and it coils its own linked flux. Through added charge dq, voltage V stores V dq of energy. Through added flux dΦ, current i stores i dΦ. The balances say what is added and at what voltage or current: dE_can = V dq, dE_coil = i dΦ. Here V = q/C and Φ = Li + κa: of i dΦ, i d(Li) stays in the coil, and i κ da is the work the current does on the rod, as in 10-c.
+The can cans charge; the inductor is a coil, and it coils linked flux. Through added charge dq, voltage V stores V dq of energy. Through added linked flux dΦ, current i takes in i dΦ of work from the circuit. Here V = q/C, so dE_can = V dq; and Φ = Li + κa, so of i dΦ, dE_coil = i d(Li) stays stored in the coil, and i κ da is the work the current does on the rod, as in 10-c.
 (e-2) Both take 2.6 s when free. Same sweep, same turn: the loop keeps the slow motion’s time. Coupling them changes the two motions; the passage shows how.
 This drawer's draft smells of ozone. The paint across its back has cracked along one edge, from the other side.
 ## Hall

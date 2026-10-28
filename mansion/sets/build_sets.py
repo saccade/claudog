@@ -1152,7 +1152,9 @@ DOC_1028 = [
  # which flux (doc 07:17): the coil links Li of its own and κa from the rod
  ((2,), "The κ is how much the coil's linked flux changes per stroke the rod swings: ε dt = −κ da = −dΦ.",
         "The κ is how much of the coil's linked flux comes from where the rod sits: per stroke the rod swings, that part changes by κ, so ε dt = −κ da. The coil's own current links Li on top of that, so in all the coil links Φ = Li + κa, and only the κa part is the rod's doing."),
- ((2, 3), "Here V = q/C and Φ = Li.", "Here V = q/C and Φ = Li + κa: of i dΦ, i d(Li) stays in the coil, and i κ da is the work the current does on the rod, as in 10-c."),
+ # doc 08:32 (a reviewer): with the rod coupled, i dΦ is the work the circuit puts in, not the coil's store; the coil stores i d(Li)
+ ((2, 3), "it coils its own linked flux. Through added charge dq, voltage V stores V dq of energy. Through added flux dΦ, current i stores i dΦ. The balances say what is added and at what voltage or current: dE_can = V dq, dE_coil = i dΦ. Here V = q/C and Φ = Li.",
+          "it coils linked flux. Through added charge dq, voltage V stores V dq of energy. Through added linked flux dΦ, current i takes in i dΦ of work from the circuit. Here V = q/C, so dE_can = V dq; and Φ = Li + κa, so of i dΦ, dE_coil = i d(Li) stays stored in the coil, and i κ da is the work the current does on the rod, as in 10-c."),
  # doc 07:46, 08:13-08:15: the leverage of a push splits three ways against the arm (torque cranks, a moment loads,
  # torsion wrings); twist is robotics' word for sweep-and-velocity, so the along-the-arm part is torsion
  ((1, 2), "A χ hung on the wall could apply a twist to something—use that for torque.", "A χ hung on the wall could turn something round—use that for torque."),
