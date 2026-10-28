@@ -1177,6 +1177,8 @@ DOC_1028 = [
  # doc 08:47 (a reviewer): drawer g defines s = √((1 − β)/(1 + β)), which is 1/2 at 3/5, not 2
  ((3,), "The shift is s = 2, and the stretch is the mean of the shift and its flip, (2 + 1/2)/2 = 5/4: drawer g's γ.", "The shift is s = 1/2, as drawer g defined it, and its flip is 2; the stretch is their mean, (1/2 + 2)/2 = 5/4: drawer g's γ."),
  ((4,), "80 mJ of rest energy, s = 2, and a stretch of 5/4", "80 mJ of rest energy, s = 1/2, and a stretch of 5/4"),
+ # doc 08:58 (a reviewer): with a = A cos ωt and q = Q sin ωt, Q/A = η(ω₀² − ω²)/(κω): behind in the low tone, ahead in the high
+ ((4,), "the charge a quarter turn behind the lean.", "the charge a quarter turn from the lean, behind it in the low tone and ahead in the high."),
  ((3, 4), "What leaves the can comes back as hook;", "What leaves the can comes back as punch;"),
  # doc 07:46: the dot keeps the forward part of the phase; what's a choice there and what isn't
  ((2,), "with P = k₁x − ω₁t and Q = k₂x + ω₂t.",
