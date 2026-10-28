@@ -1172,6 +1172,8 @@ DOC_1028 = [
  # doc 08:38: nothing is stored by a ghost; the body stores the energy, the ghost has the echo of it
  ((3,), "a ghost body with a place, a velocity, and a phase, and nothing stored.", "a ghost body with a place, a velocity, and a phase. The waves under it store energy, and that travels at u; the stripe stores nothing itself, being a ghost, and only echoes where their stores line up."),
  ((3,), "It has a place, a velocity, and a phase, and carries no independent store.", "It has a place, a velocity, and a phase; the energy is stored in the waves, and the stripe, a ghost, stores none itself, only an echo of theirs."),
+ # doc 08:45: sneak in the rapidity where path 3 uses it; the shift of 2 is a rapidity of ln 2
+ ((3,), "the 20 mJ pulse up by 2: 40 mJ each.", "the 20 mJ pulse up by 2, a rapidity of ln 2 each way: 40 mJ each."),
  ((3, 4), "What leaves the can comes back as hook;", "What leaves the can comes back as punch;"),
  # doc 07:46: the dot keeps the forward part of the phase; what's a choice there and what isn't
  ((2,), "with P = k₁x − ω₁t and Q = k₂x + ω₂t.",
