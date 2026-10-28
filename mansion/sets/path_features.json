@@ -143,7 +143,8 @@
           "why": "The spool balances in fifths; its two lever arms are 3/25 and 1/5 m."
         }
       ],
-      "maximum_denominator": 25
+      "maximum_denominator": 25,
+      "decision_basis": "Carry the causal account: an exact numerator can be counted from the problem’s own integers. For example, the grip is 30 fifths less the center’s 8; the torques are 22 twenty-fifths less 18. This is a reason to choose a fraction, not a conversion quota."
     },
     {
       "id": "explanation-register",
@@ -448,6 +449,85 @@
         "13-c"
       ],
       "evidence": "AP a-5 explicitly requests cos θ = r/R; doc wants the established language to carry later paths."
+    },
+    {
+      "id": "clown-noticing",
+      "kind": "narrative",
+      "title": "What each visitor notices",
+      "priority": "high",
+      "implementation": "editorial",
+      "status": "applied",
+      "paths": {
+        "1": {
+          "mode": "curious",
+          "starts_at": "start",
+          "note": "Materials, smells, the ruff, the spider, the mirror brooch."
+        },
+        "2": {
+          "mode": "determined",
+          "starts_at": "start",
+          "note": "Follow the cuff thread, inspect wear, watch contact, read the seated shape in the gown."
+        },
+        "3": {
+          "mode": "a bit manic",
+          "starts_at": "start",
+          "note": "A cuff within a cuff; the wrong elbow; the pinned hem; lining stops while coat goes on."
+        },
+        "4": {
+          "mode": "interleaving verse",
+          "starts_at": "start",
+          "note": "The earrings miss the return, bead and bell keep time, stripes go without a stitch, unequal eyes match."
+        }
+      },
+      "payoff": [
+        "1-d",
+        "3-d",
+        "6-a",
+        "7-b",
+        "11-c",
+        "12-c",
+        "finale"
+      ],
+      "evidence": "doc: notice different things from the clown data in each solution; choose the strongest fits by mood, move details when the house permits. No one-observation-per-room quota."
+    },
+    {
+      "id": "energy-accumulation",
+      "kind": "structure",
+      "title": "Energy follows the addition; ghost energy is kept",
+      "priority": "high",
+      "implementation": "editorial",
+      "status": "applied",
+      "paths": {
+        "1": {
+          "mode": "curious",
+          "starts_at": "1-b",
+          "note": "Follow added motion, spin, charge, or flux. No half-square energy shortcuts; ghost energy is kept."
+        },
+        "2": {
+          "mode": "determined",
+          "starts_at": "1-b",
+          "note": "Follow added motion, spin, charge, or flux. No half-square energy shortcuts; ghost energy is kept."
+        },
+        "3": {
+          "mode": "a bit manic",
+          "starts_at": "1-b",
+          "note": "Follow added motion, spin, charge, or flux. No half-square energy shortcuts; ghost energy is kept."
+        },
+        "4": {
+          "mode": "interleaving verse",
+          "starts_at": "1-b",
+          "note": "Follow added motion, spin, charge, or flux. No half-square energy shortcuts; ghost energy is kept."
+        }
+      },
+      "payoff": [
+        "1-b",
+        "2-b",
+        "4-c",
+        "5-c",
+        "10-a",
+        "11-b"
+      ],
+      "evidence": "doc, 2026-10-23: ghost energy is kept, not stored; the half-square shortcut may be in AP statements but not in solution sets."
     }
   ]
 }

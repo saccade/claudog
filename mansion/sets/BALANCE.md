@@ -66,35 +66,35 @@ The estimates are old planning aids, not user quotas or requirements.
 
 | Piece | Path 1 | Path 2 | Path 3 | Path 4 |
 |---|---|---|---|---|
-| 1 knife | 1.5 → 1.7: Full, textbook | 2.3 → 2.0: Lands: heft, punch, pickup, sweep | 2.3 → 1.3: Reel; lands: zip, flip | 0.8 → 0.9: Nod |
-| 2 flywheel | 1.8 → 1.8: Full: τ walk, χ. View | 1.5 → 1.1: Lands: hook, crank | 1.0 → 0.8: Reel; lands: zing | 0.9 → 1.0: Reel; lands: zow, zlow |
-| 3 governor, spool | 5.2 → 4.3: Full: arrows, crosses, roll, balance, dot | 2.9 → 1.4: Reprise; lands: profile | 2.9 → 0.9: Reel | 1.1 → 0.6: Nod |
-| 4 ladder | 1.5 → 1.4: Full: one dot, seen from the foot | 0.9 → 0.8: Reel (drawer 2 follows) | 1.4 → 0.9: Reel; lands: still point | 0.6 → 0.6: Nod |
-| 5 cue ball | 1.3 → 1.5: Full: crosses, slip, brackets. View | 1.3 → 1.1: Reel; lands: spin | 1.4 → 0.8: Reel | 0.6 → 0.6: Nod |
-| 6 basin | 0.9 → 0.6: Full | 0.8 → 0.6: Reel | 0.8 → 0.5: Reel | 0.4 → 0.4: Nod |
+| 1 knife | 1.9 → 1.7: Full, textbook | 2.4 → 2.0: Lands: heft, punch, pickup, sweep | 2.3 → 1.3: Reel; lands: zip, flip | 0.8 → 0.9: Nod |
+| 2 flywheel | 1.9 → 1.8: Full: τ walk, χ. View | 1.5 → 1.1: Lands: hook, crank | 0.9 → 0.8: Reel; lands: zing | 0.9 → 1.0: Reel; lands: zow, zlow |
+| 3 governor, spool | 5.3 → 4.3: Full: arrows, crosses, roll, balance, dot | 3.1 → 1.4: Reprise; lands: profile | 2.9 → 0.9: Reel | 1.1 → 0.6: Nod |
+| 4 ladder | 1.5 → 1.4: Full: one dot, seen from the foot | 0.9 → 0.8: Reel (drawer 2 follows) | 1.1 → 0.9: Reel; lands: still point | 0.6 → 0.6: Nod |
+| 5 cue ball | 1.5 → 1.5: Full: crosses, slip, brackets. View | 1.4 → 1.1: Reel; lands: spin | 1.5 → 0.8: Reel | 0.6 → 0.6: Nod |
+| 6 basin | 0.8 → 0.6: Full | 0.8 → 0.6: Reel | 0.8 → 0.5: Reel | 0.4 → 0.4: Nod |
 | 7 hoop | 0.7 → 0.7: Full. View | 0.5 → 0.4: Reel | 0.8 → 0.5: Reel; still point again | 0.3 → 0.4: Nod |
-| 8 ribbon | 0.8 → 0.8: Full | 0.7 → 0.7: Reel | 0.8 → 0.5: Reel | 0.4 → 0.4: Nod |
+| 8 ribbon | 0.9 → 0.8: Full | 0.7 → 0.7: Reel | 0.8 → 0.5: Reel | 0.4 → 0.4: Nod |
 | 9 double pendulum | 0.9 → 0.7: Full | 1.0 → 0.6: Reel | 2.7 → 1.0: Lands: tone, chord, beat. View | 1.0 → 0.5: Nod |
-| 10 coils, capacitor | 1.5 → 1.4: Full | 1.6 → 1.5: Lands: can, coil | 1.7 → 1.0: Reel | 0.9 → 1.0: Reel; lands: one machine |
-| 11 line | 1.0 → 1.0: Full | 1.0 → 0.8: Reel | 1.2 → 0.9: Reel; lands: stripe | 0.5 → 0.6: Nod |
+| 10 coils, capacitor | 1.6 → 1.4: Full | 1.9 → 1.5: Lands: can, coil | 1.9 → 1.0: Reel | 0.9 → 1.0: Reel; lands: one machine |
+| 11 line | 1.0 → 1.0: Full | 1.1 → 0.8: Reel | 1.3 → 0.9: Reel; lands: stripe | 0.5 → 0.6: Nod |
 | 12 two lights | 0.7 → 0.7: Full | 0.6 → 0.5: Reel | 0.8 → 1.0: Lands: shift, stretch. View | 0.5 → 0.5: Nod |
-| 13 chair | 1.7 → 1.7: Full: hands; the emphatic sum | 1.4 → 1.1: Reel; emphatic once | 1.4 → 1.0: Reel; emphatic once | 0.8 → 1.0: Reel; RUN |
+| 13 chair | 1.8 → 1.7: Full: hands; the emphatic sum | 1.6 → 1.1: Reel; emphatic once | 1.1 → 1.0: Reel; emphatic once | 0.9 → 1.0: Reel; RUN |
 | drawer d | - | 0.6 → 0.6: Full | 0.6 → 0.4: Reel | 0.4 → 0.3: Nod |
-| drawer a | - | 2.3 → 2.0: Full: the dot's second rent. View | 2.2 → 1.0: Reel | 1.0 → 0.6: Nod |
-| drawer b | - | 1.3 → 1.1: Full | 1.3 → 0.6: Reel | 0.8 → 0.4: Nod |
-| drawer c | - | 1.4 → 1.4: Full | 1.4 → 0.9: Reel; lands: trade | 0.5 → 0.5: Nod |
-| drawer e | - | 0.8 → 0.8: Full | 0.8 → 0.4: Reel | 0.3 → 0.3: Nod |
+| drawer a | - | 2.3 → 2.0: Full: the dot's second rent. View | 2.3 → 1.0: Reel | 1.0 → 0.6: Nod |
+| drawer b | - | 1.3 → 1.1: Full | 1.3 → 0.6: Reel | 0.9 → 0.4: Nod |
+| drawer c | - | 1.3 → 1.4: Full | 1.3 → 0.9: Reel; lands: trade | 0.5 → 0.5: Nod |
+| drawer e | - | 0.7 → 0.8: Full | 0.7 → 0.4: Reel | 0.3 → 0.3: Nod |
 | drawer f | - | 1.0 → 0.6: Full | 1.0 → 0.4: Reel | 0.6 → 0.3: Nod |
 | drawer g | - | 0.5 → 0.4: Full | 0.5 → 0.3: Reel | 0.3 → 0.2: Nod |
 | mirror 1 | - | - | 1.3 → 1.3: Full: tone, phase, hands | 0.9 → 0.8: Reel |
-| mirror 4 | - | - | 1.2 → 1.2: Full: still point | 0.8 → 0.7: Reel |
+| mirror 4 | - | - | 1.1 → 1.2: Full: still point | 0.8 → 0.7: Reel |
 | mirror 2 | - | - | 1.1 → 1.1: Full | 0.7 → 0.7: Reel |
-| mirror 3 | - | - | 1.2 → 1.2: Full | 0.7 → 0.8: Reel |
-| α | - | - | - | 1.3 → 1.3: Full |
+| mirror 3 | - | - | 1.3 → 1.2: Full | 0.7 → 0.8: Reel |
+| α | - | - | - | 1.4 → 1.3: Full |
 | β | - | - | - | 1.3 → 1.2: Full |
-| solutions | 19.5 → 18.3 | 24.4 → 19.5 | 31.8 → 19.9 | 18.4 → 16.6 |
-| rooms, scenes, endings | 5.9 | 7.7 | 7.2 | 8.6 |
-| whole path | 25.4 → 24.2 | 32.1 → 27.2 | 39.0 → 27.1 | 27.0 → 25.2 |
+| solutions | 20.5 → 18.3 | 25.2 → 19.5 | 31.4 → 19.9 | 18.7 → 16.6 |
+| rooms, scenes, endings | 6.3 | 8.3 | 7.6 | 9.1 |
+| whole path | 26.8 → 24.6 | 33.5 → 27.8 | 39.0 → 27.5 | 27.8 → 25.7 |
 
 ## Views (R-111)
 
@@ -124,3 +124,5 @@ One plan shared with the builder. Automatic means a presentation policy can be c
 | The existing chorus and last line | structure / high | protected (editorial) | keep @ ending | keep @ ending | keep @ ending | preserve-verbatim @ ending: Preserve the existing chorus; nothing follows “Something keeps your time.” |
 | Curious → determined → manic → interleaving verse | narrative / high | planned (editorial) | curious @ start: Wonder and investigation. | determined @ start: Pursue the mechanism. | a bit manic @ start: Things move; established terms need no ceremony. | interleaving verse @ start: Includes a shanty. No single mood or meter imposed on the whole saga. |
 | Textbook trigonometry → physical parts | notation / high | in progress (editorial) | slow introduction @ start: AP requests at a-1, a-5, f-1 retain their formula; do not restart the vocabulary in later paths. | parts first, requested formulas once @ start: AP requests at a-1, a-5, f-1 retain their formula; do not restart the vocabulary in later paths. | parts first, requested formulas once @ start: AP requests at a-1, a-5, f-1 retain their formula; do not restart the vocabulary in later paths. | parts first, requested formulas once @ start: AP requests at a-1, a-5, f-1 retain their formula; do not restart the vocabulary in later paths. |
+| What each visitor notices | narrative / high | applied (editorial) | curious @ start: Materials, smells, the ruff, the spider, the mirror brooch. | determined @ start: Follow the cuff thread, inspect wear, watch contact, read the seated shape in the gown. | a bit manic @ start: A cuff within a cuff; the wrong elbow; the pinned hem; lining stops while coat goes on. | interleaving verse @ start: The earrings miss the return, bead and bell keep time, stripes go without a stitch, unequal eyes match. |
+| Energy follows the addition; ghost energy is kept | structure / high | applied (editorial) | curious @ 1-b: Follow added motion, spin, charge, or flux. No half-square energy shortcuts; ghost energy is kept. | determined @ 1-b: Follow added motion, spin, charge, or flux. No half-square energy shortcuts; ghost energy is kept. | a bit manic @ 1-b: Follow added motion, spin, charge, or flux. No half-square energy shortcuts; ghost energy is kept. | interleaving verse @ 1-b: Follow added motion, spin, charge, or flux. No half-square energy shortcuts; ghost energy is kept. |
