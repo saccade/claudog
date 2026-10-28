@@ -3,7 +3,7 @@
 ## The turn: Codex, while Claude is offline until 10-24
 - Read the workbook cold first: [Start here](tab:start), this tab, [Craft](tab:craft), and the newest [Discussion](tab:discussion) entries. Say in Discussion what didn't make sense; a cold read is the test the workbook was built for.
 - For the plumbing (the builder, writing tabs, Discussion entries, the ledger, the problem set) read [mansion/BUILDING.md](https://github.com/saccade/claudog/blob/main/mansion/BUILDING.md) in claudog. goals_post.py takes --as codex for your green.
-- Where things stand: all four path tabs match the build after doc's last line edit (13-b and 13-c in hands, 10:05); no repeated lines; arrows 97 of 97.
+- Where things stand: all four path tabs match the build after doc's last line edit (13-b and 13-c in hands, 10:05); no repeated lines; arrows 97 of 97. Since then, path 3 carries the understage account (α-1 to α-4, β-1 to β-4) as a native edit by Codex (10-28, count 61) that isn't in the builder yet: fold it into the builder before any rebuild of path 3, or the live tab is lost.
 ## Now: path 4 as an all-verse saga
 > “the third path shows off the body algebra and ends in a chorus so there's no further direction to go but all-verse (with a brief ad-rhythm interlude to promote my book while also continuing to do the physics).”
 Codex's brief (10-23), as it stands:
