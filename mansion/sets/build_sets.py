@@ -1153,6 +1153,19 @@ DOC_1028 = [
  ((2,), "The κ is how much the coil's linked flux changes per stroke the rod swings: ε dt = −κ da = −dΦ.",
         "The κ is how much of the coil's linked flux comes from where the rod sits: per stroke the rod swings, that part changes by κ, so ε dt = −κ da. The coil's own current links Li on top of that, so in all the coil links Φ = Li + κa, and only the κa part is the rod's doing."),
  ((2, 3), "Here V = q/C and Φ = Li.", "Here V = q/C and Φ = Li + κa: of i dΦ, i d(Li) stays in the coil, and i κ da is the work the current does on the rod, as in 10-c."),
+ # doc 07:46: torque, moment, and twist are three jobs, not three names; χ turns things
+ ((1, 2), "A χ hung on the wall could apply a twist to something—use that for torque.", "A χ hung on the wall could turn something round—use that for torque."),
+ ((2,), "Torque, moment, and twist are three names for the one quantity: a push applied at a lever, a newton at a meter. Its unit is the crank,",
+        "Three words sit close together here, each a push on a lever, a newton at a meter, and each with its own job against the arm. Torque turns things around the axle and can do work there. A moment exerts an effort against a load across the arm, and does no work around the axle. Twist acts around the arm itself: the arm is its axis, the way a shaft carries torsion. The engine's χ turns the wheel and does work, so it's torque. Torque's unit is the crank,"),
+ # doc 07:46: a cryptic solution is a wrong one
+ ((3,), "(2-β) Call the gap Δω. Taking the square root gives ω₀² − ω² = ±[κ/√(ηL)]ω. Subtract the low and high balances: (ω_high − ω_low)(ω_high + ω_low) = [κ/√(ηL)](ω_high + ω_low). The positive sum cancels, leaving Δω√(ηL) = κ. The low balance is then ω_low² + (ω_high − ω_low)ω_low = ω₀², so ω_low ω_high = ω₀². One tone is ω₀ at a factor and the other is ω₀ on it: a mirror pair.",
+        "(2-β) Take the square root of 2-α's balance: ω₀² − ω² = ±[κ/√(ηL)]ω. The low tone sits below ω₀ and takes the + sign; the high tone sits above it and takes the −. Subtract the high balance from the low: ω_high² − ω_low² = [κ/√(ηL)](ω_high + ω_low). The left side is (ω_high − ω_low)(ω_high + ω_low), and the sum is positive, so it cancels, leaving Δω√(ηL) = κ. Put that back into the low balance: ω₀² − ω_low² = (ω_high − ω_low)ω_low, so ω₀² = ω_low ω_high. The two tones sit the same factor below and above ω₀, one ω₀ divided by it and the other ω₀ times it: a mirror pair."),
+ # doc 07:46: the rods' motion is punch (13-c), so the endings say so
+ ((2,), "a crank is a size of torque, not a new kind of twisting.", "a crank is a size of torque, not a new kind of turning."),
+ ((3, 4), "What leaves the can comes back as hook;", "What leaves the can comes back as punch;"),
+ # doc 07:46: the dot keeps the forward part of the phase; what's a choice there and what isn't
+ ((2,), "with P = k₁x − ω₁t and Q = k₂x + ω₂t.",
+        "with P = k₁x − ω₁t and Q = k₂x + ω₂t. Read → · P as the forward part of the phase P: picture P as a hand swung round from →, and the dot keeps the part of it that lies along →, which is what cos reads off. Where the count starts (the instant and the place called zero) and which way the hand goes round as time runs are choices: move the zero or flip the sense, the same way for both waves, and nothing you can measure changes. What isn't a choice is the difference between two phases, and the sign pairing k with ω, which says which way each wave runs."),
 ]
 
 def doc_1028(items, path):

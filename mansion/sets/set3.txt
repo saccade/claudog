@@ -151,7 +151,7 @@ This drawer's back opens on glass. Your reflection reaches for the jars a beat a
 ## Mirror 2: the trade, both ways
 Two facing mirrors; the can in one is the coil in the other.
 (2-α) Put the trial motions in. The swing's balance gives (D − ηω²)A = κωQ and the loop's gives (1/C − Lω²)Q = κωA. Multiply them; D = ηω₀² and 1/C = Lω₀² turn the left side into ηL(ω₀² − ω²)²AQ, so ηL(ω₀² − ω²)² = κ²ω². The charge runs a quarter turn of the cycle from the lean.
-(2-β) Call the gap Δω. Taking the square root gives ω₀² − ω² = ±[κ/√(ηL)]ω. Subtract the low and high balances: (ω_high − ω_low)(ω_high + ω_low) = [κ/√(ηL)](ω_high + ω_low). The positive sum cancels, leaving Δω√(ηL) = κ. The low balance is then ω_low² + (ω_high − ω_low)ω_low = ω₀², so ω_low ω_high = ω₀². One tone is ω₀ at a factor and the other is ω₀ on it: a mirror pair.
+(2-β) Take the square root of 2-α's balance: ω₀² − ω² = ±[κ/√(ηL)]ω. The low tone sits below ω₀ and takes the + sign; the high tone sits above it and takes the −. Subtract the high balance from the low: ω_high² − ω_low² = [κ/√(ηL)](ω_high + ω_low). The left side is (ω_high − ω_low)(ω_high + ω_low), and the sum is positive, so it cancels, leaving Δω√(ηL) = κ. Put that back into the low balance: ω₀² − ω_low² = (ω_high − ω_low)ω_low, so ω₀² = ω_low ω_high. The two tones sit the same factor below and above ω₀, one ω₀ divided by it and the other ω₀ times it: a mirror pair.
 (2-γ) 3/2 − 2/3 = 5/6, so Δω = (5/6)ω₀ and κ = (5/6)ω₀√(ηL). The tones cycle at 1.6 and 3.6 sweep. The power the field puts into the swing, κiȧ, is exactly what the loop gives up: a belt, not a battery. Energy goes round and comes back; nothing's made.
 Trapdoor, the circuit side: windings and a capacitor the size of a hatbox, wired into the same chassis, with the chipped insulator again. It's nailed down.
 ## Hall
@@ -198,7 +198,7 @@ At every hem in the last glass, the same stitch is missing.
 From the other side of the mirror comes a first voice.
 The can cans charge. The coil coils flux.
 The field cranks through a little lean.
-What leaves the can comes back as hook;
+What leaves the can comes back as punch;
 the lifted weights keep some unseen.
 The heft gives way. The sweep grows loud.
 The current turns. The charge comes home.
