@@ -274,8 +274,8 @@ to places, and a force implies a change of motion.
 Ring is the phase rate of anything that oscillates or waves, a
 stroke of phase a second (trial).
 Sheet and blanket count the area of something laid out: a wing, a
-field, a floor. Card \[not specifically\] counts profiles, which carry no mass. The
-shapes are alike and the jobs differ.
+field, a floor. Card counts smaller areas, and it's handy for
+profiles, which carry no mass.
 Handy facts:
     1 meter                     = 10 hand
     1 sheet                     = 100 card
@@ -489,23 +489,26 @@ and make no sudden moves.
     taken out. After that the ghosts do their work quietly.
   - The familiar ones, velocity and the sweep, soothe, and need
     no letter. A problem with one scary ghost can give it a
-    letter. That letter is Ω,\[usually Z, unless it’s needed by impedance is I think what we’ve been doing. most of the ghost quantities start with z.\] the ghosts' true form, the base
-    letter for the whole family: Ω for the one scary ghost, and
-    Ω\_profile, Ω\_zing, Ω\_zlow when several are in play. Marks
-    stay (Ω₁, Ω₂, Ω₊, Ω₋); a different ghost gets a different
+    letter. Ghosts go around as Z, since most of their names start
+    with z: Z for the one scary ghost. When several are in play,
+    each takes the shortest prefix of its name that tells it from
+    the others: profile, zing, and zlow are Z\_p, Z\_zi, and Z\_zl.
+    Marks stay (Z₁, Z₂, Z₊, Z₋); a different ghost gets a different
     subscript, and a repeated symbol is the same quantity.
   - The conventional quantities keep their usual symbols: K, ω,
     α, v, and, in electricity, I for current and Z for impedance.
     Inertia depends on the company. Here it's η, which leaves I
     to the current; with company, and in the problem statements,
     it's I as usual, and the letters move only where current and
-    inertia meet. The ghosts give
-    way to them, never the other way round. Ω the ghost never
-    shares an expression with the ohm: quantity algebra and unit
-    statements stay separate.
-  - All the ghosts wear Ω, or none do \[see this is about Z. if there are multiple ghosts all of them should be Z or omega, not a mixture\]. Nobody gets left visible
-    alone. If a later room needs the switch, the earlier rooms
-    change with it.
+    inertia meet. The ghosts give way to them, never the other
+    way round.
+  - When something else needs the Z, like an impedance, the
+    ghosts change into their true form, Ω, all of them together.
+    They all wear Z or all wear Ω, never a mix, so nobody gets
+    left visible alone. If a later room needs the switch, the
+    earlier rooms change with it. Ω the ghost never shares an
+    expression with the ohm: quantity algebra and unit statements
+    stay separate.
 9\. Turning words
 \----------------
 A stroke is a radian. A turn is about 6.3 stroke, and what is
@@ -786,8 +789,8 @@ Hold the two problems side by side and they're one problem in the
 mirror. The can took charge in, filling at the voltage; the coil
 lets flux out, emptying at the current.
 The electrical units stay in their own names (V, A, C, F, H, Wb),
-and the ohm is spelled out wherever the ghost letter Ω is also
-on the page. The dog park has no volt of its own.
+and the ohm is spelled out wherever the ghosts are wearing Ω. The
+dog park has no volt of its own.
 A pattern that slides
 \---------------------
 A line has a coil and a can in every meter: L\_line H and C\_line F.
@@ -1056,7 +1059,10 @@ in algebra.
 When doc says a piece is for college, for high school, or for
 anyone outside the park, the dog units stay in the dog park: SI,
 with oompf, roll, ponder, and wheel wherever those quantities are
-named. \[\[I feel like these categories are not going to have a lot of clear hard edges. like, the mansion solutions are in part designed to show off the language. they’re road legal, but they’re still not just doing a boring commute-to-work, they’re showing off a bit. I’m not saying it’s not worth having the idea of multiple modalities, just warning that any rules here are likely to get trampled eventually.   ::  Road-legal mode (section 14) is the usual way to write it.\]\]
+named. Road-legal mode (section 14) is the usual way to write it.
+The modes don't have hard edges: the mansion solutions are road
+legal and still show the language off. Treat the rules here as
+defaults, and expect some to get trampled.
 The other rules hold: no third decimal, and name things. The verbs
 still run:
     The 2 kg center, running at 3.0 m/s, punches 9.0 J.
@@ -1372,12 +1378,15 @@ People can read them too: they're the doc in brief.
     almost always works, but it's seldom the most exact. "At"
     leads with the thing: 3 lump at 10 zoom is a 30 push weight;
     2 lump at 5 hand is a ponder. "Through" is a push along a
-    distance: 40 push through 3 meter is 120 thump. "On" and
-    "over" divide: 5 cat on 1 hand sweeps at 50. Verbs multiply
-    too: 2 oompf levered at 5 hand is 1 roll; half a wheel
-    sweeping at 2 carries 1 roll; 4 push at half a meter cranks at
-    2. Reach for the exact word first, and for "of" when nothing
-    fits better.
+    distance: 40 push through 3 meter is 120 thump. "Over"
+    divides, and so does "on" when a rate is spread on a lever:
+    5 cat on 1 hand sweeps at 50. "On" can also lay one thing
+    across another: a 0.1 mm coat on 40 m^2 of wall is 4 liters of
+    paint. The units tell you which. Verbs multiply too: 2 oompf
+    levered at 5 hand is 1 roll; half a wheel sweeping at
+    2 carries 1 roll; 4 push at half a meter cranks at 2. Reach
+    for the exact word first, and for "of" when nothing fits
+    better.
     Say directions like they're ordinary: 2 cat uphill. A force is
     a size with a sense.
     Operators' words: powering is a motor driving its load;
