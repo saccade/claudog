@@ -841,6 +841,7 @@ def build(k, shares=True):
     out = clown_noticing.apply(out, k)
     out = energy_accounts(out, k)
     out = doc_1028(out, k)
+    out = native_1028(out, k)
     return out
 
 def to_html(items):
@@ -848,6 +849,7 @@ def to_html(items):
     for t, s in items:
         e = html.escape(s, quote=False).replace("&lt;b&gt;", "<b>").replace("&lt;/b&gt;", "</b>").replace("†", "<sup>†</sup>")
         e = e.replace("&lt;em&gt;", "<em>").replace("&lt;/em&gt;", "</em>")   # spoken stress on a word, set in italic
+        e = re.sub(r'&lt;a href="([^"]+)"&gt;(.*?)&lt;/a&gt;', r'<a href="\1">\2</a>', e)   # a link (path 4's pointer to path 3)
         if t in ("h1", "h2", "h3"): h.append(f"<{t}>{e}</{t}>")
         elif t == "i": h.append(f"<p><i>{e}</i></p>")
         elif t == "b": h.append(f"<p><b>{e}</b></p>")
@@ -1197,9 +1199,66 @@ def doc_1028(items, path):
         i = hits[0]; out[i] = (out[i][0], out[i][1].replace(old, new))
     return out
 
+
+# Codex's native workbook edit, 10-28 (count 61), on doc's word: "the third path should probably absorb the prior under
+# the stage machine solution with its zam and zlam and the rest." Path 3 opens its three trapdoors and takes the whole
+# understage account after the chair; path 4's prose tab says it's the prior draft, the assembly being the active fourth
+# path. Folded into the builder 10-31 from the live tabs ("that stuff had to move into path 3 because path 4 is doing
+# other work now. please incorporate the changes"). Applied last.
+NATIVE_1028_P3_HEAD = [
+ ("The Mansion, path 3 of 4: with the cabinet and the funhouse", "The Mansion, path 3 of 4: with the cabinet, the funhouse, and the machine"),
+ ("the stripe and phase, for ghosts; shift and stretch.", "the stripe and phase, for ghosts; shift and stretch; the one machine; zam and zlam; taps in step and at random; TEST and RUN."),
+ ("the words are the models'.", "the words are the models'. The understage account, originally in the fourth prose path, is brought forward and adapted by Codex (OpenAI), 2026-10-28."),
+]
+NATIVE_1028_P3_AFTER = "(13-d) T is the receiver's own time. In S the same stretch lasts γT = (5/4)T, about 19.5 s, and the receiver covers vγT = (3/5)(5/4)cT = (3/4)cT, about 3.5 × 10⁹ m. Its seat is at x = vt the whole while, so x_H = γ(x − vt) = 0 throughout. The chair stays at x_H = 0 for the whole run."
+NATIVE_1028_P3 = [
+ ('h2', 'Under the stage'),
+ ('p', "The last mirror is hinged. Behind it, the chipped insulator is on your side of the frame. You follow the windings to the can, the linkage to the rods, and the clock's shaft back through both. The three trapdoors were views of one machine."),
+ ('h3', 'α: the machine, all of it'),
+ ('p', "Use the slow shape of the rods, not their other free tone. If the upper rod leans a, the lower leans √2 a; the masses move ℓa and ℓ(1 + √2)a. So the a-swing's inertia is η = mℓ²[1 + (1 + √2)²] = (4 + 2√2) kg m², about 6.8 kg m². The rods' combined mass is 2 kg."),
+ ('p', 'Scale that lean and the charge as X = √η a and Y = √L q. The balances become Ẍ = −ω₀²X + ΔωẎ and Ÿ = −ω₀²Y − ΔωẊ. Here ω₀ = 6ν, the gap Δω = 5ν, and the tones sweep at 4ν and 9ν. The can starts full: Y = Y₀, X = 0, and neither is moving.'),
+ ('p', "(α-1) Let h be a unit hand turning at ω, starting →. Try X = A(↑ · h) and Y = B(→ · h). A quadrant exchanges the hands' forward and upward parts, so the swing's balance gives (ω₀² − ω²)A = −Δω ωB, and the loop's gives (ω₀² − ω²)B = −Δω ωA. Thus A = ±B. In units of ν, 36 − 16 = 20 = 5 × 4 for the slow tone, with A = −B; 36 − 81 = −45 = −5 × 9 for the fast, with A = B."),
+ ('p', "Call their hands h₄ and h₉. The full motion is X = ↑ · (−B₁h₄ + B₂h₉), Y = → · (B₁h₄ + B₂h₉). The low tone's charge trails the lean by a quadrant; the high tone's leads it."),
+ ('p', "(α-2) At the start Y = B₁ + B₂ = Y₀, and the swing isn't moving: −4νB₁ + 9νB₂ = 0. So B₂ = (4/9)B₁, B₁ = (9/13)Y₀ and B₂ = (4/13)Y₀."),
+ ('p', "So the charge's phase-hand account, used at the chair, is q/q₀ = → · (9h₄ + 4h₉)/13. Those unequal shares are forced by the start: the charge adds while the two contributions to the swing's velocity cancel."),
+ ('p', "(α-3) Returning the full state requires both hands back at →. Four and nine share no factor, so νT = τ: four turns low and nine high. At T/2, h₄ = → and h₉ = ←. Then Y = (5/13)Y₀, X = 0, Ẏ = 0, and Ẋ = −(12/13)ω₀Y₀. The can's energy follows Y²; the rods' punch follows Ẋ². Relative to the initial store, they keep 25/169 and 144/169: 13-c's 5–12–13, now traced through the whole machine."),
+ ('p', '(α-4) ω₀² = 10(2 − √2) per second squared, so T = τ/ν = 6τ/ω₀ ≈ 15.6 s. During RUN all 80 mJ stays in the machine. Count it through that time: 𝒜 = ∫₀ᵀ E dt = ET ≈ 1.25 J s. This is an energy-time tally; none of that energy is used up.'),
+ ('p', "On the rods' combined 2 kg, the tally is 𝒜/(2 kg) ≈ 0.62 zam, with one zam = 1 J s/kg. Against the a-swing's η, it is 𝒜/η ≈ 0.18 zlam, with one zlam = 1 J s/(kg m²). Same tally, two reference loads. The reference profile η/(2 kg) = (2 + √2) m² takes zlam to zam. Nobody asked for either of them."),
+ ('p', 'From somewhere beyond the frame: “Here I zam.”'),
+ ('p', 'From the opposite end: “Zlam.”'),
+ ('p', 'The hum covers them again.'),
+ ('h3', 'β: TEST, then RUN'),
+ ('p', 'On the chassis: a switch with two positions, TEST and RUN, and a small drive arm linked to the mechanical coordinate a.'),
+ ('p', "In TEST the electrical loop is open, so i = 0. The drive acts on a alone, with the other mechanical mode absent: X obeys Ẍ = −ω₀²X between taps. Each short impulse adds the same positive increment to Ẋ. Begin at rest and call one tap's energy E₁."),
+ ('p', '(β-1) Put ω₀X and Ẋ along the two directions of a state arrow. Its squared length is twice the oscillator’s energy. Between taps the arrow turns with the cycle; each tap adds the same piece along Ẋ. One whole turn between taps brings every addition back into step, so N additions make the arrow N times as long and store N²E₁. The k-th adds k² − (k − 1)² = 2k − 1 units of work. Equal impulses don’t mean equal work: the drive pays more as the motion grows.'),
+ ('p', '(β-2) With independent, uniformly random phases, the additions point every which way. The square of their sum is the sum of their squares plus cross terms. Those cross terms average to zero, so the expected energy is NE₁: a random walk.'),
+ ('p', '(β-3) A hundred taps in step give a hundred times one tap’s amplitude and 10,000 E₁. Random phases give an expected 100 E₁ and a root-mean-square amplitude ten times one tap’s. The coherent case stores a hundred times the expected energy. The drive supplies the work in either case.'),
+ ('p', '(β-4) No. In RUN the drive is disconnected and the loop is closed. The machine keeps its 80 mJ; the return puts it all back in the capacitor. The build-up in TEST came from the drive, through its repeated work. Changing the timing can break that step; simply making two free tones line up adds nothing.'),
+ ('p', 'You find the drive arm, then the place where it comes clear. The book is open beside it. There are gaps in the penciled blows. You count them again.'),
+]
+NATIVE_1028_P4_NOTE = 'Prior prose draft. The full understage machine solution now belongs to <a href="https://docs.google.com/document/d/1fKhIhh077LMGux9o3iC7vzjgbepmmxWXurvmtV8GeHQ/edit?tab=t.5dyqu0kfwmvx">Path 3</a>; the active fourth path is Poetry → Path 4 — first assembly. This draft is retained as a source.'
+
+def native_1028(items, path):
+    out = list(items)
+    if path == 3:
+        for old, new in NATIVE_1028_P3_HEAD:
+            hits = [i for i, (_, x) in enumerate(out) if isinstance(x, str) and old in x]
+            assert len(hits) == 1, ("native_1028 head", old[:60], len(hits))
+            out[hits[0]] = (out[hits[0]][0], out[hits[0]][1].replace(old, new))
+        doors = [i for i, (_, x) in enumerate(out) if isinstance(x, str) and x.startswith("Trapdoor, the ") and x.endswith(" It's nailed down.")]
+        assert len(doors) == 3, ("native_1028 trapdoors", len(doors))
+        for i in doors: out[i] = (out[i][0], out[i][1][:-len("It's nailed down.")] + "The trapdoor is open.")
+        j = [i for i, (_, x) in enumerate(out) if x == NATIVE_1028_P3_AFTER]
+        assert len(j) == 1 and out[j[0] + 1][1].startswith("Ending 3"), ("native_1028 place", len(j))
+        out[j[0] + 1:j[0] + 1] = list(NATIVE_1028_P3)
+    if path == 4:
+        assert out[0][0] == "h1"
+        out.insert(1, ("i", NATIVE_1028_P4_NOTE))
+    return out
+
 if __name__ == "__main__":
     for k in (1, 2, 3, 4):
         items = build(k)
         open(f"set{k}.html", "w").write(to_html(items))
-        open(f"set{k}.txt", "w").write("\n".join(("## " if t.startswith("h") else "") + re.sub("</?(b|em)>", "", s) for t, s in items))
+        open(f"set{k}.txt", "w").write("\n".join(("## " if t.startswith("h") else "") + re.sub("</?(b|em|a)( [^>]*)?>", "", s) for t, s in items))
         print(k, len(items), sum(len(s) for _, s in items))

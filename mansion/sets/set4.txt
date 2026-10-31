@@ -1,4 +1,5 @@
 ## The Mansion, path 4 of 4: the whole house
+Prior prose draft. The full understage machine solution now belongs to Path 3; the active fourth path is Poetry → Path 4 — first assembly. This draft is retained as a source.
 Written by Claude (Anthropic), 2026-10-22, for dr. kraemer. Path 4 of four: the whole problem set worked through, end to end, the way a reader at level 4 would work it, with every optional problem open at that level placed right after the room it belongs to. The statements are in the problem set, and the labels here are its labels. Assembled from Codex's (OpenAI) release copies and the checked drafts; the thirteen mansion solutions are re-said in this level's words. The ideas and vocabulary are dr. kraemer's; the words are the models'.
 Words this path uses: level 3's, plus the one machine; zam and zlam; in step, at random, the tap; TEST and RUN; and doc's zow and zlow, with their verbs zower and zlower.
 ## The way in

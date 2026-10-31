@@ -38,9 +38,10 @@ for (el, t), (tag, _, it, bold, ind, ems) in zip(have, want):
         if not tr: continue
         st = tr.get("textStyle", {}); s = tr["content"].rstrip("\n")
         if not s: continue
-        if st.get("foregroundColor", {}).get("color"): bad.append(("color", s[:30]))
+        link = st.get("link")   # a link run carries the link's own blue and underline (path 4's pointer, 10-31)
+        if st.get("foregroundColor", {}).get("color") and not link: bad.append(("color", s[:30]))
         for mark in ("strikethrough", "underline", "backgroundColor"):   # doc's markup is a message, not styling: report it
-            if st.get(mark): bad.append((mark, s[:40]))
+            if st.get(mark) and not (link and mark == "underline"): bad.append((mark, s[:40]))
         q = len(t[:pos].encode("utf-16-le")) // 2; qe = q + len(s.encode("utf-16-le")) // 2
         if bool(st.get("italic")) != (it or any(a <= q and qe <= z for a, z in ems)): bad.append(("italic", s[:30]))
         if bool(st.get("bold")) != (pos < bold): bad.append(("bold", s[:30]))
