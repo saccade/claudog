@@ -1179,6 +1179,9 @@ DOC_1028 = [
  ((4,), "80 mJ of rest energy, s = 2, and a stretch of 5/4", "80 mJ of rest energy, s = 1/2, and a stretch of 5/4"),
  # doc 08:58 (a reviewer): with a = A cos ωt and q = Q sin ωt, Q/A = η(ω₀² − ω²)/(κω): behind in the low tone, ahead in the high
  ((4,), "the charge a quarter turn behind the lean.", "the charge a quarter turn from the lean, behind it in the low tone and ahead in the high."),
+ # doc 10-31: motion is the quantity (he never retired it); "movement" had crept in for the light pulses
+ ((3,), "In the frame where the energies match, their movements cancel.", "In the frame where the energies match, their motions cancel."),
+ ((3, 4), "Their movement cancels. Mass remains.", "Their motion cancels. Mass remains."),
  ((3, 4), "What leaves the can comes back as hook;", "What leaves the can comes back as punch;"),
  # doc 07:46: the dot keeps the forward part of the phase; what's a choice there and what isn't
  ((2,), "with P = k₁x − ω₁t and Q = k₂x + ω₂t.",
