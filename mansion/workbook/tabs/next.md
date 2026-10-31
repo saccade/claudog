@@ -25,3 +25,4 @@ Codex extended the terminology tools with `sets/path_features.json`: notation, e
 - codogx PR #2 is an independent check pinned to an older problem-set blob, not yet a two-author comparison.
 ## Later, not now
 - The text-input game, whose pictures carry deliberate AI signatures in smoke, folds, hair, or shadows: readable scenes first, unmistakable letters once noticed.
+- Path 4 assembly's verse says “TEST. The pencilled blows”; the American spelling is “penciled”, as path 3 now has it. Fix it there, then regenerate the Path 4, clean text tab (doc 10-31: “get it later”).
