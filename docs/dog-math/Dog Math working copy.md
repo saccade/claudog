@@ -321,8 +321,11 @@ time: 12 V of 2 A is 24 W. After that the bare rule is safe.
 | 18 zing of half a wheel         | hook, 9 thump                 |
 | 2 lump across 2 card            | inertia, 40 mw                |
 | 4 push through 3 meter          | work, 12 thump                |
-| 0.1 ponder under 10 zoom        | heft, 1 thump                 |
+| 0.1 ponder up, under 10 zoom    | heft, 1 thump                 |
+| 0.1 ponder level, under 10 zoom | torque, 1 crank               |
 \+---------------------------------+-------------------------------+
+A bulk under gravity does both: its upward part hefts, and its
+level part cranks.
 Duration and rate are rows in the multiplication table, not
 columns. Say "z is the fluxion of y" (force is the fluxion of the
 movement) and "y adds z over time" (a push adds movement over
@@ -708,9 +711,9 @@ current of added flux. Same move:
     dE = V dQ,     dE = I dλ
 From empty, each bit of charge arrives at the voltage already
 there; each bit of flux arrives at the current already there.
-Count each addition at that voltage or current. For linear
-stores, the average over the added charge or flux makes the
-count easy. It is an average over what is added, not over time.
+Count each addition at that voltage or current: the voltage of
+the added charge, the current of the added flux. In a linear
+store the climb is a triangle over what is added, not over time.
 Every can sentence becomes a coil sentence by trading charge for
 flux and voltage for current:
 \+-----------------------------------+-----------------------------------+
@@ -777,7 +780,7 @@ As the current falls, the voltage falls with it. The coil and the
 resistor set the time, 0.40 H over 10 Ω, 0.040 s: the same two
 thirds gone in the first 0.040 s, 95% by 0.12 s.
 The coil stored the current of added flux. The 1.2 Wb arrived
-at currents from 0 to 3 A, averaging 1.5 A over the flux:
+at currents climbing from 0 to 3 A; the triangle under that is
 1.8 J. The resistor burns all of it. At the start it burns the
 voltage of the current, 30 V of 3.0 A, 90 W, and the coil's store
 falls at the same 90 W: the current of 30 Wb a second of flux
@@ -997,7 +1000,7 @@ to 2.7 m/s takes 0.30 s, and the center goes 2.4 × 0.30 = 0.72 m.
 Check from the other side: 2.0 N at R is a torque of 0.10 N m on
 0.0010 kg m^2, 100 rad/s^2, and 84 down to 54 takes 0.30 s.
 The energy. Build the center's motion from rest: 2.1 oompf
-arrives at velocities averaging 1.05 m/s and punches 2.2 J.
+arrives at velocities climbing to 2.1 m/s; the triangle is 2.2 J.
 The spin, at 3500 zing, hooks
 0.0010 × 3500 = 3.5 J: 5.7 J. Rolling, it punches 3.6 J and
 hooks 1.5 J at 1500 zing: 5.1 J. The skid burned 0.63 J, about a
@@ -1217,9 +1220,9 @@ People can read them too: they're the doc in brief.
     The velocity of added motion is stored as punch: an oompf
     added while the body moves at 4 cat stores 4 thump. From
     rest, the velocity climbs evenly as the motion comes in, so
-    the motion is added at half the final velocity on average:
-    60 lump brought to 10 cat takes 600 oompf, added at an average
-    of 5 cat, which stores 3000 thump. Per lump, the ghost keeps
+    the punch is a triangle, not a rectangle:
+    60 lump brought to 10 cat takes 600 oompf, and the triangle
+    under that climb is 3000 thump. Per lump, the ghost keeps
     50 zip. A body stores energy and transfers it; a ghost keeps
     it and gives it.
     So "zip per lump" is a slip.
@@ -1276,9 +1279,9 @@ People can read them too: they're the doc in brief.
     The velocity of added motion is stored as punch: an oompf
     added while the body moves at 4 cat stores 4 thump. From
     rest, the velocity climbs evenly as the motion comes in, so
-    the motion is added at half the final velocity on average:
-    60 lump brought to 10 cat takes 600 oompf, added at an average
-    of 5 cat, which stores 3000 thump. Per lump, the ghost keeps
+    the punch is a triangle, not a rectangle:
+    60 lump brought to 10 cat takes 600 oompf, and the triangle
+    under that climb is 3000 thump. Per lump, the ghost keeps
     50 zip. A body stores energy and transfers it; a ghost keeps
     it and gives it.
     Use these names. If you need a new one, mark it as new with
@@ -1352,9 +1355,9 @@ People can read them too: they're the doc in brief.
     The velocity of added motion is stored as punch: an oompf
     added while the body moves at 4 cat stores 4 thump. From
     rest, the velocity climbs evenly as the motion comes in, so
-    the motion is added at half the final velocity on average:
-    60 lump brought to 10 cat takes 600 oompf, added at an average
-    of 5 cat, which stores 3000 thump. Per lump, the ghost keeps
+    the punch is a triangle, not a rectangle:
+    60 lump brought to 10 cat takes 600 oompf, and the triangle
+    under that climb is 3000 thump. Per lump, the ghost keeps
     50 zip. A body stores energy and transfers it; a ghost keeps
     it and gives it.
     Rewrite a problem's SI numbers in dog units where they match:
