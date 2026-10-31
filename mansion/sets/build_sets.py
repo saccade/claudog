@@ -842,6 +842,7 @@ def build(k, shares=True):
     out = energy_accounts(out, k)
     out = doc_1028(out, k)
     out = native_1028(out, k)
+    out = hurry_3(out, k)
     return out
 
 def to_html(items):
@@ -1254,6 +1255,40 @@ def native_1028(items, path):
     if path == 4:
         assert out[0][0] == "h1"
         out.insert(1, ("i", NATIVE_1028_P4_NOTE))
+    return out
+
+
+# doc 10-31 11:57-12:04: "the path 2 and 3 solutions are supposed to feel different in tone at least, and include
+# different flavor details" / "#3 is in much more of a hurry with getting through things. the goal is to use the vocab
+# to get to interesting physics points that didn't get highlighted with the prior vocab, not to bore the reader."
+# Path 3's own tellings of the parts it had shared word for word with path 2, room by room. Each entry: the first
+# item it replaces (exact text), how many items, and the new items. Applied last.
+HURRY_3 = [
+ # room 1
+ ("(1-a) Leaning through θ lifts a point ℓ away by ℓ(1 − cos θ). For this small lean, the knife rises about ℓ θ²/2: 5 mm. The 10 N weight lifted through 5 mm stores 0.05 J. Energy stored in height is heft: the weight pulls, and the height hefts. The knife hefts 0.05 J.", 1,
+  [("p", "(1-a) A lean of a tenth of a stroke lifts the knife about ℓθ²/2, 5 mm, and 10 N through 5 mm hefts 0.05 J: 0.05 J for each kilogram, and every kilogram of knife gets the same.")]),
+ ("(1-c) The knife has a cycle: from one end, through the bottom to the other end, and back. It cycles. Call the time for one complete cycle T.", 8,
+  [("p", "(1-c) The knife cycles, and the cycle sweeps at √(g/ℓ) = √10, about 3.2 strokes a second, so a turn of it takes T = τ/√10, about 2 s. The knife's own direction sweeps too, but slower: 0.32 at the bottom, a tenth of the cycle's sweep. The tenth is the swing itself, 0.1 stroke. Swing it twice as far and the knife sweeps twice as fast, while the cycle's sweep stays where it was, as long as the swing stays small. At either end the knife picks up at the cycle's sweep squared of its lean, 1 sweep a second, back toward the bottom.")]),
+ ("(1-d) Twice the mass doubles the heft, the punch, and the resistance to being sped up. The height, bottom speed, and time for a cycle stay the same. The cycle never asked for the mass.", 1,
+  [("p", "(1-d) Double the mass and nothing in this room notices. Each kilogram still hefts 0.05 J, the bottom still comes at 0.32 m/s, and the cycle still sweeps at √10. The cycle never asked for the mass.")]),
+ # room 5
+ ("(5-a) Call the given impulse J: 2 N s →. The strike is a blow; what it leaves in the center's motion is punch. On 1 kg it leaves the center running at 2 m/s →.", 1,
+  [("p", "(5-a) 2 N s → on 1 kg, and the center's off at 2 m/s →. Wherever the cue lands, high, low, or dead center, the center gets the same 2 m/s; the height only changes the spin.")]),
+ ("(5-b) Take the lever from the ball's center up to where the cue strikes: (H − R) ↑. The angular momentum a blow leaves about the center is spin, and it's the leverage of the blow, with ↑ × → = ↻:", 5,
+  [("p", "(5-b) Rolling from the first instant means the contact is the still point from the start, so count about it. Only the blow has leverage there, H up:"),
+   ("eq", "H ↑ × J → = H J ↻."),
+   ("p", "About the contact the ball's profile is (2/5)R² + R² = (7/5)R², and sweeping at v/R that carries (7/5) m R v ↻ = (7/5) R J ↻ of spin. So H = 7R/5 = 0.07 m, two fifths of a radius above the center. Struck there, the cloth never has to push along the table: the ball rolls off without any friction at all. Strike it lower or higher and the cloth has to rub it into rolling.")]),
+ ("(5-c) The ball sweeps at 2/0.05 = 40 sweep ↻, and its spin is (2/5)(0.05 m)(2 N s) = 40 g m²/s ↻. The velocity of added motion stores punch; the sweep of added spin stores hook. Built from rest, each pair grows together, by equal amounts, so each product counts its store twice over:", 4,
+  [("p", "(5-c) It sweeps at 2/0.05 = 40 sweep ↻ and carries 40 g m²/s ↻ of spin. Each store grows with its own pair, so each product counts it twice: 2 m/s → · 2 N s → is 4 J, twice the 2 J of punch, and 40 ↻ · 40 g m²/s ↻ is 1.6 J, twice the 0.8 J of hook. The center keeps 2 J/kg as zip, and the ball zings at 800. Or take it all about the still point, where the profile is 7/5 of R²: the whole 2.8 J is turning about the contact, 7/5 of the punch.")]),
+]
+
+def hurry_3(items, path):
+    out = list(items)
+    if path != 3: return out
+    for first, n, new in HURRY_3:
+        hits = [i for i, (_, x) in enumerate(out) if isinstance(x, str) and x.replace("\u200a", " ") == first]
+        assert len(hits) == 1, ("hurry_3", first[:60], len(hits))
+        i = hits[0]; out[i:i + n] = new
     return out
 
 if __name__ == "__main__":

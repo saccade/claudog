@@ -11,19 +11,12 @@ The visitor watches the knife cycle across and back. On the paper, the curve cyc
 ## Dining room
 ## 1. The knife
 The loose sheet models the knife as a 1 kg point mass, a meter from its pivot. Let go from 0.1 rad off the downward vertical, it swings under g = 10 m/s². The numbers are on the sheet; the knife has already begun.
-(1-a) Leaning through θ lifts a point ℓ away by ℓ(1 − cos θ). For this small lean, the knife rises about ℓ θ²/2: 5 mm. The 10 N weight lifted through 5 mm stores 0.05 J. Energy stored in height is heft: the weight pulls, and the height hefts. The knife hefts 0.05 J.
+(1-a) A lean of a tenth of a stroke lifts the knife about ℓθ²/2, 5 mm, and 10 N through 5 mm hefts 0.05 J: 0.05 J for each kilogram, and every kilogram of knife gets the same.
 (1-b) The velocity of added motion is stored as punch, each bit at the velocity it arrives at. Per meter of drop, the velocity of added velocity is g, and v² takes it in through both of its v’s: 2g a meter. The mass rides on both sides and cancels:
 v² = 2gh.
 A 5 mm fall under 10 m/s² gives v² = 0.1 m²/s². The knife passes the bottom at 0.32 m/s.
-(1-c) The knife has a cycle: from one end, through the bottom to the other end, and back. It cycles. Call the time for one complete cycle T.
-Call a radian a stroke. All the way round is a turn, about 6.3 strokes, and half of that is π, the flip. A flip of the knife’s cycle takes it to the opposite end; a turn brings it back.
-Count strokes each second and call that the sweep. The cycle’s sweep is ω. The usual small-swing rule balances as
-ℓω² = g,
-Tω = 2π.
-Here the cycle sweeps at √10, about 3.2 strokes a second. Its cycle takes T = 2π/√10, about two seconds. There's a 2 riding along with that π: two flips standing in for one turn. π only covers half of what the knife does, one swing across; the cycle is the whole of it. Give the whole turn its own sign, τ, and the rule says so:
-Tω = τ.
-The knife’s own direction sweeps too, at a different pace. At the bottom it sweeps at v/ℓ, about 0.32 strokes a second. At either end that sweep is zero. The knife turns back while the cycle sweeps on. The rate the sweep changes is the pickup: swung θ off vertical, the knife picks up at g/ℓ of its lean, back toward the bottom, θ̈ = −(g/ℓ)θ. A stroke a second makes a handy unit of sweep, so call it a sweep too: the cycle sweeps at 3.2 sweep. At either end the knife picks up at 10 of its 0.1 lean: 1 sweep a second, back toward the bottom.
-(1-d) Twice the mass doubles the heft, the punch, and the resistance to being sped up. The height, bottom speed, and time for a cycle stay the same. The cycle never asked for the mass.
+(1-c) The knife cycles, and the cycle sweeps at √(g/ℓ) = √10, about 3.2 strokes a second, so a turn of it takes T = τ/√10, about 2 s. The knife's own direction sweeps too, but slower: 0.32 at the bottom, a tenth of the cycle's sweep. The tenth is the swing itself, 0.1 stroke. Swing it twice as far and the knife sweeps twice as fast, while the cycle's sweep stays where it was, as long as the swing stays small. At either end the knife picks up at the cycle's sweep squared of its lean, 1 sweep a second, back toward the bottom.
+(1-d) Double the mass and nothing in this room notices. Each kilogram still hefts 0.05 J, the bottom still comes at 0.32 m/s, and the cycle still sweeps at √10. The cycle never asked for the mass.
 The pen begins the curve again. The lid lifts.
 ## Into the cabinet
 striped canvas in faded red and cream; brass corners; sawdust and lamp oil; painted stars on every lid; no one else in here; each drawer opens from its room's locked box, and you leave the way you came
@@ -87,16 +80,11 @@ They were all cut for one wearer.
 ## Billiard room
 After the ladder has left the wall, its fall trips the sear on a cocked cue. The spring pays for the shot. The ladder only lets it go. The chalk is on your cuff. At the clown’s heel, the wool has twisted into a hard little cord. On the sideboard, a clockwork diorama under a striped dome, unlatched. It has a door in this room, the conservatory, and the ballroom.
 ## 5. The cue ball
-(5-a) Call the given impulse J: 2 N s →. The strike is a blow; what it leaves in the center's motion is punch. On 1 kg it leaves the center running at 2 m/s →.
-(5-b) Take the lever from the ball's center up to where the cue strikes: (H − R) ↑. The angular momentum a blow leaves about the center is spin, and it's the leverage of the blow, with ↑ × → = ↻:
-(H − R) ↑ × J → = (H − R) J ↻.
-Rolling at once means the bottom of the ball isn't sliding. The bottom's lever from the center is R ↓, and the turning moves it at the sweep crossed into that lever: ω ↻ × R ↓ = ω R ←. That has to cancel the center's v →, so the ball sweeps at v/R ↻. Its profile about the center is (2/5) R², and (2/5) m R² sweeping at v/R carries
-(2/5) m R² (v/R) ↻ = (2/5) R J ↻
-of spin, since m v is J. The two senses agree, so the cue went in above the center, and H − R = 2R/5: H = 7R/5 = 0.07 m, two fifths of a radius above the center.
-(5-c) The ball sweeps at 2/0.05 = 40 sweep ↻, and its spin is (2/5)(0.05 m)(2 N s) = 40 g m²/s ↻. The velocity of added motion stores punch; the sweep of added spin stores hook. Built from rest, each pair grows together, by equal amounts, so each product counts its store twice over:
-(2 m/s →) · (2 N s →) = 4 J, twice 2 J,
-(40 ↻) · (40 g m²/s ↻) = 1.6 J, twice 0.8 J.
-Each pair points the same way, so each dot multiplies the sizes. The hook is two fifths of the punch again. The center keeps 2 J/kg as zip; the sweep of 40 times itself, 1600, counts the zing twice: 800 zing.
+(5-a) 2 N s → on 1 kg, and the center's off at 2 m/s →. Wherever the cue lands, high, low, or dead center, the center gets the same 2 m/s; the height only changes the spin.
+(5-b) Rolling from the first instant means the contact is the still point from the start, so count about it. Only the blow has leverage there, H up:
+H ↑ × J → = H J ↻.
+About the contact the ball's profile is (2/5)R² + R² = (7/5)R², and sweeping at v/R that carries (7/5) m R v ↻ = (7/5) R J ↻ of spin. So H = 7R/5 = 0.07 m, two fifths of a radius above the center. Struck there, the cloth never has to push along the table: the ball rolls off without any friction at all. Strike it lower or higher and the cloth has to rub it into rolling.
+(5-c) It sweeps at 2/0.05 = 40 sweep ↻ and carries 40 g m²/s ↻ of spin. Each store grows with its own pair, so each product counts it twice: 2 m/s → · 2 N s → is 4 J, twice the 2 J of punch, and 40 ↻ · 40 g m²/s ↻ is 1.6 J, twice the 0.8 J of hook. The center keeps 2 J/kg as zip, and the ball zings at 800. Or take it all about the still point, where the profile is 7/5 of R²: the whole 2.8 J is turning about the contact, 7/5 of the punch.
 ## Conservatory
 The cue ball rolls free, then nudges a flap. A second ball, held a little way up the basin, is let go. Its own height pays for its motion. The striped dome's second door is here, unlatched.
 ## 6. The basin
