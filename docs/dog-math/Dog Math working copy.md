@@ -23,7 +23,7 @@ science or real engineering, and it says out loud that it isn't
 the last word. It won't get lost in the weeds, because the weeds
 were rounded off at the gate.
 Dog math is the default for all the work, unless doc says a piece
-is for outside eyes (sections 14 and 16).
+is for outside eyes (section 15).
 The job is naming. Find the quantity that means something, say
 how to measure it or build it, and relate it to the others in
 sentences that don't turn round on themselves. A lump of algebra,
@@ -122,12 +122,8 @@ structural work, and friendly units make the numbers easy.
     vertical in a named plane only adds a conversion, and the
     conversions are where the real confusion lives.
 19\. In a side-by-side, both columns start from the same inputs,
-    and each one stands alone: read without the other, every
-    number on it has a source on it. The dog column is still
-    math. Each quantity that keeps coming back gets an English
-    name and one line on why to believe the name. Translate one
-    to one first; flip, model, and reflip only where the
-    translation reads badly.
+    and each one stands alone; the dog column is still math
+    (section 18, WRITING A SIDE-BY-SIDE).
 20\. Apparatus isn't free. Every extra symbol, convention, and
     guard costs the reader something, and the beginner pays the
     most. An expert files it away as background; a beginner can't
@@ -149,10 +145,10 @@ if obvious, and move on.
     for a rod or a pendulum. Say wheel of inertia, mw, or kg m^2.
   - forward and back around. Where the scene has a word for the
     sense of turning, topspin, backspin, the way a wheel rolls,
-    use it (section 9).
+    use it (section 10).
   - the outward and upward parts. They name parts along and across
     a start line, wherever it points. Say which way when it isn't
-    up and out (section 9).
+    up and out (section 10).
   - across. Only the product: a mass across a profile. A
     direction is sideways, level, or at right angles to.
   - run. Only a speed: it runs at 3 cat. A computer's work is a
@@ -215,10 +211,8 @@ too, wherever the quantities are named:
 | sweep       | sweep: a stroke per second   | 1 rad/s         |
 | pickup      | pickup: a sweep per second   | 1 rad/s^2       |
 | whirl       | pickup of a body turning on  | 1 rad/s^2       |
-|             | itself: a sweep per second.  |                 |
-|             | A train picking up around a  |                 |
-|             | track's center counts in     |                 |
-|             | pickup, not whirl            |                 |
+|             | itself (a train round a track|                 |
+|             | picks up in pickup)          |                 |
 | ponder      | bulk: mass at a lever        | 1 kg m          |
 |             | ("a ponderous bulk")         |                 |
 | wheel       | inertia: a ponder at a meter | 1 kg m^2        |
@@ -241,18 +235,10 @@ too, wherever the quantities are named:
 |             | kinds are about at once      |                 |
 | zlow        | power per inertia, likewise  | 1 W/(kg m^2)    |
 | zlam        | action per inertia, likewise | 1 J s/(kg m^2)  |
-| swirl       | spin per mass; for a point,  | 1 m^2/s         |
-|             | the lever at pace; for a     |                 |
-|             | body, lever each bit's       |                 |
-|             | motion, add, then divide     |                 |
-|             | by the mass; along the axis  |                 |
-| twirl       | torque per mass; for a point,| 1 m^2/s^2       |
-|             | the lever at acceleration;   |                 |
-|             | for a body, lever each bit's |                 |
-|             | push, add, then divide by    |                 |
-|             | the mass (a balanced wheel   |                 |
-|             | can twirl with its center    |                 |
-|             | still); along the axis       |                 |
+| swirl       | spin per mass: the lever at  | 1 m^2/s         |
+|             | pace, along the axis         |                 |
+| twirl       | torque per mass: the lever at| 1 m^2/s^2       |
+|             | acceleration, along the axis |                 |
 \+-------------+------------------------------+-----------------+
 Oompf has a letter, o: 1 oompf = 1 o = 1 kg m/s. Motion is
 directed, so the o wears its arrow, joined on at the stem: o→
@@ -271,33 +257,29 @@ So 4.4 ⇐ is 4.4 push back, and ⇒ · ↦ is a push at a cat, 1 pow.
 ↦ and ⇒ already mean "maps to" and "implies" to mathematicians.
 The borrowed meanings point the same way: a velocity maps moments
 to places, and a force implies a change of motion.
-Ring is the phase rate of anything that oscillates or waves, a
-stroke of phase a second (trial).
-Sheet and blanket count the area of something laid out: a wing, a
-field, a floor. Card \[not specifically\] counts profiles, which carry no mass. The
-shapes are alike and the jobs differ.
+Sheet, blanket, and card all count area: a wing, a field, a
+floor, a drum's face. Profiles, which carry no mass, come out in
+area too, and the card is the handy size for them.
 Handy facts:
     1 meter                     = 10 hand
     1 sheet                     = 100 card
-    1 blanket                   = 10 sheet
-    1 wheel                     = a ponder at a meter
     a lump at a hand, at a hand = 10 mw (local unit)
-    1 thump                     = a lump lifted a hand, dog gravity
     1 crank through 1 stroke    = 1 grunt
-    dog gravity                 = 10 zoom
-    a turn                      = about 6.3 stroke
     a 3x5 card                  = within a few percent of a card
 4\. Saying products
 \------------------
 Products and quotients take English operators, not ×, and get
 verbed when the verbing's good.
-    of       leads with the operator: the sweep of the lot, the
+    of       leads with the operator: the sweep of the bulk, the
              capacitance of its voltage
-    at       leads with the thing: the lot at pace, a mass at a
+    at       leads with the thing: the bulk at pace, a mass at a
              lever
     across   a mass across a profile; a wheel across a zing
     through  a push through a distance
-    on       divides: 3 roll on half a wheel
+    on       divides a rate spread on a lever (3 roll on half a
+             wheel), or lays one thing across another (a 0.1 mm
+             coat on 40 sheet is 4 liters of paint); the units
+             say which
     over     divides, or runs along: 4 pickup over 4.5 stroke
     under    a bulk under gravitation
 "Of" is the ordinary genitive, not a fixed operator. The product
@@ -326,11 +308,212 @@ time: 12 V of 2 A is 24 W. After that the bare rule is safe.
 \+---------------------------------+-------------------------------+
 A bulk under gravity does both: its upward part hefts, and its
 level part cranks.
-Duration and rate are rows in the multiplication table, not
-columns. Say "z is the fluxion of y" (force is the fluxion of the
-motion) and "y adds z over time" (a push adds motion over
-time). Mass is handled by the ghost version beneath each cell.
-5\. Verbing
+Say "z is the fluxion of y" (force is the fluxion of the motion)
+and "y adds z over time" (a push adds motion over time). The
+whole multiplication table is section 5.
+5\. The product tables
+\---------------------
+Products of the things a setup has, in five tables on one scheme,
+rows 1 to 17 and columns a to u, so a cell's address needs no table
+number. The sentence for each filled cell comes after the tables.
+A setup is a body, or several, and an axis. Movement is a set-up
+body's motion: the motion of a body turning about the setup's axis.
+Rows are actions and rates; columns are things a setup has. A
+scalar (a time, a mass) takes no column: the mass rides in the
+ghost under each body cell, in parentheses. The ghost of the bulk
+is the lever, of the movement the pace, of the inertia the profile.
+The diagonal is the reflex, always a dot, out and back.
+A product cell holds the other factor stable: torque is the pickup
+of stable inertia. Let the inertia change and the rate of spin
+gains a second term, the sweep of the spread; with no torque, the
+pickup of the inertia equals the sweep of the tuck (the skater).
+Lever each bit, then add: inertia, spin, and torque are taken bit
+by bit, and never from a bulk or a movement that's already a sum.
+A balanced wheel's bulks and movements add to nothing while its
+inertia and spin are whole. Products along the axis (swing, sweep,
+torque, spin) hold through a whole swing while they're steady;
+products through the lever's direction (lever, bulk, movement)
+hold moment to moment, so arc, transit, shift, work, and action add
+up step by step.
+A cell in the backward order carries its minus; running text says
+the positive sentence, the lever at pace or the bulk at pace.
+Table 1: the setup's starting pieces (rows 1 to 6, columns a to c)
+\+---------------+---------------------+----------+--------------+
+| of →          | a lever ι           | b mass m | c bulk β     |
+\+---------------+---------------------+----------+--------------+
+| 1 rate of     | pace                |          | movement     |
+| 2 swing of    | arc                 |          | transit      |
+| 3 sweep of    | pace                |          | movement     |
+| 4 pickup of   | acceleration around |          | force around |
+| 5 leverage of | profile (reflex)    | bulk     | inertia      |
+| 6 pace of     | −swirl              | movement | −spin        |
+\+---------------+---------------------+----------+--------------+
+The bulk column is the lever column with the mass in it, and the
+mass column is the seam between them. 5a and 5c are reflexes, the
+lever twice, so they dot. Row 6's minuses are the backward order.
+Why the lever comes in twice: going out, the sweep of the lever
+gives the pace; there, the mass at that pace gives the movement;
+coming back, the leverage of that movement gives the spin. The
+same arm does two jobs, taking the sweep out to the moving mass and
+bringing the movement back into spin about the axis. The two
+crosses are two quarter turns, and they land back on the axis,
+facing the way the sweep faced; reverse either one and the spin
+lands backward, row 6's minus. Take the mass away and what's left
+of the trip is the profile. (The lever here is square to the axis;
+general three-dimensional turning is out of scope.)
+    ξ = ι × (m (ω × ι))
+Table 2: the motion ledger (rows 7 to 12, columns d to i)
+\+-------------+----------------+-----------------+-----------------+
+| of →        | d bulk β       | e inertia η     | f movement p    |
+|             |   (lever ι)    |   (profile)     |   (pace ν)      |
+\+-------------+----------------+-----------------+-----------------+
+| 7 duration  |                |                 | shift           |
+|             |                |                 | (displacement)  |
+\+-------------+----------------+-----------------+-----------------+
+| 8 rate      | movement       | spread          | force           |
+|             | (pace)         | (splay)         | (acceleration)  |
+\+-------------+----------------+-----------------+-----------------+
+| 9 swing     | transit (arc)  |                 |                 |
+\+-------------+----------------+-----------------+-----------------+
+| 10 sweep    | movement       | spin            | center force    |
+|             | (pace)         | (swirl)         | (center accel.) |
+\+-------------+----------------+-----------------+-----------------+
+| 11 pickup   | force around   | torque, stable  | yerk            |
+|             | (accel. around)| inertia (twirl) |                 |
+\+-------------+----------------+-----------------+-----------------+
+| 12 leverage | inertia        |                 | spin            |
+|             | (profile)      |                 | (swirl)         |
+\+-------------+----------------+-----------------+-----------------+
+\+-------------+----------------+-----------------+-----------------+
+| of →        | g force F      | h torque χ      | i spin ξ        |
+|             |   (accel. a)   |   (twirl)       |   (swirl)       |
+\+-------------+----------------+-----------------+-----------------+
+| 7 duration  | impulse,       | boost, Δspin    |                 |
+|             | Δmovement      | (Δswirl)        |                 |
+|             | (Δpace)        |                 |                 |
+\+-------------+----------------+-----------------+-----------------+
+| 8 rate      | yank (jerk)    |                 | torque (twirl)  |
+\+-------------+----------------+-----------------+-----------------+
+| 12 leverage | torque, moment,|                 |                 |
+|             | or torsion     |                 |                 |
+|             | (twirl)        |                 |                 |
+\+-------------+----------------+-----------------+-----------------+
+Rows 9 to 11 are empty in the second half. Empty cells are empty on
+purpose: the leverage of the inertia is m r³ along the arm, and
+nothing is measured in it; the arm enters a quantity exactly twice.
+12g splits three ways against the arm. Free to turn, it's a torque
+(slew brake off); held, it's a moment (brake on); along the arm's
+own line, it's torsion.
+Table 3: the energy ledger (rows 13 to 16, columns j to m; every
+cell a dot)
+\+------------+--------------+------------+------------+--------------+
+| of →       | j movement p | k force F  | l torque χ | m spin ξ     |
+\+------------+--------------+------------+------------+--------------+
+| 13 path    | action       | work       |            |              |
+| 14 swing   |              |            | work       | action       |
+| 15 pace    | reflected    | power      |            |              |
+|            | punch        |            |            |              |
+| 16 sweep   |              |            | power      | reflected    |
+|            |              |            |            | hook         |
+\+------------+--------------+------------+------------+--------------+
+The same per mass for straight motion and per inertia for turning,
+for the unafraid (rows 13 to 16, columns n to q):
+\+------------+--------------+------------+------------+--------------+
+| of →       | n pace ν     | o accel. a | p pickup α | q sweep ω    |
+\+------------+--------------+------------+------------+--------------+
+| 13 path    | zam          | zug        |            |              |
+| 14 swing   |              |            | zlug       | zlam         |
+| 15 pace    | reflected    | zow        |            |              |
+|            | zip          |            |            |              |
+| 16 sweep   |              |            | zlow       | reflected    |
+|            |              |            |            | zing         |
+\+------------+--------------+------------+------------+--------------+
+The reflected cells are reflexes: the pace of the movement, ν · p,
+and the sweep of the spin, ω · ξ. Each is twice its store, because
+the two factors grow together. The velocity of added motion is
+stored as punch: each bit goes in at the velocity the body has
+then, so from rest the store fills the triangle under the climb,
+and the reflex is the whole rectangle. That holds with the mass
+fixed; hook goes the same way with the inertia fixed.
+Table 4: the bulk meeting things (row 17, columns r to u)
+\+-----------+------------+------------+-------------+-------------+
+| bulk →    | r lever ι  | s pace ν   | t accel.    | u gravity g |
+|           |            |            | around a    |             |
+\+-----------+------------+------------+-------------+-------------+
+| 17 of /   | inertia    | spin       | torque      | load moment |
+| at / under| (profile)  | (swirl)    | (twirl)     | or torque   |
+\+-----------+------------+------------+-------------+-------------+
+The bulk is the one quantity that goes both ways: operators lead it
+(the sweep of the bulk, 10d) and things follow it (the bulk at
+pace, 17s). The bulk of the lever is a dot, both along the arm; the
+other three cross. Under gravity the dot is there too, and it's the
+heft: the bulk's upward part hefts, and its level part cranks
+(section 4).
+The cells, in sentences. A quantity that turns up in several cells
+is said once, with every cell it fills.
+  pace ν (1a, 3a): the rate at the lever's end; the sweep of the
+      lever. ν = Δι / Δt = ω × ι
+  arc (2a): the swing of the lever, ψ r long; step by step,
+      Δx = Δψ × ι
+  acceleration around a (4a): the pickup of the lever. a = α × ι
+  profile (5a): the reflex of the lever. ι · ι = r²
+  bulk β (5b): the leverage of the mass; mass on an arm, out along
+      the arm. β = ι × m
+  inertia η (5c, 12d, 17r): the leverage of the bulk; the bulk of
+      the lever. η = ι · β
+  swirl (6a): the lever at pace; the pace of the lever is minus it.
+      ν × ι = −swirl
+  movement p (1c, 3c, 6b, 8d, 10d): a set-up body's motion; the
+      rate of the bulk, the sweep of the bulk, the pace of the mass.
+      p = Δβ / Δt = ω × β = ν × m
+  transit (2c, 9d): the swing of the bulk, mass along the arc; it
+      keeps counting past a turn, like distance. transit = ψ m r
+  force around (4c, 11d): the pickup of the bulk. F = α × β
+  spin ξ (6c, 10e, 12f, 17s): the leverage of the movement; the
+      sweep of the inertia; the bulk at pace (the pace of the bulk
+      is minus it). ξ = ι × p = ω × η = β × ν
+  shift (7f): the movement carried over time, steady movement only;
+      a turning body's shift adds up step by step. Δshift = p × Δt
+  impulse (7g): the duration of a net force, the movement it adds.
+      Δp = F × Δt
+  boost (7h): the duration of a net torque, the spin it adds.
+      Δξ = χ × Δt
+  spread (8e): the rate of the inertia; its opposite is the tuck,
+      and for a ghost, splay and fold. spread = Δη / Δt
+  force F (8f): the fluxion of the movement; a push or pull adds
+      movement over time. F = Δp / Δt
+  yank (8g): the fluxion of the force (its ghost is the jerk).
+      yank = ΔF / Δt
+  torque χ (8i, 11e, 12g, 17t): the fluxion of the spin; the pickup
+      of stable inertia; the leverage of a force about the axis the
+      setup is free on; the bulk of the acceleration around. It
+      cranks, and can do work around the axle.
+      χ = Δξ / Δt = α × η = ι × F = β × a
+  moment M (12g, 17u): the leverage of a force across an arm that
+      holds; it loads the arm and does no work around the axle. The
+      load moment is the bulk under gravitation. M = ι × F = β × g
+  torsion (12g): the leverage of a force around the arm's own line,
+      through the offset; it wrings the arm. A wrench on a shaft is
+      all offset.
+  heft (the dot in 17u): the bulk's upward part under gravitation.
+      heft = g (↑ · β)
+  center force F⊙ (10f): the sweep of the movement, the force that
+      keeps it on center. F⊙ = ω × p
+  yerk (11f): the pickup of the movement, the growing part of the
+      yank. yerk = α × p
+  action (13j, 14m): the movement along the path; the spin through
+      the swing. action = Σ p · Δx = ξ · ψ, with the spin steady
+  work W (13k, 14l): a force along a path; a torque through a swing.
+      W = Σ F · Δx = ψ · χ
+  power P (15k, 16l): the pace of the force; the sweep of the
+      torque. P = ν · F = ω · χ
+  reflected punch (15j): the pace of the movement, twice the punch.
+      ν · p
+  reflected hook (16m): the sweep of the spin, twice the hook. ω · ξ
+Columns n to q say the same with the mass or the inertia out: zug
+is work per lump and zlug work per wheel, zow and zlow the power,
+zam and zlam the action (section 3).
+6\. Verbing
 \----------
 A unit worth introducing has a verb in it, or if not, an adverb or
 an adjective. The center of verbing is what's happening.
@@ -349,7 +532,7 @@ an adjective. The center of verbing is what's happening.
     the puck up at 20 whirl. A train picking up round a track's
     center picks up. A sentence with no body in it picks up too:
     20 pickup over 10 stroke adds 200 zing.
-6\. Ghosts
+7\. Ghosts
 \---------
 Ghost energy is kept and given; body energy is stored and
 transferred. The velocity of
@@ -442,7 +625,7 @@ off. The way out is always the same: put the body back across.
 You go in after 18 zing, and on the far side half a wheel steps
 out and hooks 9 thump. The ones who get lost forgot to bring the
 mass back.
-7\. Verbing the ghosts
+8\. Verbing the ghosts
 \---------------------
 A ghost doesn't have to sit after a number. Let it run. Put a
 body, or a slice of one, across a ghost, and it takes the ghost's
@@ -478,7 +661,7 @@ ghost and the active voice comes back with it: half a wheel with
 Don't force the verbing. Where a verb's word hasn't come in yet,
 the one that has will carry it: before zing is on the table,
 "sweeping at" carries the hook. And round as you verb.
-8\. Ghost manners, and the letter
+9\. Ghost manners, and the letter
 \--------------------------------
 Mention the ghosts enough that nobody is confused, then leave them
 be. Most people are afraid of ghosts, so hold the reader's hand
@@ -492,25 +675,26 @@ and make no sudden moves.
     taken out. After that the ghosts do their work quietly.
   - The familiar ones, velocity and the sweep, soothe, and need
     no letter. A problem with one scary ghost can give it a
-    letter. That letter is Ω,\[usually Z, unless it’s needed by impedance is I think what we’ve been doing. most of the ghost quantities start with z.\] the ghosts' true form, the base
-    letter for the whole family: Ω for the one scary ghost, and
-    Ω\_profile, Ω\_zing, Ω\_zlow when several are in play. Marks
-    stay (Ω₁, Ω₂, Ω₊, Ω₋); a different ghost gets a different
-    subscript, and a repeated symbol is the same quantity.
+    letter, and the letter is Z, since most of the ghosts' names
+    start with z: Z for the one scary ghost, and Z\_profile,
+    Z\_zing, Z\_zlow when several are in play. Marks stay (Z₁, Z₂,
+    Z₊, Z₋); a different ghost gets a different subscript, and a
+    repeated symbol is the same quantity. Where impedance needs Z,
+    the ghosts take Ω instead.
   - The conventional quantities keep their usual symbols: K, ω,
     α, v, and, in electricity, I for current and Z for impedance.
     Inertia depends on the company. Here it's η, which leaves I
     to the current; with company, and in the problem statements,
     it's I as usual, and the letters move only where current and
-    inertia meet. The ghosts give
-    way to them, never the other way round. Ω the ghost never
+    inertia meet. The ghosts give way to them, never the other
+    way round. Ω the ghost never
     shares an expression with the ohm: quantity algebra and unit
     statements stay separate.
-  - All the ghosts wear Ω, or none do \[see this is about Z. if there are multiple ghosts all of them should be Z or omega, not a mixture\]. Nobody gets left visible
-    alone. If a later room needs the switch, the earlier rooms
-    change with it.
-9\. Turning words
-\----------------
+  - All the ghosts wear the same letter, Z or Ω, never a mix.
+    Nobody gets left visible alone. If a later room needs the
+    switch, the earlier rooms change with it.
+10\. Turning words
+\-----------------
 A stroke is a radian. A turn is about 6.3 stroke, and what is
 simpler in turns is written in turns. The quadrant and the flip
 are a quarter and a half of it.
@@ -630,7 +814,7 @@ two ways to ring on its own has two tones, each with its own ring;
 both at once is a chord, and the chord beats at the gap between
 its rings. The two tones of a rod coupled to a loop, say, ring at
 1.6 and 3.6, and beat at 2.0.
-10\. Balanced, with the d's on different sides
+11\. Balanced, with the d's on different sides
 \---------------------------------------------
 Write the balanced version: both sides of every push, both
 ledgers, stated positive direction.
@@ -671,7 +855,8 @@ the same 2 oompf at paces from 0 up to 2: it gains 2 thump. The
 3 thump between is the burn, the gap between the two paces summed
 over the oompf swapped.
 When the carrying changes the rate itself, there is a second term
-for it. Roll kept and the wheel shrinking: each wheel lost adds a zing of hook.
+for it. Roll kept and the wheel shrinking: each wheel lost adds a
+zing of hook.
 That is the skater drawing her arms
 in; the hook she gains is what her arms spent.
 Same instant, same share. Two pushes that act through the same
@@ -683,7 +868,7 @@ along. The mass never needs dividing in and out. It holds only
 while the share does. If the faces stop sliding partway, that
 sliding-friction rule no longer fixes the share, so check what
 happens next.
-11\. Electricity
+12\. Electricity
 \---------------
     Current is the conductance of the voltage:   I = G V
     Voltage is the resistance of the current:    V = R I
@@ -729,20 +914,11 @@ flux and voltage for current:
 | charge: dE = V dQ                 | dE = I dλ                         |
 | counts each charge at its voltage | counts each flux at its current   |
 \+-----------------------------------+-----------------------------------+
-Verbing them right:
-  - A can cans charge, at a voltage. It doesn't can voltage: the
-    voltage is what it's at. "The can cans 24 mC at 12 V."
-  - A coil coils flux, at a current. It doesn't coil current: the
-    current runs around the turns, and the flux is what threads
-    them. "The coil coils 1.2 Wb at 3.0 A."
-  - A resistor burns power. It cans and coils nothing.
-  - A coil is the wire and the store it makes. The wire on a
-    swinging rod is the wire on the rod; the coil is what it
-    stores.
-  - The rules carry the verbs for the rest: current is the
-    conductance of the voltage, voltage the resistance of the
-    current, power the voltage of the current, and the store the
-    voltage of added charge or the current of added flux.
+Verbing them right: a can cans charge at a voltage, and doesn't
+can voltage ("the can cans 24 mC at 12 V"). A coil coils flux at a
+current, and doesn't coil current: the current runs around the
+turns, and the flux is what threads them ("the coil coils 1.2 Wb
+at 3.0 A"). A resistor burns power, and cans and coils nothing.
 Two problems, said strong
 \-------------------------
 The can on the battery
@@ -816,7 +992,7 @@ steers either one faster than u.
 Both waves at +6.0 V on a 50 ohm line: V = 12 V, I = 0. Nothing
 flows past, and nothing is sitting still: 0.72 W goes right in
 V₊ and 0.72 W goes left in V₋.
-12\. Light and clocks (on trial)
+13\. Light and clocks (on trial)
 \-------------------------------
 Two ships coast apart at a steady pace: A, the active agent, and
 B, the subject. Each has a clock, and the one thing they can both
@@ -864,7 +1040,7 @@ nothing is lost.
 Check: in S, c across 20 s is 6.0×10⁹ meters and the receiver
 goes 3.6×10⁹ of them, and 6.0² less 3.6² is 4.8², the same as c
 across the own time, 16 s. In H, the distance is 0.
-13\. Stealth mode
+14\. Stealth mode
 \----------------
 For dogs who need to pass. Put muscle and skin back on the
 close-to-the-bone problems. The dog units stay home (SI, with
@@ -892,18 +1068,26 @@ is over.
     relief. Then it earns its keep at once: the drum picks up,
     picks up faster, stops picking up.
   - Move off sine and cosine and into the arrows by the third
-    problem (section 9).
-  - Don't point at the ghosts (section 8).
+    problem (section 10).
+  - Don't point at the ghosts (section 9).
   - A rare form is a signal. Against a background of contractions,
     plain sums, and turns, a full form, a clever trick with an
     integral, or a π that really is a flip stands out and carries
     information. Keep them rare so they keep working.
-14\. Road-legal mode
+15\. Road-legal mode
 \-------------------
 For dogs on the road in daylight. All the words and none of the
 costume: the vocabulary is on the table from the first line, the
 units are the common SI ones, and what a first-year student keeps
 for good stays put. It is stealth mode without the ramp.
+It's also the way to write for outside eyes. When doc says a piece
+is for college, for high school, or for anyone outside the park,
+write it road-legal: the dog units stay in the dog park, the rules
+still hold (round hard, name things), and the verbs still run. The
+2 kg center, running at 3.0 m/s, punches 9.0 J.
+The modes have soft edges. The mansion solutions are road-legal,
+but they show off the language a bit, past a plain commute, so
+expect any rule here to get trampled now and then.
   - No ramp. Stealth mode waits until the reader is ready for a
     word. Here a word comes in when the sentence needs it, with
     its definition: one sentence and the equation, then use it.
@@ -955,7 +1139,7 @@ for good stays put. It is stealth mode without the ramp.
 |           | from one event to the other    |                     |
 | can, coil | the stores of charge and flux  | Q = C V, λ = L I    |
 \+-----------+--------------------------------+---------------------+
-The definitions are the ones in sections 4 to 12, shortened. A
+The definitions are the ones in sections 4 to 13, shortened. A
 definition that reads badly in context gets a closer look before
 it is used, not a longer sentence.
 The same sentence at the three speeds:
@@ -1006,7 +1190,7 @@ The spin, at 3500 zing, hooks
 hooks 1.5 J at 1500 zing: 5.1 J. The skid burned 0.63 J, about a
 ninth. The same from the friction: 2.0 N times the 0.315 m the
 contact slides, an average of 1.05 m/s for 0.30 s, is 0.63 J.
-15\. At talking speed
+16\. At talking speed
 \--------------------
 The point of the one-word units is saying this stuff without
 slowing down. The same sentences, said out loud, from the arm on
@@ -1054,16 +1238,6 @@ row above sets up the parallel, so the ear supplies it. That kind
 of elision only works where the parallel is that clear. Elision
 can't be done uniformly, and it's impossible with a tongue covered
 in algebra.
-16\. For outside eyes
-\--------------------
-When doc says a piece is for college, for high school, or for
-anyone outside the park, the dog units stay in the dog park: SI,
-with oompf, roll, ponder, and wheel wherever those quantities are
-named. \[\[I feel like these categories are not going to have a lot of clear hard edges. like, the mansion solutions are in part designed to show off the language. they’re road legal, but they’re still not just doing a boring commute-to-work, they’re showing off a bit. I’m not saying it’s not worth having the idea of multiple modalities, just warning that any rules here are likely to get trampled eventually.   ::  Road-legal mode (section 14) is the usual way to write it.\]\]
-The other rules hold: no third decimal, and name things. The verbs
-still run:
-    The 2 kg center, running at 3.0 m/s, punches 9.0 J.
-    The 2 kg center, dropping 0.40 m, hefts 8.0 J.
 17\. A few problems, said strong
 \-------------------------------
 Three of the working problems, cut down and said the way the
@@ -1138,10 +1312,10 @@ The puck on a string
     reflex: 2 card over 6 card, a third.
 18\. Blocks to hand off
 \----------------------
-Each block below is written to be handed whole to a helper, a bot
-given one job, so each one stands alone and repeats what it needs.
-People can read them too: they're the doc in brief.
-    READING THE ARROWS
+Each block below is written to be handed to a helper, a bot given
+one job. Hand THE KEY over with any of the others; the two together
+stand alone. People can read them too: they're the doc in brief.
+    THE KEY
     Arrows name directions in the scene, not on the page. → is
     forward, whichever way the page sits; label a figure's forward
     with → so a turned page still shows it. In a wall picture ↑ is
@@ -1188,12 +1362,6 @@ People can read them too: they're the doc in brief.
     push, the load is overhauling the motor (an overhauling load).
     A direction off the axes gets a name, like north, uphill, or
     toward Boston, and parts along and across it.
-    CHECKING A DOG-MATH SOLUTION
-    Your job is to find real slips, not to restyle the solution.
-    The rounding is deliberate: gravity is 10 zoom, a third digit
-    is noise, and results are meant to survive rounding. Don't ask
-    for more significant figures, and don't report a rounding
-    difference as an error.
     Units: hand 0.1 m, for sizes; the meter stays the meter
     wherever a push acts through it; card 0.01 m^2; lump 1 kg; cat
     1 m/s, a speed; zoom 1 m/s^2, and gravity is 10 zoom; push
@@ -1225,25 +1393,16 @@ People can read them too: they're the doc in brief.
     under that climb is 3000 thump. Per lump, the ghost keeps
     50 zip. A body stores energy and transfers it; a ghost keeps
     it and gives it.
-    So "zip per lump" is a slip.
-    Arrows name directions in the scene, not on the page. → is
-    forward, whichever way the page sits; label a figure's forward
-    with → so a turned page still shows it. In a wall picture ↑ is
-    up; on a table seen from above, ↑ is to the left of →. ↺ is
-    forward around, the turn that carries → toward ↑, and its
-    arrow points out of the picture toward you: counterclockwise
-    on a wall as you face it with forward to your right, and
-    counterclockwise seen from above on the ground (widdershins).
-    ↻ is backward around. If you translate to x, y, and z, x is →,
-    y is ↑, and z is ↺, so → × ↑ is ↺. x is the forward axis, not
-    page-right. You'll be tempted to read it as page-right again.
-    Keep the axes attached to the scene when the picture turns.
-    A minus means "the opposite of": −← is →. Two arrows dot to 1
-    the same way, minus 1 opposite, and 0 at right angles. A cross
-    for leverage takes the lever first: ↓ × → is ↺. For pace the
-    sweep comes first: ↺ × ↓ is →. Before calling a step
-    inconsistent, make sure you didn't translate → as page-right or
-    ↺ as clockwise.
+    CHECKING A DOG-MATH SOLUTION
+    Your job is to find real slips, not to restyle the solution.
+    The rounding is deliberate: gravity is 10 zoom, a third digit
+    is noise, and results are meant to survive rounding. Don't ask
+    for more significant figures, and don't report a rounding
+    difference as an error.
+    Zip, zing, zump, and swirl are already per mass or per
+    inertia, so "zip per lump" is a slip.
+    Before calling a step inconsistent, make sure you didn't
+    translate → as page-right or ↺ as clockwise.
     Check both ledgers, motion and energy, and both sides of every
     push: a push left without its other side is a slip. A floor, a
     frame, or a tractor that takes a push counts. Friction on a
@@ -1253,37 +1412,6 @@ People can read them too: they're the doc in brief.
     A word you don't know is probably one of this work's defined
     words. Ask whoever sent you before treating it as an error.
     WRITING A SIDE-BY-SIDE
-    Units: hand 0.1 m, for sizes; the meter stays the meter
-    wherever a push acts through it; card 0.01 m^2; lump 1 kg; cat
-    1 m/s, a speed; zoom 1 m/s^2, and gravity is 10 zoom; push
-    1 N, a force, and a pull is a push pulling; thump 1 J, a push
-    through a meter; pow 1 W, a thump a second; crank 1 N m, a
-    torque; stroke 1 radian, and a turn is about 6.3 stroke; oompf
-    1 kg m/s; roll 1 kg m^2/s; ponder 1 kg m; wheel 1 kg m^2.
-    Units take no plural s (5.3 hand), except stroke: 4.5 strokes
-    a second.
-    Quantities: motion is mass at velocity, in oompf. Sweep is
-    how fast a thing turns, in strokes a second. Pace is how fast
-    a point on a turning lever moves, the sweep of the lever:
-    1 hand sweeping at 50 has a pace of 5 cat. Spin is the leverage
-    of the motion, in roll. Bulk is mass at a lever, in ponder, and
-    inertia is bulk at a lever, in wheel. Torque is the leverage
-    of a push, in crank. Work is a push through a distance, in
-    thump, and power is work per second, in pow: a push at a
-    velocity, or a torque at a sweep. Punch is the energy of a
-    body's travel, hook the energy of its spin, and heft the
-    energy height stores (weight is the pull; heft is what the
-    height stores), all in thump. Zip is punch per lump, zing is
-    hook per wheel, zump is hook per lump, and swirl is spin per
-    lump: they're already per mass or per inertia.
-    The velocity of added motion is stored as punch: an oompf
-    added while the body moves at 4 cat stores 4 thump. From
-    rest, the velocity climbs evenly as the motion comes in, so
-    the punch is a triangle, not a rectangle:
-    60 lump brought to 10 cat takes 600 oompf, and the triangle
-    under that climb is 3000 thump. Per lump, the ghost keeps
-    50 zip. A body stores energy and transfers it; a ghost keeps
-    it and gives it.
     Use these names. If you need a new one, mark it as new with
     "(new)" after its first use.
     Two columns, the usual way and the dog way, from the same
@@ -1304,20 +1432,7 @@ People can read them too: they're the doc in brief.
     badly, flip it, model it, and reflip it: turn the step into
     the form that reads best in the dog column, work it there, and
     turn the answer back.
-    Put this key at the top:
-      Arrows name directions in the scene, not on the page. → is
-      forward, whichever way the page sits; label a figure's
-      forward with → so a turned page still shows it. In a wall
-      picture ↑ is up; on a table seen from above, ↑ is to the
-      left of →. ↺ is forward around, the turn that carries →
-      toward ↑, and its arrow points out of the picture toward
-      you: counterclockwise on a wall as you face it with
-      forward to your right, and counterclockwise seen from
-      above on the ground (widdershins). ↻ is backward around.
-      If you translate to x, y, and z, x is →, y is ↑, and z is
-      ↺, so → × ↑ is ↺. x is the forward axis, not page-right.
-      You'll be tempted to read it as page-right again. Keep the
-      axes attached to the scene when the picture turns.
+    Put THE KEY's first paragraph, on the arrows, at the top.
     Say what holds, and why, in one plain sentence: a quantity
     that can't change (the floor pushes where it has no lever, so
     the swirl about that point holds) or a balance (the wrench
@@ -1329,37 +1444,6 @@ People can read them too: they're the doc in brief.
     reasoning shows. The units say out loud that this is playing
     with ideas, not the last word. Readers are curious people
     learning mechanics.
-    Units: hand 0.1 m, for sizes; the meter stays the meter
-    wherever a push acts through it; card 0.01 m^2; lump 1 kg; cat
-    1 m/s, a speed; zoom 1 m/s^2, and gravity is 10 zoom; push
-    1 N, a force, and a pull is a push pulling; thump 1 J, a push
-    through a meter; pow 1 W, a thump a second; crank 1 N m, a
-    torque; stroke 1 radian, and a turn is about 6.3 stroke; oompf
-    1 kg m/s; roll 1 kg m^2/s; ponder 1 kg m; wheel 1 kg m^2.
-    Units take no plural s (5.3 hand), except stroke: 4.5 strokes
-    a second.
-    Quantities: motion is mass at velocity, in oompf. Sweep is
-    how fast a thing turns, in strokes a second. Pace is how fast
-    a point on a turning lever moves, the sweep of the lever:
-    1 hand sweeping at 50 has a pace of 5 cat. Spin is the leverage
-    of the motion, in roll. Bulk is mass at a lever, in ponder, and
-    inertia is bulk at a lever, in wheel. Torque is the leverage
-    of a push, in crank. Work is a push through a distance, in
-    thump, and power is work per second, in pow: a push at a
-    velocity, or a torque at a sweep. Punch is the energy of a
-    body's travel, hook the energy of its spin, and heft the
-    energy height stores (weight is the pull; heft is what the
-    height stores), all in thump. Zip is punch per lump, zing is
-    hook per wheel, zump is hook per lump, and swirl is spin per
-    lump: they're already per mass or per inertia.
-    The velocity of added motion is stored as punch: an oompf
-    added while the body moves at 4 cat stores 4 thump. From
-    rest, the velocity climbs evenly as the motion comes in, so
-    the punch is a triangle, not a rectangle:
-    60 lump brought to 10 cat takes 600 oompf, and the triangle
-    under that climb is 3000 thump. Per lump, the ghost keeps
-    50 zip. A body stores energy and transfers it; a ghost keeps
-    it and gives it.
     Rewrite a problem's SI numbers in dog units where they match:
     3 kg is 3 lump, 2 m/s is 2 cat. Keep meters where a push acts
     through them, and use hands for sizes, like a drum 1 hand in
@@ -1376,7 +1460,10 @@ People can read them too: they're the doc in brief.
     leads with the thing: 3 lump at 10 zoom is a 30 push weight;
     2 lump at 5 hand is a ponder. "Through" is a push along a
     distance: 40 push through 3 meter is 120 thump. "On" and
-    "over" divide: 5 cat on 1 hand sweeps at 50. Verbs multiply
+    "over" divide a rate spread on a lever: 5 cat on 1 hand
+    sweeps at 50. "On" also lays a coat on an area, a product:
+    0.1 mm on 40 sheet is 4 liters of paint. The units say which.
+    Verbs multiply
     too: 2 oompf levered at 5 hand is 1 roll; half a wheel
     sweeping at 2 carries 1 roll; 4 push at half a meter cranks at
     2. Reach for the exact word first, and for "of" when nothing

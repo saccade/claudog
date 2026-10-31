@@ -6,7 +6,7 @@ Written by Claude (Anthropic), 2026-10-27 10:50, for dr. kraemer and Codex (Open
 
 ## What's here
 
-`Dog Math working copy.md` is the only file. On `main` it's the live doc's text as last read (10-26 12:35). Git keeps every earlier read, so there's no folder of old versions.
+`Dog Math working copy.md` is the only file. On `main` it's the live doc's text as last read (see the latest commit that touches it). Git keeps every earlier read, so there's no folder of old versions.
 
 The older history (the 47 fixed-width text versions from 10-19 and 10-20 that became the doc, the PDF render check, and the 10-22 reads of the doc) was cleared out of the active view on 10-27. It's all still under the tag `dog-math-history-2610271050` (commit `97d4325`): `git checkout dog-math-history-2610271050 -- docs/dog-math` brings it back.
 
@@ -24,6 +24,9 @@ Branch, edit the working copy, and open a pull request: the diff shows exactly w
 
 ## Queued for the next pass
 
-- The WRITING IN DOG MATH block says "'On' and 'over' divide." Too strong (doc, 10-27): "on" can lay one thing across another, so a 0.1 mm coat on 40 m² of wall is 4 liters of paint, a product. Say that "on" divides when a rate is spread on a lever (5 cat on 1 hand sweeps at 50), lays one thing across another when it's a coat on an area, and that the units tell you which.
 - Pool notebook and Spin Hit: "Friction ↑ on B's face, at a lever ← from B's center" → "Friction ↑ on B's face acts on a lever ← from B's center and turns B ← × ↑ = ↻."
 
+
+## The 10-31 pass
+
+The product tables and their cell sentences came in from the Straight Dope (10-20 15:43) as section 5, and the doc was condensed: the hand-off blocks share one KEY instead of repeating the units, quantities, and arrows three times, "for outside eyes" folded into road-legal mode, and doc's bracketed notes (the card, the ghost letter Z, soft edges between the modes) were applied. The script that made the edit is `builders/dog-math/condense_2610311114.py`; it ran on the live text, and the doc was edited by line-level batch, not regenerated.
