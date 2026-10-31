@@ -23,10 +23,8 @@ T = [
 
 ("h2", "The crown move: openings that differ in kind"),
 ("q", "“I like the way you're distinguishing this from the other one by pulling in heft right away, that's the kind of thing I'm looking for, that kind of unpredictability. like opening my fourth book with the crown scene, bam look the crown doesn't matter it's there it's gone look now it's in the hut where it sat all through the third book (think progressive flashbacks, not time travel)” · “but it's not unpredictable if you do it the same every time, you know?”"),
-("li", "Path 2 opens on a word, heft, at the knife."),
-("li", "Path 3 opens on a place: the still point, at the ladder."),
-("li", "Path 4 opens on the kitchen's pair, zing and zlow, and makes the crown move under the stage: the upper rod's bob is the dining room's knife, a kilogram a meter out from the same silver pivot. You've been watching one end of the machine since the roast went cold."),
-("p", "A draft that gave paths 3 and 4 the same opening move was reverted before anyone saw it. Each path's move has to be of a different kind, not just different words."),
+("p", "Path 2 surprises right out of the gate, pulling in heft at the knife. That isn't a template for the other paths: a surprise done the same way every time stops being one, so no path owes an opening move."),
+("p", "Path 4's big turn comes under the stage: the upper rod's bob is the dining room's knife, a kilogram a meter out from the same silver pivot. You've been watching one end of this machine since the roast went cold."),
 
 ("h2", "The key change: same openings, new endings"),
 ("q", "“the top of every line is the same while the back ends progressively reveal that this is not in the key you thought you were in. but all the notes were right there on the staff.”"),
