@@ -60,9 +60,9 @@ structural work, and friendly units make the numbers easy.
     per thing, one thing per name. Assigning a word never bans
     its everyday sense: "spinning at 6" is still the sweep in
     plain English, so spin stays out of its way. Spin the
-    quantity is the turning movement, inertia at sweep; the rate
-    is the sweep. Where both are in play, say sweep or turning
-    movement and leave the bare word out. Each word is a unit
+    quantity is the motion's leverage, inertia at sweep; the rate
+    is the sweep. Where both are in play, say sweep or the motion's
+    leverage and leave the bare word out. Each word is a unit
     test on the algebra.
  8. The verbs are fixed by the old rules of the language. Energy
     is transformed. Work is performed. Punch and hook are
@@ -142,7 +142,7 @@ Where a dog word steps aside
 Each of these is a rock on the trail. Point at it in passing, as
 if obvious, and move on.
   - roll. In a problem with something rolling, the spin is the
-    turning movement (or angular momentum), and its number goes
+    motion's leverage (or angular momentum), and its number goes
     in kg m^2/s, or say roll of
     spin. Roll stays a unit where nothing rolls.
   - wheel. Not as a unit in a problem about an actual wheel, nor
@@ -207,7 +207,7 @@ too, wherever the quantities are named:
 \+-------------+------------------------------+-----------------+
 | Unit        | Quantity it measures         | Standard        |
 \+-------------+------------------------------+-----------------+
-| oompf       | movement, a body's motion    | 1 kg m/s        |
+| oompf       | motion: mass at velocity     | 1 kg m/s        |
 | stroke      | swing (one radian's worth)   | 1 rad           |
 | quadrant    | swing: a quarter turn        | about 1.6 stroke|
 | flip        | swing: half a turn           | about 3.1 stroke|
@@ -222,8 +222,8 @@ too, wherever the quantities are named:
 | ponder      | bulk: mass at a lever        | 1 kg m          |
 |             | ("a ponderous bulk")         |                 |
 | wheel       | inertia: a ponder at a meter | 1 kg m^2        |
-| roll        | spin: turning movement       | 1 kg m^2/s      |
-| shift       | shift: movement for a time;  | 1 kg m          |
+| roll        | spin: the motion's leverage  | 1 kg m^2/s      |
+| shift       | shift: motion for a time;    | 1 kg m          |
 |             | what moves a center of mass  |                 |
 | transit     | transit: the swing of the    | 1 kg m          |
 |             | bulk, mass along the arc     |                 |
@@ -244,7 +244,7 @@ too, wherever the quantities are named:
 | swirl       | spin per mass; for a point,  | 1 m^2/s         |
 |             | the lever at pace; for a     |                 |
 |             | body, lever each bit's       |                 |
-|             | movement, add, then divide   |                 |
+|             | motion, add, then divide     |                 |
 |             | by the mass; along the axis  |                 |
 | twirl       | torque per mass; for a point,| 1 m^2/s^2       |
 |             | the lever at acceleration;   |                 |
@@ -313,7 +313,7 @@ time: 12 V of 2 A is 24 W. After that the bare rule is safe.
 | Said                            | Is                            |
 \+---------------------------------+-------------------------------+
 | 1 hand sweeping at 50           | pace, 5 cat                   |
-| 7 lump moving at 7 cat          | movement, 49 oompf            |
+| 7 lump moving at 7 cat          | motion, 49 oompf              |
 | 2 oompf levered at 5 hand       | spin, 1 roll                  |
 | 0.5 wheel sweeping at 2         | spin, 1 roll                  |
 | 1.5 crank sweeping at 2         | power, 3 pow                  |
@@ -328,7 +328,7 @@ A bulk under gravity does both: its upward part hefts, and its
 level part cranks.
 Duration and rate are rows in the multiplication table, not
 columns. Say "z is the fluxion of y" (force is the fluxion of the
-movement) and "y adds z over time" (a push adds movement over
+motion) and "y adds z over time" (a push adds motion over
 time). Mass is handled by the ghost version beneath each cell.
 5\. Verbing
 \----------
@@ -338,7 +338,7 @@ an adjective. The center of verbing is what's happening.
     pulling at 4 along the ice. A crank cranks. A boost boosts.
     A wheel wheels: 0.27 wheel wheeling at 5.0 carries 1.35 roll.
     A body hooks, punches, and hefts.
-  - Movement and spin are carried: the cart carries 6 oompf, the
+  - Motion and spin are carried: the cart carries 6 oompf, the
     wheel 3 roll. The ball gives the bat oompf, the blow boosts
     it, and the bat rolls with it.
   - Ponder is from the Latin for "to weigh". You ponder from a
@@ -376,7 +376,7 @@ The center of mass is the plainest ghost body: a place, a
 velocity, a swirl about any line, and no mass of its own. A laser
 dot is another.
 A ghost quantity is a quantity with the body taken out. Velocity,
-swirl, and zip are a ghost's properties, the way movement, spin, and
+swirl, and zip are a ghost's properties, the way motion, spin, and
 punch are a body's. Straight ghosts come per lump; turning ghosts
 come per wheel. Some turning quantities also have a per-lump
 ghost.
@@ -405,8 +405,8 @@ Take the lump out of the same ball instead:
     half a wheel on 2 lump is 25 card of profile.
     9 thump of hook on 2 lump is 4.5 zump.
     25 card of profile across 18 zing is 4.5 zump.
-Spin and torque per wheel leave the motion itself, sweep and
-pickup, just as movement and push per lump leave the velocity and
+Spin and torque per wheel leave the turning itself, sweep and
+pickup, just as motion and push per lump leave the velocity and
 the acceleration. Spin on the wheel gives the sweep wherever the
 setup fixes the axis. A crank on the wheel gives the pickup only
 while the inertia stays put: a skater tucking on a fixed axis
@@ -416,16 +416,16 @@ speed, acceleration. One way to sort them: real quantities add,
 ghosts average, each by its own weight, the mass for the per-lump
 ghosts and the inertia for the per-wheel ones. Glue a 2-lump ball
 at 3 cat to a 1-lump ball at 6 cat, both moving the same way:
-    movement:  6 oompf and 6 oompf make 12 oompf. It adds.
+    motion:    6 oompf and 6 oompf make 12 oompf. It adds.
     velocity:  3 cat and 6 cat make 4 cat, the 12 oompf spread
                across 3 lump. It averages, by the mass.
 That's bookkeeping, not a rule about what an interaction changes.
-Gluing is a collision. Movement comes through it, so the velocity
+Gluing is a collision. Motion comes through it, so the velocity
 comes out as the mass-weighted average. Punch doesn't all come
 through:
     before:  27 thump of punch, 9 zip
     after:   24 thump at 4 cat, 8 zip; 3 thump burned
-Movement, spin, punch, and hook are carried by bodies, and can be
+Motion, spin, punch, and hook are carried by bodies, and can be
 split up and swapped around between them. Velocity, speed, zip, and
 acceleration belong to no body in particular, and split only by
 the mass. Ghosts aren't weak for that. A free body keeps its
@@ -1106,7 +1106,7 @@ The ball that skids
     8 lump at 1 hand is 0.8 ponder; moving at 7 cat, it has 5.6
     roll, backward around. From here on, back around.
     Moving the line along the lane to the contact once it rolls
-    adds no leverage on the movement, so the spin stays 5.6 roll.
+    adds no leverage on the motion, so the spin stays 5.6 roll.
     Rolling, the ball turns about its contact: 2/5 card of its own
     profile and 1 card for the center, 7/5 card. 8 lump across
     7/5 card is 112 mw. 5.6 roll on 112 mw sweeps at 50, and 1 hand
@@ -1203,11 +1203,11 @@ People can read them too: they're the doc in brief.
     1 kg m/s; roll 1 kg m^2/s; ponder 1 kg m; wheel 1 kg m^2.
     Units take no plural s (5.3 hand), except stroke: 4.5 strokes
     a second.
-    Quantities: movement is mass at velocity, in oompf. Sweep is
+    Quantities: motion is mass at velocity, in oompf. Sweep is
     how fast a thing turns, in strokes a second. Pace is how fast
     a point on a turning lever moves, the sweep of the lever:
-    1 hand sweeping at 50 has a pace of 5 cat. Spin is turning
-    movement, in roll. Bulk is mass at a lever, in ponder, and
+    1 hand sweeping at 50 has a pace of 5 cat. Spin is the leverage
+    of the motion, in roll. Bulk is mass at a lever, in ponder, and
     inertia is bulk at a lever, in wheel. Torque is the leverage
     of a push, in crank. Work is a push through a distance, in
     thump, and power is work per second, in pow: a push at a
@@ -1262,11 +1262,11 @@ People can read them too: they're the doc in brief.
     1 kg m/s; roll 1 kg m^2/s; ponder 1 kg m; wheel 1 kg m^2.
     Units take no plural s (5.3 hand), except stroke: 4.5 strokes
     a second.
-    Quantities: movement is mass at velocity, in oompf. Sweep is
+    Quantities: motion is mass at velocity, in oompf. Sweep is
     how fast a thing turns, in strokes a second. Pace is how fast
     a point on a turning lever moves, the sweep of the lever:
-    1 hand sweeping at 50 has a pace of 5 cat. Spin is turning
-    movement, in roll. Bulk is mass at a lever, in ponder, and
+    1 hand sweeping at 50 has a pace of 5 cat. Spin is the leverage
+    of the motion, in roll. Bulk is mass at a lever, in ponder, and
     inertia is bulk at a lever, in wheel. Torque is the leverage
     of a push, in crank. Work is a push through a distance, in
     thump, and power is work per second, in pow: a push at a
@@ -1338,11 +1338,11 @@ People can read them too: they're the doc in brief.
     1 kg m/s; roll 1 kg m^2/s; ponder 1 kg m; wheel 1 kg m^2.
     Units take no plural s (5.3 hand), except stroke: 4.5 strokes
     a second.
-    Quantities: movement is mass at velocity, in oompf. Sweep is
+    Quantities: motion is mass at velocity, in oompf. Sweep is
     how fast a thing turns, in strokes a second. Pace is how fast
     a point on a turning lever moves, the sweep of the lever:
-    1 hand sweeping at 50 has a pace of 5 cat. Spin is turning
-    movement, in roll. Bulk is mass at a lever, in ponder, and
+    1 hand sweeping at 50 has a pace of 5 cat. Spin is the leverage
+    of the motion, in roll. Bulk is mass at a lever, in ponder, and
     inertia is bulk at a lever, in wheel. Torque is the leverage
     of a push, in crank. Work is a push through a distance, in
     thump, and power is work per second, in pow: a push at a
